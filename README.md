@@ -78,6 +78,25 @@ Seasons that fail (e.g. older private-league seasons without valid cookies)
 are logged and skipped; see `data/EXPORT_REPORT.md` for the results of the
 most recent full run.
 
+### Automated weekly refresh (GitHub Action)
+
+`.github/workflows/fetch-league-data.yml` runs the full export automatically
+every Tuesday morning during the NFL season (Sept-Jan), and can also be
+triggered manually from the Actions tab. It:
+
+1. Runs `check_espn_connection.py` first as a fast pre-flight check (fails
+   the job immediately if credentials are bad, before doing a full export).
+2. Runs a full `export_league_data.py` (every season, not just the current
+   one) - this keeps the anonymized manager-ID mapping deterministic without
+   needing to persist `owner_id_map.json` anywhere in CI.
+3. Commits only `app/src/data/` and `data/EXPORT_REPORT.md` back to `main`
+   if anything changed (never `data/raw/`, never `.env`). That push
+   triggers a Vercel redeploy automatically.
+
+**Setup**: add three repository secrets (Settings -> Secrets and variables
+-> Actions): `ESPN_S2`, `SWID`, `LEAGUE_ID` - same values as your local
+`.env`. These are encrypted by GitHub and never appear in logs.
+
 ## Weekly report PDF conventions
 
 - Reports live at `/app/public/reports/<season>/week-<NN>.pdf`, where `<NN>`

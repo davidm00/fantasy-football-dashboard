@@ -1,0 +1,61 @@
+name: Fetch latest league data
+
+# Runs a full re-export of every season (not just the current one), because
+# the owner-anonymization mapping is derived fresh each run in a
+# deterministic order (season -> team -> owner) rather than persisted
+# across CI runs. This keeps anonymized manager IDs/names stable without
+# needing to store that mapping anywhere.
+on:
+  schedule:
+    # Tuesday mornings, 10:00 UTC, during the NFL season (Sept - Jan).
+    - cron: "0 10 * 9-12,1 2"
+  workflow_dispatch: {} # allows manually running this from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: pip install -r requirements.txt
+
+      - name: Check ESPN credentials (dry run, no files written)
+        working-directory: scripts
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
+        run: python check_espn_connection.py
+
+      - name: Run full export
+        working-directory: scripts
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
+        run: python export_league_data.py
+
+      - name: Commit and push public data, if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Only ever stage the public/app-facing data and the report.
+          # Never stage data/raw/ or .env - those must never be committed.
+          git add app/src/data data/EXPORT_REPORT.md
+          if git diff --cached --quiet; then
+            echo "No data changes - nothing to commit."
+          else
+            git commit -m "Automated weekly league data refresh"
+            git push
+          fi
