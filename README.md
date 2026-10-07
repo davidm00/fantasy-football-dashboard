@@ -1,5 +1,13 @@
 # Fantasy Football League Dashboard
 
+## App functionality (so far)
+
+- Pick a season and week (selectors + prev/next), see that week's matchup
+  cards (teams, scores, win-loss record through that week).
+- View that week's report PDF inline, with open-in-full-screen and
+  download links; a sidebar lists other reports for the selected season.
+- This will keep changing as more of the app gets built.
+
 ## Project layout
 
 - `app/` — Vite + React + TypeScript frontend (Tailwind CSS, react-router installed). All app code (components, routes, types) is written by hand; this scaffold only installed and wired up tooling.
