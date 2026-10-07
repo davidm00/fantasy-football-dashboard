@@ -1,4 +1,4 @@
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useState, useSyncExternalStore } from "react";
 import "./App.css";
 import { useLoadSeasonData } from "./hooks/useLoadSeasonData";
 import { SeasonFile } from "./utils/seasonDataLoader";
@@ -41,21 +41,30 @@ function App() {
     year,
     SEASON_FILES,
   );
+  const completedMatchups = matchups.filter(
+    (matchup) => matchup.status === "final",
+  );
+  const latestMatchupWeek = completedMatchups.reduce(
+    (latest, matchup) => Math.max(latest, matchup.week),
+    1,
+  );
   const week =
     selectedWeek !== null &&
-    matchups.some((matchup) => matchup.week === selectedWeek)
+    completedMatchups.some((matchup) => matchup.week === selectedWeek)
       ? selectedWeek
-      : (matchups[0]?.week ?? 1);
+      : latestMatchupWeek;
 
-  const records = useMemo(() => {
-    return getStanding(matchups, week, settings?.regular_season_length ?? week);
-  }, [week, matchups, settings]);
+  const records = getStanding(
+    matchups,
+    week,
+    settings?.regular_season_length ?? week,
+  );
 
-  const currentMatchup = matchups.find((m) => m.week === week);
+  const currentMatchup = completedMatchups.find((m) => m.week === week);
 
   const reports = reportsList.filter((r) => r.season === year);
   const currentReport = reports.find((r) => r.week === week);
-  const matchupWeeks = matchups.map((matchup) => matchup.week);
+  const matchupWeeks = completedMatchups.map((matchup) => matchup.week);
   const firstWeek = matchupWeeks.length ? Math.min(...matchupWeeks) : week;
   const lastWeek = matchupWeeks.length ? Math.max(...matchupWeeks) : week;
   const isFirstWeek = week === firstWeek;
@@ -79,6 +88,7 @@ function App() {
 
   const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setYear(Number(e.target.value));
+    setSelectedWeek(null);
   };
 
   const handleWeekChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -168,7 +178,7 @@ function App() {
                   value={week}
                   onChange={handleWeekChange}
                 >
-                  {matchups.map((mu: Matchup) => {
+                  {completedMatchups.map((mu: Matchup) => {
                     return (
                       <option key={mu.week} value={mu.week}>
                         Week {mu.week}
@@ -179,7 +189,7 @@ function App() {
                 <button
                   className="btn-primary"
                   onClick={nextWeek}
-                  disabled={week === matchups.length}
+                  disabled={week === lastWeek}
                 >
                   &rarr;
                 </button>

@@ -28,7 +28,7 @@ export const useLoadSeasonData = (season: number, files: SeasonFile[]) => {
               setTeams(r as Team[]);
               break;
             case SeasonFile.Matchups:
-              setMatchups((r as Matchup[]).filter((m) => m.status === "final"));
+              setMatchups(r as Matchup[]);
               break;
             case SeasonFile.Settings:
               setSettings(r as Settings);
