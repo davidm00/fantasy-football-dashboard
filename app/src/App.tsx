@@ -119,7 +119,11 @@ function App() {
   return (
     <>
       <header className="app-nav">
-        <a className="app-brand" href="#scoreboard" aria-label="Ian Book Believers">
+        <a
+          className="app-brand"
+          href="#scoreboard"
+          aria-label="Ian Book Believers"
+        >
           <span className="app-brand-mark" aria-hidden="true">
             IB
           </span>
@@ -258,8 +262,8 @@ function App() {
                       </span>
                       <span>
                         {currentReport.pageCount}{" "}
-                        {currentReport.pageCount === 1 ? "page" : "pages"} &bull;{" "}
-                        {formatFileSize(currentReport.fileSize)}
+                        {currentReport.pageCount === 1 ? "page" : "pages"}{" "}
+                        &bull; {formatFileSize(currentReport.fileSize)}
                       </span>
                     </div>
                   </div>
@@ -347,7 +351,7 @@ function MatchupCard({
         <div className="match-ups-card-team-name">
           <p className="card-title">{away.team.team_name}</p>
           <p className="card-subtitle">
-            {away.team.owners[0].name} &bull; {home.record}
+            {away.team.owners[0].name} &bull; {away.record}
           </p>
         </div>
         <div
