@@ -1,0 +1,102 @@
+[
+  {
+    "team_id": 10,
+    "team_name": "Team Great Greeks",
+    "final_standing": 1,
+    "wins": 8,
+    "losses": 6,
+    "ties": 0,
+    "points_for": 1873.8000000000002,
+    "points_against": 1659.7
+  },
+  {
+    "team_id": 2,
+    "team_name": "69ers W",
+    "final_standing": 2,
+    "wins": 11,
+    "losses": 3,
+    "ties": 0,
+    "points_for": 1874.02,
+    "points_against": 1706.0
+  },
+  {
+    "team_id": 5,
+    "team_name": "Laplace  Souljas",
+    "final_standing": 3,
+    "wins": 8,
+    "losses": 6,
+    "ties": 0,
+    "points_for": 1739.86,
+    "points_against": 1691.18
+  },
+  {
+    "team_id": 3,
+    "team_name": "Slums Pipe",
+    "final_standing": 4,
+    "wins": 8,
+    "losses": 6,
+    "ties": 0,
+    "points_for": 1707.8600000000001,
+    "points_against": 1662.8
+  },
+  {
+    "team_id": 6,
+    "team_name": "OnTheBorder Salsa",
+    "final_standing": 5,
+    "wins": 8,
+    "losses": 6,
+    "ties": 0,
+    "points_for": 1707.72,
+    "points_against": 1712.18
+  },
+  {
+    "team_id": 1,
+    "team_name": "Brady is a  Bum",
+    "final_standing": 6,
+    "wins": 6,
+    "losses": 8,
+    "ties": 0,
+    "points_for": 1566.2200000000003,
+    "points_against": 1670.04
+  },
+  {
+    "team_id": 7,
+    "team_name": "LA Fudruckers#1fan",
+    "final_standing": 7,
+    "wins": 7,
+    "losses": 7,
+    "ties": 0,
+    "points_for": 1765.9999999999998,
+    "points_against": 1750.28
+  },
+  {
+    "team_id": 9,
+    "team_name": "Tanking for #1 Overall",
+    "final_standing": 8,
+    "wins": 2,
+    "losses": 12,
+    "ties": 0,
+    "points_for": 1513.4999999999998,
+    "points_against": 1672.16
+  },
+  {
+    "team_id": 4,
+    "team_name": "69ers Meat",
+    "final_standing": 9,
+    "wins": 5,
+    "losses": 9,
+    "ties": 0,
+    "points_for": 1547.88,
+    "points_against": 1821.52
+  },
+  {
+    "team_id": 8,
+    "team_name": "Team in the grave",
+    "final_standing": 10,
+    "wins": 7,
+    "losses": 7,
+    "ties": 0,
+    "points_for": 1712.5399999999997,
+    "points_against": 1663.54
+  }
+]

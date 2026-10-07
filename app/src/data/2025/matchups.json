@@ -1,0 +1,722 @@
+[
+  {
+    "week": 1,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 5,
+        "home_score": 129.95,
+        "away_team_id": 6,
+        "away_score": 136.1
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 129.95,
+        "away_team_id": 4,
+        "away_score": 151.8
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 137.2,
+        "away_team_id": 12,
+        "away_score": 101.3
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 125.9,
+        "away_team_id": 1,
+        "away_score": 138.7
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 152.6,
+        "away_team_id": 3,
+        "away_score": 146.5
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 116.1,
+        "away_team_id": 2,
+        "away_score": 127.4
+      }
+    ]
+  },
+  {
+    "week": 2,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 118.7,
+        "away_team_id": 4,
+        "away_score": 161.25
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 138.2,
+        "away_team_id": 5,
+        "away_score": 150.75
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 121.6,
+        "away_team_id": 11,
+        "away_score": 149.4
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 134.55,
+        "away_team_id": 7,
+        "away_score": 134.45
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 179.6,
+        "away_team_id": 8,
+        "away_score": 112.5
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 130.45,
+        "away_team_id": 9,
+        "away_score": 174.7
+      }
+    ]
+  },
+  {
+    "week": 3,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 12,
+        "home_score": 136.5,
+        "away_team_id": 6,
+        "away_score": 120.6
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 128.05,
+        "away_team_id": 1,
+        "away_score": 158.6
+      },
+      {
+        "home_team_id": 5,
+        "home_score": 158.6,
+        "away_team_id": 3,
+        "away_score": 139.75
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 105.85,
+        "away_team_id": 2,
+        "away_score": 166.2
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 135.65,
+        "away_team_id": 10,
+        "away_score": 144.25
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 171.05,
+        "away_team_id": 9,
+        "away_score": 152.7
+      }
+    ]
+  },
+  {
+    "week": 4,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 120.0,
+        "away_team_id": 1,
+        "away_score": 138.05
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 128.6,
+        "away_team_id": 12,
+        "away_score": 142.7
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 168.9,
+        "away_team_id": 4,
+        "away_score": 160.35
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 150.8,
+        "away_team_id": 5,
+        "away_score": 158.75
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 185.95,
+        "away_team_id": 11,
+        "away_score": 148.45
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 131.0,
+        "away_team_id": 7,
+        "away_score": 172.15
+      }
+    ]
+  },
+  {
+    "week": 5,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 3,
+        "home_score": 148.0,
+        "away_team_id": 6,
+        "away_score": 142.5
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 115.6,
+        "away_team_id": 2,
+        "away_score": 146.9
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 131.65,
+        "away_team_id": 10,
+        "away_score": 173.2
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 145.45,
+        "away_team_id": 9,
+        "away_score": 172.05
+      },
+      {
+        "home_team_id": 5,
+        "home_score": 169.55,
+        "away_team_id": 8,
+        "away_score": 137.8
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 132.1,
+        "away_team_id": 7,
+        "away_score": 154.45
+      }
+    ]
+  },
+  {
+    "week": 6,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 130.35,
+        "away_team_id": 2,
+        "away_score": 132.0
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 118.8,
+        "away_team_id": 3,
+        "away_score": 119.35
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 134.9,
+        "away_team_id": 1,
+        "away_score": 149.85
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 167.9,
+        "away_team_id": 12,
+        "away_score": 151.8
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 101.45,
+        "away_team_id": 4,
+        "away_score": 167.1
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 131.1,
+        "away_team_id": 5,
+        "away_score": 160.35
+      }
+    ]
+  },
+  {
+    "week": 7,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 10,
+        "home_score": 145.25,
+        "away_team_id": 6,
+        "away_score": 177.3
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 154.15,
+        "away_team_id": 9,
+        "away_score": 132.8
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 114.25,
+        "away_team_id": 8,
+        "away_score": 156.1
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 114.7,
+        "away_team_id": 7,
+        "away_score": 109.9
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 173.3,
+        "away_team_id": 11,
+        "away_score": 116.6
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 210.5,
+        "away_team_id": 5,
+        "away_score": 125.5
+      }
+    ]
+  },
+  {
+    "week": 8,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 80.5,
+        "away_team_id": 9,
+        "away_score": 170.0
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 111.2,
+        "away_team_id": 10,
+        "away_score": 147.95
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 135.8,
+        "away_team_id": 2,
+        "away_score": 134.55
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 126.5,
+        "away_team_id": 3,
+        "away_score": 168.65
+      },
+      {
+        "home_team_id": 5,
+        "home_score": 133.1,
+        "away_team_id": 1,
+        "away_score": 134.5
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 110.1,
+        "away_team_id": 12,
+        "away_score": 190.4
+      }
+    ]
+  },
+  {
+    "week": 9,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 8,
+        "home_score": 165.15,
+        "away_team_id": 6,
+        "away_score": 112.35
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 138.15,
+        "away_team_id": 7,
+        "away_score": 172.5
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 132.75,
+        "away_team_id": 11,
+        "away_score": 91.3
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 175.3,
+        "away_team_id": 5,
+        "away_score": 194.55
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 149.3,
+        "away_team_id": 4,
+        "away_score": 177.8
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 131.75,
+        "away_team_id": 12,
+        "away_score": 112.5
+      }
+    ]
+  },
+  {
+    "week": 10,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 145.95,
+        "away_team_id": 7,
+        "away_score": 174.5
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 121.95,
+        "away_team_id": 8,
+        "away_score": 121.4
+      },
+      {
+        "home_team_id": 5,
+        "home_score": 183.15,
+        "away_team_id": 9,
+        "away_score": 133.3
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 151.45,
+        "away_team_id": 10,
+        "away_score": 181.95
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 125.2,
+        "away_team_id": 2,
+        "away_score": 110.9
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 144.25,
+        "away_team_id": 3,
+        "away_score": 161.0
+      }
+    ]
+  },
+  {
+    "week": 11,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 11,
+        "home_score": 138.7,
+        "away_team_id": 6,
+        "away_score": 128.5
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 129.8,
+        "away_team_id": 5,
+        "away_score": 151.85
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 95.8,
+        "away_team_id": 4,
+        "away_score": 127.45
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 105.55,
+        "away_team_id": 12,
+        "away_score": 123.8
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 130.05,
+        "away_team_id": 1,
+        "away_score": 189.6
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 143.8,
+        "away_team_id": 3,
+        "away_score": 120.65
+      }
+    ]
+  },
+  {
+    "week": 12,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 168.0,
+        "away_team_id": 5,
+        "away_score": 149.6
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 145.2,
+        "away_team_id": 11,
+        "away_score": 110.1
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 144.85,
+        "away_team_id": 7,
+        "away_score": 194.9
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 113.7,
+        "away_team_id": 8,
+        "away_score": 121.65
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 116.1,
+        "away_team_id": 9,
+        "away_score": 151.15
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 129.3,
+        "away_team_id": 10,
+        "away_score": 135.55
+      }
+    ]
+  },
+  {
+    "week": 13,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 4,
+        "home_score": 161.3,
+        "away_team_id": 6,
+        "away_score": 121.2
+      },
+      {
+        "home_team_id": 5,
+        "home_score": 174.55,
+        "away_team_id": 12,
+        "away_score": 172.3
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 147.35,
+        "away_team_id": 1,
+        "away_score": 147.75
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 113.8,
+        "away_team_id": 3,
+        "away_score": 133.0
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 113.4,
+        "away_team_id": 2,
+        "away_score": 123.7
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 157.5,
+        "away_team_id": 10,
+        "away_score": 129.3
+      }
+    ]
+  },
+  {
+    "week": 14,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 109.25,
+        "away_team_id": 12,
+        "away_score": 159.55
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 142.0,
+        "away_team_id": 4,
+        "away_score": 172.8
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 146.4,
+        "away_team_id": 5,
+        "away_score": 160.6
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 107.45,
+        "away_team_id": 11,
+        "away_score": 149.4
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 133.95,
+        "away_team_id": 7,
+        "away_score": 190.45
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 121.95,
+        "away_team_id": 8,
+        "away_score": 111.25
+      }
+    ]
+  },
+  {
+    "week": 15,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 5,
+        "home_score": 219.15,
+        "away_team_id": null,
+        "away_score": 0
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 144.2,
+        "away_team_id": 7,
+        "away_score": 162.05
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 108.8,
+        "away_team_id": 9,
+        "away_score": 120.6
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 170.1,
+        "away_team_id": null,
+        "away_score": 0
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 142.5,
+        "away_team_id": 10,
+        "away_score": 171.7
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 141.85,
+        "away_team_id": 8,
+        "away_score": 117.4
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 137.35,
+        "away_team_id": 6,
+        "away_score": 149.1
+      }
+    ]
+  },
+  {
+    "week": 16,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 5,
+        "home_score": 129.1,
+        "away_team_id": 9,
+        "away_score": 148.65
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 157.25,
+        "away_team_id": 7,
+        "away_score": 184.5
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 128.85,
+        "away_team_id": 1,
+        "away_score": 123.9
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 149.6,
+        "away_team_id": 3,
+        "away_score": 166.6
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 154.0,
+        "away_team_id": 6,
+        "away_score": 125.95
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 82.0,
+        "away_team_id": 11,
+        "away_score": 131.55
+      }
+    ]
+  },
+  {
+    "week": 17,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 7,
+        "home_score": 164.65,
+        "away_team_id": 9,
+        "away_score": 119.25
+      },
+      {
+        "home_team_id": 5,
+        "home_score": 105.2,
+        "away_team_id": 4,
+        "away_score": 161.9
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 100.2,
+        "away_team_id": 1,
+        "away_score": 173.55
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 156.1,
+        "away_team_id": 3,
+        "away_score": 160.0
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 85.8,
+        "away_team_id": 11,
+        "away_score": 130.15
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 95.2,
+        "away_team_id": 6,
+        "away_score": 152.15
+      }
+    ]
+  }
+]

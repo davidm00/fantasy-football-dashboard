@@ -1,0 +1,7160 @@
+[
+  {
+    "id": "f22eac1a-5903-4272-966b-ae358ff46a1e",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1788966039048,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4696044,
+        "player_name": "Kaelon Black",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "eab8d430-78f7-4ba0-8c3e-dc4e0b224d15",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788998185785,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ea2a3f90-b3e7-4f25-abd0-17ca90589095",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1788966039047,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4832800,
+        "player_name": "Denzel Boston",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 3925357,
+        "player_name": "Calvin Ridley",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2fe6e209-c5ad-45f9-a246-16058f462918",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 1,
+    "date": 1789020648733,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2977187,
+        "player_name": "Cooper Kupp",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 3123076,
+        "player_name": "David Njoku",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2bcca6f7-2b85-436b-968f-a6153d683a87",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 1,
+    "date": 1789445818105,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "21ff973d-cf7e-4a61-95aa-565f9b4e00e9",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788998169303,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "5bacc404-03f1-493f-ab86-2a9897ab0675",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788998211699,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3121544,
+        "player_name": "T.J. Edwards",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "7e26de46-b775-4e09-9e0b-50f901a3a8f5",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1789052444735,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4379416,
+        "player_name": "Quay Walker",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4575517,
+        "player_name": "Kyle Hamilton",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "32adf87d-1c07-4b7f-a9f0-6d577dccda3f",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 1,
+    "date": 1788966039046,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869748,
+        "player_name": "Zavion Thomas",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "3354a476-80fb-4bb4-9c24-3d3f092b808b",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1789002531505,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 3,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4870808,
+        "player_name": "Jeremiyah Love",
+        "from_team_id": 12,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "3ccced9d-4a91-460f-b9a0-3e3137d36458",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1789138812045,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4036261,
+        "player_name": "Devin Bush",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4575517,
+        "player_name": "Kyle Hamilton",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ec70b70b-8474-41a0-a135-bf02b364503c",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 1,
+    "date": 1788830649034,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4890973,
+        "player_name": "Ashton Jeanty",
+        "from_team_id": 5,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 7,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "758fe1df-8024-4891-ac86-b0aa53b02b6d",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1789052444734,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3121544,
+        "player_name": "T.J. Edwards",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "9b85e17d-9992-4cf2-8df8-4381dc2a613f",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1789006042416,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 3054850,
+        "player_name": "Alvin Kamara",
+        "from_team_id": 5,
+        "to_team_id": 3
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4695883,
+        "player_name": "Jalen Coker",
+        "from_team_id": 5,
+        "to_team_id": 3
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4047646,
+        "player_name": "A.J. Brown",
+        "from_team_id": 3,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "c9adce56-0a5e-47a6-bc40-58e2b14f2b38",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1789002520827,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 3
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426388,
+        "player_name": "Jameson Williams",
+        "from_team_id": 3,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "452f58e1-123f-448e-8a68-e907edaf2322",
+    "type": "WAIVER",
+    "status": "FAILED_POSITIONLIMIT",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1788966039048,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4241457,
+        "player_name": "Najee Harris",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "f65d26ab-896a-4abb-8d5c-1dde9f9372d7",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1789052444735,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869961,
+        "player_name": "Chris Bell",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 3925357,
+        "player_name": "Calvin Ridley",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ca4ed473-461a-4a6d-9728-873db1c99779",
+    "type": "WAIVER",
+    "status": "FAILED_POSITIONLIMIT",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1788966039048,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4596334,
+        "player_name": "Keaton Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "c29e2942-0b8e-40a3-94de-7b42252ede85",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 1,
+    "date": 1789439633186,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "49c9f687-00b0-4d77-99dd-0c3e80224654",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1789406376766,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4696044,
+        "player_name": "Kaelon Black",
+        "from_team_id": 5,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4688813,
+        "player_name": "Josh Downs",
+        "from_team_id": 5,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4870808,
+        "player_name": "Jeremiyah Love",
+        "from_team_id": 12,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "e1d0c6d3-b779-4b57-944e-c591def87809",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1789052444734,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4379416,
+        "player_name": "Quay Walker",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "349fc485-7465-4eeb-94dc-0399d780454b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1788966039046,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4696044,
+        "player_name": "Kaelon Black",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "585c31d8-73a9-4b87-b17c-c2ee70bf9e97",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788998194211,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4362851,
+        "player_name": "Ernest Jones IV",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "33659e4c-c32f-4802-9f37-98b0d3b3f567",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 1,
+    "date": 1788904156476,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4566094,
+        "player_name": "Jacob Rodriguez",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 4036378,
+        "player_name": "Jordan Love",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2a6dc72d-fddc-40de-8556-2f96277d628d",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 1,
+    "date": 1788831202951,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16030,
+        "player_name": "Jaguars D/ST",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4702555,
+        "player_name": "Jonah Coleman",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "28971f35-59f4-4504-aba5-b1452c95255c",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788992171731,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4362851,
+        "player_name": "Ernest Jones IV",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2a9c962e-0e0b-4e7f-ade5-2dda095b3d01",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 1,
+    "date": 1789324333792,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "4c4a2a13-60e3-46d3-a2e2-077f2fdb936b",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 1,
+    "date": 1789412547204,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 7,
+        "to_team_id": 5
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4568490,
+        "player_name": "RJ Harvey",
+        "from_team_id": 5,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4688813,
+        "player_name": "Josh Downs",
+        "from_team_id": 5,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4362759,
+        "player_name": "Nick Bolton",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "40b800d6-a8a6-4d24-8a9d-49071c18bb24",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1789002527413,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "2203137c-5a12-44ec-ae0c-4fa0d71b515d",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788998217643,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3121544,
+        "player_name": "T.J. Edwards",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "512c1f7b-72ff-4c2e-9d1f-6fb8fd0dae42",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788998148119,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4379416,
+        "player_name": "Quay Walker",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "f4a50dfd-887e-44ac-8070-9c958dc760d2",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1789052444734,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "94f41722-e689-4f98-a043-38ccd95c8986",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1788892588359,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "e718af94-7c13-4024-bc3c-edd655df6108",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 1,
+    "date": 1789053084635,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4038815,
+        "player_name": "Rico Dowdle",
+        "from_team_id": 6,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4242335,
+        "player_name": "Jonathan Taylor",
+        "from_team_id": 4,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "6982daa1-c4f9-4814-b022-4588e42710cb",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1789315207888,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3915189,
+        "player_name": "Roquan Smith",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429834,
+        "player_name": "Cedric Gray",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "058d72f0-2922-411f-b845-b67a5dd8701b",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 1,
+    "date": 1788830522992,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3134316,
+        "player_name": "Matt Dickerson",
+        "from_team_id": 0,
+        "to_team_id": 2
+      }
+    ]
+  },
+  {
+    "id": "94613489-c249-4d49-8221-f5b7a47dccbc",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1789054820180,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3915189,
+        "player_name": "Roquan Smith",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429834,
+        "player_name": "Cedric Gray",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2dac394d-1d76-4312-a509-9e9db53d61a6",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 1,
+    "date": 1789443282566,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "ed51044e-ee3b-4891-95db-60c1f2d51cf9",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1789002515248,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "e0850c52-8042-40e5-88a9-3285d8800b6f",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1789400467652,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "2a77d02b-ee2d-4de5-900a-791cb4172849",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1788970963727,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "23987637-2227-4f30-a1af-38611886ae3e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1788966039047,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3149687,
+        "player_name": "Chris Brooks",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "98b9f9de-01d7-4e31-991f-7d77749a11da",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 1,
+    "date": 1789426592322,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "bf67c90b-5544-4fe4-91a6-e8568fab3e61",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 1,
+    "date": 1788966039046,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869461,
+        "player_name": "Trey Smack",
+        "from_team_id": 0,
+        "to_team_id": 2
+      }
+    ]
+  },
+  {
+    "id": "d0ebedcb-509a-4021-9d2b-1d978cf5002b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1789315207888,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430968,
+        "player_name": "Kimani Vidal",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "23ac5d1c-46d4-40cd-8a96-9395cc2b146f",
+    "type": "TRADE_PROPOSAL",
+    "status": "PENDING",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 1,
+    "date": 1788965954801,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4038815,
+        "player_name": "Rico Dowdle",
+        "from_team_id": 6,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4242335,
+        "player_name": "Jonathan Taylor",
+        "from_team_id": 4,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "14593159-b23f-407f-b11a-71152829638d",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788992673811,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4379416,
+        "player_name": "Quay Walker",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "29005101-08b9-4a1a-a24f-c9d4141cf4d0",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1788966039045,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3050073,
+        "player_name": "Foyesade Oluokun",
+        "from_team_id": 0,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "9034b668-dacb-4f41-a57c-502479c02c43",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1789002536680,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "5f10b1ad-02a8-4f3b-8d28-3b40fc6374d2",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 1,
+    "date": 1788966039047,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4566094,
+        "player_name": "Jacob Rodriguez",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 5082424,
+        "player_name": "Dominic Zvada",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8d2b42a6-c377-47e8-9476-e60a653a8963",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788992628478,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "7ee7a3e8-5afe-4a3c-9d4d-be0869da817d",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 1,
+    "date": 1788877372508,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "012f1776-e8d6-4f4b-8900-d811b14243bb",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1789002511984,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "a38b931d-0635-41e6-ba43-01478b346b29",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 1,
+    "date": 1788966039045,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4832800,
+        "player_name": "Denzel Boston",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 4036378,
+        "player_name": "Jordan Love",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "c0c0db2c-1321-4fcf-aed9-e4ebbebf41db",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1789439273488,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4685278,
+        "player_name": "Luther Burden III",
+        "from_team_id": 7,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "82dfbd52-4bf8-4295-9059-48368b1258b2",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 1,
+    "date": 1789315207888,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081807,
+        "player_name": "Sonny Styles",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429834,
+        "player_name": "Cedric Gray",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0a91690e-6597-45c9-990b-030e20ec2b08",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 1,
+    "date": 1789315207887,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4362478,
+        "player_name": "Emari Demercado",
+        "from_team_id": 0,
+        "to_team_id": 7
+      }
+    ]
+  },
+  {
+    "id": "23fef5c6-79e0-4196-8a3f-20e08231d5e7",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1789053084635,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "c083a6da-b76f-4f90-9ca0-bbbf059d0a4a",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 1,
+    "date": 1788966039047,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3050073,
+        "player_name": "Foyesade Oluokun",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4575517,
+        "player_name": "Kyle Hamilton",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "867266b5-a145-4d99-a568-c3030317b203",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788992745367,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3121544,
+        "player_name": "T.J. Edwards",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "c2938827-8670-4d48-a5a3-6f38a2dafa56",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 1,
+    "date": 1788998180810,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4379416,
+        "player_name": "Quay Walker",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869523,
+        "player_name": "Nick Emmanwori",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ef97b963-7358-4d61-805d-3893aeeef782",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 1,
+    "date": 1789052444733,
+    "bid_amount": 6,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 3123076,
+        "player_name": "David Njoku",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b055ee58-23d0-4669-ac9a-664879abb8b5",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 1,
+    "date": 1788839256515,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426388,
+        "player_name": "Jameson Williams",
+        "from_team_id": 3,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4870808,
+        "player_name": "Jeremiyah Love",
+        "from_team_id": 12,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "f4de2e01-0485-451d-ae18-7d575039274e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 12,
+    "team_name": "Certified Mid",
+    "scoring_period": 2,
+    "date": 1789575232866,
+    "bid_amount": 11,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3045523,
+        "player_name": "Kendrick Bourne",
+        "from_team_id": 0,
+        "to_team_id": 12
+      }
+    ]
+  },
+  {
+    "id": "69f4a082-18be-4675-b0c9-502edc3fae9a",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789494663298,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "6ed3f6a0-4df3-4944-bc6b-374cc890e3f5",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789503381691,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "91eaaf0b-669b-4458-a595-232eeea330a8",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789575232869,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4036261,
+        "player_name": "Devin Bush",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "49d54fd1-031d-4078-aa35-e8eff9371e25",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 2,
+    "date": 1789575232866,
+    "bid_amount": 12,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430834,
+        "player_name": "Jalen McMillan",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "9dde2f13-ab90-4c99-b0b5-67f57b7f4c64",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789910601729,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360939,
+        "player_name": "Rashod Bateman",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569587,
+        "player_name": "Wan'Dale Robinson",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ad950a8d-877d-408f-a438-dbff4332217d",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789575232864,
+    "bid_amount": 30,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081432,
+        "player_name": "Antonio Williams",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4035369,
+        "player_name": "Jeffery Simmons",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d42ec41d-4e59-4622-ab7e-67f5d9b351e6",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789575895374,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4430438,
+        "player_name": "Edgerrin Cooper",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16024,
+        "player_name": "Chargers D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b81577c0-0669-4a70-aa5e-6198592d12b3",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 12,
+    "team_name": "Certified Mid",
+    "scoring_period": 2,
+    "date": 1789575232865,
+    "bid_amount": 20,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 12
+      },
+      {
+        "type": "DROP",
+        "player_id": 4710714,
+        "player_name": "De'Zhaun Stribling",
+        "from_team_id": 12,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "270d55da-1759-43a0-8df7-d0c7c314ed9c",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789495014660,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 2
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 2
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4431299,
+        "player_name": "Rome Odunze",
+        "from_team_id": 2,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "18626492-4c18-454c-a363-9b9264c887cc",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 2,
+    "date": 1789661683407,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2612151,
+        "player_name": "Alex Singleton",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 5081807,
+        "player_name": "Sonny Styles",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a2fb70ea-3540-4e6d-ad20-0f0803c0d573",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 2,
+    "date": 1789661683406,
+    "bid_amount": 8,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4870653,
+        "player_name": "KC Concepcion",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569603,
+        "player_name": "Malik Washington",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "31a7abfc-0b30-4988-a0f1-aee44d207167",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525893822,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4372016,
+        "player_name": "Jaylen Waddle",
+        "from_team_id": 11,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "5c3dfc5c-862b-4e2b-bb58-0653606678ab",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789575232865,
+    "bid_amount": 16,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "52aa836e-1bd1-49a3-b1a7-9dcca7cd8dac",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 2,
+    "date": 1789575232867,
+    "bid_amount": 6,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685720,
+        "player_name": "Bryce Young",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917315,
+        "player_name": "Kyler Murray",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "cf856759-c876-4ee8-a52f-e5797cf6a56f",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 2,
+    "date": 1789517226887,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4036378,
+        "player_name": "Jordan Love",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": 3052587,
+        "player_name": "Baker Mayfield",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b7f0830a-6e6d-4b94-b9f7-64c0e28bb43f",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525887030,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3121422,
+        "player_name": "Terry McLaurin",
+        "from_team_id": 11,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "f57f1bc5-1e4b-4bd5-990b-6014b5ef0377",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 2,
+    "date": 1789575232868,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3045282,
+        "player_name": "T.J. Watt",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3122132,
+        "player_name": "Myles Garrett",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "bdb773fd-b399-4427-b2ef-8a3fe78d40e7",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789572722655,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869961,
+        "player_name": "Chris Bell",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "419ba4b1-2cb7-4219-bcf7-48bdc962f405",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789506316432,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "f48f22d9-50e8-4777-9a22-3e44ce68e301",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 2,
+    "date": 1789575232866,
+    "bid_amount": 8,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428850,
+        "player_name": "Dontayvion Wicks",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "4e004a50-1e40-456c-8ef8-64c8b4c14a41",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789910492145,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4686612,
+        "player_name": "Tre' Harris",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569587,
+        "player_name": "Wan'Dale Robinson",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "886b4708-d398-4a20-8a15-fe3762852edd",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789575232870,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360234,
+        "player_name": "Evan McPherson",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4567104,
+        "player_name": "Will Reichard",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d4a6bf08-f1c2-4b2c-ba8d-5a18e818ce0d",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 2,
+    "date": 1789575232868,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4032473,
+        "player_name": "Rashid Shaheed",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "fa0e78ab-d87b-4b32-95cb-4419842da4d9",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789575232871,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16012,
+        "player_name": "Chiefs D/ST",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16024,
+        "player_name": "Chargers D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f567ea22-fd00-4c27-b40d-5649fa57afa4",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789913731758,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "1de3d0b0-1af4-43bc-bbe9-d3db22659652",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789534371392,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2973405,
+        "player_name": "Kalif Raymond",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "27cf68f6-5f9b-4b18-b8d2-cea89b43ee77",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789494601772,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": -16005,
+        "player_name": "Browns D/ST",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "c3a4144a-41b1-4c7e-82f0-29a7e75d5dfb",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525912802,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 7,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "13b89b33-1858-446a-8162-5520f9421f42",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789535732673,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16012,
+        "player_name": "Chiefs D/ST",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4870653,
+        "player_name": "KC Concepcion",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "acb5c089-942d-40a5-8661-1bfe646bd4bc",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 2,
+    "date": 1789575232870,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16012,
+        "player_name": "Chiefs D/ST",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": -16023,
+        "player_name": "Steelers D/ST",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "81657910-6516-4641-a4a3-bfc6f73f16bf",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1790005829545,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "1299a360-78ec-4e07-b986-d3cd1b319896",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 2,
+    "date": 1789575232871,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": -16023,
+        "player_name": "Steelers D/ST",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "c3b622ad-1644-481f-a094-512a8d8fe2b0",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789504913047,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "3e5808af-41f1-4e2c-bf8f-4d2a64d752bf",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525879777,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4035369,
+        "player_name": "Jeffery Simmons",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "e5b8a8bc-fc2b-4176-abc9-8eb66f801d57",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 2,
+    "date": 1789581354938,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 7,
+        "to_team_id": 5
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4688813,
+        "player_name": "Josh Downs",
+        "from_team_id": 5,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4568490,
+        "player_name": "RJ Harvey",
+        "from_team_id": 5,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569603,
+        "player_name": "Malik Washington",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "7c9828c7-4b7f-432e-b716-73e163703482",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789661683407,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4430438,
+        "player_name": "Edgerrin Cooper",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4036261,
+        "player_name": "Devin Bush",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6c5821f1-b188-4156-bdc4-c3af7e61fe9d",
+    "type": "TRADE_PROPOSAL",
+    "status": "PENDING",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1790027028786,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 1,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4685472,
+        "player_name": "Tetairoa McMillan",
+        "from_team_id": 4,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "61e42868-0e3a-4bed-a55a-c53947209913",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525916472,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3116365,
+        "player_name": "Mark Andrews",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 7,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "edeeddcd-b854-45e1-9778-55652e1f22ae",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 2,
+    "date": 1789575232869,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16027,
+        "player_name": "Buccaneers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": -16018,
+        "player_name": "Saints D/ST",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "e885f3ea-faf7-49a7-a917-ac4d216d0917",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 2,
+    "date": 1789575232869,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4036378,
+        "player_name": "Jordan Love",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": 3052587,
+        "player_name": "Baker Mayfield",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "cffb72be-bb71-4b10-bde9-75582d7e4bd5",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525899902,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4372016,
+        "player_name": "Jaylen Waddle",
+        "from_team_id": 11,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "14465cca-9174-4a29-9959-89b4a239a534",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789575232867,
+    "bid_amount": 8,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3915189,
+        "player_name": "Roquan Smith",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "5cf7742c-e00b-41c5-9e2d-fa8c6c7984d7",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 2,
+    "date": 1789575232869,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4912274,
+        "player_name": "Sione Vaki",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3122132,
+        "player_name": "Myles Garrett",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0506ee9d-aa87-4ad5-94df-3427efefc5c3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789575232868,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4379416,
+        "player_name": "Quay Walker",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "3910e95a-40df-4491-9adf-d1f240a53692",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789575232868,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16012,
+        "player_name": "Chiefs D/ST",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3117256,
+        "player_name": "Dalton Schultz",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "668994b3-8fc6-4d1d-b4ca-5cf7934cb486",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 2,
+    "date": 1789575232871,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4569603,
+        "player_name": "Malik Washington",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4032473,
+        "player_name": "Rashid Shaheed",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "e8b930d8-09e2-443b-ba60-4106a39f2923",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 2,
+    "date": 1789538289667,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3045523,
+        "player_name": "Kendrick Bourne",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "e8b41e17-fafb-4645-a29e-f06876a35567",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789572846616,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569587,
+        "player_name": "Wan'Dale Robinson",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "dd11340a-6fa9-488f-9cc4-f577cab07e0b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 2,
+    "date": 1789575232868,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5083315,
+        "player_name": "Kenyon Sadiq",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": 4685415,
+        "player_name": "Travis Hunter",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "c5655ada-3367-44c6-af56-beb2f2a5cd4e",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789575232871,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16024,
+        "player_name": "Chargers D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "1bf83eb2-216f-4881-af94-22e2c9497bab",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525924184,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426388,
+        "player_name": "Jameson Williams",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 7,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "643c8a86-3ed6-41bd-90d0-9d781cdcc88f",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 2,
+    "date": 1789494539248,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "b9dce14d-e7f5-4d5d-a2a9-21f180f4cb8b",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789525906405,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4685278,
+        "player_name": "Luther Burden III",
+        "from_team_id": 7,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "ed1dc059-89b1-4c78-8306-22f825da29b0",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1790008009109,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4371733,
+        "player_name": "Kenny Gainwell",
+        "from_team_id": 1,
+        "to_team_id": 9
+      },
+      {
+        "type": "TRADE",
+        "player_id": 5083315,
+        "player_name": "Kenyon Sadiq",
+        "from_team_id": 9,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "c7453176-ab67-4c78-8ff2-a0fa67ea95f8",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 2,
+    "date": 1789575232867,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428850,
+        "player_name": "Dontayvion Wicks",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": 4241463,
+        "player_name": "Jerry Jeudy",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b3563cb3-98f9-4081-97fc-98d55a161d61",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789661683407,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685247,
+        "player_name": "Braelon Allen",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "7ea2fdf2-a012-455e-95ec-e6b3bc7da873",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789575232869,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": -16005,
+        "player_name": "Browns D/ST",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0eef2979-2fac-4490-8705-34cc7567c14b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789920008451,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "ef3bfd82-3c78-42b7-9422-a3f0b8ce3434",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789511154020,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2973405,
+        "player_name": "Kalif Raymond",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4635008,
+        "player_name": "Keon Coleman",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "4279ca97-1795-4875-886d-a18bbb1a27b5",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789910606809,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869961,
+        "player_name": "Chris Bell",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "af5b85bf-2dc8-48f0-b3b2-5c97847d51f9",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 2,
+    "date": 1789503392187,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "8ade5792-2fd2-4b65-9c0b-468d69568852",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789566162729,
+    "bid_amount": 6,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081432,
+        "player_name": "Antonio Williams",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3912547,
+        "player_name": "Sam Darnold",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "53a4cbde-3246-4a61-9206-aa17dddd212a",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789536716382,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16012,
+        "player_name": "Chiefs D/ST",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "45e390ee-0738-42d6-90eb-f73eb06a5513",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789575232871,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16027,
+        "player_name": "Buccaneers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16024,
+        "player_name": "Chargers D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "30cb08f9-2da3-4c04-b8f0-ad6d096fd828",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 2,
+    "date": 1789575232870,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16027,
+        "player_name": "Buccaneers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": -16009,
+        "player_name": "Packers D/ST",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2de55b53-e57f-482e-bcd9-fea9c550198e",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 2,
+    "date": 1789517685468,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4036378,
+        "player_name": "Jordan Love",
+        "from_team_id": 0,
+        "to_team_id": 9
+      }
+    ]
+  },
+  {
+    "id": "2a1bf907-cd50-40ac-9b27-30fde30c175d",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 2,
+    "date": 1789575232867,
+    "bid_amount": 7,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 9
+      }
+    ]
+  },
+  {
+    "id": "820a8ddd-6385-45bb-ba23-766ea18d1345",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 2,
+    "date": 1789575232870,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3915189,
+        "player_name": "Roquan Smith",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 5081807,
+        "player_name": "Sonny Styles",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "132e68e7-3ca4-41ff-a597-8460be954882",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789575232866,
+    "bid_amount": 13,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3051876,
+        "player_name": "Evan Engram",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4870653,
+        "player_name": "KC Concepcion",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ff24b68d-12c9-4426-8369-d0a378f92929",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 2,
+    "date": 1789575232865,
+    "bid_amount": 23,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4635008,
+        "player_name": "Keon Coleman",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "bf79725f-6db8-4c9a-ba06-c53580e49aa8",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 2,
+    "date": 1789575232870,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": -16009,
+        "player_name": "Packers D/ST",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "eb7b9b35-e83d-4576-80f6-f99196d49cf2",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789575232866,
+    "bid_amount": 9,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081432,
+        "player_name": "Antonio Williams",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3912547,
+        "player_name": "Sam Darnold",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "39e5342d-3912-4d0e-bc5f-501f7454afa6",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789920008451,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569587,
+        "player_name": "Wan'Dale Robinson",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "696f6cc9-2f31-4165-a1aa-249984238f9e",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1789575232865,
+    "bid_amount": 13,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869645,
+        "player_name": "Caleb Douglas",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869961,
+        "player_name": "Chris Bell",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d34516cf-e581-47b9-879c-e37afdbd68aa",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 2,
+    "date": 1789505957723,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4379416,
+        "player_name": "Quay Walker",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "4864e010-9cae-4fe5-8e91-30169f21a8e6",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 2,
+    "date": 1790199782067,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 1,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4685472,
+        "player_name": "Tetairoa McMillan",
+        "from_team_id": 4,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "a6a778c2-6410-4931-812d-6f48f05672e3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 3,
+    "date": 1790179209271,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4689114,
+        "player_name": "Jaxson Dart",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8eab1b15-405c-48dd-acd4-cffa89cf9d44",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790524814574,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4595342,
+        "player_name": "Oronde Gadsden",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4426338,
+        "player_name": "Bo Nix",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a6c623b5-2a50-40f1-8300-b900fce912b8",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790179209267,
+    "bid_amount": 7,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d243e69a-9d9e-4740-b009-131eb94918d2",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 3,
+    "date": 1790179209270,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16004,
+        "player_name": "Bengals D/ST",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": -16023,
+        "player_name": "Steelers D/ST",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0ed486c0-c20d-410a-a445-efa543cfc1b6",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 3,
+    "date": 1790524814573,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3050073,
+        "player_name": "Foyesade Oluokun",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4243256,
+        "player_name": "Devin Lloyd",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "51ddc42e-eae0-426b-b12c-bb5acab30e55",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 3,
+    "date": 1790262700607,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "a1956555-9f5d-47d6-afb8-e32b7bee6ca4",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790094174092,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4595342,
+        "player_name": "Oronde Gadsden",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "964e2096-46b7-4bbc-ad58-f2c222623384",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 3,
+    "date": 1790305339675,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "b45c7b19-d28d-4426-9a9b-f34145c80a55",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179209267,
+    "bid_amount": 10,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4569603,
+        "player_name": "Malik Washington",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4869961,
+        "player_name": "Chris Bell",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "09c49145-f692-40d0-9c1e-0b12ea31836e",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790257004894,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "8b304bfa-1331-4feb-926d-520db5040ed2",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790193049790,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 3915189,
+        "player_name": "Roquan Smith",
+        "from_team_id": 11,
+        "to_team_id": 5
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 5
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3054850,
+        "player_name": "Alvin Kamara",
+        "from_team_id": 5,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4428331,
+        "player_name": "Rashee Rice",
+        "from_team_id": 5,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "1b589a33-f843-4514-bfed-ba74533adf38",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790273273190,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "63006e76-c5b4-402b-9af8-694f4a99187c",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790179209266,
+    "bid_amount": 11,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3117256,
+        "player_name": "Dalton Schultz",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3051876,
+        "player_name": "Evan Engram",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0259e75a-54d2-40b7-8d21-feec93ebe107",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790637887608,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 2973405,
+        "player_name": "Kalif Raymond",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d6c0c492-3bb3-41c9-9147-31367aafb807",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790278165731,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4426515,
+        "player_name": "Puka Nacua",
+        "from_team_id": 1,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 1,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4038815,
+        "player_name": "Rico Dowdle",
+        "from_team_id": 6,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4595348,
+        "player_name": "Malik Nabers",
+        "from_team_id": 6,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4241478,
+        "player_name": "DeVonta Smith",
+        "from_team_id": 6,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "56dccc35-3ff8-4b58-9938-4748dd202220",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790630756542,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "9ed146cf-e072-453a-ae47-de782ff9b86d",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 3,
+    "date": 1790128180107,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429022,
+        "player_name": "Kayshon Boutte",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "32784497-4a75-4912-9fd0-9de7013bcd54",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790296552128,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "ce397a35-7fd6-4857-a72a-dc114ab1b8c9",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790265603628,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361411,
+        "player_name": "Pat Freiermuth",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3051876,
+        "player_name": "Evan Engram",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ca4f1f31-5ebf-4d71-b7da-68dfeba4bbc3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 3,
+    "date": 1790179209265,
+    "bid_amount": 27,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3117256,
+        "player_name": "Dalton Schultz",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429022,
+        "player_name": "Kayshon Boutte",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "96a942aa-9407-4a8f-849f-516626803a1f",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 3,
+    "date": 1790179209268,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3117256,
+        "player_name": "Dalton Schultz",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b7a53596-acad-4c8e-8f39-475b103d78ba",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 3,
+    "date": 1790265603627,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4870998,
+        "player_name": "Josiah Trotter",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4043130,
+        "player_name": "Jordyn Brooks",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "3917a8ea-4271-4dcc-a851-7291b22796b0",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790265603628,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2973405,
+        "player_name": "Kalif Raymond",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "5dbe6ddb-bae4-454b-befb-0a16b902e0dc",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 3,
+    "date": 1790305344845,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "69b56044-73ef-46b4-835a-1b00fc10dbf7",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 3,
+    "date": 1790524814573,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917315,
+        "player_name": "Kyler Murray",
+        "from_team_id": 0,
+        "to_team_id": 10
+      }
+    ]
+  },
+  {
+    "id": "4aca638a-c7a4-407c-bceb-c36c12ea2e3c",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 3,
+    "date": 1790179209267,
+    "bid_amount": 10,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "be545da4-b7fd-442f-90fa-e4e3d7598c60",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179970335,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "0e7deac2-016c-49b2-9279-f84573fc0742",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790643370816,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4575131,
+        "player_name": "Jacory Croskey-Merritt",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4612826,
+        "player_name": "Ladd McConkey",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4567048,
+        "player_name": "Kenneth Walker III",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4361370,
+        "player_name": "Chris Olave",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "type": "ACQUISITION_BUDGET_TRADE",
+        "player_id": 0,
+        "player_name": "Unknown",
+        "from_team_id": 11,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "84fa99c4-2660-46a0-a730-9002d9daabf3",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 3,
+    "date": 1790124051840,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "b41c7cb6-ee6a-49d5-88d4-120a202d7614",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790187232182,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "ee5ac6bd-09d4-46b2-ae91-993f639830a1",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790179209270,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3051909,
+        "player_name": "Daniel Carlson",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4574716,
+        "player_name": "Harrison Mevis",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "008c17c5-7e86-43f0-9863-ca3d3cbd6cc7",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 3,
+    "date": 1790124028008,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "6b31a341-8a1c-4a21-b453-a42a6cf9dbd7",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 3,
+    "date": 1790262705807,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "eb48ed9b-5861-44de-a540-28fcc2db030d",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 3,
+    "date": 1790305350337,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "f9e8735a-1e35-47d4-886a-a5b8d9f87c68",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 3,
+    "date": 1790179209268,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4243256,
+        "player_name": "Devin Lloyd",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 3050073,
+        "player_name": "Foyesade Oluokun",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "49c13290-f507-42b8-bbcd-39ff5bd29918",
+    "type": "TRADE_PROPOSAL",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 3,
+    "date": 1790296515493,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 15818,
+        "player_name": "Keenan Allen",
+        "from_team_id": 4,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 1,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4373626,
+        "player_name": "Tyler Allgeier",
+        "from_team_id": 4,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "e36253e1-2349-4759-9041-0770c4af1a2e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179209266,
+    "bid_amount": 18,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 3149687,
+        "player_name": "Chris Brooks",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2bd6311b-2c65-4ebd-a013-9fc536f22b18",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 3,
+    "date": 1790179209268,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2576925,
+        "player_name": "Darren Waller",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "79a63e16-20fc-4406-ab82-92ae7ef0b8a9",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179209270,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4426340,
+        "player_name": "Nakobe Dean",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430438,
+        "player_name": "Edgerrin Cooper",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "526ce77c-5723-4308-ac7e-13652b32ab21",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 3,
+    "date": 1790276661970,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "da16c7d2-1244-4308-a92f-81fc2d062d7d",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790613675260,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "98ea8e5f-9b15-4f52-833a-b841ba6e7cde",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790251418203,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "b359eb71-c7d6-4aa1-b1ba-231c1a1bc9ee",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790638870366,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4575131,
+        "player_name": "Jacory Croskey-Merritt",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4361370,
+        "player_name": "Chris Olave",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4697815,
+        "player_name": "Rachaad White",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4567048,
+        "player_name": "Kenneth Walker III",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4612826,
+        "player_name": "Ladd McConkey",
+        "from_team_id": 1,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "9ff0bf33-ee2a-4d8f-9890-050bc2772abc",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790638873039,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4575131,
+        "player_name": "Jacory Croskey-Merritt",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3929645,
+        "player_name": "Juwan Johnson",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4567048,
+        "player_name": "Kenneth Walker III",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4697815,
+        "player_name": "Rachaad White",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4361370,
+        "player_name": "Chris Olave",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "84d0aa34-2deb-4198-aba8-30545ad31a70",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179209271,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16018,
+        "player_name": "Saints D/ST",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16024,
+        "player_name": "Chargers D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "4e04fd95-866d-4549-8c4c-9861cdc43d0d",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790619523239,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "0f722b41-6648-4339-95c0-92327070f684",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 3,
+    "date": 1790179209267,
+    "bid_amount": 6,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3117256,
+        "player_name": "Dalton Schultz",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430834,
+        "player_name": "Jalen McMillan",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8e754ac8-89dc-4a3b-a2ac-cab8c732b539",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 3,
+    "date": 1790179209269,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4249128,
+        "player_name": "Quentin Lake",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569465,
+        "player_name": "Jack Campbell",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2f8f7c8a-8e0d-417c-9918-fef72e5dbcab",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 3,
+    "date": 1790179209265,
+    "bid_amount": 23,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "3b9852bd-1e9d-4e39-bf07-a531ed684689",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 3,
+    "date": 1790173990038,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3117256,
+        "player_name": "Dalton Schultz",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "41c186e3-779b-4a9b-b33d-1b79ef39d30d",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 3,
+    "date": 1790179209266,
+    "bid_amount": 12,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 8
+      }
+    ]
+  },
+  {
+    "id": "da9dd8b4-3de2-4036-98f1-dd59b2746c6b",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179209271,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4362506,
+        "player_name": "Greg Rousseau",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430438,
+        "player_name": "Edgerrin Cooper",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f72ec2b6-1687-4b33-b348-87db805885ba",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179209270,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4243256,
+        "player_name": "Devin Lloyd",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430438,
+        "player_name": "Edgerrin Cooper",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "fc3b103b-114d-472e-91b8-6034b13416bc",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 3,
+    "date": 1790179209268,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4243256,
+        "player_name": "Devin Lloyd",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4043130,
+        "player_name": "Jordyn Brooks",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "93c11b1b-5220-4ed3-bfaa-4bf8ffb237ae",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179209269,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16016,
+        "player_name": "Vikings D/ST",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16024,
+        "player_name": "Chargers D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "1bfb5e62-a713-4b25-b5e9-17a64ac1365a",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179628188,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4040715,
+        "player_name": "Jalen Hurts",
+        "from_team_id": 1,
+        "to_team_id": 10
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4612826,
+        "player_name": "Ladd McConkey",
+        "from_team_id": 1,
+        "to_team_id": 10
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4258173,
+        "player_name": "Nico Collins",
+        "from_team_id": 10,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4608686,
+        "player_name": "Kyle Monangai",
+        "from_team_id": 10,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "f69df40e-7fa5-496e-a786-b04dacf9de6c",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790179625478,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4575131,
+        "player_name": "Jacory Croskey-Merritt",
+        "from_team_id": 1,
+        "to_team_id": 12
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4723086,
+        "player_name": "Colston Loveland",
+        "from_team_id": 12,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "7a80c6e1-eac6-422c-9ab6-ce63e4f80029",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790278168355,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4426515,
+        "player_name": "Puka Nacua",
+        "from_team_id": 1,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4595348,
+        "player_name": "Malik Nabers",
+        "from_team_id": 6,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4241478,
+        "player_name": "DeVonta Smith",
+        "from_team_id": 6,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a22ac600-325d-4b85-b3ad-9210dc0b6327",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 3,
+    "date": 1790296552128,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 15818,
+        "player_name": "Keenan Allen",
+        "from_team_id": 4,
+        "to_team_id": 1
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 1,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4373626,
+        "player_name": "Tyler Allgeier",
+        "from_team_id": 4,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "f7f445d2-ab4b-40a2-bc5e-7479702fa9ca",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 3,
+    "date": 1790193045188,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "8d489f96-27ee-4961-9f5a-d0c97f43ffec",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 3,
+    "date": 1790660193210,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4572680,
+        "player_name": "Tucker Kraft",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4038941,
+        "player_name": "Justin Herbert",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 12483,
+        "player_name": "Matthew Stafford",
+        "from_team_id": 6,
+        "to_team_id": 3
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4595348,
+        "player_name": "Malik Nabers",
+        "from_team_id": 6,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "b5033043-9023-4e68-871a-86392c446a03",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 3,
+    "date": 1790179209269,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16029,
+        "player_name": "Panthers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": -16023,
+        "player_name": "Steelers D/ST",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "44039d66-ea4c-4dc5-aaa1-d4a770656706",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 3,
+    "date": 1790524814574,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "fe74748f-c3a7-41f9-b47c-063a4389c629",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 3,
+    "date": 1790523539603,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685287,
+        "player_name": "Jihaad Campbell",
+        "from_team_id": 0,
+        "to_team_id": 8
+      }
+    ]
+  },
+  {
+    "id": "acdeb6f4-704e-40a7-b9a7-ae260cc16de3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 3,
+    "date": 1790524814574,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4260409,
+        "player_name": "Derrick Barnes",
+        "from_team_id": 0,
+        "to_team_id": 8
+      }
+    ]
+  },
+  {
+    "id": "89424eb9-b43f-4403-a3f1-6038c53eefb9",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 4,
+    "date": 1790784010126,
+    "bid_amount": 10,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3045282,
+        "player_name": "T.J. Watt",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "229587a0-c01e-4796-a732-51588fa876c8",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 4,
+    "date": 1790784010126,
+    "bid_amount": 6,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4686612,
+        "player_name": "Tre' Harris",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430834,
+        "player_name": "Jalen McMillan",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "723b33ea-b55c-4414-8ec4-f7e1b9d9bde8",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 4,
+    "date": 1790693572651,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4682745,
+        "player_name": "Jaylen Wright",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3045282,
+        "player_name": "T.J. Watt",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6b7a07e5-8de0-41eb-b0d8-9a6c833d368f",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790711420517,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "bde4d7b7-b138-4f05-b01b-49af8ecb8aa8",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1791043211851,
+    "bid_amount": 7,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "fe7acd6f-a59d-4331-b51e-760c28eef19b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1791043211850,
+    "bid_amount": 7,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 0,
+        "to_team_id": 9
+      }
+    ]
+  },
+  {
+    "id": "6a1cea47-0f82-4a46-a5bc-2f99119b4685",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790784010131,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4596334,
+        "player_name": "Keaton Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "88a4f18c-e497-45c5-9e8d-c953dad982d5",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1790784010124,
+    "bid_amount": 26,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": 4241463,
+        "player_name": "Jerry Jeudy",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a7af4d30-db4a-4e65-ae41-31c54ab34b54",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1791043211852,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4366031,
+        "player_name": "Tank Dell",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f2be633a-27f3-4b68-a26b-f4bf30379024",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 4,
+    "date": 1790784010125,
+    "bid_amount": 24,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4260409,
+        "player_name": "Derrick Barnes",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "20371bc9-30ca-4beb-b898-8c80d91be671",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 4,
+    "date": 1790977471390,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428659,
+        "player_name": "Drake Thomas",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "4a488323-9c49-4063-b685-1505f01d446e",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790784010129,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4567104,
+        "player_name": "Will Reichard",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 2971573,
+        "player_name": "Ka'imi Fairbairn",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2f0513ca-5afd-43df-8dfa-bb1987621fa7",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1791068154725,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "DROP",
+        "player_id": 4371733,
+        "player_name": "Kenny Gainwell",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b95c5a00-aa24-4af2-88a2-db34ab3fc9f4",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790784010128,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4571557,
+        "player_name": "Spencer Shrader",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 2971573,
+        "player_name": "Ka'imi Fairbairn",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d98f21ad-8692-4e04-882c-e85cd41a7906",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 4,
+    "date": 1790904244043,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "6a00288a-30c6-4658-9a62-1cf57b70f903",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790784010126,
+    "bid_amount": 6,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2573401,
+        "player_name": "Tyler Higbee",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "74a25e1a-8e3d-4586-aa65-c2f5181abd50",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790683872315,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "12138b5c-e48e-4e4b-b88f-b4f32b25b310",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1790789324084,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4385690,
+        "player_name": "Dalton Kincaid",
+        "from_team_id": 9,
+        "to_team_id": 2
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4880281,
+        "player_name": "Jordyn Tyson",
+        "from_team_id": 9,
+        "to_team_id": 2
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 2,
+        "to_team_id": 9
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4429205,
+        "player_name": "Jordan Addison",
+        "from_team_id": 2,
+        "to_team_id": 9
+      }
+    ]
+  },
+  {
+    "id": "3973d827-74a8-49d5-b758-7c92c27afb51",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790784010129,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116406,
+        "player_name": "Tyreek Hill",
+        "from_team_id": 0,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "f2763504-a1ff-4a0e-9892-0538cf649d9a",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLOCK",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 4,
+    "date": 1791216010404,
+    "bid_amount": 10,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116385,
+        "player_name": "Joe Mixon",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361529,
+        "player_name": "Isiah Pacheco",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "773daa8c-8bc8-4912-8a53-b6027532741b",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 4,
+    "date": 1790693448007,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3045282,
+        "player_name": "T.J. Watt",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0a0a6649-86be-4757-ab10-ba3d4ecbe9ac",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 4,
+    "date": 1791129613382,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2578570,
+        "player_name": "Jacoby Brissett",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917315,
+        "player_name": "Kyler Murray",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "c791f4d4-f384-4ba4-83cf-266c50b32d8d",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1791043211852,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3051909,
+        "player_name": "Daniel Carlson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "166c6446-29e6-4e84-a2fb-2759def71019",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790956803717,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16009,
+        "player_name": "Packers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": -16018,
+        "player_name": "Saints D/ST",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f05c3734-0fea-44f2-b693-8dc599f41c30",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790965601528,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "c71ab099-ef76-440c-9609-f2bc01b094c1",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790776164495,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "5bbab6c7-3a41-45a8-acff-a72a28018d65",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790688525758,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "68690529-2f78-46a5-b2e2-8980aab23f57",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1791120096923,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "a527d675-5efe-4ca6-92fb-78434d89192d",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790784010127,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429023,
+        "player_name": "MarShawn Lloyd",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "1051dd52-a780-4264-91f3-e05015001e25",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 4,
+    "date": 1790977424129,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4362506,
+        "player_name": "Greg Rousseau",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "d9c91ffb-7f48-4808-8c65-17cfce4d79fc",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790956803718,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4568263,
+        "player_name": "Ryan Fitzgerald",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4362081,
+        "player_name": "Cameron Dicker",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "eb7ba23f-01c7-4e93-ad54-81658f6e8a6a",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790784010125,
+    "bid_amount": 17,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "5ef0b416-6816-478e-89ef-8916497c7cea",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 4,
+    "date": 1790977316553,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4575517,
+        "player_name": "Kyle Hamilton",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "81679be2-9c46-4da8-9fc8-0402afab0b3f",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790784010128,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4243256,
+        "player_name": "Devin Lloyd",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 3050073,
+        "player_name": "Foyesade Oluokun",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "30eaa5e1-ed65-4d33-8706-e353a7a1ec9f",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790716350051,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4571557,
+        "player_name": "Spencer Shrader",
+        "from_team_id": 0,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "af7dc96f-5b07-4f8a-ab92-327758d35980",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790784010126,
+    "bid_amount": 10,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4682745,
+        "player_name": "Jaylen Wright",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429023,
+        "player_name": "MarShawn Lloyd",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b12d4133-e380-4b8c-8f93-9a911d671a5f",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 4,
+    "date": 1791043211853,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4575517,
+        "player_name": "Kyle Hamilton",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "661823d2-4468-4dbf-8862-1acac2d8bb32",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1791043211853,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081432,
+        "player_name": "Antonio Williams",
+        "from_team_id": 0,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "0a95842c-7cce-4567-85b0-69bcc7f21a9e",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1790896742714,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "DROP",
+        "player_id": 4241463,
+        "player_name": "Jerry Jeudy",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6c817a4e-42ef-49f7-8cce-31ea0f2a468b",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1791070349885,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4682745,
+        "player_name": "Jaylen Wright",
+        "from_team_id": 1,
+        "to_team_id": 9
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4385690,
+        "player_name": "Dalton Kincaid",
+        "from_team_id": 9,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "a8c74b7d-033c-4425-839c-aaba6afa7007",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1790966771965,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "7f0401df-b0ee-4d4a-b80d-9c58bbf956ad",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 4,
+    "date": 1791070184112,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2578570,
+        "player_name": "Jacoby Brissett",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4426348,
+        "player_name": "Jayden Daniels",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8ce9335b-c515-42fb-8013-324fd2017529",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 4,
+    "date": 1790784010127,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16023,
+        "player_name": "Steelers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": -16029,
+        "player_name": "Panthers D/ST",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "fd3198c8-4b25-418b-8310-47fac9e3e371",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790904244043,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4429795,
+        "player_name": "Jahmyr Gibbs",
+        "from_team_id": 6,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 4,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "8d761679-2ca1-4390-a273-48307ccfc6cd",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790784010130,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4241457,
+        "player_name": "Najee Harris",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "adcb4744-28c3-4972-8fe1-cb64147d4f53",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 4,
+    "date": 1790693575691,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3045282,
+        "player_name": "T.J. Watt",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "e1768c84-c71d-47d7-9119-f500dcac7690",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790784010127,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 0,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "3e65b39d-3edf-4030-8ff2-d0c4313b2376",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790784010131,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917792,
+        "player_name": "Daniel Jones",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 5081432,
+        "player_name": "Antonio Williams",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6c04d555-d56e-46db-bdee-4e3ec32ca37c",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1791129613381,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16007,
+        "player_name": "Broncos D/ST",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "27b5f9cd-876c-45c2-bc26-b98fe1306d48",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790718357358,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3116365,
+        "player_name": "Mark Andrews",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4038941,
+        "player_name": "Justin Herbert",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "type": "TRADE",
+        "player_id": 12483,
+        "player_name": "Matthew Stafford",
+        "from_team_id": 6,
+        "to_team_id": 3
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4595348,
+        "player_name": "Malik Nabers",
+        "from_team_id": 6,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "f9b24915-d957-42b4-af15-3bd80d89d863",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790784010130,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16018,
+        "player_name": "Saints D/ST",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": -16021,
+        "player_name": "Eagles D/ST",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "35e05cbf-5b9c-486c-9000-e0c404737e87",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790965782812,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4362238,
+        "player_name": "Chase Brown",
+        "from_team_id": 8,
+        "to_team_id": 3
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4696981,
+        "player_name": "Cam Skattebo",
+        "from_team_id": 3,
+        "to_team_id": 8
+      }
+    ]
+  },
+  {
+    "id": "e14cc545-8c41-4953-8012-22eace469921",
+    "type": "TRADE_PROPOSAL",
+    "status": "PENDING",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790904076164,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4429795,
+        "player_name": "Jahmyr Gibbs",
+        "from_team_id": 6,
+        "to_team_id": 4
+      },
+      {
+        "type": "TRADE",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 4,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "a9fc298d-67d3-4583-b179-41cb5b81c48b",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790784010127,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116406,
+        "player_name": "Tyreek Hill",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "bc0f4fe5-2663-4b89-9d8d-bc59aa91abc1",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 4,
+    "date": 1790784010124,
+    "bid_amount": 30,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3045282,
+        "player_name": "T.J. Watt",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "4a4e4164-82aa-4093-92bc-dbe1ae7a66d1",
+    "type": "TRADE_PROPOSAL",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1791162747679,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 5
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3116365,
+        "player_name": "Mark Andrews",
+        "from_team_id": 3,
+        "to_team_id": 5
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4596448,
+        "player_name": "Bucky Irving",
+        "from_team_id": 5,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "39b2e3cf-ecd7-4bb2-af9c-abd23a89234f",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790784010130,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16023,
+        "player_name": "Steelers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "ec988369-a79c-49ed-a9a0-932d3cbb0d6d",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 4,
+    "date": 1791129613383,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4429835,
+        "player_name": "George Holani",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429160,
+        "player_name": "De'Von Achane",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "49257d8f-816c-4dfb-ab16-6bc312b867ee",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 4,
+    "date": 1790783770626,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116406,
+        "player_name": "Tyreek Hill",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4870653,
+        "player_name": "KC Concepcion",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "c20dd734-34c7-4ce7-8a7c-d4086ff67c2e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790956803717,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4241457,
+        "player_name": "Najee Harris",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "b45582a4-3ce4-4dc0-ba2f-505d3bb236b5",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790784010125,
+    "bid_amount": 16,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4711533,
+        "player_name": "Ollie Gordon II",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "21d820a6-3dd1-4f28-9369-06677b49b978",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 4,
+    "date": 1790956803716,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16003,
+        "player_name": "Bears D/ST",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4362249,
+        "player_name": "Jayden Reed",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "68e3caa0-457c-4efe-9375-cd68fa6dc47c",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1791043211851,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3068267,
+        "player_name": "Austin Ekeler",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "58b315ec-f27d-46d0-ac76-c4eac1eeae2c",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1791133192816,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 0,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "0b52ea1f-c37b-4885-a523-0c4bf38bb598",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790804932422,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "DROP",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "86fb92a0-249c-48c7-a472-38347fce2c76",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790784010129,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4571557,
+        "player_name": "Spencer Shrader",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361411,
+        "player_name": "Pat Freiermuth",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "7c6f5b91-85cc-4704-90da-ce2dafb6f3ae",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790956803717,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": -16034,
+        "player_name": "Texans D/ST",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6290c315-05e1-44f6-a448-cf9ce8ad1817",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790898071223,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "2a9b8ac8-8302-4272-b8e4-dd64d6508835",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790870406839,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4567104,
+        "player_name": "Will Reichard",
+        "from_team_id": 0,
+        "to_team_id": 11
+      }
+    ]
+  },
+  {
+    "id": "4ee280cd-883e-47fc-8f78-e65082318336",
+    "type": "TRADE_ACCEPT",
+    "status": null,
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790708349696,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "c182197f-b30e-4a28-85f7-00630177a9d4",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1790736155447,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "22519a00-38f5-4ca7-bd18-7815725720f2",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790977676823,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3051909,
+        "player_name": "Daniel Carlson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "5dbf232d-1b63-4bf6-8b2c-62607820d6fb",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790776135951,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "7fe529f3-868e-404f-9cfe-d4b904f25088",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1791070355455,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "3c9f27ea-a9de-4c39-97e6-dbe4763661b1",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 4,
+    "date": 1791043211854,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428659,
+        "player_name": "Drake Thomas",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "5c49b556-025f-47a9-a8f5-4582f109dd58",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1791129613382,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869961,
+        "player_name": "Chris Bell",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4366031,
+        "player_name": "Tank Dell",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "e008fb5a-9fa2-4b61-8bd6-9957f78cb161",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1791039277592,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "1841f56c-2deb-4eb1-b2df-b165f8472b69",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1791129613383,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "7e6468a9-951f-4f9c-af2b-69c1736f8922",
+    "type": "TRADE_DECLINE",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 4,
+    "date": 1790794607656,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "95e02b19-6f78-4f2e-afa2-79d55be66ed3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790870406840,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "abbb9b02-12ef-47b1-958d-ba68fc584a49",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 4,
+    "date": 1791043211852,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4362506,
+        "player_name": "Greg Rousseau",
+        "from_team_id": 0,
+        "to_team_id": 4
+      }
+    ]
+  },
+  {
+    "id": "0ba826fc-d9c1-4473-842e-0f438cfa7f73",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790784010125,
+    "bid_amount": 11,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116406,
+        "player_name": "Tyreek Hill",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4682648,
+        "player_name": "Malachi Fields",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "faaa0a1c-d1c8-4ffa-9352-cd4595b67334",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790977729341,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569587,
+        "player_name": "Wan'Dale Robinson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "23030a70-ae36-48ea-892f-8618ffdb9f63",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 4,
+    "date": 1790784010127,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4682745,
+        "player_name": "Jaylen Wright",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4362478,
+        "player_name": "Emari Demercado",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0d77eeca-7f27-407a-b5f7-94637c84bc99",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790784010128,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4596334,
+        "player_name": "Keaton Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429023,
+        "player_name": "MarShawn Lloyd",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f64a2ae2-489a-4c21-8ae5-76c0e60d1133",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790784010128,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4686612,
+        "player_name": "Tre' Harris",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "71ccd975-ac32-484d-9747-ba176bf37142",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1791043211853,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16034,
+        "player_name": "Texans D/ST",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": -16007,
+        "player_name": "Broncos D/ST",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "46cd281c-bab2-4354-bb7a-34722a7aa364",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790870406840,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4569587,
+        "player_name": "Wan'Dale Robinson",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361411,
+        "player_name": "Pat Freiermuth",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "262ebaa9-3076-4997-9299-2c8b919135d9",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790711738338,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361411,
+        "player_name": "Pat Freiermuth",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f3f24911-7012-4bb8-8152-3a2e76067e0b",
+    "type": "TRADE_VETO",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 4,
+    "date": 1790956637707,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "fde2ae6e-fbaa-4339-957e-cc8b059a957a",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 4,
+    "date": 1790712087782,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4571557,
+        "player_name": "Spencer Shrader",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361411,
+        "player_name": "Pat Freiermuth",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8418a1d0-e85b-4f9b-a8fb-68cd01eaf0a5",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 4,
+    "date": 1791043211853,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429160,
+        "player_name": "De'Von Achane",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "223450ec-0a7b-4c57-aec9-0a1bd8b52928",
+    "type": "TRADE_UPHOLD",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790898093466,
+    "bid_amount": 0,
+    "items": []
+  },
+  {
+    "id": "53db4f30-3aa2-4097-84b8-4840b3e87a96",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790870406840,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5220680,
+        "player_name": "Ted Hurst III",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "feccab41-0c3c-455f-89d1-207e822d9a05",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Road to the Wildcard",
+    "scoring_period": 4,
+    "date": 1790784010130,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2576925,
+        "player_name": "Darren Waller",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "075e5f7d-f2ef-4d52-b0a5-946c34343815",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790972660083,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 3
+      }
+    ]
+  },
+  {
+    "id": "74121751-587a-4198-adba-e16a28206c07",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 4,
+    "date": 1790711610202,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917792,
+        "player_name": "Daniel Jones",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4038941,
+        "player_name": "Justin Herbert",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "4ed2094e-4fd5-49fb-a21e-4425e372cd82",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Coke, Criminals, and Handcuffs",
+    "scoring_period": 4,
+    "date": 1790784010129,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16002,
+        "player_name": "Bills D/ST",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "013621db-2e34-4e58-b80a-069c81259679",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 4,
+    "date": 1791129613383,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 14880,
+        "player_name": "Kirk Cousins",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": 4431452,
+        "player_name": "Drake Maye",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  }
+]

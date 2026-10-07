@@ -1,0 +1,130 @@
+[
+  {
+    "team_id": 1,
+    "team_name": "Frauds",
+    "owners": [
+      {
+        "id": "m01",
+        "name": "David G"
+      }
+    ]
+  },
+  {
+    "team_id": 2,
+    "team_name": "Strange Things",
+    "owners": [
+      {
+        "id": "m02",
+        "name": "Devon"
+      }
+    ]
+  },
+  {
+    "team_id": 3,
+    "team_name": "Cesar #1 Fan! #1 in my heart!",
+    "owners": [
+      {
+        "id": "m03",
+        "name": "George"
+      }
+    ]
+  },
+  {
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "owners": [
+      {
+        "id": "m04",
+        "name": "David M"
+      },
+      {
+        "id": "m14",
+        "name": "David M2"
+      }
+    ]
+  },
+  {
+    "team_id": 5,
+    "team_name": "Al Queda",
+    "owners": [
+      {
+        "id": "m05",
+        "name": "Jhajuan C"
+      },
+      {
+        "id": "m15",
+        "name": "Jhajuan C2"
+      }
+    ]
+  },
+  {
+    "team_id": 6,
+    "team_name": "Maybe Next Year",
+    "owners": [
+      {
+        "id": "m06",
+        "name": "Jonathan"
+      }
+    ]
+  },
+  {
+    "team_id": 7,
+    "team_name": "Puka Boo",
+    "owners": [
+      {
+        "id": "m11",
+        "name": "Cesar"
+      }
+    ]
+  },
+  {
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "owners": [
+      {
+        "id": "m08",
+        "name": "Dylan"
+      }
+    ]
+  },
+  {
+    "team_id": 9,
+    "team_name": "Extra Chromahomes",
+    "owners": [
+      {
+        "id": "m09",
+        "name": "Benjamin"
+      }
+    ]
+  },
+  {
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "owners": [
+      {
+        "id": "m10",
+        "name": "Joey"
+      }
+    ]
+  },
+  {
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "owners": [
+      {
+        "id": "m12",
+        "name": "DeJon"
+      }
+    ]
+  },
+  {
+    "team_id": 12,
+    "team_name": "Certified Mid",
+    "owners": [
+      {
+        "id": "m13",
+        "name": "Victor"
+      }
+    ]
+  }
+]

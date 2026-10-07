@@ -1,0 +1,1840 @@
+{
+  "picks": [
+    {
+      "round": 1,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4362628,
+      "player_name": "Ja'Marr Chase",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3929630,
+      "player_name": "Saquon Barkley",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4430807,
+      "player_name": "Bijan Robinson",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4262921,
+      "player_name": "Justin Jefferson",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4429795,
+      "player_name": "Jahmyr Gibbs",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4241389,
+      "player_name": "CeeDee Lamb",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4374302,
+      "player_name": "Amon-Ra St. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 3043078,
+      "player_name": "Derrick Henry",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 3117251,
+      "player_name": "Christian McCaffrey",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4047646,
+      "player_name": "A.J. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4047365,
+      "player_name": "Josh Jacobs",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4426515,
+      "player_name": "Puka Nacua",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4890973,
+      "player_name": "Ashton Jeanty",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4426502,
+      "player_name": "Drake London",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4429160,
+      "player_name": "De'Von Achane",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 3916387,
+      "player_name": "Lamar Jackson",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 3116406,
+      "player_name": "Tyreek Hill",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4362238,
+      "player_name": "Chase Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 3918298,
+      "player_name": "Josh Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4430737,
+      "player_name": "Kyren Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4379399,
+      "player_name": "James Cook III",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4612826,
+      "player_name": "Ladd McConkey",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3054850,
+      "player_name": "Alvin Kamara",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4432710,
+      "player_name": "TreVeyon Henderson",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4432708,
+      "player_name": "Marvin Harrison Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3121422,
+      "player_name": "Terry McLaurin",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4040715,
+      "player_name": "Jalen Hurts",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4239993,
+      "player_name": "Tee Higgins",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4569618,
+      "player_name": "Garrett Wilson",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4241416,
+      "player_name": "Chuba Hubbard",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4683062,
+      "player_name": "Xavier Worthy",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4595348,
+      "player_name": "Malik Nabers",
+      "is_keeper": true
+    },
+    {
+      "round": 3,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 16800,
+      "player_name": "Davante Adams",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4047650,
+      "player_name": "DK Metcalf",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 3045147,
+      "player_name": "James Conner",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 16737,
+      "player_name": "Mike Evans",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 3915416,
+      "player_name": "DJ Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4258173,
+      "player_name": "Nico Collins",
+      "is_keeper": true
+    },
+    {
+      "round": 4,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3915511,
+      "player_name": "Joe Burrow",
+      "is_keeper": true
+    },
+    {
+      "round": 4,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 4685472,
+      "player_name": "Tetairoa McMillan",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 3128429,
+      "player_name": "Courtland Sutton",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4242335,
+      "player_name": "Jonathan Taylor",
+      "is_keeper": true
+    },
+    {
+      "round": 4,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4685382,
+      "player_name": "Omarion Hampton",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4241478,
+      "player_name": "DeVonta Smith",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4567048,
+      "player_name": "Kenneth Walker III",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3925357,
+      "player_name": "Calvin Ridley",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4429615,
+      "player_name": "Zay Flowers",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4259545,
+      "player_name": "D'Andre Swift",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 3052587,
+      "player_name": "Baker Mayfield",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3040151,
+      "player_name": "George Kittle",
+      "is_keeper": true
+    },
+    {
+      "round": 5,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4035538,
+      "player_name": "David Montgomery",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4430027,
+      "player_name": "Sam LaPorta",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4241463,
+      "player_name": "Jerry Jeudy",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4685415,
+      "player_name": "Travis Hunter",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4036133,
+      "player_name": "T.J. Hockenson",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4427366,
+      "player_name": "Breece Hall",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 4426354,
+      "player_name": "George Pickens",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3916148,
+      "player_name": "Tony Pollard",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4426388,
+      "player_name": "Jameson Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4361307,
+      "player_name": "Trey McBride",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4568490,
+      "player_name": "RJ Harvey",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4431299,
+      "player_name": "Rome Odunze",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 15847,
+      "player_name": "Travis Kelce",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 4596448,
+      "player_name": "Bucky Irving",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4372016,
+      "player_name": "Jaylen Waddle",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4701936,
+      "player_name": "Matthew Golden",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4432773,
+      "player_name": "Brian Thomas Jr.",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4426348,
+      "player_name": "Jayden Daniels",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 3139477,
+      "player_name": "Patrick Mahomes",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4432665,
+      "player_name": "Brock Bowers",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4361370,
+      "player_name": "Chris Olave",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4430878,
+      "player_name": "Jaxon Smith-Njigba",
+      "is_keeper": true
+    },
+    {
+      "round": 7,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4361529,
+      "player_name": "Isiah Pacheco",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3042519,
+      "player_name": "Aaron Jones Sr.",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4428209,
+      "player_name": "Ricky Pearsall",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4567750,
+      "player_name": "Emeka Egbuka",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4426385,
+      "player_name": "Zach Charbonnet",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4360516,
+      "player_name": "Tyrone Tracy Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4575131,
+      "player_name": "Jacory Croskey-Merritt",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 3116365,
+      "player_name": "Mark Andrews",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 3051876,
+      "player_name": "Evan Engram",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3916433,
+      "player_name": "Jakobi Meyers",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4428331,
+      "player_name": "Rashee Rice",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 2976212,
+      "player_name": "Stefon Diggs",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 3917315,
+      "player_name": "Kyler Murray",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4361741,
+      "player_name": "Brock Purdy",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3068267,
+      "player_name": "Austin Ekeler",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 2977187,
+      "player_name": "Cooper Kupp",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 3126486,
+      "player_name": "Deebo Samuel",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4426338,
+      "player_name": "Bo Nix",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 3123076,
+      "player_name": "David Njoku",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 3054212,
+      "player_name": "Jonnu Smith",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 3917657,
+      "player_name": "Zack Baun",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4819231,
+      "player_name": "Kaleb Johnson",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4373678,
+      "player_name": "Khalil Shakir",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4360248,
+      "player_name": "Kyle Pitts Sr.",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4569987,
+      "player_name": "Jaylen Warren",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 2577417,
+      "player_name": "Dak Prescott",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4360569,
+      "player_name": "Jordan Mason",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4361579,
+      "player_name": "Javonte Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4241985,
+      "player_name": "J.K. Dobbins",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 3116165,
+      "player_name": "Chris Godwin Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4035687,
+      "player_name": "Michael Pittman Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4038941,
+      "player_name": "Justin Herbert",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 3116385,
+      "player_name": "Joe Mixon",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 15818,
+      "player_name": "Keenan Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4723086,
+      "player_name": "Colston Loveland",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 3886598,
+      "player_name": "Jauan Jennings",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4688813,
+      "player_name": "Josh Downs",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4696981,
+      "player_name": "Cam Skattebo",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4239996,
+      "player_name": "Travis Etienne Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 4429205,
+      "player_name": "Jordan Addison",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4429013,
+      "player_name": "Tank Bigsby",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4635008,
+      "player_name": "Keon Coleman",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4882093,
+      "player_name": "Bhayshul Tuten",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4040655,
+      "player_name": "Darnell Mooney",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4372019,
+      "player_name": "Jerome Ford",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4877706,
+      "player_name": "Jayden Higgins",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3953687,
+      "player_name": "Brandon Aubrey",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4430034,
+      "player_name": "Xavier Legette",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4431459,
+      "player_name": "Tyler Warren",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4032473,
+      "player_name": "Rashid Shaheed",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4686472,
+      "player_name": "Marvin Mims Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4360939,
+      "player_name": "Rashod Bateman",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4432577,
+      "player_name": "C.J. Stroud",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4685279,
+      "player_name": "Jaydon Blue",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4429275,
+      "player_name": "Trey Benson",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 3124005,
+      "player_name": "Zaire Franklin",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 4362249,
+      "player_name": "Jayden Reed",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4569173,
+      "player_name": "Rhamondre Stevenson",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 3138826,
+      "player_name": "Fred Warner",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4685702,
+      "player_name": "Quinshon Judkins",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4241372,
+      "player_name": "Hollywood Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4697815,
+      "player_name": "Rachaad White",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4572680,
+      "player_name": "Tucker Kraft",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 3128720,
+      "player_name": "Nick Chubb",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4433970,
+      "player_name": "J.J. McCarthy",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 3915189,
+      "player_name": "Roquan Smith",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4369863,
+      "player_name": "Cedric Tillman",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4241474,
+      "player_name": "Brian Robinson Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4360438,
+      "player_name": "Brandon Aiyuk",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4373626,
+      "player_name": "Tyler Allgeier",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 2612151,
+      "player_name": "Alex Singleton",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4431452,
+      "player_name": "Drake Maye",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": -16034,
+      "player_name": "Texans D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": -16033,
+      "player_name": "Ravens D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3129446,
+      "player_name": "Robert Spillane",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4385690,
+      "player_name": "Dalton Kincaid",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 17372,
+      "player_name": "Chris Boswell",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4692025,
+      "player_name": "Brian Branch",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": -16007,
+      "player_name": "Broncos D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4685247,
+      "player_name": "Braelon Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 5081397,
+      "player_name": "Dylan Sampson",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3728281,
+      "player_name": "Blake Cashman",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4711533,
+      "player_name": "Ollie Gordon II",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 3127287,
+      "player_name": "Budda Baker",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 3117253,
+      "player_name": "Bobby Okereke",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4243331,
+      "player_name": "Cade Otton",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4689936,
+      "player_name": "Jake Bates",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": -16023,
+      "player_name": "Steelers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4686612,
+      "player_name": "Tre' Harris",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4686361,
+      "player_name": "Cam Little",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": -16016,
+      "player_name": "Vikings D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 15835,
+      "player_name": "Zach Ertz",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": -16026,
+      "player_name": "Seahawks D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4242355,
+      "player_name": "Jake Ferguson",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3121023,
+      "player_name": "Dallas Goedert",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 3050478,
+      "player_name": "Jake Elliott",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4431545,
+      "player_name": "Will Shipley",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3919117,
+      "player_name": "Azeez Al-Shaair",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4431611,
+      "player_name": "Caleb Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 3046779,
+      "player_name": "Jared Goff",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 4569587,
+      "player_name": "Wan'Dale Robinson",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 4685720,
+      "player_name": "Bryce Young",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4429501,
+      "player_name": "Ray Davis",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4362081,
+      "player_name": "Cameron Dicker",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 4362887,
+      "player_name": "Justin Fields",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": -16002,
+      "player_name": "Bills D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 4599739,
+      "player_name": "Kendre Miller",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 4241457,
+      "player_name": "Najee Harris",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 1,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": 3150744,
+      "player_name": "Chase McLaughlin",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": 3917232,
+      "player_name": "Tyler Bass",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 3,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4360310,
+      "player_name": "Trevor Lawrence",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 4,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 3055899,
+      "player_name": "Harrison Butker",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 5,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": 4428557,
+      "player_name": "Tyjae Spears",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4427095,
+      "player_name": "DeMario Douglas",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 2576925,
+      "player_name": "Darren Waller",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 8,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": -16008,
+      "player_name": "Lions D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 4697745,
+      "player_name": "Tyler Loop",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4249087,
+      "player_name": "Matt Gay",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4685278,
+      "player_name": "Luther Burden III",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 12,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4575517,
+      "player_name": "Kyle Hamilton",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 1,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 3895856,
+      "player_name": "Christian Kirk",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4036378,
+      "player_name": "Jordan Love",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 3,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": -16019,
+      "player_name": "Giants D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Extra Chromahomes",
+      "player_id": 3046439,
+      "player_name": "Hunter Henry",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "Maybe Next Year",
+      "player_id": 3124890,
+      "player_name": "Kaden Elliss",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 6,
+      "team_id": 1,
+      "team_name": "Frauds",
+      "player_id": 2985659,
+      "player_name": "Wil Lutz",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 7,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4360761,
+      "player_name": "Michael Wilson",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 8,
+      "team_id": 3,
+      "team_name": "Cesar #1 Fan! #1 in my heart!",
+      "player_id": -16021,
+      "player_name": "Eagles D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 9,
+      "team_id": 2,
+      "team_name": "Strange Things",
+      "player_id": 4361423,
+      "player_name": "Micah Parsons",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 10,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4361432,
+      "player_name": "Romeo Doubs",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 11,
+      "team_id": 5,
+      "team_name": "Al Queda",
+      "player_id": -16022,
+      "player_name": "Cardinals D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 12,
+      "team_id": 7,
+      "team_name": "Puka Boo",
+      "player_id": -16011,
+      "player_name": "Colts D/ST",
+      "is_keeper": false
+    }
+  ]
+}

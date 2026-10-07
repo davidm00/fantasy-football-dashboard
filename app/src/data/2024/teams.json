@@ -1,0 +1,122 @@
+[
+  {
+    "team_id": 1,
+    "team_name": "Saquon My Achane Balls",
+    "owners": [
+      {
+        "id": "m01",
+        "name": "David G"
+      }
+    ]
+  },
+  {
+    "team_id": 2,
+    "team_name": "Anythings Possible ",
+    "owners": [
+      {
+        "id": "m02",
+        "name": "Devon"
+      }
+    ]
+  },
+  {
+    "team_id": 3,
+    "team_name": "Sh$t Dumb",
+    "owners": [
+      {
+        "id": "m03",
+        "name": "George"
+      }
+    ]
+  },
+  {
+    "team_id": 4,
+    "team_name": "Washed ",
+    "owners": [
+      {
+        "id": "m04",
+        "name": "David M"
+      }
+    ]
+  },
+  {
+    "team_id": 5,
+    "team_name": "Philadelphia 76ers",
+    "owners": [
+      {
+        "id": "m05",
+        "name": "Jhajuan C"
+      }
+    ]
+  },
+  {
+    "team_id": 6,
+    "team_name": "Win This Week: +4500",
+    "owners": [
+      {
+        "id": "m06",
+        "name": "Jonathan"
+      }
+    ]
+  },
+  {
+    "team_id": 7,
+    "team_name": "KMET Suicide",
+    "owners": [
+      {
+        "id": "m11",
+        "name": "Cesar"
+      }
+    ]
+  },
+  {
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "owners": [
+      {
+        "id": "m08",
+        "name": "Dylan"
+      }
+    ]
+  },
+  {
+    "team_id": 9,
+    "team_name": "Tight End Committee",
+    "owners": [
+      {
+        "id": "m09",
+        "name": "Benjamin"
+      }
+    ]
+  },
+  {
+    "team_id": 10,
+    "team_name": "Team Great Greeks",
+    "owners": [
+      {
+        "id": "m10",
+        "name": "Joey"
+      }
+    ]
+  },
+  {
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "owners": [
+      {
+        "id": "m12",
+        "name": "DeJon"
+      }
+    ]
+  },
+  {
+    "team_id": 12,
+    "team_name": "Mixon Sold",
+    "owners": [
+      {
+        "id": "m13",
+        "name": "Victor"
+      }
+    ]
+  }
+]

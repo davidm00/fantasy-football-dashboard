@@ -1,0 +1,1840 @@
+{
+  "picks": [
+    {
+      "round": 1,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4429795,
+      "player_name": "Jahmyr Gibbs",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4430807,
+      "player_name": "Bijan Robinson",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4362628,
+      "player_name": "Ja'Marr Chase",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4242335,
+      "player_name": "Jonathan Taylor",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4426515,
+      "player_name": "Puka Nacua",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4374302,
+      "player_name": "Amon-Ra St. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3117251,
+      "player_name": "Christian McCaffrey",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4379399,
+      "player_name": "James Cook III",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4429160,
+      "player_name": "De'Von Achane",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4241389,
+      "player_name": "CeeDee Lamb",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4362238,
+      "player_name": "Chase Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4262921,
+      "player_name": "Justin Jefferson",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 3929630,
+      "player_name": "Saquon Barkley",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3043078,
+      "player_name": "Derrick Henry",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4890973,
+      "player_name": "Ashton Jeanty",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4258173,
+      "player_name": "Nico Collins",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4430737,
+      "player_name": "Kyren Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4870808,
+      "player_name": "Jeremiyah Love",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4047646,
+      "player_name": "A.J. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4567048,
+      "player_name": "Kenneth Walker III",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4569618,
+      "player_name": "Garrett Wilson",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4426502,
+      "player_name": "Drake London",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 3918298,
+      "player_name": "Josh Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4696981,
+      "player_name": "Cam Skattebo",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4595348,
+      "player_name": "Malik Nabers",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4361307,
+      "player_name": "Trey McBride",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4429615,
+      "player_name": "Zay Flowers",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4685472,
+      "player_name": "Tetairoa McMillan",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4612826,
+      "player_name": "Ladd McConkey",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4259545,
+      "player_name": "D'Andre Swift",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4723086,
+      "player_name": "Colston Loveland",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4372016,
+      "player_name": "Jaylen Waddle",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4882093,
+      "player_name": "Bhayshul Tuten",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 3916387,
+      "player_name": "Lamar Jackson",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 16800,
+      "player_name": "Davante Adams",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4685702,
+      "player_name": "Quinshon Judkins",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4596448,
+      "player_name": "Bucky Irving",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4432665,
+      "player_name": "Brock Bowers",
+      "is_keeper": true
+    },
+    {
+      "round": 4,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4431459,
+      "player_name": "Tyler Warren",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 3915416,
+      "player_name": "DJ Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3121422,
+      "player_name": "Terry McLaurin",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4239993,
+      "player_name": "Tee Higgins",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4426388,
+      "player_name": "Jameson Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4685382,
+      "player_name": "Omarion Hampton",
+      "is_keeper": true
+    },
+    {
+      "round": 4,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4430878,
+      "player_name": "Jaxon Smith-Njigba",
+      "is_keeper": true
+    },
+    {
+      "round": 4,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4035538,
+      "player_name": "David Montgomery",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4431299,
+      "player_name": "Rome Odunze",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4241478,
+      "player_name": "DeVonta Smith",
+      "is_keeper": true
+    },
+    {
+      "round": 5,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 3915511,
+      "player_name": "Joe Burrow",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4426354,
+      "player_name": "George Pickens",
+      "is_keeper": true
+    },
+    {
+      "round": 5,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4685278,
+      "player_name": "Luther Burden III",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4569173,
+      "player_name": "Rhamondre Stevenson",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4040715,
+      "player_name": "Jalen Hurts",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4427366,
+      "player_name": "Breece Hall",
+      "is_keeper": true
+    },
+    {
+      "round": 5,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4432708,
+      "player_name": "Marvin Harrison Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4360248,
+      "player_name": "Kyle Pitts Sr.",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 5083076,
+      "player_name": "Harold Fannin Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4047365,
+      "player_name": "Josh Jacobs",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4871023,
+      "player_name": "Carnell Tate",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4431452,
+      "player_name": "Drake Maye",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4567750,
+      "player_name": "Emeka Egbuka",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4685512,
+      "player_name": "Jadarian Price",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4428331,
+      "player_name": "Rashee Rice",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4426348,
+      "player_name": "Jayden Daniels",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4361370,
+      "player_name": "Chris Olave",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4239996,
+      "player_name": "Travis Etienne Jr.",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4248528,
+      "player_name": "Christian Watson",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4432710,
+      "player_name": "TreVeyon Henderson",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 3040151,
+      "player_name": "George Kittle",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4361579,
+      "player_name": "Javonte Williams",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 3916148,
+      "player_name": "Tony Pollard",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4038815,
+      "player_name": "Rico Dowdle",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4035687,
+      "player_name": "Michael Pittman Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4678008,
+      "player_name": "Jonathon Brooks",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 3128429,
+      "player_name": "Courtland Sutton",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4569987,
+      "player_name": "Jaylen Warren",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4432620,
+      "player_name": "Parker Washington",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4572680,
+      "player_name": "Tucker Kraft",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4047650,
+      "player_name": "DK Metcalf",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4697815,
+      "player_name": "Rachaad White",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4360761,
+      "player_name": "Michael Wilson",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 3953687,
+      "player_name": "Brandon Aubrey",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 16737,
+      "player_name": "Mike Evans",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4430027,
+      "player_name": "Sam LaPorta",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4685415,
+      "player_name": "Travis Hunter",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4432773,
+      "player_name": "Brian Thomas Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4429023,
+      "player_name": "MarShawn Lloyd",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 3116165,
+      "player_name": "Chris Godwin Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3138826,
+      "player_name": "Fred Warner",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4360078,
+      "player_name": "Alec Pierce",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4038941,
+      "player_name": "Justin Herbert",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4371733,
+      "player_name": "Kenny Gainwell",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 2577417,
+      "player_name": "Dak Prescott",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 2976212,
+      "player_name": "Stefon Diggs",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4241416,
+      "player_name": "Chuba Hubbard",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 12483,
+      "player_name": "Matthew Stafford",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4241985,
+      "player_name": "J.K. Dobbins",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4701936,
+      "player_name": "Matthew Golden",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 15847,
+      "player_name": "Travis Kelce",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4429096,
+      "player_name": "Blake Corum",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4569587,
+      "player_name": "Wan'Dale Robinson",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4429025,
+      "player_name": "Quentin Johnston",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4431611,
+      "player_name": "Caleb Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4870653,
+      "player_name": "KC Concepcion",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4608686,
+      "player_name": "Kyle Monangai",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4568490,
+      "player_name": "RJ Harvey",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4360569,
+      "player_name": "Jordan Mason",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 3042519,
+      "player_name": "Aaron Jones Sr.",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4870795,
+      "player_name": "Makai Lemon",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4360310,
+      "player_name": "Trevor Lawrence",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4688813,
+      "player_name": "Josh Downs",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4683062,
+      "player_name": "Xavier Worthy",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3046779,
+      "player_name": "Jared Goff",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4710714,
+      "player_name": "De'Zhaun Stribling",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4426385,
+      "player_name": "Zach Charbonnet",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4575131,
+      "player_name": "Jacory Croskey-Merritt",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 3916433,
+      "player_name": "Jakobi Meyers",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4428557,
+      "player_name": "Tyjae Spears",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4429205,
+      "player_name": "Jordan Addison",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 3121023,
+      "player_name": "Dallas Goedert",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 3126486,
+      "player_name": "Deebo Samuel Sr.",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4429059,
+      "player_name": "Woody Marks",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4362619,
+      "player_name": "Chris Rodriguez Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4373626,
+      "player_name": "Tyler Allgeier",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4360689,
+      "player_name": "Tyler Shough",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4682648,
+      "player_name": "Malachi Fields",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4361050,
+      "player_name": "Isaiah Likely",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4428718,
+      "player_name": "Tre Tucker",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4362249,
+      "player_name": "Jayden Reed",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4695883,
+      "player_name": "Jalen Coker",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4043130,
+      "player_name": "Jordyn Brooks",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4876017,
+      "player_name": "Carson Schwesinger",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4880281,
+      "player_name": "Jordyn Tyson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4242355,
+      "player_name": "Jake Ferguson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4686658,
+      "player_name": "Mike Washington Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4361432,
+      "player_name": "Romeo Doubs",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": -16034,
+      "player_name": "Texans D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 5081397,
+      "player_name": "Dylan Sampson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4373678,
+      "player_name": "Khalil Shakir",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 3929645,
+      "player_name": "Juwan Johnson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 15818,
+      "player_name": "Keenan Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 3139477,
+      "player_name": "Patrick Mahomes",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": -16014,
+      "player_name": "Rams D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 2971573,
+      "player_name": "Ka'imi Fairbairn",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4569465,
+      "player_name": "Jack Campbell",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4870847,
+      "player_name": "Ja'Kobi Lane",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4032473,
+      "player_name": "Rashid Shaheed",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 2473037,
+      "player_name": "Jason Myers",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 3925357,
+      "player_name": "Calvin Ridley",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 3116365,
+      "player_name": "Mark Andrews",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4361741,
+      "player_name": "Brock Purdy",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4574716,
+      "player_name": "Harrison Mevis",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 3728281,
+      "player_name": "Blake Cashman",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4689114,
+      "player_name": "Jaxson Dart",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4430834,
+      "player_name": "Jalen McMillan",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4385690,
+      "player_name": "Dalton Kincaid",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": -16007,
+      "player_name": "Broncos D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4832955,
+      "player_name": "Emmett Johnson",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4366031,
+      "player_name": "Tank Dell",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4686361,
+      "player_name": "Cam Little",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4426338,
+      "player_name": "Bo Nix",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3916655,
+      "player_name": "Maxx Crosby",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4362081,
+      "player_name": "Cameron Dicker",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4430968,
+      "player_name": "Kimani Vidal",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 3912547,
+      "player_name": "Sam Darnold",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4362759,
+      "player_name": "Nick Bolton",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 3122132,
+      "player_name": "Myles Garrett",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4241474,
+      "player_name": "Brian Robinson Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 4429022,
+      "player_name": "Kayshon Boutte",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4036378,
+      "player_name": "Jordan Love",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4034949,
+      "player_name": "Eddy Pineiro",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4869523,
+      "player_name": "Nick Emmanwori",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4575517,
+      "player_name": "Kyle Hamilton",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4035369,
+      "player_name": "Jeffery Simmons",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 3055899,
+      "player_name": "Harrison Butker",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 3117256,
+      "player_name": "Dalton Schultz",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4702555,
+      "player_name": "Jonah Coleman",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 3054850,
+      "player_name": "Alvin Kamara",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3917315,
+      "player_name": "Kyler Murray",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4241463,
+      "player_name": "Jerry Jeudy",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 4697745,
+      "player_name": "Tyler Loop",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": -16026,
+      "player_name": "Seahawks D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 3,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": 4429834,
+      "player_name": "Cedric Gray",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 4,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": -16017,
+      "player_name": "Patriots D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 5,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4635008,
+      "player_name": "Keon Coleman",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 6,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": -16033,
+      "player_name": "Ravens D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": 4038441,
+      "player_name": "Justice Hill",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 8,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": -16024,
+      "player_name": "Chargers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": 4569559,
+      "player_name": "Devaughn Vele",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 10,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": -16023,
+      "player_name": "Steelers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 4361529,
+      "player_name": "Isiah Pacheco",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 12,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": -16018,
+      "player_name": "Saints D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 1,
+      "team_id": 6,
+      "team_name": "Ay Bendito \ud83e\udd40",
+      "player_id": 3123076,
+      "player_name": "David Njoku",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "Smack That Ahh",
+      "player_id": 5082424,
+      "player_name": "Dominic Zvada",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "Chase ma Ballz",
+      "player_id": 4240603,
+      "player_name": "Malik Davis",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "JSN My Pants",
+      "player_id": -16005,
+      "player_name": "Browns D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 5,
+      "team_id": 1,
+      "team_name": "Road to the Wildcard",
+      "player_id": 4567104,
+      "player_name": "Will Reichard",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 6,
+      "team_id": 3,
+      "team_name": "RIDE THAT MEAT",
+      "player_id": -16021,
+      "player_name": "Eagles D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 7,
+      "team_id": 12,
+      "team_name": "Certified Mid",
+      "player_id": 4036133,
+      "player_name": "T.J. Hockenson",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 8,
+      "team_id": 11,
+      "team_name": "Sorry This Had 2 Happen 2 U",
+      "player_id": 4869748,
+      "player_name": "Zavion Thomas",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 9,
+      "team_id": 10,
+      "team_name": "Scam Little",
+      "player_id": 4429013,
+      "player_name": "Tank Bigsby",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 10,
+      "team_id": 5,
+      "team_name": "Coke, Criminals, and Handcuffs",
+      "player_id": -16009,
+      "player_name": "Packers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 11,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3150744,
+      "player_name": "Chase McLaughlin",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 12,
+      "team_id": 9,
+      "team_name": "RB Stash",
+      "player_id": 3052587,
+      "player_name": "Baker Mayfield",
+      "is_keeper": false
+    }
+  ]
+}

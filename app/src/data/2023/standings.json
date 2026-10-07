@@ -1,0 +1,102 @@
+[
+  {
+    "team_id": 5,
+    "team_name": "They Hate Us Cuz They Aint Us",
+    "final_standing": 1,
+    "wins": 7,
+    "losses": 7,
+    "ties": 0,
+    "points_for": 2191.3499999999995,
+    "points_against": 2160.75
+  },
+  {
+    "team_id": 4,
+    "team_name": "69ers Meat",
+    "final_standing": 2,
+    "wins": 9,
+    "losses": 5,
+    "ties": 0,
+    "points_for": 2236.0499999999997,
+    "points_against": 1999.6
+  },
+  {
+    "team_id": 10,
+    "team_name": "Team Great Greeks",
+    "final_standing": 3,
+    "wins": 11,
+    "losses": 3,
+    "ties": 0,
+    "points_for": 2202.3,
+    "points_against": 1897.1
+  },
+  {
+    "team_id": 7,
+    "team_name": "LA Fudruckers#1fan",
+    "final_standing": 4,
+    "wins": 9,
+    "losses": 5,
+    "ties": 0,
+    "points_for": 2256.8999999999996,
+    "points_against": 2077.95
+  },
+  {
+    "team_id": 6,
+    "team_name": "Let me in the Playoffs",
+    "final_standing": 5,
+    "wins": 7,
+    "losses": 7,
+    "ties": 0,
+    "points_for": 2009.0000000000002,
+    "points_against": 2082.8
+  },
+  {
+    "team_id": 9,
+    "team_name": "Not in Last Place",
+    "final_standing": 6,
+    "wins": 5,
+    "losses": 9,
+    "ties": 0,
+    "points_for": 2043.3500000000001,
+    "points_against": 2145.05
+  },
+  {
+    "team_id": 2,
+    "team_name": "69ers W",
+    "final_standing": 7,
+    "wins": 5,
+    "losses": 9,
+    "ties": 0,
+    "points_for": 1953.6000000000001,
+    "points_against": 2156.1
+  },
+  {
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "final_standing": 8,
+    "wins": 7,
+    "losses": 7,
+    "ties": 0,
+    "points_for": 2186.2000000000003,
+    "points_against": 2186.4
+  },
+  {
+    "team_id": 3,
+    "team_name": "Slums Pipe",
+    "final_standing": 9,
+    "wins": 5,
+    "losses": 9,
+    "ties": 0,
+    "points_for": 1941.6000000000001,
+    "points_against": 2091.1
+  },
+  {
+    "team_id": 1,
+    "team_name": "Jolo Wouldve Won",
+    "final_standing": 10,
+    "wins": 5,
+    "losses": 9,
+    "ties": 0,
+    "points_for": 2028.1999999999998,
+    "points_against": 2251.7
+  }
+]

@@ -1,0 +1,21 @@
+# Environment variables (contains ESPN session cookies)
+.env
+
+# Raw data export (full ESPN detail, includes member IDs tied to cookie
+# values and real names). Stays local only; app imports from
+# app/src/data/ (the cleaned/public copy) instead.
+data/raw/
+
+# Node / frontend
+app/node_modules/
+app/dist/
+app/node_modules/.tmp/
+
+# Python / scripts
+scripts/.venv/
+scripts/__pycache__/
+scripts/**/__pycache__/
+*.pyc
+
+# OS
+.DS_Store

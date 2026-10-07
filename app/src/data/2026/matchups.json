@@ -1,0 +1,235 @@
+[
+  {
+    "week": 1,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 5,
+        "home_score": 159.45,
+        "away_team_id": 6,
+        "away_score": 143.95
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 99.65,
+        "away_team_id": 4,
+        "away_score": 139.35
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 168.65,
+        "away_team_id": 12,
+        "away_score": 130.0
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 169.6,
+        "away_team_id": 1,
+        "away_score": 163.25
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 129.05,
+        "away_team_id": 3,
+        "away_score": 172.45
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 155.0,
+        "away_team_id": 2,
+        "away_score": 168.4
+      }
+    ]
+  },
+  {
+    "week": 2,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 123.15,
+        "away_team_id": 4,
+        "away_score": 185.15
+      },
+      {
+        "home_team_id": 12,
+        "home_score": 98.35,
+        "away_team_id": 5,
+        "away_score": 165.1
+      },
+      {
+        "home_team_id": 1,
+        "home_score": 153.2,
+        "away_team_id": 11,
+        "away_score": 156.45
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 115.3,
+        "away_team_id": 7,
+        "away_score": 173.1
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 156.25,
+        "away_team_id": 8,
+        "away_score": 145.1
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 134.4,
+        "away_team_id": 9,
+        "away_score": 118.3
+      }
+    ]
+  },
+  {
+    "week": 3,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 12,
+        "home_score": 151.85,
+        "away_team_id": 6,
+        "away_score": 150.0
+      },
+      {
+        "home_team_id": 4,
+        "home_score": 178.25,
+        "away_team_id": 1,
+        "away_score": 150.75
+      },
+      {
+        "home_team_id": 5,
+        "home_score": 131.25,
+        "away_team_id": 3,
+        "away_score": 99.9
+      },
+      {
+        "home_team_id": 11,
+        "home_score": 150.65,
+        "away_team_id": 2,
+        "away_score": 163.75
+      },
+      {
+        "home_team_id": 7,
+        "home_score": 162.9,
+        "away_team_id": 10,
+        "away_score": 104.1
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 147.3,
+        "away_team_id": 9,
+        "away_score": 108.45
+      }
+    ]
+  },
+  {
+    "week": 4,
+    "status": "final",
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": 136.5,
+        "away_team_id": 1,
+        "away_score": 174.2
+      },
+      {
+        "home_team_id": 3,
+        "home_score": 113.65,
+        "away_team_id": 12,
+        "away_score": 135.05
+      },
+      {
+        "home_team_id": 2,
+        "home_score": 163.7,
+        "away_team_id": 4,
+        "away_score": 180.65
+      },
+      {
+        "home_team_id": 10,
+        "home_score": 156.15,
+        "away_team_id": 5,
+        "away_score": 148.55
+      },
+      {
+        "home_team_id": 9,
+        "home_score": 115.15,
+        "away_team_id": 11,
+        "away_score": 133.0
+      },
+      {
+        "home_team_id": 8,
+        "home_score": 151.65,
+        "away_team_id": 7,
+        "away_score": 137.7
+      }
+    ]
+  },
+  {
+    "week": 5,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 6,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 7,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 8,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 9,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 10,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 11,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 12,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 13,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 14,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 15,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 16,
+    "status": "not_started",
+    "matchups": []
+  },
+  {
+    "week": 17,
+    "status": "not_started",
+    "matchups": []
+  }
+]

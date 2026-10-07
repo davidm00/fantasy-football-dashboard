@@ -1,0 +1,1444 @@
+{
+  "picks": [
+    {
+      "round": 1,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4242335,
+      "player_name": "Jonathan Taylor",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 2977187,
+      "player_name": "Cooper Kupp",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3117251,
+      "player_name": "Christian McCaffrey",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3043078,
+      "player_name": "Derrick Henry",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 4262921,
+      "player_name": "Justin Jefferson",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3068267,
+      "player_name": "Austin Ekeler",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3054850,
+      "player_name": "Alvin Kamara",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3116593,
+      "player_name": "Dalvin Cook",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4362628,
+      "player_name": "Ja'Marr Chase",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 3116385,
+      "player_name": "Joe Mixon",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 16800,
+      "player_name": "Davante Adams",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4241457,
+      "player_name": "Najee Harris",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 2976212,
+      "player_name": "Stefon Diggs",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3116406,
+      "player_name": "Tyreek Hill",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 15847,
+      "player_name": "Travis Kelce",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 3126486,
+      "player_name": "Deebo Samuel",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3116365,
+      "player_name": "Mark Andrews",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 15818,
+      "player_name": "Keenan Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 4259545,
+      "player_name": "D'Andre Swift",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 3918298,
+      "player_name": "Josh Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 3139477,
+      "player_name": "Patrick Mahomes",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 3929630,
+      "player_name": "Saquon Barkley",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 4038941,
+      "player_name": "Justin Herbert",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3917315,
+      "player_name": "Kyler Murray",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 3115364,
+      "player_name": "Leonard Fournette",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4241389,
+      "player_name": "CeeDee Lamb",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3042519,
+      "player_name": "Aaron Jones",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4040715,
+      "player_name": "Jalen Hurts",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4361579,
+      "player_name": "Javonte Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 4360248,
+      "player_name": "Kyle Pitts",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 3045147,
+      "player_name": "James Conner",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4240021,
+      "player_name": "Cam Akers",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3128720,
+      "player_name": "Nick Chubb",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3121422,
+      "player_name": "Terry McLaurin",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 16737,
+      "player_name": "Mike Evans",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 3915511,
+      "player_name": "Joe Burrow",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4047646,
+      "player_name": "A.J. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3932905,
+      "player_name": "Diontae Johnson",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 4035687,
+      "player_name": "Michael Pittman Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4241463,
+      "player_name": "Jerry Jeudy",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4241372,
+      "player_name": "Marquise Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 4427366,
+      "player_name": "Breece Hall",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3051392,
+      "player_name": "Ezekiel Elliott",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4239993,
+      "player_name": "Tee Higgins",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 4241985,
+      "player_name": "J.K. Dobbins",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4035538,
+      "player_name": "David Montgomery",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3916387,
+      "player_name": "Lamar Jackson",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 2976499,
+      "player_name": "Amari Cooper",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 3915416,
+      "player_name": "DJ Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 4047650,
+      "player_name": "DK Metcalf",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 8439,
+      "player_name": "Aaron Rodgers",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4372016,
+      "player_name": "Jaylen Waddle",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 2576925,
+      "player_name": "Darren Waller",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3040151,
+      "player_name": "George Kittle",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 2577417,
+      "player_name": "Dak Prescott",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 3128429,
+      "player_name": "Courtland Sutton",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3045138,
+      "player_name": "Mike Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3117256,
+      "player_name": "Dalton Schultz",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 4239996,
+      "player_name": "Travis Etienne Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4047365,
+      "player_name": "Josh Jacobs",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 2976316,
+      "player_name": "Michael Thomas",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 3116165,
+      "player_name": "Chris Godwin",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 16731,
+      "player_name": "Brandin Cooks",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4360294,
+      "player_name": "Antonio Gibson",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 16790,
+      "player_name": "Jarvis Landry",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4241555,
+      "player_name": "Elijah Mitchell",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 4243537,
+      "player_name": "Gabe Davis",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4374302,
+      "player_name": "Amon-Ra St. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 2330,
+      "player_name": "Tom Brady",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 4040655,
+      "player_name": "Darnell Mooney",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 16799,
+      "player_name": "Allen Robinson II",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4036133,
+      "player_name": "T.J. Hockenson",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3925347,
+      "player_name": "Damien Harris",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 4045163,
+      "player_name": "Miles Sanders",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3135321,
+      "player_name": "Hunter Renfrow",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": -16002,
+      "player_name": "Bills D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 2577327,
+      "player_name": "Tyler Lockett",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 15683,
+      "player_name": "Justin Tucker",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 3120348,
+      "player_name": "JuJu Smith-Schuster",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 3116164,
+      "player_name": "Mike Gesicki",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4360234,
+      "player_name": "Evan McPherson",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 12483,
+      "player_name": "Matthew Stafford",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 4040761,
+      "player_name": "Devin Singletary",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 16460,
+      "player_name": "Adam Thielen",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 14881,
+      "player_name": "Russell Wilson",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3059915,
+      "player_name": "Kareem Hunt",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 4360939,
+      "player_name": "Rashod Bateman",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4249087,
+      "player_name": "Matt Gay",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4242214,
+      "player_name": "Clyde Edwards-Helaire",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 4372414,
+      "player_name": "Elijah Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": -16018,
+      "player_name": "Saints D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 15795,
+      "player_name": "DeAndre Hopkins",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": -16027,
+      "player_name": "Buccaneers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 15807,
+      "player_name": "Cordarrelle Patterson",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3916148,
+      "player_name": "Tony Pollard",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 4569173,
+      "player_name": "Rhamondre Stevenson",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 16757,
+      "player_name": "Derek Carr",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 14880,
+      "player_name": "Kirk Cousins",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 15835,
+      "player_name": "Zach Ertz",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4241478,
+      "player_name": "DeVonta Smith",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 3121023,
+      "player_name": "Dallas Goedert",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 4383351,
+      "player_name": "Trey Lance",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": -16009,
+      "player_name": "Packers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4239934,
+      "player_name": "AJ Dillon",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 4361411,
+      "player_name": "Pat Freiermuth",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 2969939,
+      "player_name": "Jameis Winston",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 4362887,
+      "player_name": "Justin Fields",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3895856,
+      "player_name": "Christian Kirk",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4241479,
+      "player_name": "Tua Tagovailoa",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 3119195,
+      "player_name": "Chase Edmonds",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 3917232,
+      "player_name": "Tyler Bass",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": -16033,
+      "player_name": "Ravens D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4052042,
+      "player_name": "James Robinson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": -16024,
+      "player_name": "Chargers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": -16025,
+      "player_name": "49ers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 3051909,
+      "player_name": "Daniel Carlson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 10621,
+      "player_name": "Nick Folk",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 4426502,
+      "player_name": "Drake London",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 4360238,
+      "player_name": "Dameon Pierce",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": -16005,
+      "player_name": "Browns D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4361370,
+      "player_name": "Chris Olave",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 3975763,
+      "player_name": "Greg Joseph",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3930086,
+      "player_name": "Dawson Knox",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": -16015,
+      "player_name": "Dolphins D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 4240600,
+      "player_name": "Kadarius Toney",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3128390,
+      "player_name": "Allen Lazard",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3123076,
+      "player_name": "David Njoku",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4360438,
+      "player_name": "Brandon Aiyuk",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4430191,
+      "player_name": "Skyy Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 4360310,
+      "player_name": "Trevor Lawrence",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 3139925,
+      "player_name": "Rashaad Penny",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4040980,
+      "player_name": "Irv Smith Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4569618,
+      "player_name": "Garrett Wilson",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 2985659,
+      "player_name": "Wil Lutz",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3055899,
+      "player_name": "Harrison Butker",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 15880,
+      "player_name": "Robert Woods",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 2576434,
+      "player_name": "Melvin Gordon III",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 15072,
+      "player_name": "Marvin Jones Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": -16006,
+      "player_name": "Cowboys D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 3046439,
+      "player_name": "Hunter Henry",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 1,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4379399,
+      "player_name": "James Cook",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 2,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": -16017,
+      "player_name": "Patriots D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 3,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3045523,
+      "player_name": "Kendrick Bourne",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 4,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 2573401,
+      "player_name": "Tyler Higbee",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 5,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 4046692,
+      "player_name": "Chase Claypool",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 6,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3115378,
+      "player_name": "Russell Gage",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 7,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 2974858,
+      "player_name": "Kenny Golladay",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4567048,
+      "player_name": "Kenneth Walker III",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 9,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 11122,
+      "player_name": "Matt Prater",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 10,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 4258595,
+      "player_name": "Cole Kmet",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 1,
+      "team_id": 9,
+      "team_name": "Tanking for #1 Overall",
+      "player_id": 3916433,
+      "player_name": "Jakobi Meyers",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 2,
+      "team_id": 1,
+      "team_name": "Brady is a  Bum",
+      "player_id": 4249836,
+      "player_name": "Pierre Strong Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 2573079,
+      "player_name": "Carson Wentz",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 4,
+      "team_id": 5,
+      "team_name": "Laplace  Souljas",
+      "player_id": 3051738,
+      "player_name": "Marquez Valdes-Scantling",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 5,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3045144,
+      "player_name": "Tyler Boyd",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "OnTheBorder Salsa",
+      "player_id": 4240657,
+      "player_name": "Michael Carter",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 7,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4567156,
+      "player_name": "Treylon Burks",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 8,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3115375,
+      "player_name": "Darrel Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 9,
+      "team_id": 8,
+      "team_name": "Team in the grave",
+      "player_id": 3918639,
+      "player_name": "Gerald Everett",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 10,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": -16011,
+      "player_name": "Colts D/ST",
+      "is_keeper": false
+    }
+  ]
+}

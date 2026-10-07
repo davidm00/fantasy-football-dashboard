@@ -1,0 +1,102 @@
+[
+  {
+    "team_id": 1,
+    "team_name": "Brady is a  Bum",
+    "owners": [
+      {
+        "id": "m01",
+        "name": "David G"
+      }
+    ]
+  },
+  {
+    "team_id": 2,
+    "team_name": "69ers W",
+    "owners": [
+      {
+        "id": "m02",
+        "name": "Devon"
+      }
+    ]
+  },
+  {
+    "team_id": 3,
+    "team_name": "Slums Pipe",
+    "owners": [
+      {
+        "id": "m03",
+        "name": "George"
+      }
+    ]
+  },
+  {
+    "team_id": 4,
+    "team_name": "69ers Meat",
+    "owners": [
+      {
+        "id": "m04",
+        "name": "David M"
+      }
+    ]
+  },
+  {
+    "team_id": 5,
+    "team_name": "Laplace  Souljas",
+    "owners": [
+      {
+        "id": "m05",
+        "name": "Jhajuan C"
+      }
+    ]
+  },
+  {
+    "team_id": 6,
+    "team_name": "OnTheBorder Salsa",
+    "owners": [
+      {
+        "id": "m06",
+        "name": "Jonathan"
+      }
+    ]
+  },
+  {
+    "team_id": 7,
+    "team_name": "LA Fudruckers#1fan",
+    "owners": [
+      {
+        "id": "m07",
+        "name": "Jericho"
+      }
+    ]
+  },
+  {
+    "team_id": 8,
+    "team_name": "Team in the grave",
+    "owners": [
+      {
+        "id": "m08",
+        "name": "Dylan"
+      }
+    ]
+  },
+  {
+    "team_id": 9,
+    "team_name": "Tanking for #1 Overall",
+    "owners": [
+      {
+        "id": "m09",
+        "name": "Benjamin"
+      }
+    ]
+  },
+  {
+    "team_id": 10,
+    "team_name": "Team Great Greeks",
+    "owners": [
+      {
+        "id": "m10",
+        "name": "Joey"
+      }
+    ]
+  }
+]

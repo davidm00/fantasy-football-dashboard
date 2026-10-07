@@ -1,0 +1,1624 @@
+{
+  "picks": [
+    {
+      "round": 1,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4362628,
+      "player_name": "Ja'Marr Chase",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3116406,
+      "player_name": "Tyreek Hill",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3068267,
+      "player_name": "Austin Ekeler",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4262921,
+      "player_name": "Justin Jefferson",
+      "is_keeper": true
+    },
+    {
+      "round": 1,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3043078,
+      "player_name": "Derrick Henry",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4430807,
+      "player_name": "Bijan Robinson",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 3916148,
+      "player_name": "Tony Pollard",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 2977187,
+      "player_name": "Cooper Kupp",
+      "is_keeper": false
+    },
+    {
+      "round": 1,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 3117251,
+      "player_name": "Christian McCaffrey",
+      "is_keeper": true
+    },
+    {
+      "round": 1,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 2976212,
+      "player_name": "Stefon Diggs",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4241389,
+      "player_name": "CeeDee Lamb",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4374302,
+      "player_name": "Amon-Ra St. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4047365,
+      "player_name": "Josh Jacobs",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 3128720,
+      "player_name": "Nick Chubb",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4047646,
+      "player_name": "A.J. Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 16800,
+      "player_name": "Davante Adams",
+      "is_keeper": true
+    },
+    {
+      "round": 2,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 3116385,
+      "player_name": "Joe Mixon",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4241478,
+      "player_name": "DeVonta Smith",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3139477,
+      "player_name": "Patrick Mahomes",
+      "is_keeper": false
+    },
+    {
+      "round": 2,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 15847,
+      "player_name": "Travis Kelce",
+      "is_keeper": true
+    },
+    {
+      "round": 3,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4241457,
+      "player_name": "Najee Harris",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3042519,
+      "player_name": "Aaron Jones",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4040715,
+      "player_name": "Jalen Hurts",
+      "is_keeper": true
+    },
+    {
+      "round": 3,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4047650,
+      "player_name": "DK Metcalf",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3918298,
+      "player_name": "Josh Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4239993,
+      "player_name": "Tee Higgins",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4361370,
+      "player_name": "Chris Olave",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 3915511,
+      "player_name": "Joe Burrow",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 3916387,
+      "player_name": "Lamar Jackson",
+      "is_keeper": false
+    },
+    {
+      "round": 3,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3929630,
+      "player_name": "Saquon Barkley",
+      "is_keeper": true
+    },
+    {
+      "round": 4,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4429795,
+      "player_name": "Jahmyr Gibbs",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 3116365,
+      "player_name": "Mark Andrews",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4427366,
+      "player_name": "Breece Hall",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4569173,
+      "player_name": "Rhamondre Stevenson",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4239996,
+      "player_name": "Travis Etienne Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3915416,
+      "player_name": "DJ Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4360238,
+      "player_name": "Dameon Pierce",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 15818,
+      "player_name": "Keenan Allen",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 2976499,
+      "player_name": "Amari Cooper",
+      "is_keeper": false
+    },
+    {
+      "round": 4,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4697815,
+      "player_name": "Rachaad White",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3126486,
+      "player_name": "Deebo Samuel",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4036133,
+      "player_name": "T.J. Hockenson",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3054850,
+      "player_name": "Alvin Kamara",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 3925357,
+      "player_name": "Calvin Ridley",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 4567048,
+      "player_name": "Kenneth Walker III",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4248528,
+      "player_name": "Christian Watson",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 15795,
+      "player_name": "DeAndre Hopkins",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4362887,
+      "player_name": "Justin Fields",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4038941,
+      "player_name": "Justin Herbert",
+      "is_keeper": false
+    },
+    {
+      "round": 5,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3045147,
+      "player_name": "James Conner",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3116165,
+      "player_name": "Chris Godwin",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4045163,
+      "player_name": "Miles Sanders",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 2576925,
+      "player_name": "Darren Waller",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4372016,
+      "player_name": "Jaylen Waddle",
+      "is_keeper": true
+    },
+    {
+      "round": 6,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 3932905,
+      "player_name": "Diontae Johnson",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3040151,
+      "player_name": "George Kittle",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4048244,
+      "player_name": "Alexander Mattison",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3050073,
+      "player_name": "Foyesade Oluokun",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4241463,
+      "player_name": "Jerry Jeudy",
+      "is_keeper": false
+    },
+    {
+      "round": 6,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 16737,
+      "player_name": "Mike Evans",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4242335,
+      "player_name": "Jonathan Taylor",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3915189,
+      "player_name": "Roquan Smith",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 2577327,
+      "player_name": "Tyler Lockett",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4379399,
+      "player_name": "James Cook",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 4362759,
+      "player_name": "Nick Bolton",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4360248,
+      "player_name": "Kyle Pitts",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 3121422,
+      "player_name": "Terry McLaurin",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4361579,
+      "player_name": "Javonte Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4426502,
+      "player_name": "Drake London",
+      "is_keeper": false
+    },
+    {
+      "round": 7,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3122840,
+      "player_name": "Deshaun Watson",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3123076,
+      "player_name": "David Njoku",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4240021,
+      "player_name": "Cam Akers",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4241372,
+      "player_name": "Marquise Brown",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 3045138,
+      "player_name": "Mike Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4360310,
+      "player_name": "Trevor Lawrence",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 2976316,
+      "player_name": "Michael Thomas",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 3116593,
+      "player_name": "Dalvin Cook",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4035538,
+      "player_name": "David Montgomery",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4259545,
+      "player_name": "D'Andre Swift",
+      "is_keeper": false
+    },
+    {
+      "round": 8,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3916655,
+      "player_name": "Maxx Crosby",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4426354,
+      "player_name": "George Pickens",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 16733,
+      "player_name": "Odell Beckham Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4035687,
+      "player_name": "Michael Pittman Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4360438,
+      "player_name": "Brandon Aiyuk",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3128429,
+      "player_name": "Courtland Sutton",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 3056362,
+      "player_name": "Shaquille Leonard",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4361529,
+      "player_name": "Isiah Pacheco",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 3045282,
+      "player_name": "T.J. Watt",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 3895856,
+      "player_name": "Christian Kirk",
+      "is_keeper": false
+    },
+    {
+      "round": 9,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3040150,
+      "player_name": "Josey Jewell",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4361409,
+      "player_name": "Jahan Dotson",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 3117253,
+      "player_name": "Bobby Okereke",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4429205,
+      "player_name": "Jordan Addison",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 3121023,
+      "player_name": "Dallas Goedert",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4241985,
+      "player_name": "J.K. Dobbins",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 15683,
+      "player_name": "Justin Tucker",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 14880,
+      "player_name": "Kirk Cousins",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 2980453,
+      "player_name": "Jamaal Williams",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": -16025,
+      "player_name": "49ers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 10,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3691739,
+      "player_name": "Derwin James Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 8439,
+      "player_name": "Aaron Rodgers",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3051909,
+      "player_name": "Daniel Carlson",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 16731,
+      "player_name": "Brandin Cooks",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4361411,
+      "player_name": "Pat Freiermuth",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 4239934,
+      "player_name": "AJ Dillon",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4241479,
+      "player_name": "Tua Tagovailoa",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 2577417,
+      "player_name": "Dak Prescott",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4430878,
+      "player_name": "Jaxon Smith-Njigba",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": -16018,
+      "player_name": "Saints D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 11,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4360294,
+      "player_name": "Antonio Gibson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 4429615,
+      "player_name": "Zay Flowers",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4429025,
+      "player_name": "Quentin Johnston",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": -16020,
+      "player_name": "Jets D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4372414,
+      "player_name": "Elijah Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 3051876,
+      "player_name": "Evan Engram",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": -16023,
+      "player_name": "Steelers D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4360234,
+      "player_name": "Evan McPherson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 15835,
+      "player_name": "Zach Ertz",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 3929645,
+      "player_name": "Juwan Johnson",
+      "is_keeper": false
+    },
+    {
+      "round": 12,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4035886,
+      "player_name": "Khalil Herbert",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4567156,
+      "player_name": "Treylon Burks",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4241474,
+      "player_name": "Brian Robinson Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3120348,
+      "player_name": "JuJu Smith-Schuster",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": -16015,
+      "player_name": "Dolphins D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 4430191,
+      "player_name": "Skyy Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4040605,
+      "player_name": "Nick Bosa",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 3124005,
+      "player_name": "Zaire Franklin",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4241555,
+      "player_name": "Elijah Mitchell",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 3139925,
+      "player_name": "Rashaad Penny",
+      "is_keeper": false
+    },
+    {
+      "round": 13,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3917792,
+      "player_name": "Daniel Jones",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3116389,
+      "player_name": "Samaje Perine",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4240600,
+      "player_name": "Kadarius Toney",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4569618,
+      "player_name": "Garrett Wilson",
+      "is_keeper": true
+    },
+    {
+      "round": 14,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4243537,
+      "player_name": "Gabe Davis",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4428557,
+      "player_name": "Tyjae Spears",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3121544,
+      "player_name": "T.J. Edwards",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 4240703,
+      "player_name": "Kenny Pickett",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": -16002,
+      "player_name": "Bills D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4361423,
+      "player_name": "Micah Parsons",
+      "is_keeper": false
+    },
+    {
+      "round": 14,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3916433,
+      "player_name": "Jakobi Meyers",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4372485,
+      "player_name": "Rondale Moore",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 15864,
+      "player_name": "Geno Smith",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 2473037,
+      "player_name": "Jason Myers",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 3929950,
+      "player_name": "Tremaine Edmunds",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3046779,
+      "player_name": "Jared Goff",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 3115394,
+      "player_name": "DJ Chark Jr.",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4429084,
+      "player_name": "Anthony Richardson",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4426385,
+      "player_name": "Zach Charbonnet",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 12460,
+      "player_name": "Graham Gano",
+      "is_keeper": false
+    },
+    {
+      "round": 15,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3117256,
+      "player_name": "Dalton Schultz",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": -16006,
+      "player_name": "Cowboys D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4242431,
+      "player_name": "Ty Chandler",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4259619,
+      "player_name": "Blake Grupe",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 4429160,
+      "player_name": "De'Von Achane",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 4258595,
+      "player_name": "Cole Kmet",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 2576414,
+      "player_name": "Raheem Mostert",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 2573401,
+      "player_name": "Tyler Higbee",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 16460,
+      "player_name": "Adam Thielen",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4036348,
+      "player_name": "Michael Gallup",
+      "is_keeper": false
+    },
+    {
+      "round": 16,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 3050478,
+      "player_name": "Jake Elliott",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 1,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": -16017,
+      "player_name": "Patriots D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 2,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4040432,
+      "player_name": "L'Jarius Sneed",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 3,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 3051392,
+      "player_name": "Ezekiel Elliott",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 4,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 3045144,
+      "player_name": "Tyler Boyd",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 5,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3121427,
+      "player_name": "Curtis Samuel",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 6,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": -16005,
+      "player_name": "Browns D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 7,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": -16033,
+      "player_name": "Ravens D/ST",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 8,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4040655,
+      "player_name": "Darnell Mooney",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 9,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 4258173,
+      "player_name": "Nico Collins",
+      "is_keeper": false
+    },
+    {
+      "round": 17,
+      "round_pick": 10,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 16782,
+      "player_name": "Jerick McKinnon",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 1,
+      "team_id": 8,
+      "team_name": "Team Mickey Mouse",
+      "player_id": 3055899,
+      "player_name": "Harrison Butker",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 2,
+      "team_id": 5,
+      "team_name": "They Hate Us Cuz They Aint Us",
+      "player_id": 3138826,
+      "player_name": "Fred Warner",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 3,
+      "team_id": 2,
+      "team_name": "69ers W",
+      "player_id": 4241223,
+      "player_name": "Jalen Pitre",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 4,
+      "team_id": 1,
+      "team_name": "Jolo Wouldve Won",
+      "player_id": 16339,
+      "player_name": "Brandon McManus",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 5,
+      "team_id": 9,
+      "team_name": "Not in Last Place",
+      "player_id": 3049899,
+      "player_name": "Younghoe Koo",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 6,
+      "team_id": 4,
+      "team_name": "69ers Meat",
+      "player_id": 3918639,
+      "player_name": "Gerald Everett",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Let me in the Playoffs",
+      "player_id": 3925345,
+      "player_name": "Minkah Fitzpatrick",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 8,
+      "team_id": 7,
+      "team_name": "LA Fudruckers#1fan",
+      "player_id": 4385690,
+      "player_name": "Dalton Kincaid",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 9,
+      "team_id": 3,
+      "team_name": "Slums Pipe",
+      "player_id": 4034949,
+      "player_name": "Eddy Pineiro",
+      "is_keeper": false
+    },
+    {
+      "round": 18,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "Team Great Greeks",
+      "player_id": 4373626,
+      "player_name": "Tyler Allgeier",
+      "is_keeper": false
+    }
+  ]
+}
