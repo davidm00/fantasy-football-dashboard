@@ -771,32 +771,6 @@
     ]
   },
   {
-    "id": "0978a343-7701-4cec-a0e6-497e46f124c1",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 2,
-    "date": 1694983270041,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 3116406,
-        "player_name": "Tyreek Hill",
-        "from_team_id": 3,
-        "to_team_id": 6
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4379399,
-        "player_name": "James Cook",
-        "from_team_id": 6,
-        "to_team_id": 3
-      }
-    ]
-  },
-  {
     "id": "6efbcd88-7673-4f8a-9232-12744c8a8c11",
     "type": "WAIVER",
     "status": "CANCELED",
@@ -821,17 +795,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "a24bbe52-3a89-4ef2-9e8b-797ac85a8c52",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 10,
-    "team_name": "Team Great Greeks",
-    "scoring_period": 2,
-    "date": 1694618101314,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "a77c8b1f-d5ae-4c06-a4dd-714176a17dd4",
@@ -964,114 +927,6 @@
     ]
   },
   {
-    "id": "00860b3b-d67e-40db-8ed8-5426f585ea98",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 2,
-    "date": 1694581595852,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426385,
-        "player_name": "Zach Charbonnet",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361579,
-        "player_name": "Javonte Williams",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3915511,
-        "player_name": "Joe Burrow",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4242335,
-        "player_name": "Jonathan Taylor",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3126486,
-        "player_name": "Deebo Samuel",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4241457,
-        "player_name": "Najee Harris",
-        "from_team_id": 10,
-        "to_team_id": 2
-      }
-    ]
-  },
-  {
-    "id": "04ce23c5-7c0e-471e-82b5-b686f8a00d65",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 2,
-    "date": 1694581935531,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4361579,
-        "player_name": "Javonte Williams",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3915511,
-        "player_name": "Joe Burrow",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4242335,
-        "player_name": "Jonathan Taylor",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3126486,
-        "player_name": "Deebo Samuel",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4241457,
-        "player_name": "Najee Harris",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "DROP",
-        "player_id": 4241555,
-        "player_name": "Elijah Mitchell",
-        "from_team_id": 2,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "cd05ce3d-15ca-4cfc-96f4-45e1b696303f",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -1119,60 +974,6 @@
         "player_id": 3040150,
         "player_name": "Josey Jewell",
         "from_team_id": 8,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "5a678382-c4c1-4769-b897-d62fb59493a0",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 2,
-    "date": 1694581268136,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4241457,
-        "player_name": "Najee Harris",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4242335,
-        "player_name": "Jonathan Taylor",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3126486,
-        "player_name": "Deebo Samuel",
-        "from_team_id": 10,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3915511,
-        "player_name": "Joe Burrow",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361579,
-        "player_name": "Javonte Williams",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "DROP",
-        "player_id": 4426385,
-        "player_name": "Zach Charbonnet",
-        "from_team_id": 2,
         "to_team_id": 0
       }
     ]
@@ -1566,17 +1367,6 @@
     ]
   },
   {
-    "id": "109e6ba6-04fc-4084-abdb-5210713f3e18",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 7,
-    "team_name": "LA Fudruckers#1fan",
-    "scoring_period": 3,
-    "date": 1695269493939,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "5cd603b1-56f8-4073-81e4-65bd18e97b7a",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -1592,39 +1382,6 @@
         "player_name": "Hunter Henry",
         "from_team_id": 0,
         "to_team_id": 1
-      }
-    ]
-  },
-  {
-    "id": "622d2099-6900-45d6-802e-a2050a1eee05",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 3,
-    "date": 1695312410750,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4239934,
-        "player_name": "AJ Dillon",
-        "from_team_id": 5,
-        "to_team_id": 3
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361432,
-        "player_name": "Romeo Doubs",
-        "from_team_id": 5,
-        "to_team_id": 3
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4259545,
-        "player_name": "D'Andre Swift",
-        "from_team_id": 3,
-        "to_team_id": 5
       }
     ]
   },
@@ -1889,39 +1646,6 @@
     ]
   },
   {
-    "id": "f14d08a3-cc76-4b65-9eef-1fdc5c65c23c",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 3,
-    "date": 1695312401806,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4239934,
-        "player_name": "AJ Dillon",
-        "from_team_id": 5,
-        "to_team_id": 7
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361432,
-        "player_name": "Romeo Doubs",
-        "from_team_id": 5,
-        "to_team_id": 7
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4035687,
-        "player_name": "Michael Pittman Jr.",
-        "from_team_id": 7,
-        "to_team_id": 5
-      }
-    ]
-  },
-  {
     "id": "b71dde83-e8c3-4deb-819a-4687461ca0d0",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -1944,32 +1668,6 @@
         "player_name": "Tyler Higbee",
         "from_team_id": 6,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "10767dba-5c34-4617-a940-0f99174e6458",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 3,
-    "date": 1695699331348,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4429160,
-        "player_name": "De'Von Achane",
-        "from_team_id": 1,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4243537,
-        "player_name": "Gabe Davis",
-        "from_team_id": 2,
-        "to_team_id": 1
       }
     ]
   },
@@ -2050,28 +1748,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "7f517c2a-849b-4957-9aa9-a2b6c7bea8fd",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 3,
-    "date": 1695172215589,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
-    "id": "fe1962d1-7112-4ac1-99ef-89ea60005d1d",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 3,
-    "date": 1695257890805,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "8e20dbc2-faa1-4954-bc7d-0403c97e7d51",
@@ -2942,39 +2618,6 @@
     ]
   },
   {
-    "id": "88e2ffad-03f6-42c9-9bc6-3f6d414ee2b3",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 4,
-    "date": 1695771728798,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4241479,
-        "player_name": "Tua Tagovailoa",
-        "from_team_id": 9,
-        "to_team_id": 1
-      },
-      {
-        "type": "TRADE",
-        "player_id": 15795,
-        "player_name": "DeAndre Hopkins",
-        "from_team_id": 1,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 2577417,
-        "player_name": "Dak Prescott",
-        "from_team_id": 1,
-        "to_team_id": 9
-      }
-    ]
-  },
-  {
     "id": "0ceb106f-64b6-45f6-bbe4-0b77f87a2f11",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -3077,17 +2720,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "5c3f72ae-1e52-4d82-8590-b02202e82077",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 8,
-    "team_name": "Team Mickey Mouse",
-    "scoring_period": 4,
-    "date": 1695917344899,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "4a204559-54af-4674-badd-6097ce64c2ac",
@@ -3220,17 +2852,6 @@
     ]
   },
   {
-    "id": "b0245d59-5b61-423b-af27-099c6912c382",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 5,
-    "date": 1696521737306,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "c2f0f9f4-9a84-4095-8600-de99e8f3f5f7",
     "type": "WAIVER",
     "status": "CANCELED",
@@ -3309,17 +2930,6 @@
     ]
   },
   {
-    "id": "cdbca9af-0df3-480f-8097-55232a4ed9ab",
-    "type": "TRADE_UPHOLD",
-    "status": "EXECUTED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 5,
-    "date": 1696373686504,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "e0248085-8389-4399-978c-95b63383649d",
     "type": "WAIVER",
     "status": "PENDING",
@@ -3361,46 +2971,6 @@
         "player_name": "Joshua Kelley",
         "from_team_id": 5,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "34d62d64-ffb0-4935-ab68-df37b7f13d9a",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 5,
-    "date": 1696375128783,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426502,
-        "player_name": "Drake London",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4239934,
-        "player_name": "AJ Dillon",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4567048,
-        "player_name": "Kenneth Walker III",
-        "from_team_id": 4,
-        "to_team_id": 5
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3043078,
-        "player_name": "Derrick Henry",
-        "from_team_id": 4,
-        "to_team_id": 5
       }
     ]
   },
@@ -3483,39 +3053,6 @@
     ]
   },
   {
-    "id": "1bde6c8c-9b37-4e3f-b67b-4bcf7b36ab43",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 5,
-    "date": 1696376490411,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426502,
-        "player_name": "Drake London",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3910544,
-        "player_name": "Joshua Kelley",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4567048,
-        "player_name": "Kenneth Walker III",
-        "from_team_id": 4,
-        "to_team_id": 5
-      }
-    ]
-  },
-  {
     "id": "5fb82e74-d27c-4839-9cbd-e7609ac94b06",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -3538,39 +3075,6 @@
         "player_name": "DJ Chark Jr.",
         "from_team_id": 7,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "7b452189-6c99-4252-aca5-04346bad8320",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 5,
-    "date": 1696601476026,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426502,
-        "player_name": "Drake London",
-        "from_team_id": 5,
-        "to_team_id": 3
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4360294,
-        "player_name": "Antonio Gibson",
-        "from_team_id": 5,
-        "to_team_id": 3
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4241474,
-        "player_name": "Brian Robinson Jr.",
-        "from_team_id": 3,
-        "to_team_id": 5
       }
     ]
   },
@@ -3703,17 +3207,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "561d473b-140a-432c-9e18-05149a06c1bb",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 5,
-    "date": 1696438000971,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "22850268-5bab-43ac-87dd-56a42226809c",
@@ -3910,28 +3403,6 @@
     ]
   },
   {
-    "id": "100e24c4-ab3f-43a0-b453-cf6db405dbec",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 5,
-    "date": 1696376588384,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
-    "id": "11dc9a90-12ea-4016-a006-fac9b45c7513",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 5,
-    "date": 1696373426343,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "3fb9cbe5-400c-4955-8a80-b962df1b7b4e",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -4055,32 +3526,6 @@
     ]
   },
   {
-    "id": "a7b59e2d-dfc9-412d-a963-98ec8f68b651",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 5,
-    "date": 1696438000971,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4258173,
-        "player_name": "Nico Collins",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3128429,
-        "player_name": "Courtland Sutton",
-        "from_team_id": 4,
-        "to_team_id": 5
-      }
-    ]
-  },
-  {
     "id": "1654bb88-9f7c-4805-ae6a-e75cba6cae23",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -4171,46 +3616,6 @@
     ]
   },
   {
-    "id": "29260f26-70b0-47fc-a5e3-f4a3f11a0b49",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 5,
-    "date": 1696375638000,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426502,
-        "player_name": "Drake London",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4239934,
-        "player_name": "AJ Dillon",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4567048,
-        "player_name": "Kenneth Walker III",
-        "from_team_id": 4,
-        "to_team_id": 5
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3043078,
-        "player_name": "Derrick Henry",
-        "from_team_id": 4,
-        "to_team_id": 5
-      }
-    ]
-  },
-  {
     "id": "12753211-a45c-499b-a214-168ff41860f6",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -4287,17 +3692,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "fba384cb-c8b8-49b5-8cd2-f229f8043270",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 5,
-    "date": 1696375638000,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "5ba8ee19-3306-4540-b791-a41b444d4dee",
@@ -4426,32 +3820,6 @@
         "player_name": "Chiefs D/ST",
         "from_team_id": 1,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "542b069d-44af-444d-b4bc-953bde9b9025",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 5,
-    "date": 1696375762826,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4258173,
-        "player_name": "Nico Collins",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3128429,
-        "player_name": "Courtland Sutton",
-        "from_team_id": 4,
-        "to_team_id": 5
       }
     ]
   },
@@ -4627,39 +3995,6 @@
         "player_name": "Saints D/ST",
         "from_team_id": 5,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "caf0e099-1b5f-4166-853f-ca29700ef92b",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 5,
-    "date": 1696376588384,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426502,
-        "player_name": "Drake London",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3910544,
-        "player_name": "Joshua Kelley",
-        "from_team_id": 5,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4567048,
-        "player_name": "Kenneth Walker III",
-        "from_team_id": 4,
-        "to_team_id": 5
       }
     ]
   },
@@ -5137,46 +4472,6 @@
     ]
   },
   {
-    "id": "b9ef33fe-226e-43e3-9e19-ddcbcbe39d78",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 3,
-    "team_name": "Slums Pipe",
-    "scoring_period": 6,
-    "date": 1697314921492,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 2976316,
-        "player_name": "Michael Thomas",
-        "from_team_id": 4,
-        "to_team_id": 3
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4241463,
-        "player_name": "Jerry Jeudy",
-        "from_team_id": 3,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361423,
-        "player_name": "Micah Parsons",
-        "from_team_id": 3,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4036348,
-        "player_name": "Michael Gallup",
-        "from_team_id": 3,
-        "to_team_id": 4
-      }
-    ]
-  },
-  {
     "id": "97939123-b1b6-41f0-9079-3eaf37965fa2",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -5390,17 +4685,6 @@
     ]
   },
   {
-    "id": "3a6d2174-b135-4a4d-abe6-5d85b13f3845",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 7,
-    "team_name": "LA Fudruckers#1fan",
-    "scoring_period": 6,
-    "date": 1697141922688,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "a95d8ba7-2a48-4826-a3b1-9d30d064578b",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -5446,46 +4730,6 @@
     ]
   },
   {
-    "id": "e0e4ecbc-3fd6-4d7f-857c-857331ed8853",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 3,
-    "team_name": "Slums Pipe",
-    "scoring_period": 6,
-    "date": 1697142147294,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 2976316,
-        "player_name": "Michael Thomas",
-        "from_team_id": 4,
-        "to_team_id": 3
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4241463,
-        "player_name": "Jerry Jeudy",
-        "from_team_id": 3,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361423,
-        "player_name": "Micah Parsons",
-        "from_team_id": 3,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4036348,
-        "player_name": "Michael Gallup",
-        "from_team_id": 3,
-        "to_team_id": 4
-      }
-    ]
-  },
-  {
     "id": "b9700b96-b7fe-4bfd-800c-227acdb6ac04",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -5510,17 +4754,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "e337b071-5d8b-4ade-a541-e6608ba7f2ab",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 7,
-    "date": 1697805639908,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "9c88c162-9016-42e3-a37b-a32f656be3ff",
@@ -5753,46 +4986,6 @@
         "player_name": "Joshua Dobbs",
         "from_team_id": 6,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "ede95d22-77f5-4368-a12b-8c17e296689a",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 7,
-    "date": 1698041314154,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4241416,
-        "player_name": "Chuba Hubbard",
-        "from_team_id": 5,
-        "to_team_id": 7
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4241478,
-        "player_name": "DeVonta Smith",
-        "from_team_id": 7,
-        "to_team_id": 5
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4035538,
-        "player_name": "David Montgomery",
-        "from_team_id": 7,
-        "to_team_id": 5
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3895856,
-        "player_name": "Christian Kirk",
-        "from_team_id": 5,
-        "to_team_id": 7
       }
     ]
   },
@@ -6213,32 +5406,6 @@
     ]
   },
   {
-    "id": "3367ad28-7027-45ba-aca8-3d9dbb9a18f4",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 8,
-    "date": 1698622595928,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 3121427,
-        "player_name": "Curtis Samuel",
-        "from_team_id": 4,
-        "to_team_id": 1
-      },
-      {
-        "type": "TRADE",
-        "player_id": 15795,
-        "player_name": "DeAndre Hopkins",
-        "from_team_id": 1,
-        "to_team_id": 4
-      }
-    ]
-  },
-  {
     "id": "89d90a7b-0787-4c5e-a102-19f2f92358df",
     "type": "WAIVER",
     "status": "CANCELED",
@@ -6261,65 +5428,6 @@
         "player_name": "Saints D/ST",
         "from_team_id": 8,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "b3ebf3ed-7ee1-41ad-a514-78c460a58447",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 8,
-    "date": 1698295940232,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "DROP",
-        "player_id": 2514270,
-        "player_name": "Jordan Hicks",
-        "from_team_id": 6,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "77832a03-8410-4fb7-9c1a-27424d9cbce8",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 8,
-    "date": 1698622626703,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 15795,
-        "player_name": "DeAndre Hopkins",
-        "from_team_id": 1,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4432577,
-        "player_name": "C.J. Stroud",
-        "from_team_id": 1,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3915416,
-        "player_name": "DJ Moore",
-        "from_team_id": 4,
-        "to_team_id": 1
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3918298,
-        "player_name": "Josh Allen",
-        "from_team_id": 4,
-        "to_team_id": 1
       }
     ]
   },
@@ -6348,50 +5456,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "9626a30a-ea97-4888-9bf5-846370dbf6ff",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 8,
-    "date": 1698290423907,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4048244,
-        "player_name": "Alexander Mattison",
-        "from_team_id": 6,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4047650,
-        "player_name": "DK Metcalf",
-        "from_team_id": 6,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4047646,
-        "player_name": "A.J. Brown",
-        "from_team_id": 9,
-        "to_team_id": 6
-      }
-    ]
-  },
-  {
-    "id": "8661023b-3ba5-4d80-bc4a-7e3b07966213",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 8,
-    "date": 1698250142028,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "f2077033-15c8-4a90-9844-30ea6229c7f2",
@@ -6472,80 +5536,6 @@
     ]
   },
   {
-    "id": "9a607ded-d5ea-4aa7-8bac-eb5ba564bee8",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 8,
-    "team_name": "Team Mickey Mouse",
-    "scoring_period": 8,
-    "date": 1698258768460,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
-    "id": "9ba1255f-3aaa-41d3-9b8f-5957a52e41c9",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 8,
-    "date": 1698622592548,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 2976316,
-        "player_name": "Michael Thomas",
-        "from_team_id": 4,
-        "to_team_id": 1
-      },
-      {
-        "type": "TRADE",
-        "player_id": 15795,
-        "player_name": "DeAndre Hopkins",
-        "from_team_id": 1,
-        "to_team_id": 4
-      }
-    ]
-  },
-  {
-    "id": "fdc25237-042b-4210-b30d-d5f1d5eec164",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 8,
-    "date": 1698622592548,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
-    "id": "1083cd2f-b382-42c8-a1a2-02553d4ed458",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 8,
-    "date": 1698621775597,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 2976316,
-        "player_name": "Michael Thomas",
-        "from_team_id": 4,
-        "to_team_id": 1
-      },
-      {
-        "type": "TRADE",
-        "player_id": 15795,
-        "player_name": "DeAndre Hopkins",
-        "from_team_id": 1,
-        "to_team_id": 4
-      }
-    ]
-  },
-  {
     "id": "075ee804-2203-498b-be7f-4cbb981a26bf",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -6570,28 +5560,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "52e7515e-e5b2-48be-b405-3941e8b34cc9",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 8,
-    "date": 1698629033089,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
-    "id": "b6209bef-cbc7-439d-8e53-4118e5f4bde1",
-    "type": "TRADE_UPHOLD",
-    "status": "EXECUTED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 8,
-    "date": 1698267683690,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "c64b55d6-25f9-4106-99d5-5c6d4f1f7477",
@@ -6620,43 +5588,6 @@
     ]
   },
   {
-    "id": "b2fb9c88-22a6-4531-897a-52491dd4e036",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 8,
-    "date": 1698621803116,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 3121427,
-        "player_name": "Curtis Samuel",
-        "from_team_id": 4,
-        "to_team_id": 1
-      },
-      {
-        "type": "TRADE",
-        "player_id": 15795,
-        "player_name": "DeAndre Hopkins",
-        "from_team_id": 1,
-        "to_team_id": 4
-      }
-    ]
-  },
-  {
-    "id": "8ac60efc-81cd-4f11-a600-57e6525e00a8",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 8,
-    "date": 1698298686291,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "fdad7281-7dda-459e-9bad-bc1f76924127",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -6681,17 +5612,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "d8623108-25fe-4722-8f9d-c9cbd81ab039",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 8,
-    "date": 1698622787855,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "231e6d33-a2c0-4a5e-947d-2c62c9b09759",
@@ -6742,39 +5662,6 @@
         "player_name": "Raiders D/ST",
         "from_team_id": 1,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "60d6be89-6300-46eb-b01c-f1a99001e550",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 8,
-    "date": 1698289006026,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 3925357,
-        "player_name": "Calvin Ridley",
-        "from_team_id": 6,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4048244,
-        "player_name": "Alexander Mattison",
-        "from_team_id": 6,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4047646,
-        "player_name": "A.J. Brown",
-        "from_team_id": 9,
-        "to_team_id": 6
       }
     ]
   },
@@ -6831,17 +5718,6 @@
     ]
   },
   {
-    "id": "23f04ded-9d6c-4860-9e03-3aef4487db64",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 10,
-    "team_name": "Team Great Greeks",
-    "scoring_period": 8,
-    "date": 1698320804646,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "a058406b-7207-4567-9fb1-0b542021afef",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -6887,68 +5763,6 @@
     ]
   },
   {
-    "id": "b1e1602e-3ca1-4b58-b2da-107944a84d69",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 8,
-    "date": 1698622787855,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 15795,
-        "player_name": "DeAndre Hopkins",
-        "from_team_id": 1,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4432577,
-        "player_name": "C.J. Stroud",
-        "from_team_id": 1,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3915416,
-        "player_name": "DJ Moore",
-        "from_team_id": 4,
-        "to_team_id": 1
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3918298,
-        "player_name": "Josh Allen",
-        "from_team_id": 4,
-        "to_team_id": 1
-      }
-    ]
-  },
-  {
-    "id": "78f9ab22-4612-4ff1-a5ef-714c16be91fe",
-    "type": "TRADE_VETO",
-    "status": "EXECUTED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 8,
-    "date": 1698296046703,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
-    "id": "2ba9899e-34f0-4e09-a4d6-3670cffca4ec",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 8,
-    "date": 1698622595928,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "c0885b7f-344f-4b66-97b3-4270e1faefec",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -6964,112 +5778,6 @@
         "player_name": "Kalif Raymond",
         "from_team_id": 0,
         "to_team_id": 5
-      }
-    ]
-  },
-  {
-    "id": "58f2d70e-171a-406e-8fb1-dc86d28e0ccd",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 8,
-    "date": 1698279622157,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426386,
-        "player_name": "Roschon Johnson",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4036378,
-        "player_name": "Jordan Love",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4242335,
-        "player_name": "Jonathan Taylor",
-        "from_team_id": 10,
-        "to_team_id": 2
-      }
-    ]
-  },
-  {
-    "id": "8d301d1c-77d1-486f-a8d8-f22c1dc38e51",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 8,
-    "date": 1698295812746,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4426386,
-        "player_name": "Roschon Johnson",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4036378,
-        "player_name": "Jordan Love",
-        "from_team_id": 2,
-        "to_team_id": 10
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4242335,
-        "player_name": "Jonathan Taylor",
-        "from_team_id": 10,
-        "to_team_id": 2
-      }
-    ]
-  },
-  {
-    "id": "27a83d02-1ad5-4858-bdd5-153104a1766b",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 8,
-    "date": 1698298693798,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4047650,
-        "player_name": "DK Metcalf",
-        "from_team_id": 6,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4360438,
-        "player_name": "Brandon Aiyuk",
-        "from_team_id": 6,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4428557,
-        "player_name": "Tyjae Spears",
-        "from_team_id": 9,
-        "to_team_id": 6
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4047646,
-        "player_name": "A.J. Brown",
-        "from_team_id": 9,
-        "to_team_id": 6
       }
     ]
   },
@@ -7195,17 +5903,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "2373391f-ff1a-439e-b401-90ec07a29fbe",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 9,
-    "date": 1699072938325,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "f11c21f8-8205-4347-9ff6-3b50c3100767",
@@ -7461,17 +6158,6 @@
     ]
   },
   {
-    "id": "dc8c7a56-61d9-452c-89f0-fe5c9470aedb",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 1,
-    "team_name": "Jolo Wouldve Won",
-    "scoring_period": 9,
-    "date": 1699071426645,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "61511dbd-0402-4116-a2b7-6b77c02026a5",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -7725,17 +6411,6 @@
     ]
   },
   {
-    "id": "7e1facf0-b6a8-4709-af39-a047da93c9d8",
-    "type": "TRADE_VETO",
-    "status": "EXECUTED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 9,
-    "date": 1699072454888,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "9000794a-f775-49b5-9eed-47c7a0aa7ab2",
     "type": "WAIVER",
     "status": "FAILED_PLAYERALREADYDROPPED",
@@ -7798,28 +6473,6 @@
         "to_team_id": 6
       }
     ]
-  },
-  {
-    "id": "aec39b84-ddc5-473a-a892-b414c6e54a18",
-    "type": "TRADE_DECLINE",
-    "status": "EXECUTED",
-    "team_id": 6,
-    "team_name": "Let me in the Playoffs",
-    "scoring_period": 9,
-    "date": 1698983181157,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
-    "id": "1e8e5847-6cfc-47b7-ae9f-ebe7fa61c148",
-    "type": "TRADE_UPHOLD",
-    "status": "EXECUTED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 9,
-    "date": 1699121509027,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "e967d794-4ef3-4c28-92b0-9b07e12e3e60",
@@ -8097,46 +6750,6 @@
         "player_name": "Dameon Pierce",
         "from_team_id": 6,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "319f6f67-abb4-4bea-9db2-29fa6052cdca",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 9,
-    "date": 1699072909346,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 3895856,
-        "player_name": "Christian Kirk",
-        "from_team_id": 5,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361432,
-        "player_name": "Romeo Doubs",
-        "from_team_id": 5,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4372019,
-        "player_name": "Jerome Ford",
-        "from_team_id": 9,
-        "to_team_id": 5
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4239993,
-        "player_name": "Tee Higgins",
-        "from_team_id": 9,
-        "to_team_id": 5
       }
     ]
   },
@@ -8917,46 +7530,6 @@
     ]
   },
   {
-    "id": "c22956e2-f264-43f4-841a-7f8219522c5d",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 2,
-    "team_name": "69ers W",
-    "scoring_period": 10,
-    "date": 1699467091799,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4360248,
-        "player_name": "Kyle Pitts",
-        "from_team_id": 2,
-        "to_team_id": 7
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4362887,
-        "player_name": "Justin Fields",
-        "from_team_id": 2,
-        "to_team_id": 7
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4035538,
-        "player_name": "David Montgomery",
-        "from_team_id": 7,
-        "to_team_id": 2
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4385690,
-        "player_name": "Dalton Kincaid",
-        "from_team_id": 7,
-        "to_team_id": 2
-      }
-    ]
-  },
-  {
     "id": "fc8322f1-8daa-49a3-823a-bf3fe4d48cee",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -9151,53 +7724,6 @@
     ]
   },
   {
-    "id": "0a176c48-d59c-41f8-bb67-98c3e4d03d87",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 11,
-    "date": 1700522687945,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4360797,
-        "player_name": "Tutu Atwell",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361432,
-        "player_name": "Romeo Doubs",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 2468609,
-        "player_name": "Taysom Hill",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3121427,
-        "player_name": "Curtis Samuel",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "DROP",
-        "player_id": 3054212,
-        "player_name": "Jonnu Smith",
-        "from_team_id": 9,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "01a34062-eebe-4586-9d7b-bd217ba72fe1",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -9245,53 +7771,6 @@
         "player_id": 14985,
         "player_name": "Lavonte David",
         "from_team_id": 1,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "33998131-c168-4fcb-9bd6-054c1bb92ce6",
-    "type": "TRADE_PROPOSAL",
-    "status": "PENDING",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 11,
-    "date": 1700522953355,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4361432,
-        "player_name": "Romeo Doubs",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4360797,
-        "player_name": "Tutu Atwell",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3121427,
-        "player_name": "Curtis Samuel",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 2468609,
-        "player_name": "Taysom Hill",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "DROP",
-        "player_id": 3054212,
-        "player_name": "Jonnu Smith",
-        "from_team_id": 9,
         "to_team_id": 0
       }
     ]
@@ -9396,53 +7875,6 @@
         "player_id": 4360238,
         "player_name": "Dameon Pierce",
         "from_team_id": 6,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "46db08fa-236f-4ffa-ac86-250dd4f956a3",
-    "type": "TRADE_PROPOSAL",
-    "status": "CANCELED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 11,
-    "date": 1700522904054,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4360797,
-        "player_name": "Tutu Atwell",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4361432,
-        "player_name": "Romeo Doubs",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 2468609,
-        "player_name": "Taysom Hill",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3121427,
-        "player_name": "Curtis Samuel",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "DROP",
-        "player_id": 3054212,
-        "player_name": "Jonnu Smith",
-        "from_team_id": 9,
         "to_team_id": 0
       }
     ]
@@ -9578,17 +8010,6 @@
     ]
   },
   {
-    "id": "dda662b3-41ef-4a31-819d-51362fa67408",
-    "type": "TRADE_VETO",
-    "status": "EXECUTED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 12,
-    "date": 1701013484280,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "b15cc009-28e4-42ba-aeb2-90fdd58b4c41",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -9641,17 +8062,6 @@
     ]
   },
   {
-    "id": "24dd7cb6-d3a9-4346-bb44-bd36230c9678",
-    "type": "TRADE_UPHOLD",
-    "status": "EXECUTED",
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 12,
-    "date": 1701015315803,
-    "bid_amount": 0,
-    "items": []
-  },
-  {
     "id": "179d72e5-e3d2-4619-b087-e31f680e2a03",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -9702,17 +8112,6 @@
         "to_team_id": 0
       }
     ]
-  },
-  {
-    "id": "d42be3ec-7468-465f-b939-5891c932313d",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 12,
-    "date": 1701013798789,
-    "bid_amount": 0,
-    "items": []
   },
   {
     "id": "f0fd2281-303c-427b-8dbd-f737488bdbbe",
@@ -9805,25 +8204,6 @@
     ]
   },
   {
-    "id": "6bed3f3c-d4fd-448c-a17f-ff93fc7c4623",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 4,
-    "team_name": "69ers Meat",
-    "scoring_period": 12,
-    "date": 1700580193502,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "DROP",
-        "player_id": 4032473,
-        "player_name": "Rashid Shaheed",
-        "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "13e177a8-a30e-4f9d-b954-177e67a4e048",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -9846,39 +8226,6 @@
         "player_name": "Pat Freiermuth",
         "from_team_id": 2,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "cb098da4-130f-42af-8db6-495b639a4040",
-    "type": "TRADE_ACCEPT",
-    "status": "EXECUTED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 12,
-    "date": 1701044578452,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4360310,
-        "player_name": "Trevor Lawrence",
-        "from_team_id": 5,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 2468609,
-        "player_name": "Taysom Hill",
-        "from_team_id": 5,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4426502,
-        "player_name": "Drake London",
-        "from_team_id": 9,
-        "to_team_id": 5
       }
     ]
   },
@@ -9956,79 +8303,6 @@
         "player_id": 4361418,
         "player_name": "Will Levis",
         "from_team_id": 6,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "6517f398-d7d4-404b-905a-97d394b89de5",
-    "type": "TRADE_ACCEPT",
-    "status": null,
-    "team_id": 5,
-    "team_name": "They Hate Us Cuz They Aint Us",
-    "scoring_period": 12,
-    "date": 1700970113779,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "DROP",
-        "player_id": 4428557,
-        "player_name": "Tyjae Spears",
-        "from_team_id": 5,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "278b4a98-e626-487b-af2e-3bf678ca5d57",
-    "type": "TRADE_ACCEPT",
-    "status": "EXECUTED",
-    "team_id": 9,
-    "team_name": "Not in Last Place",
-    "scoring_period": 12,
-    "date": 1700752993624,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "TRADE",
-        "player_id": 4361432,
-        "player_name": "Romeo Doubs",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 4360797,
-        "player_name": "Tutu Atwell",
-        "from_team_id": 9,
-        "to_team_id": 4
-      },
-      {
-        "type": "TRADE",
-        "player_id": 3121427,
-        "player_name": "Curtis Samuel",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "TRADE",
-        "player_id": 2468609,
-        "player_name": "Taysom Hill",
-        "from_team_id": 4,
-        "to_team_id": 9
-      },
-      {
-        "type": "DROP",
-        "player_id": 3054212,
-        "player_name": "Jonnu Smith",
-        "from_team_id": 9,
-        "to_team_id": 0
-      },
-      {
-        "type": "DROP",
-        "player_id": 4032473,
-        "player_name": "Rashid Shaheed",
-        "from_team_id": 4,
         "to_team_id": 0
       }
     ]

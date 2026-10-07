@@ -1,0 +1,299 @@
+[
+  {
+    "id": "26128219-03b9-464b-8bd8-693bab5d900f",
+    "week": 1,
+    "date": 1756878736151,
+    "team_ids": [
+      6
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "9ae18884-26d2-4a0e-838e-6387581c9920",
+    "week": 3,
+    "date": 1758134948817,
+    "team_ids": [
+      1,
+      5
+    ],
+    "items": [
+      {
+        "player_id": 4429022,
+        "from_team_id": 5,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4360516,
+        "from_team_id": 1,
+        "to_team_id": 5
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "7c0d52ea-6e54-4f12-873c-0f86e0d00e33",
+    "week": 3,
+    "date": 1758146870259,
+    "team_ids": [
+      3,
+      7
+    ],
+    "items": [
+      {
+        "player_id": 4372016,
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 4685247,
+        "from_team_id": 3,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 2976212,
+        "from_team_id": 7,
+        "to_team_id": 3
+      },
+      {
+        "player_id": 4241457,
+        "from_team_id": 7,
+        "to_team_id": 3
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "3dd3fec4-c52a-4ffa-a3ce-bc73d009db8f",
+    "week": 5,
+    "date": 1759277382746,
+    "team_ids": [
+      5,
+      10
+    ],
+    "items": [
+      {
+        "player_id": 4362238,
+        "from_team_id": 10,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4701936,
+        "from_team_id": 10,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4426388,
+        "from_team_id": 5,
+        "to_team_id": 10
+      },
+      {
+        "player_id": 4697815,
+        "from_team_id": 5,
+        "to_team_id": 10
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "4bd63e54-9cb0-4b04-ad82-1305a3f8fa74",
+    "week": 5,
+    "date": 1759449615543,
+    "team_ids": [
+      1,
+      8
+    ],
+    "items": [
+      {
+        "player_id": 4241416,
+        "from_team_id": 1,
+        "to_team_id": 8
+      },
+      {
+        "player_id": 4432773,
+        "from_team_id": 1,
+        "to_team_id": 8
+      },
+      {
+        "player_id": 4696981,
+        "from_team_id": 1,
+        "to_team_id": 8
+      },
+      {
+        "player_id": 4430807,
+        "from_team_id": 8,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4612826,
+        "from_team_id": 8,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4373626,
+        "from_team_id": 8,
+        "to_team_id": 1
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "cd9b222a-e1e5-42eb-9ce8-960f1c489b99",
+    "week": 7,
+    "date": 1760490274405,
+    "team_ids": [
+      6
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "65f1f63b-8565-4cf4-bda6-5716a41dbcb3",
+    "week": 7,
+    "date": 1760625286752,
+    "team_ids": [
+      5,
+      6
+    ],
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4429795,
+        "player_name": "Jahmyr Gibbs",
+        "from_team_id": 5,
+        "to_team_id": 6,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4241474,
+        "player_name": "Brian Robinson Jr.",
+        "from_team_id": 5,
+        "to_team_id": 6,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4362238,
+        "player_name": "Chase Brown",
+        "from_team_id": 6,
+        "to_team_id": 5,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4038815,
+        "player_name": "Rico Dowdle",
+        "from_team_id": 6,
+        "to_team_id": 5,
+        "is_keeper": false
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "3a0a16a4-cf9c-44c4-aa93-899905b00866",
+    "week": 9,
+    "date": 1761834008214,
+    "team_ids": [
+      4,
+      5
+    ],
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4038815,
+        "player_name": "Rico Dowdle",
+        "from_team_id": 5,
+        "to_team_id": 4,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4360248,
+        "player_name": "Kyle Pitts Sr.",
+        "from_team_id": 4,
+        "to_team_id": 5,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 4,
+        "to_team_id": 5,
+        "is_keeper": false
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "9ff68d0c-fc28-4a6e-a86a-99e7e8db63df",
+    "week": 10,
+    "date": 1762478454987,
+    "team_ids": [
+      7,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 4890973,
+        "from_team_id": 7,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 3886598,
+        "from_team_id": 7,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4372016,
+        "from_team_id": 7,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4262921,
+        "from_team_id": 9,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 4361579,
+        "from_team_id": 9,
+        "to_team_id": 7
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "981c4db9-e797-4a17-bba7-604ee746ee03",
+    "week": 12,
+    "date": 1763612891279,
+    "team_ids": [
+      3,
+      11
+    ],
+    "items": [
+      {
+        "player_id": 4429615,
+        "from_team_id": 11,
+        "to_team_id": 3
+      },
+      {
+        "player_id": 4032473,
+        "from_team_id": 11,
+        "to_team_id": 3
+      },
+      {
+        "player_id": 3126486,
+        "from_team_id": 3,
+        "to_team_id": 11
+      },
+      {
+        "player_id": 4429022,
+        "from_team_id": 3,
+        "to_team_id": 11
+      }
+    ],
+    "source": "rebuilt"
+  }
+]

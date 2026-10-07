@@ -1,0 +1,334 @@
+{
+  "players": {
+    "4035687": {
+      "player_name": "Michael Pittman Jr.",
+      "weekly_points": {
+        "4": 5.0,
+        "3": 3.6,
+        "2": 0.0,
+        "1": 8.8,
+        "0": 17.4
+      }
+    },
+    "4430027": {
+      "player_name": "Sam LaPorta",
+      "weekly_points": {
+        "4": 22.4,
+        "3": 7.4,
+        "2": 17.2,
+        "1": 9.8,
+        "0": 56.8
+      }
+    },
+    "4880281": {
+      "player_name": "Jordyn Tyson",
+      "weekly_points": {
+        "4": 0.0,
+        "3": 0.0,
+        "2": 0.0,
+        "1": 0.0,
+        "0": 0.0
+      }
+    },
+    "4688813": {
+      "player_name": "Josh Downs",
+      "weekly_points": {
+        "4": 4.6,
+        "3": 12.7,
+        "2": 14.2,
+        "1": 7.2,
+        "0": 38.7
+      }
+    },
+    "3929630": {
+      "player_name": "Saquon Barkley",
+      "weekly_points": {
+        "4": 2.0,
+        "3": 9.0,
+        "2": 3.0,
+        "1": 9.0,
+        "0": 23.0
+      }
+    },
+    "4696981": {
+      "player_name": "Cam Skattebo",
+      "weekly_points": {
+        "4": 7.6,
+        "3": 13.0,
+        "2": 9.5,
+        "1": 14.1,
+        "0": 44.2
+      }
+    },
+    "4887558": {
+      "player_name": "Emanuel Wilson",
+      "weekly_points": {
+        "4": 28.5,
+        "3": 1.4,
+        "2": 9.2,
+        "1": 0.3,
+        "0": 39.4
+      }
+    },
+    "4036378": {
+      "player_name": "Jordan Love",
+      "weekly_points": {
+        "4": 17.05,
+        "3": 23.6,
+        "2": 19.25,
+        "1": 26.85,
+        "0": 86.75
+      }
+    },
+    "4596448": {
+      "player_name": "Bucky Irving",
+      "weekly_points": {
+        "4": 6.1,
+        "3": 7.8,
+        "2": 13.0,
+        "1": 20.3,
+        "0": 47.2
+      }
+    },
+    "4429025": {
+      "player_name": "Quentin Johnston",
+      "weekly_points": {
+        "4": 5.0,
+        "3": 7.0,
+        "2": 2.4,
+        "1": 3.7,
+        "0": 18.1
+      }
+    },
+    "4241985": {
+      "player_name": "J.K. Dobbins",
+      "weekly_points": {
+        "4": 7.2,
+        "3": 6.3,
+        "2": 3.6,
+        "1": 3.6,
+        "0": 20.7
+      }
+    },
+    "4599739": {
+      "player_name": "Kendre Miller",
+      "weekly_points": {
+        "4": 1.9,
+        "3": 3.9,
+        "2": 0.0,
+        "1": 9.0,
+        "0": 14.8
+      }
+    },
+    "4429023": {
+      "player_name": "MarShawn Lloyd",
+      "weekly_points": {
+        "4": 9.9,
+        "3": 3.8,
+        "2": 8.6,
+        "1": 3.7,
+        "0": 26.0
+      }
+    },
+    "12483": {
+      "player_name": "Matthew Stafford",
+      "weekly_points": {
+        "4": 8.85,
+        "3": 24.8,
+        "2": 36.25,
+        "1": 3.65,
+        "0": 73.55
+      }
+    },
+    "4432710": {
+      "player_name": "TreVeyon Henderson",
+      "weekly_points": {
+        "4": 4.2,
+        "3": 3.9,
+        "2": 13.6,
+        "1": 0.0,
+        "0": 21.7
+      }
+    },
+    "3054850": {
+      "player_name": "Alvin Kamara",
+      "weekly_points": {
+        "4": 22.8,
+        "3": 5.1,
+        "2": 7.2,
+        "1": 0.0,
+        "0": 35.1
+      }
+    },
+    "4568490": {
+      "player_name": "RJ Harvey",
+      "weekly_points": {
+        "4": 19.3,
+        "3": 10.7,
+        "2": 0.0,
+        "1": 8.1,
+        "0": 38.1
+      }
+    },
+    "3121023": {
+      "player_name": "Dallas Goedert",
+      "weekly_points": {
+        "4": 0.0,
+        "3": 0.0,
+        "2": 1.4,
+        "1": 23.7,
+        "0": 25.1
+      }
+    },
+    "4685702": {
+      "player_name": "Quinshon Judkins",
+      "weekly_points": {
+        "4": 21.6,
+        "3": 9.9,
+        "2": 9.8,
+        "1": 7.0,
+        "0": 48.3
+      }
+    },
+    "4430737": {
+      "player_name": "Kyren Williams",
+      "weekly_points": {
+        "4": 38.2,
+        "3": 21.8,
+        "2": 15.7,
+        "1": 15.5,
+        "0": 91.2
+      }
+    },
+    "4371733": {
+      "player_name": "Kenny Gainwell",
+      "weekly_points": {
+        "4": 10.7,
+        "3": 4.5,
+        "2": 4.5,
+        "1": 2.8,
+        "0": 22.5
+      }
+    },
+    "4612826": {
+      "player_name": "Ladd McConkey",
+      "weekly_points": {
+        "4": 0.0,
+        "3": 10.6,
+        "2": 6.5,
+        "1": 19.2,
+        "0": 36.3
+      }
+    },
+    "4426388": {
+      "player_name": "Jameson Williams",
+      "weekly_points": {
+        "4": 16.2,
+        "3": 8.9,
+        "2": 5.3,
+        "1": 8.5,
+        "0": 38.9
+      }
+    },
+    "4870795": {
+      "player_name": "Makai Lemon",
+      "weekly_points": {
+        "4": 5.7,
+        "3": 7.4,
+        "2": 3.4,
+        "1": 2.5,
+        "0": 19.0
+      }
+    },
+    "4697815": {
+      "player_name": "Rachaad White",
+      "weekly_points": {
+        "4": 0.0,
+        "3": 11.1,
+        "2": 14.3,
+        "1": 4.7,
+        "0": 30.1
+      }
+    },
+    "4361370": {
+      "player_name": "Chris Olave",
+      "weekly_points": {
+        "4": 19.6,
+        "3": 19.7,
+        "2": 22.6,
+        "1": 28.2,
+        "0": 90.1
+      }
+    },
+    "4595348": {
+      "player_name": "Malik Nabers",
+      "weekly_points": {
+        "4": 23.2,
+        "3": 7.6,
+        "2": 1.1,
+        "1": 12.9,
+        "0": 44.8
+      }
+    },
+    "4575131": {
+      "player_name": "Jacory Croskey-Merritt",
+      "weekly_points": {
+        "4": 7.0,
+        "3": 5.3,
+        "2": 5.8,
+        "1": 12.6,
+        "0": 30.7
+      }
+    },
+    "4427366": {
+      "player_name": "Breece Hall",
+      "weekly_points": {
+        "4": 0.0,
+        "3": 8.5,
+        "2": 14.2,
+        "1": 19.8,
+        "0": 42.5
+      }
+    },
+    "3929645": {
+      "player_name": "Juwan Johnson",
+      "weekly_points": {
+        "4": 11.9,
+        "3": 27.8,
+        "2": 10.6,
+        "1": 14.4,
+        "0": 64.7
+      }
+    },
+    "4372016": {
+      "player_name": "Jaylen Waddle",
+      "weekly_points": {
+        "4": 14.5,
+        "3": 6.4,
+        "2": 21.8,
+        "1": 1.2,
+        "0": 43.9
+      }
+    },
+    "4685247": {
+      "player_name": "Braelon Allen",
+      "weekly_points": {
+        "4": 8.7,
+        "3": 6.2,
+        "2": 8.5,
+        "1": 4.0,
+        "0": 27.4
+      }
+    },
+    "4567048": {
+      "player_name": "Kenneth Walker III",
+      "weekly_points": {
+        "4": 30.9,
+        "3": 21.3,
+        "2": 23.8,
+        "1": 34.1,
+        "0": 110.1
+      }
+    }
+  }
+}

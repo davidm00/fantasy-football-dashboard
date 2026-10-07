@@ -1,0 +1,406 @@
+[
+  {
+    "id": "f984bcc5-2bd5-42d4-a2c5-c8231dc983f1",
+    "week": 3,
+    "date": 1663780326084,
+    "team_ids": [
+      10
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "57e335f8-9c09-483e-89a5-b2df3b6d254a",
+    "week": 3,
+    "date": 1663785550410,
+    "team_ids": [
+      9
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "13d5dcff-87df-4c16-bee1-4ff85c0067d8",
+    "week": 3,
+    "date": 1663802859104,
+    "team_ids": [
+      8
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "90fb25cb-53f1-4b16-bf92-e7b89bc7f6d1",
+    "week": 4,
+    "date": 1664310277016,
+    "team_ids": [
+      1
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "745c1709-4ff6-4d42-a31e-e6536ad8555f",
+    "week": 4,
+    "date": 1664324937011,
+    "team_ids": [
+      9
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "4f1af2b6-27a2-4dc7-8f14-a254232b8795",
+    "week": 5,
+    "date": 1664931650384,
+    "team_ids": [
+      4,
+      9
+    ],
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 3051392,
+        "player_name": "Ezekiel Elliott",
+        "from_team_id": 4,
+        "to_team_id": 9,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3932905,
+        "player_name": "Diontae Johnson",
+        "from_team_id": 4,
+        "to_team_id": 9,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 2980453,
+        "player_name": "Jamaal Williams",
+        "from_team_id": 9,
+        "to_team_id": 4,
+        "is_keeper": false
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "70171828-9be2-4726-9956-73dce8febe1c",
+    "week": 5,
+    "date": 1664997592453,
+    "team_ids": [
+      1,
+      5
+    ],
+    "items": [
+      {
+        "player_id": 15795,
+        "from_team_id": 1,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4360310,
+        "from_team_id": 1,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4045163,
+        "from_team_id": 5,
+        "to_team_id": 1
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "8d34e505-a905-46da-8f72-5016e89b7513",
+    "week": 6,
+    "date": 1665619378360,
+    "team_ids": [
+      7,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 4047650,
+        "from_team_id": 9,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 4242214,
+        "from_team_id": 9,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 3116593,
+        "from_team_id": 7,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4569618,
+        "from_team_id": 7,
+        "to_team_id": 9
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "f4cd615f-6e39-46be-96d7-cd171e50aa9e",
+    "week": 6,
+    "date": 1665770399019,
+    "team_ids": [
+      2,
+      6
+    ],
+    "items": [
+      {
+        "player_id": 4569173,
+        "from_team_id": 6,
+        "to_team_id": 2
+      },
+      {
+        "player_id": 3123076,
+        "from_team_id": 2,
+        "to_team_id": 6
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "53bf9672-b7a9-4566-9026-af3cbe2334b0",
+    "week": 7,
+    "date": 1666100481002,
+    "team_ids": [
+      1,
+      8
+    ],
+    "items": [
+      {
+        "player_id": 4362628,
+        "from_team_id": 1,
+        "to_team_id": 8
+      },
+      {
+        "player_id": 3116165,
+        "from_team_id": 8,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4360238,
+        "from_team_id": 8,
+        "to_team_id": 1
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "38463082-693e-4652-87ad-f9f88c5ddbc9",
+    "week": 7,
+    "date": 1666106265864,
+    "team_ids": [
+      5,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 16800,
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 3918639,
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4567048,
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 3040151,
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4243537,
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 3116385,
+        "from_team_id": 5,
+        "to_team_id": 9
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "383bb498-0f58-4295-911d-fa6afd5dcc35",
+    "week": 8,
+    "date": 1666802530896,
+    "team_ids": [
+      9
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "53e4f914-4a1c-4415-8eee-e689c5c51e82",
+    "week": 8,
+    "date": 1666806085048,
+    "team_ids": [
+      6
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "892b7097-6c22-4f7a-b188-c40d9141d9e8",
+    "week": 9,
+    "date": 1667340362119,
+    "team_ids": [
+      4,
+      5
+    ],
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 4,
+        "to_team_id": 5,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3117251,
+        "player_name": "Christian McCaffrey",
+        "from_team_id": 4,
+        "to_team_id": 5,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3121427,
+        "player_name": "Curtis Samuel",
+        "from_team_id": 5,
+        "to_team_id": 4,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 16800,
+        "player_name": "Davante Adams",
+        "from_team_id": 5,
+        "to_team_id": 4,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3042519,
+        "player_name": "Aaron Jones",
+        "from_team_id": 5,
+        "to_team_id": 4,
+        "is_keeper": false
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "a4ad5a1c-2e2b-47da-b0c9-2232c06f07eb",
+    "week": 9,
+    "date": 1667598208021,
+    "team_ids": [
+      9
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "7cea9347-4f54-40b8-ba2a-eb336887593c",
+    "week": 9,
+    "date": 1667598399986,
+    "team_ids": [
+      6
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "5099bd58-25c6-4187-a715-736699416242",
+    "week": 9,
+    "date": 1667842430056,
+    "team_ids": [
+      7,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 3116593,
+        "from_team_id": 9,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 4360438,
+        "from_team_id": 9,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 2976499,
+        "from_team_id": 7,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4052042,
+        "from_team_id": 7,
+        "to_team_id": 9
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "3f29263c-3214-4d3d-8b2a-3f73eb43c1e9",
+    "week": 10,
+    "date": 1667936475592,
+    "team_ids": [
+      1,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 4243537,
+        "from_team_id": 9,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 3045147,
+        "from_team_id": 1,
+        "to_team_id": 9
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "0aa10f84-1aa3-44a8-8cb5-98d28339d0b8",
+    "week": 10,
+    "date": 1668017114505,
+    "team_ids": [
+      9,
+      10
+    ],
+    "items": [
+      {
+        "player_id": 2577417,
+        "from_team_id": 10,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 3051392,
+        "from_team_id": 9,
+        "to_team_id": 10
+      }
+    ],
+    "source": "rebuilt"
+  }
+]

@@ -52,5 +52,7 @@
     "15": "not_started",
     "16": "not_started",
     "17": "not_started"
-  }
+  },
+  "waiver_type": "faab",
+  "faab_budget": 100
 }

@@ -1,0 +1,94 @@
+{
+  "rounds": [
+    {
+      "week": 15,
+      "games": [
+        {
+          "tier": "WINNERS_BRACKET",
+          "home_team_id": 10,
+          "home_score": 158.15,
+          "away_team_id": 5,
+          "away_score": 167.9,
+          "winner": "AWAY"
+        },
+        {
+          "tier": "WINNERS_BRACKET",
+          "home_team_id": 7,
+          "home_score": 131.45,
+          "away_team_id": 4,
+          "away_score": 140.65,
+          "winner": "AWAY"
+        },
+        {
+          "tier": "LOSERS_CONSOLATION_LADDER",
+          "home_team_id": 8,
+          "home_score": 130.05,
+          "away_team_id": 6,
+          "away_score": 178.4,
+          "winner": "AWAY"
+        },
+        {
+          "tier": "LOSERS_CONSOLATION_LADDER",
+          "home_team_id": 9,
+          "home_score": 150.55,
+          "away_team_id": 1,
+          "away_score": 131.45,
+          "winner": "HOME"
+        },
+        {
+          "tier": "LOSERS_CONSOLATION_LADDER",
+          "home_team_id": 2,
+          "home_score": 135.25,
+          "away_team_id": 3,
+          "away_score": 102.5,
+          "winner": "HOME"
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "games": [
+        {
+          "tier": "WINNERS_BRACKET",
+          "home_team_id": 4,
+          "home_score": 130.5,
+          "away_team_id": 5,
+          "away_score": 202.05,
+          "winner": "AWAY"
+        },
+        {
+          "tier": "WINNERS_CONSOLATION_LADDER",
+          "home_team_id": 10,
+          "home_score": 179.5,
+          "away_team_id": 7,
+          "away_score": 129.25,
+          "winner": "HOME"
+        },
+        {
+          "tier": "LOSERS_CONSOLATION_LADDER",
+          "home_team_id": 6,
+          "home_score": 145.55,
+          "away_team_id": 9,
+          "away_score": 113.65,
+          "winner": "HOME"
+        },
+        {
+          "tier": "LOSERS_CONSOLATION_LADDER",
+          "home_team_id": 8,
+          "home_score": 120.1,
+          "away_team_id": 2,
+          "away_score": 165.15,
+          "winner": "AWAY"
+        },
+        {
+          "tier": "LOSERS_CONSOLATION_LADDER",
+          "home_team_id": 1,
+          "home_score": 129.3,
+          "away_team_id": 3,
+          "away_score": 137.65,
+          "winner": "AWAY"
+        }
+      ]
+    }
+  ]
+}

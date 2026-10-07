@@ -1,0 +1,203 @@
+[
+  {
+    "id": "6ffb6b29-035c-4127-86fd-04f8bc4280bc",
+    "week": 5,
+    "date": 1696373426343,
+    "team_ids": [
+      1,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 4430807,
+        "from_team_id": 9,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4248528,
+        "from_team_id": 9,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4361370,
+        "from_team_id": 1,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4361529,
+        "from_team_id": 1,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4372019,
+        "from_team_id": 1,
+        "to_team_id": 9
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "4756d691-a88d-4aa7-86fd-47ad6fb73ce2",
+    "week": 8,
+    "date": 1698258768460,
+    "team_ids": [
+      5,
+      8
+    ],
+    "items": [
+      {
+        "player_id": 3929630,
+        "from_team_id": 8,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 3045147,
+        "from_team_id": 8,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4035676,
+        "from_team_id": 8,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4038941,
+        "from_team_id": 5,
+        "to_team_id": 8
+      },
+      {
+        "player_id": 4241416,
+        "from_team_id": 5,
+        "to_team_id": 8
+      },
+      {
+        "player_id": 3125116,
+        "from_team_id": 5,
+        "to_team_id": 8
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "054d430f-1d71-4257-b08e-73f660a2f6cb",
+    "week": 9,
+    "date": 1699072938325,
+    "team_ids": [
+      5,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 3895856,
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4361432,
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4239993,
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4372019,
+        "from_team_id": 9,
+        "to_team_id": 5
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "33998131-c168-4fcb-9bd6-054c1bb92ce6",
+    "week": 12,
+    "date": 1700752993624,
+    "team_ids": [
+      4,
+      9
+    ],
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4361432,
+        "player_name": "Romeo Doubs",
+        "from_team_id": 9,
+        "to_team_id": 4,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4360797,
+        "player_name": "Tutu Atwell",
+        "from_team_id": 9,
+        "to_team_id": 4,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3121427,
+        "player_name": "Curtis Samuel",
+        "from_team_id": 4,
+        "to_team_id": 9,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 2468609,
+        "player_name": "Taysom Hill",
+        "from_team_id": 4,
+        "to_team_id": 9,
+        "is_keeper": false
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "7289a9b7-4827-46f7-a744-1793b00149a2",
+    "week": 12,
+    "date": 1701013798789,
+    "team_ids": [
+      9
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "cb098da4-130f-42af-8db6-495b639a4040",
+    "week": 12,
+    "date": 1701044578452,
+    "team_ids": [
+      5,
+      9
+    ],
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4360310,
+        "player_name": "Trevor Lawrence",
+        "from_team_id": 5,
+        "to_team_id": 9,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 2468609,
+        "player_name": "Taysom Hill",
+        "from_team_id": 5,
+        "to_team_id": 9,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4426502,
+        "player_name": "Drake London",
+        "from_team_id": 9,
+        "to_team_id": 5,
+        "is_keeper": false
+      }
+    ],
+    "source": "espn"
+  }
+]

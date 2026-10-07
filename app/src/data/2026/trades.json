@@ -1,0 +1,308 @@
+[
+  {
+    "id": "c058b1a8-f7b8-4d2d-a5e9-5ec50ce9dbea",
+    "week": 3,
+    "date": 1790124028008,
+    "team_ids": [
+      1,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 4371733,
+        "player_name": "Kenny Gainwell",
+        "from_team_id": 1,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 9,
+        "to_team_id": 1
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "c808b4ab-19b1-4f53-8a20-fa16d99d7516",
+    "week": 3,
+    "date": 1790619523239,
+    "team_ids": [
+      1,
+      5
+    ],
+    "items": [
+      {
+        "player_id": 4429023,
+        "player_name": "MarShawn Lloyd",
+        "from_team_id": 5,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 1,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 1,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4568490,
+        "player_name": "RJ Harvey",
+        "from_team_id": 5,
+        "to_team_id": 1
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "1f256085-d87f-49a0-a945-218c9d5fd905",
+    "week": 4,
+    "date": 1790683872315,
+    "team_ids": [
+      1,
+      11
+    ],
+    "items": [
+      {
+        "player_id": 4361370,
+        "player_name": "Chris Olave",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4575131,
+        "player_name": "Jacory Croskey-Merritt",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "player_id": 4372016,
+        "player_name": "Jaylen Waddle",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4612826,
+        "player_name": "Ladd McConkey",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "player_id": 4697815,
+        "player_name": "Rachaad White",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 3929645,
+        "player_name": "Juwan Johnson",
+        "from_team_id": 1,
+        "to_team_id": 11
+      },
+      {
+        "player_id": 4430737,
+        "player_name": "Kyren Williams",
+        "from_team_id": 11,
+        "to_team_id": 1
+      },
+      {
+        "player_id": 4567048,
+        "player_name": "Kenneth Walker III",
+        "from_team_id": 1,
+        "to_team_id": 11
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "69ea9217-179e-41bd-966d-198b5e942cb7",
+    "week": 4,
+    "date": 1790708349696,
+    "team_ids": [
+      3,
+      6
+    ],
+    "items": [
+      {
+        "player_id": 4429025,
+        "player_name": "Quentin Johnston",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "player_id": 4035687,
+        "player_name": "Michael Pittman Jr.",
+        "from_team_id": 6,
+        "to_team_id": 3
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "d57a4ab1-57fd-47f0-ab6e-ebe88ffb937c",
+    "week": 4,
+    "date": 1790804932422,
+    "team_ids": [
+      3,
+      6
+    ],
+    "items": [
+      {
+        "player_id": 4685247,
+        "player_name": "Braelon Allen",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "player_id": 4427366,
+        "player_name": "Breece Hall",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "player_id": 4426388,
+        "player_name": "Jameson Williams",
+        "from_team_id": 3,
+        "to_team_id": 6
+      },
+      {
+        "player_id": 4696981,
+        "player_name": "Cam Skattebo",
+        "from_team_id": 6,
+        "to_team_id": 3
+      },
+      {
+        "player_id": 4595348,
+        "player_name": "Malik Nabers",
+        "from_team_id": 6,
+        "to_team_id": 3
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "839a1967-2d9a-49ce-93dd-aaf3bee903c7",
+    "week": 4,
+    "date": 1790896742714,
+    "team_ids": [
+      5,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 3054850,
+        "player_name": "Alvin Kamara",
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4880281,
+        "player_name": "Jordyn Tyson",
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4685702,
+        "player_name": "Quinshon Judkins",
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4596448,
+        "player_name": "Bucky Irving",
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4688813,
+        "player_name": "Josh Downs",
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 5,
+        "to_team_id": 9
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "a95872e9-9fa8-47ed-beb5-6fbbe351108c",
+    "week": 4,
+    "date": 1790966771965,
+    "team_ids": [
+      3,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 4696981,
+        "player_name": "Cam Skattebo",
+        "from_team_id": 3,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 3929630,
+        "player_name": "Saquon Barkley",
+        "from_team_id": 9,
+        "to_team_id": 3
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "ceea6c35-e149-4a85-a38c-392dd5cfbf2d",
+    "week": 4,
+    "date": 1791068154725,
+    "team_ids": [
+      6,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 3121023,
+        "player_name": "Dallas Goedert",
+        "from_team_id": 6,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 12483,
+        "player_name": "Matthew Stafford",
+        "from_team_id": 6,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4036378,
+        "player_name": "Jordan Love",
+        "from_team_id": 9,
+        "to_team_id": 6
+      },
+      {
+        "player_id": 4430027,
+        "player_name": "Sam LaPorta",
+        "from_team_id": 9,
+        "to_team_id": 6
+      },
+      {
+        "player_id": 4241985,
+        "player_name": "J.K. Dobbins",
+        "from_team_id": 6,
+        "to_team_id": 9
+      }
+    ],
+    "source": "espn"
+  }
+]

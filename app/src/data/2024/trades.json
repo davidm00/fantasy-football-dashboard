@@ -1,0 +1,152 @@
+[
+  {
+    "id": "d748fe46-bb11-4c49-bcd9-d2e56cc44ec8",
+    "week": 3,
+    "date": 1727113688674,
+    "team_ids": [
+      9
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "25f5ed6f-d0cb-4f04-bbfb-56e2af929ade",
+    "week": 4,
+    "date": 1727415404624,
+    "team_ids": [
+      3
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "30735447-21a8-4bd3-a1c4-897268c42eec",
+    "week": 5,
+    "date": 1727838997684,
+    "team_ids": [
+      2,
+      6
+    ],
+    "items": [
+      {
+        "player_id": 4382466,
+        "from_team_id": 6,
+        "to_team_id": 2
+      },
+      {
+        "player_id": 4038941,
+        "from_team_id": 2,
+        "to_team_id": 6
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "490f413c-4fdd-4a0e-af94-18b592c19e48",
+    "week": 7,
+    "date": 1729130263147,
+    "team_ids": [
+      9
+    ],
+    "items": [],
+    "source": "unknown"
+  },
+  {
+    "id": "6e7b83b8-b1e4-46e9-aecd-e1b14bafdf5d",
+    "week": 8,
+    "date": 1729722282172,
+    "team_ids": [
+      4,
+      9
+    ],
+    "items": [
+      {
+        "type": "TRADE",
+        "player_id": 4683062,
+        "player_name": "Xavier Worthy",
+        "from_team_id": 4,
+        "to_team_id": 9,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 3916148,
+        "player_name": "Tony Pollard",
+        "from_team_id": 4,
+        "to_team_id": 9,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 2977187,
+        "player_name": "Cooper Kupp",
+        "from_team_id": 9,
+        "to_team_id": 4,
+        "is_keeper": false
+      },
+      {
+        "type": "TRADE",
+        "player_id": 4248528,
+        "player_name": "Christian Watson",
+        "from_team_id": 9,
+        "to_team_id": 4,
+        "is_keeper": false
+      }
+    ],
+    "source": "espn"
+  },
+  {
+    "id": "11d9fda2-01a8-4664-b64a-aa1bf352471e",
+    "week": 11,
+    "date": 1731449622638,
+    "team_ids": [
+      5,
+      8
+    ],
+    "items": [
+      {
+        "player_id": 3912547,
+        "from_team_id": 8,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4372016,
+        "from_team_id": 5,
+        "to_team_id": 8
+      }
+    ],
+    "source": "rebuilt"
+  },
+  {
+    "id": "ee2d2edd-e083-4052-8fec-8bf6ffdbfe31",
+    "week": 11,
+    "date": 1731532558562,
+    "team_ids": [
+      5,
+      9
+    ],
+    "items": [
+      {
+        "player_id": 3051876,
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4241474,
+        "from_team_id": 5,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 15847,
+        "from_team_id": 9,
+        "to_team_id": 5
+      },
+      {
+        "player_id": 4683062,
+        "from_team_id": 9,
+        "to_team_id": 5
+      }
+    ],
+    "source": "rebuilt"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "vetoed_trades_total": 5,
+  "by_team": {
+    "5": {
+      "declined": 4,
+      "cancelled": 8,
+      "pending": 3
+    },
+    "2": {
+      "declined": 21,
+      "cancelled": 16,
+      "pending": 0
+    },
+    "1": {
+      "declined": 7,
+      "cancelled": 3,
+      "pending": 2
+    },
+    "8": {
+      "declined": 10,
+      "cancelled": 8,
+      "pending": 0
+    },
+    "9": {
+      "declined": 7,
+      "cancelled": 7,
+      "pending": 3
+    },
+    "7": {
+      "declined": 2,
+      "cancelled": 0,
+      "pending": 0
+    },
+    "3": {
+      "declined": 3,
+      "cancelled": 0,
+      "pending": 0
+    },
+    "6": {
+      "declined": 3,
+      "cancelled": 0,
+      "pending": 0
+    },
+    "4": {
+      "declined": 5,
+      "cancelled": 0,
+      "pending": 0
+    },
+    "10": {
+      "declined": 3,
+      "cancelled": 0,
+      "pending": 0
+    }
+  }
+}

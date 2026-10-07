@@ -6,10 +6,6 @@
       {
         "id": "m01",
         "name": "David G"
-      },
-      {
-        "id": "m16",
-        "name": "Ian"
       }
     ]
   },
@@ -40,10 +36,6 @@
       {
         "id": "m04",
         "name": "David M"
-      },
-      {
-        "id": "m14",
-        "name": "David M2"
       }
     ]
   },
@@ -53,11 +45,7 @@
     "owners": [
       {
         "id": "m05",
-        "name": "Jhajuan C"
-      },
-      {
-        "id": "m15",
-        "name": "Jhajuan C2"
+        "name": "Jhajuan"
       }
     ]
   },
