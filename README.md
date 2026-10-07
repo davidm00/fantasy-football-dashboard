@@ -136,3 +136,34 @@ uniform across seasons — read these from the JSON, never hardcode them:
   `in_progress`, or `not_started`. Never infer "played" from whether a
   score is non-zero — an unplayed week can still show `0` scores, and
   that's expected.
+
+## Manager identity (owners / `m01`-style IDs)
+
+An ESPN *account* and a real *person* aren't always the same thing — one
+person can own a league team under two different ESPN accounts (e.g. a
+new account added in a later season), and some co-owner slots aren't a
+real league member at all. `scripts/export_league_data.py` resolves every
+raw ESPN member ID to a stable anonymized person ID (`m01`, `m02`, ...)
+before anything is written to `app/src/data/` — `owners` entries there
+never contain a real ESPN ID, last name, or SWID.
+
+**IDs are frozen, forever:**
+- Once a real person is assigned an ID (e.g. `m04`), that ID never
+  changes, is never reused for someone else, and is never reassigned even
+  if new ESPN accounts for them are discovered later.
+- A brand-new real person always gets the next unused number — numbers
+  are never reused or renumbered to close a gap (e.g. dropping a person
+  doesn't shift everyone after them down by one).
+- Known merges (the same person's two ESPN accounts) and exclusions (a
+  co-owner slot that isn't a real person) are hardcoded as
+  `KNOWN_SAME_PERSON` / `KNOWN_NOT_A_PERSON` in `export_league_data.py`,
+  not just in the local review file — this is required so the automated
+  GitHub Action (which never persists `data/raw/`) reaches the exact same
+  identity mapping on every run.
+- `/data/raw/people.json` is the full human-reviewable draft of every
+  ESPN member ID (real names, seasons, suggested person, flags for
+  anything ambiguous) — regenerate it with
+  `python scripts/generate_people_draft.py`. It's local-only (gitignored)
+  and re-running it never changes an ID already assigned, for the same
+  freeze reason as above.
+

@@ -37,9 +37,25 @@ DATA_DIR = REPO_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 PUBLIC_DATA_DIR = REPO_ROOT / "app" / "src" / "data"
 OWNER_MAP_PATH = RAW_DIR / "owner_id_map.json"
+PEOPLE_PATH = RAW_DIR / "people.json"
 
 # Seconds to pause between network requests to be polite to ESPN's API.
 REQUEST_DELAY_SECONDS = 1.0
+
+# Approved real-person merges/exclusions (see /data/raw/people.json for the
+# full reviewable draft with display names/seasons - this is the subset
+# that actually needs to survive into every run, including CI, where
+# data/raw/ never persists between runs). Two ESPN member IDs in the same
+# group are the same real person and always resolve to one anon ID; an ID
+# in KNOWN_NOT_A_PERSON is dropped from owners everywhere (never assigned
+# an anon ID at all).
+KNOWN_SAME_PERSON: list[list[str]] = [
+    ["{17F61188-C664-4827-8F9E-2F4263223B0A}", "{B61EAF29-AB69-469D-B011-1EFA38744F69}"],  # David Moses
+    ["{25658ADB-9C1E-43E9-8CFA-AC14FFE356EE}", "{ACCD7B19-B676-4329-A664-2555A51B7A38}"],  # Jhajuan Countee
+]
+KNOWN_NOT_A_PERSON: set[str] = {
+    "{B8EDDD07-E5F3-4C77-894C-0613FF9B6B56}",  # "Ian Book" co-owner slot - not a real league member
+}
 
 # Transaction types that represent real roster moves (trades, waivers, free
 # agent adds/drops). Excludes internal bookkeeping types like DRAFT, ROSTER,
@@ -66,6 +82,12 @@ class SeasonResult:
     season: int
     status: str  # "ok", "partial", "failed"
     notes: list[str]
+    trade_counts_by_source: dict[str, int]
+    vetoed_trades_total: int
+    bracket_status: str  # "built", "not_started"
+    player_info_calls: int
+    waiver_type: str
+    faab_budget: int | None
 
 
 def load_config() -> tuple[str, str, int]:
@@ -141,34 +163,133 @@ def save_owner_map(owner_map: dict[str, Any]) -> None:
     write_json(OWNER_MAP_PATH, owner_map)
 
 
-def update_owner_map(owner_map: dict[str, Any], leagues: list[League]) -> dict[str, Any]:
-    """Discover every ESPN member across every season's teams, assign each a
-    stable anonymized ID (m01, m02, ...) the first time it's seen, and
+def load_people_decisions() -> tuple[dict[str, str], set[str]]:
+    """Return (merge_into, excluded), combining two sources:
+      - KNOWN_SAME_PERSON / KNOWN_NOT_A_PERSON (hardcoded above): the
+        approved facts that MUST apply on every run, including CI, where
+        data/raw/ (and therefore people.json) never persists between runs.
+      - /data/raw/people.json, if present: the full reviewable draft,
+        read in addition for local runs - lets a new merge/exclusion be
+        tried out locally before it's promoted to a hardcoded constant.
+
+      - merge_into: raw ESPN member id -> a single arbitrary-but-
+        deterministic "merge group key" (sorted-min id of the group).
+        Used only to recognize that two raw ids are the same person; the
+        anon ID a merged person actually keeps is resolved against
+        whichever anon ID already exists in owner_id_map.json (see
+        update_owner_map), never recomputed from this key.
+      - excluded: raw ESPN member ids that are not a real league member
+        and should be dropped from owners everywhere.
+    """
+    merge_into: dict[str, str] = {}
+    excluded: set[str] = set(KNOWN_NOT_A_PERSON)
+    for group in KNOWN_SAME_PERSON:
+        canonical = sorted(group)[0]
+        for member_id in group:
+            merge_into[member_id] = canonical
+
+    if PEOPLE_PATH.exists():
+        with PEOPLE_PATH.open() as f:
+            people = json.load(f)
+        for espn_id, info in people.items():
+            if info.get("person") is None:
+                excluded.add(espn_id)
+                continue
+            group = sorted({espn_id, *(info.get("merged_with") or [])})
+            canonical = group[0]
+            for member_id in group:
+                merge_into.setdefault(member_id, canonical)
+    return merge_into, excluded
+
+
+def _migrate_legacy_member_schema(members: dict[str, Any]) -> None:
+    """One-time in-place migration: old schema stored a single "espn_id"
+    string per anon ID; new schema stores "espn_ids" (a list), since a
+    merged person can have more than one raw ESPN account."""
+    for info in members.values():
+        if "espn_ids" not in info and "espn_id" in info:
+            info["espn_ids"] = [info.pop("espn_id")]
+
+
+def update_owner_map(owner_map: dict[str, Any], owner_dicts_in_order: list[dict[str, Any]]) -> dict[str, Any]:
+    """Discover every ESPN member (in the given deterministic order - season
+    ascending, team ascending, owner-list order), assign each real person a
+    stable anonymized ID (m01, m02, ...) the first time they're seen, and
     recompute public display names (first name, +last initial if another
     member shares that first name) across the *entire* known set so a name
-    never changes between seasons or across re-runs."""
-    members: dict[str, Any] = owner_map.get("members", {})
+    never changes between seasons or across re-runs.
 
-    # Discover members in a deterministic order: season ascending, team
-    # ascending, owner list order. Only new (not-yet-mapped) members get a
-    # new anon ID; existing ones keep theirs.
-    existing_ids = {m["espn_id"] for m in members.values()}
-    next_num = len(members) + 1
-    for league in sorted(leagues, key=lambda lg: lg.year):
-        for team in sorted(league.teams, key=lambda t: t.team_id):
-            for raw_member in team.owners:
-                od = owner_dict(raw_member)
-                espn_id = od["id"]
-                if not espn_id or espn_id in existing_ids:
-                    continue
-                anon_id = f"m{next_num:02d}"
-                members[anon_id] = {
-                    "espn_id": espn_id,
-                    "first_name": od["first_name"],
-                    "last_name": od["last_name"],
-                }
-                existing_ids.add(espn_id)
-                next_num += 1
+    Applies /data/raw/people.json's approved merges and exclusions:
+      - Two+ raw ESPN accounts confirmed to be the same real person always
+        resolve to the SAME anon ID (whichever one already exists; new
+        accounts for an already-known person never get a new ID).
+      - Accounts marked "not a real person" (person: null) are dropped
+        entirely - no anon ID is ever assigned to them.
+    IDs already assigned are frozen: this function only ever *adds* new
+    anon IDs for a brand-new real person, never changes or reuses an
+    existing one, even across merges (the lowest already-assigned ID in a
+    merge group wins as canonical; any higher-numbered duplicate for the
+    same person is folded into it and stops being a separate ID)."""
+    members: dict[str, Any] = owner_map.get("members", {})
+    _migrate_legacy_member_schema(members)
+    merge_into, excluded = load_people_decisions()
+
+    def anon_num(anon_id: str) -> int:
+        return int(anon_id[1:])
+
+    # Drop excluded (not-a-real-person) accounts from any anon entry that
+    # currently holds them.
+    for info in members.values():
+        info["espn_ids"] = [eid for eid in info["espn_ids"] if eid not in excluded]
+    for anon_id in [a for a, info in members.items() if not info["espn_ids"]]:
+        del members[anon_id]
+
+    # One-time consolidation: if a merge group's accounts are currently
+    # split across more than one anon ID (e.g. a duplicate account was
+    # discovered before the merge was known), fold every higher-numbered
+    # anon ID in the group into the lowest-numbered one.
+    espn_id_to_anon: dict[str, str] = {}
+    for anon_id, info in members.items():
+        for eid in info["espn_ids"]:
+            espn_id_to_anon[eid] = anon_id
+
+    merge_groups: dict[str, set[str]] = {}
+    for member_id, canonical_key in merge_into.items():
+        merge_groups.setdefault(canonical_key, set()).add(member_id)
+    for group in merge_groups.values():
+        anon_ids_in_group = sorted({espn_id_to_anon[m] for m in group if m in espn_id_to_anon}, key=anon_num)
+        if len(anon_ids_in_group) <= 1:
+            continue
+        keep, *drop = anon_ids_in_group
+        for anon_id in drop:
+            for eid in members[anon_id]["espn_ids"]:
+                if eid not in members[keep]["espn_ids"]:
+                    members[keep]["espn_ids"].append(eid)
+                espn_id_to_anon[eid] = keep
+            del members[anon_id]
+
+    # Discover new members. Only a brand-new real person (no existing
+    # anon ID anywhere in their merge group) gets the next unused number.
+    next_num = max((anon_num(a) for a in members), default=0) + 1
+    for od in owner_dicts_in_order:
+        espn_id = od["id"]
+        if not espn_id or espn_id in excluded:
+            continue
+        canonical_key = merge_into.get(espn_id, espn_id)
+        anon_id = espn_id_to_anon.get(espn_id)
+        if anon_id is None:
+            # Has a merge-mate already been assigned an ID?
+            for member_id, key in merge_into.items():
+                if key == canonical_key and member_id in espn_id_to_anon:
+                    anon_id = espn_id_to_anon[member_id]
+                    break
+        if anon_id is None:
+            anon_id = f"m{next_num:02d}"
+            next_num += 1
+            members[anon_id] = {"espn_ids": [], "first_name": od["first_name"], "last_name": od["last_name"]}
+        if espn_id not in members[anon_id]["espn_ids"]:
+            members[anon_id]["espn_ids"].append(espn_id)
+        espn_id_to_anon[espn_id] = anon_id
 
     # Recompute public display names across the whole known set so that
     # adding a new member can never change an existing member's name.
@@ -182,11 +303,9 @@ def update_owner_map(owner_map: dict[str, Any], leagues: list[League]) -> dict[s
             members[anon_ids[0]]["public_name"] = first
             continue
         # Shared first name: disambiguate with a single last initial only -
-        # never expose more of a real last name than that, even if two
-        # members share both first name and last initial (e.g. the same
-        # person appearing under two different ESPN member IDs across
-        # seasons). Any residual collision is broken with a numeric suffix
-        # instead of revealing more of the surname.
+        # never expose more of a real last name than that. Any residual
+        # collision is broken with a numeric suffix instead of revealing
+        # more of the surname.
         by_initial: dict[str, list[str]] = {}
         for anon_id in sorted(anon_ids):
             last = (members[anon_id].get("last_name") or "").strip()
@@ -203,10 +322,12 @@ def update_owner_map(owner_map: dict[str, Any], leagues: list[League]) -> dict[s
 
 
 def espn_id_to_public(owner_map: dict[str, Any]) -> dict[str, dict[str, str]]:
-    """espn member id -> {"id": anon_id, "name": public_name}"""
+    """espn member id -> {"id": anon_id, "name": public_name}. A merged
+    person's multiple raw ESPN IDs all resolve to the same entry."""
     result = {}
     for anon_id, info in owner_map.get("members", {}).items():
-        result[info["espn_id"]] = {"id": anon_id, "name": info.get("public_name") or anon_id}
+        for espn_id in info["espn_ids"]:
+            result[espn_id] = {"id": anon_id, "name": info.get("public_name") or anon_id}
     return result
 
 
@@ -251,17 +372,19 @@ def compute_week_status(league: League, week: int, current_matchup_period: int, 
     return "in_progress"
 
 
-def compute_all_week_statuses(league: League, weeks: int) -> dict[int, str]:
+def compute_all_week_statuses(league: League, weeks: int) -> tuple[dict[int, str], dict[int, list[dict[str, Any]]]]:
     current_matchup_period = league.currentMatchupPeriod
     statuses: dict[int, str] = {}
+    schedule_by_week: dict[int, list[dict[str, Any]]] = {}
     for week in range(1, weeks + 1):
         try:
             entries = fetch_week_schedule_raw(league, week)
         except Exception:  # noqa: BLE001
             entries = []
+        schedule_by_week[week] = entries
         statuses[week] = compute_week_status(league, week, current_matchup_period, entries)
         time.sleep(REQUEST_DELAY_SECONDS)
-    return statuses
+    return statuses, schedule_by_week
 
 
 # --------------------------------------------------------------------------
@@ -283,6 +406,8 @@ def serialize_settings_raw(league: League, week_statuses: dict[int, str]) -> dic
         "keeper_count": settings.keeper_count,
         "faab": settings.faab,
         "acquisition_budget": settings.acquisition_budget,
+        "waiver_type": "faab" if settings.faab else "waivers",
+        "faab_budget": settings.acquisition_budget if settings.faab else None,
         "current_week": league.currentMatchupPeriod,
         "week_status": {str(wk): status for wk, status in sorted(week_statuses.items())},
     }
@@ -407,6 +532,484 @@ def serialize_transaction_raw(txn: dict[str, Any], league: League) -> dict[str, 
     }
 
 
+# --------------------------------------------------------------------------
+# Trades: grouping, recent_activity (current season), rebuild-free
+# resolution, and privacy-safe counts for non-upheld trades.
+# --------------------------------------------------------------------------
+
+
+def group_trade_transactions(txns: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    """Group TRADE_* legs that belong to the same trade thread. A trade's
+    legs (PROPOSAL, ACCEPT, UPHOLD/VETO/DECLINE) share one relatedTransactionId
+    (the proposal's own id); the proposal itself has no relatedTransactionId,
+    so it is its own group key."""
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for t in txns:
+        if not t["type"].startswith("TRADE"):
+            continue
+        key = t.get("related_transaction_id") or t["id"]
+        groups.setdefault(key, []).append(t)
+    return groups
+
+
+def classify_trade_group(legs: list[dict[str, Any]]) -> str:
+    """One of: upheld, vetoed, declined, cancelled, pending."""
+    types = {t["type"] for t in legs}
+    if "TRADE_VETO" in types:
+        return "vetoed"
+    if "TRADE_DECLINE" in types:
+        return "declined"
+    if "TRADE_ACCEPT" in types:
+        return "upheld"
+    statuses = {t.get("status") for t in legs}
+    if "PENDING" in statuses:
+        return "pending"
+    return "cancelled"
+
+
+def group_accept_leg(legs: list[dict[str, Any]]) -> dict[str, Any]:
+    accepts = [t for t in legs if t["type"] == "TRADE_ACCEPT"]
+    return max(accepts, key=lambda t: t["date"] or 0)
+
+
+def group_known_items(legs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Union of TRADE-type items across all legs in the group. Excludes
+    incidental DROP items (roster space made for incoming players) - those
+    aren't something either side "received"."""
+    seen = set()
+    items = []
+    for t in legs:
+        for item in t["items"]:
+            if item["type"] != "TRADE":
+                continue
+            dedup_key = (item["player_id"], item["from_team_id"], item["to_team_id"])
+            if dedup_key in seen:
+                continue
+            seen.add(dedup_key)
+            items.append(item)
+    return items
+
+
+def fetch_trade_activity_raw(league: League) -> list[dict[str, Any]]:
+    """league.recent_activity() only has data for the live/current season -
+    it returns an empty list harmlessly for completed seasons, so this is
+    safe to call for every season on every run."""
+    try:
+        acts = league.recent_activity(msg_type="TRADED", size=50)
+    except Exception:  # noqa: BLE001
+        return []
+    resolved = []
+    for a in acts:
+        sent_by_player: dict[int, int] = {}
+        received_by_player: dict[int, int] = {}
+        player_names: dict[int, str] = {}
+        for team, action, player, _bid in a.actions:
+            team_id = getattr(team, "team_id", None)
+            player_names[player.playerId] = player.name
+            if action == "TRADE_SENT":
+                sent_by_player[player.playerId] = team_id
+            elif action == "TRADE_RECEIVED":
+                received_by_player[player.playerId] = team_id
+        items = [
+            {
+                "player_id": pid,
+                "player_name": player_names.get(pid),
+                "from_team_id": sent_by_player[pid],
+                "to_team_id": received_by_player[pid],
+            }
+            for pid in sent_by_player
+            if pid in received_by_player
+        ]
+        if items:
+            resolved.append({"date": a.date, "items": items})
+    return resolved
+
+
+def merge_trade_activity(existing: list[dict[str, Any]], new: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Merge by date (recent_activity's timestamps are unique per trade
+    event); never overwrite an entry already on disk."""
+    by_date = {e["date"]: e for e in existing}
+    for event in new:
+        by_date.setdefault(event["date"], event)
+    return [by_date[d] for d in sorted(by_date)]
+
+
+def match_activity_to_group(
+    accepting_team_id: int,
+    group_date: int | None,
+    activity: list[dict[str, Any]],
+    consumed: set[int],
+) -> tuple[int, list[dict[str, Any]]] | None:
+    """Match a trade group to a resolved recent_activity event.
+
+    Groups are processed in ascending accept-date order by the caller, and
+    recent_activity events correspond 1:1 with upheld trades for a team
+    (confirmed empirically: 2026 had exactly 8 upheld trades and
+    recent_activity returned exactly 8 TRADED events). Picking the
+    *nearest-by-absolute-time* candidate was the bug: ESPN's processing lag
+    between acceptance and the activity feed timestamp varies enough
+    (routinely 20-40h) that two trades involving the same team in the same
+    week can have their nearest-candidate ranking flip. Instead, pick the
+    *earliest remaining* (not-yet-consumed) event that involves this team -
+    since both lists are chronological and each team's trades consume its
+    own events in order, this pairs correctly regardless of absolute gap."""
+    if group_date is None:
+        return None
+    candidates = [
+        (i, a) for i, a in enumerate(activity)
+        if i not in consumed
+        and any(accepting_team_id in (item["from_team_id"], item["to_team_id"]) for item in a["items"])
+    ]
+    if not candidates:
+        return None
+    idx, best = min(candidates, key=lambda ia: ia[1]["date"])
+    return idx, best["items"]
+
+
+def build_roster_by_week(box_scores: list[dict[str, Any]]) -> dict[int, dict[int, int]]:
+    """week -> {player_id: team_id}, from locked box-score lineups."""
+    by_week: dict[int, dict[int, int]] = {}
+    for bs in box_scores:
+        week = bs["week"]
+        roster = by_week.setdefault(week, {})
+        for side in ("home", "away"):
+            team_id = bs.get(f"{side}_team_id")
+            if team_id is None:
+                continue
+            for player in bs.get(f"{side}_lineup", []):
+                roster[player["player_id"]] = team_id
+    return by_week
+
+
+def build_add_log(txns: list[dict[str, Any]]) -> dict[tuple[int, int], set[int]]:
+    """(player_id, week) -> set of team_ids that logged an EXECUTED ADD of
+    that player that week (via WAIVER or FREEAGENT). A player can only
+    enter a roster via waiver/FA from free agency, never directly from
+    another team's roster, so a direct team-to-team change with no
+    logged add here is unambiguously a trade, not a waiver pickup."""
+    log: dict[tuple[int, int], set[int]] = {}
+    for t in txns:
+        if t["type"] not in ("WAIVER", "FREEAGENT"):
+            continue
+        if t["status"] != "EXECUTED":
+            continue
+        week = t["scoring_period"]
+        for item in t["items"]:
+            if item["type"] != "ADD":
+                continue
+            log.setdefault((item["player_id"], week), set()).add(item["to_team_id"])
+    return log
+
+
+def _unexplained_transitions(
+    before: dict[int, int],
+    after: dict[int, int],
+    weeks_to_check: tuple[int, ...],
+    add_log: dict[tuple[int, int], set[int]],
+) -> dict[int, tuple[int, int]]:
+    """player_id -> (from_team, to_team) for every player whose team
+    changed between two roster snapshots with no logged waiver/FA add by
+    the destination team in any of weeks_to_check."""
+    result: dict[int, tuple[int, int]] = {}
+    for player_id, from_team in before.items():
+        to_team = after.get(player_id)
+        if to_team is None or to_team == from_team:
+            continue
+        explained = any(to_team in add_log.get((player_id, w), set()) for w in weeks_to_check)
+        if explained:
+            continue
+        result[player_id] = (from_team, to_team)
+    return result
+
+
+def rebuild_trade_group(
+    accepting_team_id: int,
+    week: int,
+    roster_by_week: dict[int, dict[int, int]],
+    add_log: dict[tuple[int, int], set[int]],
+    same_team_same_week_count: int,
+) -> tuple[str, list[dict[str, Any]], str | None]:
+    """Rebuild a trade's player contents from roster diffs around its
+    execution week. Returns (status, items, guard_reason).
+
+    status is "rebuilt" (safe to use), or "unknown" (not safe - either no
+    unexplained transitions were found, or a guard tripped). Window: we
+    check BOTH week-1 -> week AND week -> week+1, since a trade accepted
+    mid-week can already be reflected in that week's locked lineup (not
+    just the following week's) - using whichever of the two windows has
+    data available, unioned together."""
+    if same_team_same_week_count > 1:
+        return "unknown", [], "same_team_multiple_trades_this_week"
+
+    transitions: dict[int, tuple[int, int]] = {}
+    conflicting_players: set[int] = set()
+    any_window_available = False
+    for before_wk, after_wk in ((week - 1, week), (week, week + 1)):
+        if before_wk not in roster_by_week or after_wk not in roster_by_week:
+            continue
+        any_window_available = True
+        window_transitions = _unexplained_transitions(
+            roster_by_week[before_wk], roster_by_week[after_wk], (before_wk, week, after_wk), add_log
+        )
+        for player_id, move in window_transitions.items():
+            if player_id in transitions and transitions[player_id] != move:
+                conflicting_players.add(player_id)
+            transitions[player_id] = move
+
+    if not transitions:
+        return "unknown", [], "no_unexplained_transitions" if any_window_available else "insufficient_window"
+
+    relevant = {
+        pid: (frm, to) for pid, (frm, to) in transitions.items()
+        if accepting_team_id in (frm, to) and pid not in conflicting_players
+    }
+    if not relevant:
+        return "unknown", [], "no_unexplained_transitions"
+
+    counterparties: dict[int, int] = {}
+    for frm, to in relevant.values():
+        other = to if frm == accepting_team_id else frm
+        counterparties[other] = counterparties.get(other, 0) + 1
+
+    # Guard: every moved player must tie back to one single counterparty
+    # team. If relevant transitions point at more than one other team,
+    # we can't safely say which trade each player belongs to.
+    if len(counterparties) > 1:
+        return "unknown", [], "multiple_candidate_counterparties"
+
+    counterparty = next(iter(counterparties))
+    items = [
+        {"player_id": pid, "from_team_id": frm, "to_team_id": to}
+        for pid, (frm, to) in relevant.items()
+    ]
+
+    received_by_accepting = sum(1 for i in items if i["to_team_id"] == accepting_team_id)
+    received_by_counterparty = sum(1 for i in items if i["to_team_id"] == counterparty)
+    if received_by_accepting == 0 or received_by_counterparty == 0:
+        return "unknown", [], "one_sided_result"
+
+    return "rebuilt", items, None
+
+
+def build_trades_public(
+    txns: list[dict[str, Any]],
+    trade_activity: list[dict[str, Any]],
+    is_current_season: bool,
+    roster_by_week: dict[int, dict[int, int]] | None = None,
+    add_log: dict[tuple[int, int], set[int]] | None = None,
+) -> list[dict[str, Any]]:
+    """One entry per upheld (executed, non-vetoed) trade. Players are
+    included when we have an actual ESPN record (a full item list on one
+    of the trade's legs, or - for the current season - a recent_activity
+    match): "source": "espn". Failing that, if roster_by_week/add_log are
+    supplied, we attempt a guarded roster-diff rebuild: "source":
+    "rebuilt". If neither succeeds (or a guard trips), the trade is
+    "source": "unknown" with an empty player list - nothing is ever
+    guessed past what the guards allow."""
+    groups = group_trade_transactions(txns)
+    trades = []
+    consumed_activity: set[int] = set()
+    upheld = {k: v for k, v in groups.items() if classify_trade_group(v) == "upheld"}
+
+    # Count upheld trades per (team, week) up front - needed by the
+    # same-team-same-week rebuild guard.
+    team_week_counts: dict[tuple[int, int], int] = {}
+    accepts_by_key = {key: group_accept_leg(legs) for key, legs in upheld.items()}
+    for accept in accepts_by_key.values():
+        tw_key = (accept["team_id"], accept["scoring_period"])
+        team_week_counts[tw_key] = team_week_counts.get(tw_key, 0) + 1
+
+    for key, legs in sorted(upheld.items(), key=lambda kv: group_accept_leg(kv[1])["date"] or 0):
+        accept = accepts_by_key[key]
+        known_items = group_known_items(legs)
+        source = None
+        items = known_items
+        if items:
+            source = "espn"
+        elif is_current_season:
+            match = match_activity_to_group(accept["team_id"], accept["date"], trade_activity, consumed_activity)
+            if match:
+                idx, activity_items = match
+                consumed_activity.add(idx)
+                items = [
+                    {
+                        "player_id": i["player_id"],
+                        "player_name": i["player_name"],
+                        "from_team_id": i["from_team_id"],
+                        "to_team_id": i["to_team_id"],
+                    }
+                    for i in activity_items
+                ]
+                source = "espn"
+        if source is None and roster_by_week is not None and add_log is not None:
+            tw_key = (accept["team_id"], accept["scoring_period"])
+            status, rebuilt_items, _reason = rebuild_trade_group(
+                accept["team_id"], accept["scoring_period"], roster_by_week, add_log, team_week_counts[tw_key]
+            )
+            if status == "rebuilt":
+                items = rebuilt_items
+                source = "rebuilt"
+        if source is None:
+            items = []
+            source = "unknown"
+        team_ids = sorted({accept["team_id"], *(i["from_team_id"] for i in items), *(i["to_team_id"] for i in items)})
+        trades.append(
+            {
+                "id": key,
+                "week": accept["scoring_period"],
+                "date": accept["date"],
+                "team_ids": team_ids,
+                "items": items,
+                "source": source,
+            }
+        )
+    _check_no_rebuilt_overlap(trades)
+    return trades
+
+
+def _check_no_rebuilt_overlap(trades: list[dict[str, Any]]) -> None:
+    """Safety guard for the (not-yet-wired-in) rebuild path: a single
+    player roster transition can only ever belong to one real trade. If
+    the same player_id shows up in more than one "rebuilt" trade in the
+    same week, that's a sign the guards let through a bad grouping -
+    fail loudly instead of silently publishing conflicting trades."""
+    seen: dict[tuple[int, int], str] = {}  # (week, player_id) -> trade id
+    conflicts: list[str] = []
+    for trade in trades:
+        if trade["source"] != "rebuilt":
+            continue
+        week = trade["week"]
+        for item in trade["items"]:
+            dupe_key = (week, item["player_id"])
+            if dupe_key in seen and seen[dupe_key] != trade["id"]:
+                conflicts.append(
+                    f"player {item['player_id']} in both trade {seen[dupe_key]!r} and {trade['id']!r} (week {week})"
+                )
+            else:
+                seen[dupe_key] = trade["id"]
+    if conflicts:
+        raise RuntimeError(
+            "rebuilt-trade overlap guard tripped - a player appears in more than one "
+            "rebuilt trade in the same week:\n  " + "\n  ".join(conflicts)
+        )
+
+
+def build_trade_privacy_summary(txns: list[dict[str, Any]]) -> dict[str, Any]:
+    """Counts only for non-upheld trades - no player contents, and no
+    record of which team cast a veto (we never read team_id off a
+    TRADE_VETO leg for this reason)."""
+    groups = group_trade_transactions(txns)
+    by_team: dict[int, dict[str, int]] = {}
+    vetoed_total = 0
+
+    def bump(team_id: int | None, field: str) -> None:
+        if team_id is None:
+            return
+        by_team.setdefault(team_id, {"declined": 0, "cancelled": 0, "pending": 0})[field] += 1
+
+    for legs in groups.values():
+        classification = classify_trade_group(legs)
+        if classification == "upheld":
+            continue
+        if classification == "vetoed":
+            vetoed_total += 1
+            continue
+        if classification == "declined":
+            decline_leg = next((t for t in legs if t["type"] == "TRADE_DECLINE"), None)
+            bump(decline_leg["team_id"] if decline_leg else None, "declined")
+        elif classification == "cancelled":
+            proposal = next((t for t in legs if t["type"] == "TRADE_PROPOSAL"), None)
+            bump(proposal["team_id"] if proposal else None, "cancelled")
+        elif classification == "pending":
+            proposal = next((t for t in legs if t["type"] == "TRADE_PROPOSAL"), None)
+            bump(proposal["team_id"] if proposal else None, "pending")
+
+    return {"vetoed_trades_total": vetoed_total, "by_team": by_team}
+
+
+# --------------------------------------------------------------------------
+# Playoff bracket
+# --------------------------------------------------------------------------
+
+
+def build_bracket_public(
+    league: League, schedule_by_week: dict[int, list[dict[str, Any]]], regular_season_length: int, weeks: int
+) -> dict[str, Any] | None:
+    """Reconstructed from playoff-week schedule entries (playoffTierType,
+    winner, teamId, totalPoints). Returns None if playoffs haven't started
+    yet this season."""
+    playoff_weeks = [w for w in range(regular_season_length + 1, weeks + 1) if schedule_by_week.get(w)]
+    if not playoff_weeks:
+        return None
+
+    rounds = []
+    any_decided = False
+    for week in playoff_weeks:
+        games = []
+        for entry in schedule_by_week[week]:
+            home = entry.get("home") or {}
+            away = entry.get("away") or {}
+            winner = entry.get("winner", "UNDECIDED")
+            if winner != "UNDECIDED":
+                any_decided = True
+            games.append(
+                {
+                    "tier": entry.get("playoffTierType"),
+                    "home_team_id": home.get("teamId"),
+                    "home_score": home.get("totalPoints"),
+                    "away_team_id": away.get("teamId"),
+                    "away_score": away.get("totalPoints"),
+                    "winner": winner,
+                }
+            )
+        rounds.append({"week": week, "games": games})
+
+    if not any_decided:
+        # playoff weeks exist on the schedule but nothing has been played yet
+        return None
+
+    return {"rounds": rounds}
+
+
+# --------------------------------------------------------------------------
+# Player weekly points, scoped to players who appear in a resolved trade
+# --------------------------------------------------------------------------
+
+
+def build_traded_player_points(
+    league: League, trades_public: list[dict[str, Any]], existing: dict[str, Any] | None, season_finished: bool
+) -> dict[str, Any]:
+    traded_player_ids = sorted({item["player_id"] for trade in trades_public for item in trade["items"]})
+    existing_players: dict[str, Any] = (existing or {}).get("players", {})
+
+    if season_finished:
+        ids_to_fetch = [pid for pid in traded_player_ids if str(pid) not in existing_players]
+    else:
+        ids_to_fetch = traded_player_ids
+
+    fetched_count = 0
+    players_out = dict(existing_players)
+    if ids_to_fetch:
+        results = league.player_info(playerId=ids_to_fetch)
+        if results is None:
+            results = []
+        elif not isinstance(results, list):
+            results = [results]
+        fetched_count = len(results)
+        for player in results:
+            weekly_points = {
+                str(week): stat.get("points")
+                for week, stat in (player.stats or {}).items()
+                if isinstance(stat, dict)
+            }
+            players_out[str(player.playerId)] = {
+                "player_name": player.name,
+                "weekly_points": weekly_points,
+            }
+
+    return {"players": players_out}, fetched_count
+
+
 def serialize_pick_raw(pick: Any) -> dict[str, Any]:
     return {
         "round": pick.round_num,
@@ -450,6 +1053,8 @@ def clean_settings_public(raw_settings: dict[str, Any]) -> dict[str, Any]:
         "current_week": raw_settings["current_week"],
         "roster_slots": raw_settings["roster_slots"],
         "week_status": raw_settings["week_status"],
+        "waiver_type": raw_settings["waiver_type"],
+        "faab_budget": raw_settings["faab_budget"],
     }
 
 
@@ -457,10 +1062,16 @@ def clean_teams_public(raw_teams: list[dict[str, Any]], espn_to_public: dict[str
     cleaned = []
     for team in raw_teams:
         owners = []
+        seen_anon_ids: set[str] = set()
         for raw_owner in team["owners"]:
             mapped = espn_to_public.get(raw_owner["id"])
-            if mapped:
+            # A merged person (two raw ESPN accounts for the same real
+            # manager) can show up as two separate co-owner slots on the
+            # same team once both accounts map to the same anon ID - only
+            # list that person once.
+            if mapped and mapped["id"] not in seen_anon_ids:
                 owners.append(mapped)
+                seen_anon_ids.add(mapped["id"])
         cleaned.append(
             {
                 "team_id": team["team_id"],
@@ -510,6 +1121,9 @@ def clean_matchups_public(box_score_entries: list[dict[str, Any]], weeks: int, w
 
 
 def clean_transaction_public(raw_txn: dict[str, Any]) -> dict[str, Any]:
+    """Only called for WAIVER/FREEAGENT transactions now - trades have
+    their own dedicated trades.json (upheld only, privacy-filtered) and
+    trade_activity_summary.json (counts only for everything else)."""
     return {
         "id": raw_txn["id"],
         "type": raw_txn["type"],
@@ -554,6 +1168,13 @@ def write_json(path: Path, data: Any) -> None:
         json.dump(data, f, indent=2, default=str)
 
 
+def load_json_if_exists(path: Path) -> Any | None:
+    if not path.exists():
+        return None
+    with path.open() as f:
+        return json.load(f)
+
+
 def write_seasons_manifest() -> list[int]:
     """The browser can't list directories at runtime, so write a small
     manifest (/app/src/data/seasons.json) the app can fetch/import to know
@@ -569,14 +1190,14 @@ def write_seasons_manifest() -> list[int]:
     return seasons
 
 
-def export_season(league: League, espn_to_public: dict[str, dict[str, str]]) -> SeasonResult:
+def export_season(league: League, espn_to_public: dict[str, dict[str, str]], is_current_season: bool) -> SeasonResult:
     notes: list[str] = []
     season = league.year
     raw_dir = RAW_DIR / str(season)
     public_dir = PUBLIC_DATA_DIR / str(season)
 
     weeks = total_weeks(league)
-    week_statuses = compute_all_week_statuses(league, weeks)
+    week_statuses, schedule_by_week = compute_all_week_statuses(league, weeks)
 
     raw_settings = serialize_settings_raw(league, week_statuses)
     write_json(raw_dir / "settings.json", raw_settings)
@@ -650,10 +1271,58 @@ def export_season(league: League, espn_to_public: dict[str, dict[str, str]]) -> 
 
     raw_transactions = list(transactions_by_id.values())
     write_json(raw_dir / "transactions.json", raw_transactions)
-    write_json(public_dir / "transactions.json", [clean_transaction_public(t) for t in raw_transactions])
+    # Trades are handled separately below (trades.json + privacy-safe
+    # summary); the general transactions.json is now only adds/drops.
+    non_trade_transactions = [t for t in raw_transactions if not t["type"].startswith("TRADE")]
+    write_json(public_dir / "transactions.json", [clean_transaction_public(t) for t in non_trade_transactions])
+
+    # --- Trades: current-season recent_activity cache (merge, never overwrite) ---
+    activity_path = raw_dir / "trades_activity.json"
+    existing_activity = load_json_if_exists(activity_path) or []
+    new_activity = fetch_trade_activity_raw(league)
+    merged_activity = merge_trade_activity(existing_activity, new_activity)
+    write_json(activity_path, merged_activity)
+
+    roster_by_week = build_roster_by_week(box_scores)
+    add_log = build_add_log(raw_transactions)
+    trades_public = build_trades_public(
+        raw_transactions, merged_activity, is_current_season, roster_by_week=roster_by_week, add_log=add_log
+    )
+    write_json(public_dir / "trades.json", trades_public)
+    trade_counts_by_source: dict[str, int] = {}
+    for trade in trades_public:
+        trade_counts_by_source[trade["source"]] = trade_counts_by_source.get(trade["source"], 0) + 1
+
+    privacy_summary = build_trade_privacy_summary(raw_transactions)
+    write_json(public_dir / "trade_activity_summary.json", privacy_summary)
+
+    # --- Playoff bracket ---
+    bracket = build_bracket_public(league, schedule_by_week, raw_settings["regular_season_length"], weeks)
+    bracket_status = "built" if bracket is not None else "not_started"
+    if bracket is not None:
+        write_json(public_dir / "bracket.json", bracket)
+
+    # --- Player weekly points, scoped to traded players ---
+    points_path = public_dir / "traded_player_points.json"
+    existing_points = load_json_if_exists(points_path)
+    season_finished = all(s == "final" for s in week_statuses.values())
+    traded_player_points, player_info_calls = build_traded_player_points(
+        league, trades_public, existing_points, season_finished
+    )
+    write_json(points_path, traded_player_points)
 
     status = "ok" if not notes else "partial"
-    return SeasonResult(season=season, status=status, notes=notes)
+    return SeasonResult(
+        season=season,
+        status=status,
+        notes=notes,
+        trade_counts_by_source=trade_counts_by_source,
+        vetoed_trades_total=privacy_summary["vetoed_trades_total"],
+        bracket_status=bracket_status,
+        player_info_calls=player_info_calls,
+        waiver_type=raw_settings["waiver_type"],
+        faab_budget=raw_settings["faab_budget"],
+    )
 
 
 def main() -> None:
@@ -691,20 +1360,31 @@ def main() -> None:
 
     # Build/refresh the stable owner-id map using every season we could
     # load (not just the ones in this run, if --season was used: the
-    # persisted map already has prior seasons' members in it).
+    # persisted map already has prior seasons' members in it). Discovery
+    # order is season ascending, team ascending, owner-list order - this
+    # must match the offline regeneration path in
+    # scripts/apply_people_merge.py so re-runs stay deterministic.
+    owner_dicts_in_order = [
+        owner_dict(raw_member)
+        for league in sorted(leagues, key=lambda lg: lg.year)
+        for team in sorted(league.teams, key=lambda t: t.team_id)
+        for raw_member in team.owners
+    ]
     owner_map = load_owner_map()
-    owner_map = update_owner_map(owner_map, leagues)
+    owner_map = update_owner_map(owner_map, owner_dicts_in_order)
     save_owner_map(owner_map)
     espn_to_public = espn_id_to_public(owner_map)
 
     results: list[SeasonResult] = []
     failures: list[tuple[int, str]] = list(load_failures)
 
+    max_season = max((l.year for l in leagues), default=None)
+
     for league in leagues:
         season = league.year
         print(f"[export] season {season}: starting")
         try:
-            result = export_season(league, espn_to_public)
+            result = export_season(league, espn_to_public, is_current_season=(season == max_season))
             results.append(result)
             if result.notes:
                 print(f"[export] season {season}: partial ({'; '.join(result.notes)})")
@@ -719,7 +1399,18 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     summary = {
         "exported": [
-            {"season": r.season, "status": r.status, "notes": r.notes} for r in results
+            {
+                "season": r.season,
+                "status": r.status,
+                "notes": r.notes,
+                "trade_counts_by_source": r.trade_counts_by_source,
+                "vetoed_trades_total": r.vetoed_trades_total,
+                "bracket_status": r.bracket_status,
+                "player_info_calls": r.player_info_calls,
+                "waiver_type": r.waiver_type,
+                "faab_budget": r.faab_budget,
+            }
+            for r in results
         ],
         "failed": [{"season": s, "reason": reason} for s, reason in failures],
     }

@@ -39,10 +39,13 @@ Every field in the original spec is present and non-empty for all five
 seasons, **except**:
 
 - **Transactions `FREEAGENT` type**: zero `FREEAGENT`-typed entries exist in
-  any season; all adds/drops come back as `WAIVER` type instead. This league
-  has FAAB enabled (`settings.json` → `"faab": true`), so free-agent moves
-  are processed through the waiver system — not a data gap, just an unused
-  bucket for this league.
+  any season; all adds/drops come back as `WAIVER` type instead. 2023-2026
+  have FAAB enabled (`settings.json` → `"waiver_type": "faab"`), so
+  free-agent moves there are processed through the waiver system. **2022 is
+  the exception: FAAB was not on that season** (`"waiver_type": "waivers"`,
+  `"faab_budget": null`) — standard waiver-priority adds/drops still come
+  back typed `WAIVER` from this API, not `FREEAGENT`, so this is an unused
+  bucket for every season, not something specific to FAAB.
 - **2022 keepers**: 0 of 160 picks flagged `is_keeper`. Confirmed with the
   league owner — **2022 was the league's first year**, so there were no
   keepers to carry over yet. This is accurate data, not an export gap.
@@ -75,21 +78,23 @@ score data is fetched at all for weeks marked `not_started`.
 Gibbs + Brian Robinson Jr. (from team 5) traded for Chase Brown + Rico
 Dowdle (from team 6).
 
-For this specific trade, all four players stayed on a roster (starter or
-bench) every remaining week of the regular season, so weekly points are
-available for all of them through week 14 (this league's regular season
-length).
+**This gap is now closed for traded players.** `box_scores.json` is still
+built by walking each team's roster for a given week, so it only ever
+includes players who are on *some* team's roster that week — if a traded
+player is later dropped and spends a week as a free agent, there's still
+no row for them in `box_scores.json`. But `/app/src/data/<season>/
+traded_player_points.json` (added in this update) sidesteps that entirely:
+for every player who appears in that season's `trades.json`, it calls
+`league.player_info(playerId=[...])` directly, which returns a `.stats`
+dict keyed by week regardless of roster status — free agency, bench, or
+started. **Plainly: every traded player's weekly points are now available
+for every week, including weeks they were unrostered**, scoped only to
+players who were actually part of a trade (not the whole league, to keep
+the call count small — see section 8 for per-season call counts).
 
-**However, this is not a guarantee — it's a gap in the data model.** The
-`box_scores.json` export is built by walking each team's roster for a given
-week (`League.box_scores()`), which only includes players who are on **some**
-team's roster that week. If a traded player is later dropped and spends a
-week as a free agent before being re-added (by anyone), there is no row for
-them that week — free agents aren't attached to any team's box score.
-**Plainly: if a traded player goes to free agency, this export does not have
-their points for that week.** Getting those points would require a separate
-per-week free-agent/player-pool query stitched in by `player_id`, which is
-out of scope for this script as built.
+For this specific Jahmyr Gibbs trade, all four players also happened to
+stay rostered every remaining week, so this case wasn't actually testing
+the gap - but the mechanism now covers the general case too.
 
 ## 5. Keeper picks in draft data
 
@@ -146,3 +151,163 @@ After writing `/app/src/data/`, we searched the whole tree for:
 
 (2026's `box_scores.json`/`matchups.json` are smaller because only 4 of 17
 weeks are `final` so far.)
+
+## 8. Items 2-6 (data-quality punch list)
+
+Everything below is real data from a run against all 5 seasons.
+
+### Person merge map (draft - needs your confirmation)
+
+`scripts/generate_people_draft.py` wrote `/data/raw/people.json` (16 ESPN
+member IDs, gitignored, local only). It is a **draft**: nothing reads it
+yet, and no public data has been regenerated from it.
+
+- **David Moses** (`David M`): 2 ESPN IDs merged to one person (`m01`).
+- **Jhajuan Countee**: 2 ESPN IDs merged to one person (`m03`).
+- **Ian Book**: mapped to `"person": null` - not a real league member,
+  flagged to be dropped from owners everywhere once applied.
+- The other 11 members each have exactly one ESPN ID across all 5 seasons
+  - no other duplicates were detected (no two distinct IDs share a display
+  name outside the two known-merge groups above), so every entry is
+  `"confirm": false`. Please review the file by hand regardless before
+  it's used for anything.
+
+### Trades: counts by source, per season
+
+`/app/src/data/<season>/trades.json` has one entry per **upheld** (executed,
+non-vetoed, non-declined) trade only. `"source"` is `"espn"` when we have a
+real ESPN item record (either the trade's own leg data, or - current season
+only - a `league.recent_activity` match), `"rebuilt"` when the guarded
+roster-diff mechanism below safely reconstructed it, or `"unknown"` (empty
+player list) when neither succeeded.
+
+| Season | espn | rebuilt | unknown | Vetoed (count only) |
+|--------|------|---------|---------|----------------------|
+| 2022 | 2 | 8 | 9 | 5 |
+| 2023 | 2 | 3 | 1 | 3 |
+| 2024 | 1 | 3 | 3 | 1 |
+| 2025 | 2 | 6 | 2 | 0 |
+| 2026 | 8 | 0 | 0 | 1 |
+| **Total** | **15** | **20** | **15** | 10 |
+
+**2026 matching bug fixed.** `recent_activity` returned exactly 8 TRADED
+events for 2026's 8 upheld trades, but the matcher only resolved 5/8 - it
+picked the *globally nearest-by-absolute-time* candidate event for each
+trade, and ESPN's acceptance-to-activity-feed lag (routinely 20-40h) made
+that ranking flip when the same team had two trades close together. Fixed
+by picking the *earliest still-unconsumed* event involving that team
+instead (both lists are chronological and each team's trades consume its
+own events in order) - now **8/8 (100%) sourced `"espn"`** for 2026.
+
+`/app/src/data/<season>/trade_activity_summary.json` holds **counts only**
+for declined/cancelled/pending trades, per team, per season, plus one
+season-level `vetoed_trades_total` int. No player contents and no
+per-team veto attribution are stored anywhere (we never read `team_id`
+off a `TRADE_VETO` leg, since that field can represent the vetoing actor
+rather than a trade participant).
+
+### Trade rebuild: guarded mechanism (wired into export)
+
+`rebuild_trade_group()` is implemented in `export_league_data.py` with the
+corrected week window and three guards, and is now called directly from
+`build_trades_public()` in `export_season()` (passing `roster_by_week`/
+`add_log`) - every season's committed `trades.json` includes real
+`"source": "rebuilt"` entries as of this export.
+
+**Window fix:** checks BOTH week N-1→N and N→N+1 (previously only N-1→N+1,
+skipping week N entirely) - a trade accepted mid-week can already be
+reflected in that week's own locked lineup, not just the following week's.
+
+**Guards (any one marks the trade `"unknown"` instead of `"rebuilt"`):**
+1. `same_team_multiple_trades_this_week` - the accepting team has 2+
+   upheld trades that week; can't tell which counterparty a transition
+   belongs to.
+2. `one_sided_result` - one side of the rebuilt trade would receive zero
+   players (likely a window artifact, not a real lopsided trade).
+3. `multiple_candidate_counterparties` - unexplained transitions point at
+   more than one other team; can't tie every moved player to a single
+   counterparty.
+
+**Overlap safety check.** `_check_no_rebuilt_overlap()` runs after every
+rebuild pass and fails the export outright if the same player ever ends up
+in two different `"rebuilt"` trades the same week - this export produced
+no such conflict.
+
+Results, now live in `trades.json` (2026 had none left after the matching
+fix above - all 8 are `"espn"`):
+
+| Season | Rebuilt | Still unknown |
+|--------|---------|-----------------|
+| 2022 | 8 | 9 |
+| 2023 | 3 | 1 |
+| 2024 | 3 | 3 |
+| 2025 | 6 | 2 |
+| **Total** | **20** | **15** |
+
+Reasons for the 15 that stayed `"unknown"`:
+
+| Guard reason | Count |
+|---|---|
+| `multiple_candidate_counterparties` | 9 |
+| `one_sided_result` | 3 |
+| `same_team_multiple_trades_this_week` | 2 |
+| `no_unexplained_transitions` | 1 |
+
+One concrete validation of guard 1: 2025 week 7 team 6 has **two** separate
+upheld trade groups - the Jahmyr Gibbs trade (already fully known from its
+own ESPN record, `"source": "espn"`) and a second, genuinely-unknown trade
+the same team made the same week. The guard correctly leaves the second
+one `"unknown"` rather than attributing its players to the wrong trade -
+this is exactly the ambiguity the guard exists to catch, not a flaw.
+
+A pair-based alternative rule (group by unordered team-pair instead of a
+single fixed accepting team) was evaluated as a fallback for the 9
+`multiple_candidate_counterparties` misses above, including a dual-window
+variant.
+It was **not adopted**: on validation it performed strictly worse than the
+guarded rule above (0 exact / 15 miss vs. 5 exact / 10 miss), and on the two
+specific cases spot-checked by hand (2022 wk4, 2024 wk7) the dual-window
+version produced *more* ambiguity, not less, from extra noise introduced by
+unioning both windows. Those `multiple_candidate_counterparties` trades
+remain `"unknown"`.
+
+
+### Playoff bracket
+
+Built from already-fetched `mMatchupScore` schedule data (`playoffTierType`,
+`winner`, per-side `teamId`/`totalPoints`) — no new API calls needed.
+
+| Season | Bracket status |
+|--------|----------------|
+| 2022 | built |
+| 2023 | built |
+| 2024 | built |
+| 2025 | built |
+| 2026 | not started (no playoff week has a decided game yet) |
+
+### Player weekly points, scoped to traded players
+
+`league.player_info()` calls made this run (batched per season, one call
+covers every player who appears in that season's `trades.json`, skipping
+already-saved players for finished seasons):
+
+| Season | `player_info` calls |
+|--------|----------------------|
+| 2022 | 8 |
+| 2023 | 6 |
+| 2024 | 4 |
+| 2025 | 6 |
+| 2026 | 19 |
+
+### Waiver type per season
+
+| Season | Type | FAAB budget |
+|--------|------|-------------|
+| 2022 | waivers (no FAAB) | — |
+| 2023 | faab | 100 |
+| 2024 | faab | 100 |
+| 2025 | faab | 100 |
+| 2026 | faab | 100 |
+
+2022 is the only season where FAAB tracking isn't meaningful - the league
+ran standard waiver priority that year.
