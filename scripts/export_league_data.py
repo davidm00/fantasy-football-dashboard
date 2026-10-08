@@ -23,7 +23,7 @@ import argparse
 import json
 import time
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -1096,10 +1096,20 @@ def clean_box_score_public(raw_entry: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def clean_matchups_public(box_score_entries: list[dict[str, Any]], weeks: int, week_statuses: dict[int, str]) -> list[dict[str, Any]]:
+def clean_matchups_public(
+    box_score_entries: list[dict[str, Any]],
+    weeks: int,
+    week_statuses: dict[int, str],
+    schedule_by_week: dict[int, list[dict[str, Any]]] | None = None,
+) -> list[dict[str, Any]]:
     """Slim, per-week matchup list for the app. Byes (one team, no
     opponent) are preserved exactly as ESPN returns them - never given an
-    invented placeholder opponent."""
+    invented placeholder opponent.
+
+    "not_started" weeks have no box scores yet (nothing to score), but we
+    still want the app to be able to show the upcoming pairings - those
+    come from the raw schedule fetch (mMatchupScore) instead, with both
+    scores left null."""
     by_week: dict[int, list[dict[str, Any]]] = {w: [] for w in range(1, weeks + 1)}
     for entry in box_score_entries:
         by_week.setdefault(entry["week"], []).append(
@@ -1110,14 +1120,25 @@ def clean_matchups_public(box_score_entries: list[dict[str, Any]], weeks: int, w
                 "away_score": entry["away_score"],
             }
         )
-    return [
-        {
-            "week": week,
-            "status": week_statuses.get(week, "not_started"),
-            "matchups": by_week.get(week, []),
-        }
-        for week in range(1, weeks + 1)
-    ]
+
+    result = []
+    for week in range(1, weeks + 1):
+        status = week_statuses.get(week, "not_started")
+        matchups = by_week.get(week, [])
+        if status == "not_started" and not matchups and schedule_by_week:
+            for sched_entry in schedule_by_week.get(week, []):
+                home = sched_entry.get("home") or {}
+                away = sched_entry.get("away") or {}
+                matchups.append(
+                    {
+                        "home_team_id": home.get("teamId"),
+                        "home_score": None,
+                        "away_team_id": away.get("teamId"),
+                        "away_score": None,
+                    }
+                )
+        result.append({"week": week, "status": status, "matchups": matchups})
+    return result
 
 
 def clean_transaction_public(raw_txn: dict[str, Any]) -> dict[str, Any]:
@@ -1190,6 +1211,17 @@ def write_seasons_manifest() -> list[int]:
     return seasons
 
 
+def write_last_export_manifest() -> str:
+    """Written exactly once per run (not per season) - the UTC timestamp
+    of this pull, so the app can show "data as of ..." instead of
+    silently looking stale. Separate file (not a new seasons.json field)
+    so the existing flat-array shape the app already imports/`.includes()`s
+    doesn't change."""
+    pulled_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    write_json(PUBLIC_DATA_DIR / "last_export.json", {"pulled_at": pulled_at})
+    return pulled_at
+
+
 def export_season(league: League, espn_to_public: dict[str, dict[str, str]], is_current_season: bool) -> SeasonResult:
     notes: list[str] = []
     season = league.year
@@ -1252,7 +1284,7 @@ def export_season(league: League, espn_to_public: dict[str, dict[str, str]], is_
     # matchups.json duplicated the same records - removed.
     write_json(raw_dir / "box_scores.json", box_scores)
     write_json(public_dir / "box_scores.json", [clean_box_score_public(b) for b in box_scores])
-    write_json(public_dir / "matchups.json", clean_matchups_public(box_scores, weeks, week_statuses))
+    write_json(public_dir / "matchups.json", clean_matchups_public(box_scores, weeks, week_statuses, schedule_by_week))
 
     transactions_by_id: dict[Any, dict[str, Any]] = {}
     transaction_failed_weeks: list[int] = []
@@ -1418,6 +1450,7 @@ def main() -> None:
 
     PUBLIC_DATA_DIR.mkdir(parents=True, exist_ok=True)
     seasons_manifest = write_seasons_manifest()
+    pulled_at = write_last_export_manifest()
 
     print("\n=== Export summary ===")
     for r in results:
@@ -1425,6 +1458,7 @@ def main() -> None:
     for s, reason in failures:
         print(f"  season {s}: failed - {reason}")
     print(f"  seasons manifest (app/src/data/seasons.json): {seasons_manifest}")
+    print(f"  last export manifest (app/src/data/last_export.json): pulled_at={pulled_at}")
 
 
 if __name__ == "__main__":

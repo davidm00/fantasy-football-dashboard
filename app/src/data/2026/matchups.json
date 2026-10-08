@@ -170,52 +170,422 @@
   {
     "week": 5,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 3,
+        "home_score": null,
+        "away_team_id": 6,
+        "away_score": null
+      },
+      {
+        "home_team_id": 1,
+        "home_score": null,
+        "away_team_id": 2,
+        "away_score": null
+      },
+      {
+        "home_team_id": 12,
+        "home_score": null,
+        "away_team_id": 10,
+        "away_score": null
+      },
+      {
+        "home_team_id": 4,
+        "home_score": null,
+        "away_team_id": 9,
+        "away_score": null
+      },
+      {
+        "home_team_id": 5,
+        "home_score": null,
+        "away_team_id": 8,
+        "away_score": null
+      },
+      {
+        "home_team_id": 11,
+        "home_score": null,
+        "away_team_id": 7,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 6,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": null,
+        "away_team_id": 2,
+        "away_score": null
+      },
+      {
+        "home_team_id": 10,
+        "home_score": null,
+        "away_team_id": 3,
+        "away_score": null
+      },
+      {
+        "home_team_id": 9,
+        "home_score": null,
+        "away_team_id": 1,
+        "away_score": null
+      },
+      {
+        "home_team_id": 8,
+        "home_score": null,
+        "away_team_id": 12,
+        "away_score": null
+      },
+      {
+        "home_team_id": 7,
+        "home_score": null,
+        "away_team_id": 4,
+        "away_score": null
+      },
+      {
+        "home_team_id": 11,
+        "home_score": null,
+        "away_team_id": 5,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 7,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 10,
+        "home_score": null,
+        "away_team_id": 6,
+        "away_score": null
+      },
+      {
+        "home_team_id": 2,
+        "home_score": null,
+        "away_team_id": 9,
+        "away_score": null
+      },
+      {
+        "home_team_id": 3,
+        "home_score": null,
+        "away_team_id": 8,
+        "away_score": null
+      },
+      {
+        "home_team_id": 1,
+        "home_score": null,
+        "away_team_id": 7,
+        "away_score": null
+      },
+      {
+        "home_team_id": 12,
+        "home_score": null,
+        "away_team_id": 11,
+        "away_score": null
+      },
+      {
+        "home_team_id": 4,
+        "home_score": null,
+        "away_team_id": 5,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 8,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": null,
+        "away_team_id": 9,
+        "away_score": null
+      },
+      {
+        "home_team_id": 8,
+        "home_score": null,
+        "away_team_id": 10,
+        "away_score": null
+      },
+      {
+        "home_team_id": 7,
+        "home_score": null,
+        "away_team_id": 2,
+        "away_score": null
+      },
+      {
+        "home_team_id": 11,
+        "home_score": null,
+        "away_team_id": 3,
+        "away_score": null
+      },
+      {
+        "home_team_id": 5,
+        "home_score": null,
+        "away_team_id": 1,
+        "away_score": null
+      },
+      {
+        "home_team_id": 4,
+        "home_score": null,
+        "away_team_id": 12,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 9,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 8,
+        "home_score": null,
+        "away_team_id": 6,
+        "away_score": null
+      },
+      {
+        "home_team_id": 9,
+        "home_score": null,
+        "away_team_id": 7,
+        "away_score": null
+      },
+      {
+        "home_team_id": 10,
+        "home_score": null,
+        "away_team_id": 11,
+        "away_score": null
+      },
+      {
+        "home_team_id": 2,
+        "home_score": null,
+        "away_team_id": 5,
+        "away_score": null
+      },
+      {
+        "home_team_id": 3,
+        "home_score": null,
+        "away_team_id": 4,
+        "away_score": null
+      },
+      {
+        "home_team_id": 1,
+        "home_score": null,
+        "away_team_id": 12,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 10,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": null,
+        "away_team_id": 7,
+        "away_score": null
+      },
+      {
+        "home_team_id": 11,
+        "home_score": null,
+        "away_team_id": 8,
+        "away_score": null
+      },
+      {
+        "home_team_id": 5,
+        "home_score": null,
+        "away_team_id": 9,
+        "away_score": null
+      },
+      {
+        "home_team_id": 4,
+        "home_score": null,
+        "away_team_id": 10,
+        "away_score": null
+      },
+      {
+        "home_team_id": 12,
+        "home_score": null,
+        "away_team_id": 2,
+        "away_score": null
+      },
+      {
+        "home_team_id": 1,
+        "home_score": null,
+        "away_team_id": 3,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 11,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 11,
+        "home_score": null,
+        "away_team_id": 6,
+        "away_score": null
+      },
+      {
+        "home_team_id": 7,
+        "home_score": null,
+        "away_team_id": 5,
+        "away_score": null
+      },
+      {
+        "home_team_id": 8,
+        "home_score": null,
+        "away_team_id": 4,
+        "away_score": null
+      },
+      {
+        "home_team_id": 9,
+        "home_score": null,
+        "away_team_id": 12,
+        "away_score": null
+      },
+      {
+        "home_team_id": 10,
+        "home_score": null,
+        "away_team_id": 1,
+        "away_score": null
+      },
+      {
+        "home_team_id": 2,
+        "home_score": null,
+        "away_team_id": 3,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 12,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": null,
+        "away_team_id": 5,
+        "away_score": null
+      },
+      {
+        "home_team_id": 4,
+        "home_score": null,
+        "away_team_id": 11,
+        "away_score": null
+      },
+      {
+        "home_team_id": 12,
+        "home_score": null,
+        "away_team_id": 7,
+        "away_score": null
+      },
+      {
+        "home_team_id": 1,
+        "home_score": null,
+        "away_team_id": 8,
+        "away_score": null
+      },
+      {
+        "home_team_id": 3,
+        "home_score": null,
+        "away_team_id": 9,
+        "away_score": null
+      },
+      {
+        "home_team_id": 2,
+        "home_score": null,
+        "away_team_id": 10,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 13,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 4,
+        "home_score": null,
+        "away_team_id": 6,
+        "away_score": null
+      },
+      {
+        "home_team_id": 5,
+        "home_score": null,
+        "away_team_id": 12,
+        "away_score": null
+      },
+      {
+        "home_team_id": 7,
+        "home_score": null,
+        "away_team_id": 1,
+        "away_score": null
+      },
+      {
+        "home_team_id": 11,
+        "home_score": null,
+        "away_team_id": 3,
+        "away_score": null
+      },
+      {
+        "home_team_id": 8,
+        "home_score": null,
+        "away_team_id": 2,
+        "away_score": null
+      },
+      {
+        "home_team_id": 9,
+        "home_score": null,
+        "away_team_id": 10,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 14,
     "status": "not_started",
-    "matchups": []
+    "matchups": [
+      {
+        "home_team_id": 6,
+        "home_score": null,
+        "away_team_id": 12,
+        "away_score": null
+      },
+      {
+        "home_team_id": 1,
+        "home_score": null,
+        "away_team_id": 4,
+        "away_score": null
+      },
+      {
+        "home_team_id": 3,
+        "home_score": null,
+        "away_team_id": 5,
+        "away_score": null
+      },
+      {
+        "home_team_id": 2,
+        "home_score": null,
+        "away_team_id": 11,
+        "away_score": null
+      },
+      {
+        "home_team_id": 10,
+        "home_score": null,
+        "away_team_id": 7,
+        "away_score": null
+      },
+      {
+        "home_team_id": 9,
+        "home_score": null,
+        "away_team_id": 8,
+        "away_score": null
+      }
+    ]
   },
   {
     "week": 15,
