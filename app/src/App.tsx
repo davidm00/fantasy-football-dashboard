@@ -10,7 +10,7 @@ import { reportsList } from "./data/reportsList";
 const YEAR = new Date().getFullYear();
 const MOBILE_REPORT_QUERY = "(max-width: 720px)";
 
-const SEASON_FILES: SeasonFile[] = [
+const SEASON_FILES = [
   SeasonFile.Settings,
   SeasonFile.Teams,
   SeasonFile.Matchups,
@@ -37,10 +37,11 @@ function App() {
     getMobileReportLayout,
     () => false,
   );
-  const { settings, teams, matchups, loading, error } = useLoadSeasonData(
-    year,
-    SEASON_FILES,
-  );
+  const { state } = useLoadSeasonData(year, SEASON_FILES);
+
+  const matchups = state.status === "success" ? state.data.matchups : [];
+  const settings = state.status === "success" ? state.data.settings : undefined;
+  const teams = state.status === "success" ? state.data.teams : [];
   const completedMatchups = matchups.filter(
     (matchup) => matchup.status === "final",
   );
@@ -140,14 +141,16 @@ function App() {
         </nav>
       </header>
       <main id="app">
-        {loading && <h1 className="status-message">Loading data...</h1>}
-        {!loading && error && (
+        {state.status === "loading" && (
+          <h1 className="status-message">Loading data...</h1>
+        )}
+        {state.status === "error" && (
           <h1 className="status-message status-message-error">
-            There was an error: {error}
+            There was an error: {state.error}
           </h1>
         )}
 
-        {!loading && !error && (
+        {state.status === "success" && (
           <section id="scoreboard" className="match-ups-section">
             <div className="match-ups-header">
               <div className="match-ups-heading">

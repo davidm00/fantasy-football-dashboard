@@ -2,52 +2,61 @@ import { useEffect, useState } from "react";
 import { loadSeasonFile, SeasonFile } from "../utils/seasonDataLoader";
 import type { BoxScore, Matchup, Settings, Team } from "../models/models";
 
-export const useLoadSeasonData = (season: number, files: SeasonFile[]) => {
-  const [boxScores, setBoxScores] = useState<BoxScore[]>([]);
-  const [teams, setTeams] = useState<Team[]>([]);
-  const [matchups, setMatchups] = useState<Matchup[]>([]);
-  const [settings, setSettings] = useState<Settings>();
-  const [error, setError] = useState<string | undefined>();
-  const [loading, setLoading] = useState(false);
+type FileTypeMap = {
+  teams: Team[];
+  box_scores: BoxScore[];
+  matchups: Matchup[];
+  settings: Settings;
+};
+
+type FileData<T extends readonly SeasonFile[]> = {
+  [K in T[number]]: FileTypeMap[Extract<K, keyof FileTypeMap>];
+};
+
+type LoadState<T> =
+  | { status: "loading" }
+  | { status: "error"; error: string }
+  | { status: "success"; data: T };
+
+export const useLoadSeasonData = <T extends readonly SeasonFile[]>(
+  season: number,
+  files: T,
+) => {
+  const [state, setState] = useState<LoadState<FileData<T>>>({
+    status: "loading",
+  });
 
   useEffect(() => {
     const loadData = async () => {
-      setLoading(true);
+      setState({ status: "loading" });
       try {
         let results = await Promise.all(
           files.map((file) => {
             return loadSeasonFile(season, file);
           }),
         );
-        results.map((r, ind) => {
-          switch (files[ind]) {
-            case SeasonFile.BoxScores:
-              setBoxScores(r as BoxScore[]);
-              break;
-            case SeasonFile.Teams:
-              setTeams(r as Team[]);
-              break;
-            case SeasonFile.Matchups:
-              setMatchups(r as Matchup[]);
-              break;
-            case SeasonFile.Settings:
-              setSettings(r as Settings);
-              break;
-            default:
-              break;
-          }
+
+        let entries = files.map((file, ind) => {
+          return [file, results[ind]];
+        });
+
+        setState({
+          status: "success",
+          data: Object.fromEntries(entries) as FileData<T>,
         });
       } catch (error) {
         if (error instanceof Error) {
-          setError(error.message);
+          setState({ status: "error", error: error.message });
+        } else {
+          setState({
+            status: "error",
+            error: "There was an unknown error fetching data",
+          });
         }
-        setError("There was an unknown error fetching data");
-      } finally {
-        setLoading(false);
       }
     };
     loadData();
   }, [season, files]);
 
-  return { boxScores, teams, matchups, settings, error, loading };
+  return { state };
 };
