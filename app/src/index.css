@@ -18,6 +18,12 @@
   --accent-soft: #e9edff;
   --danger: #b42318;
   --danger-soft: #fef3f2;
+  --positive: #0f766e;
+  --positive-soft: #ccfbf1;
+  --warning: #c2410c;
+  --warning-soft: #ffedd5;
+  --historical: #6d28d9;
+  --historical-soft: #f3e8ff;
   --shadow-sm: 0 1px 2px rgb(16 24 40 / 0.04);
   --shadow-md:
     0 1px 3px rgb(16 24 40 / 0.08), 0 8px 24px rgb(16 24 40 / 0.06);
