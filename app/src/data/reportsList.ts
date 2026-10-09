@@ -1,4 +1,13 @@
-export const reportsList = [
+export type Report = {
+  season: number;
+  week: number;
+  title: string;
+  path: string;
+  pageCount: number;
+  fileSize: number;
+};
+
+export const reportsList: Report[] = [
   {
     season: 2026,
     week: 2,

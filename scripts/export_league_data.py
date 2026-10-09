@@ -84,7 +84,7 @@ class SeasonResult:
     notes: list[str]
     trade_counts_by_source: dict[str, int]
     vetoed_trades_total: int
-    bracket_status: str  # "built", "not_started"
+    bracket_status: str  # "not_started", "in_progress", "decided"
     player_info_calls: int
     waiver_type: str
     faab_budget: int | None
@@ -933,25 +933,34 @@ def build_trade_privacy_summary(txns: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def build_bracket_public(
-    league: League, schedule_by_week: dict[int, list[dict[str, Any]]], regular_season_length: int, weeks: int
-) -> dict[str, Any] | None:
+    season: int,
+    schedule_by_week: dict[int, list[dict[str, Any]]],
+    regular_season_length: int,
+    weeks: int,
+) -> dict[str, Any]:
     """Reconstructed from playoff-week schedule entries (playoffTierType,
-    winner, teamId, totalPoints). Returns None if playoffs haven't started
-    yet this season."""
+    winner, teamId, totalPoints).
+
+    Contract: this always returns a dict with "champion" and "rounds" keys,
+    for every season, even before playoffs start ("rounds": []). "champion"
+    is null until the championship game ("WINNERS_BRACKET", final round) is
+    decided.
+
+    A bye (one team, no opponent) is marked with "is_bye": true and its
+    "winner" is set to "HOME" (the only team in the game), since the team
+    advances automatically. After this, "winner": "UNDECIDED" means "not
+    played yet" and nothing else.
+    """
     playoff_weeks = [w for w in range(regular_season_length + 1, weeks + 1) if schedule_by_week.get(w)]
-    if not playoff_weeks:
-        return None
 
     rounds = []
-    any_decided = False
     for week in playoff_weeks:
         games = []
         for entry in schedule_by_week[week]:
             home = entry.get("home") or {}
             away = entry.get("away") or {}
-            winner = entry.get("winner", "UNDECIDED")
-            if winner != "UNDECIDED":
-                any_decided = True
+            is_bye = away.get("teamId") is None
+            winner = "HOME" if is_bye else entry.get("winner", "UNDECIDED")
             games.append(
                 {
                     "tier": entry.get("playoffTierType"),
@@ -960,15 +969,28 @@ def build_bracket_public(
                     "away_team_id": away.get("teamId"),
                     "away_score": away.get("totalPoints"),
                     "winner": winner,
+                    "is_bye": is_bye,
                 }
             )
         rounds.append({"week": week, "games": games})
 
-    if not any_decided:
-        # playoff weeks exist on the schedule but nothing has been played yet
-        return None
+    champion = None
+    if rounds:
+        final_round = max(rounds, key=lambda r: r["week"])
+        title_games = [g for g in final_round["games"] if g["tier"] == "WINNERS_BRACKET"]
+        if len(title_games) != 1:
+            raise RuntimeError(
+                f"season {season}: expected exactly one WINNERS_BRACKET game in the final "
+                f"playoff round (week {final_round['week']}), found {len(title_games)}"
+            )
+        title_game = title_games[0]
+        if title_game["winner"] != "UNDECIDED":
+            champion_team_id = (
+                title_game["home_team_id"] if title_game["winner"] == "HOME" else title_game["away_team_id"]
+            )
+            champion = {"team_id": champion_team_id}
 
-    return {"rounds": rounds}
+    return {"champion": champion, "rounds": rounds}
 
 
 # --------------------------------------------------------------------------
@@ -1329,10 +1351,14 @@ def export_season(league: League, espn_to_public: dict[str, dict[str, str]], is_
     write_json(public_dir / "trade_activity_summary.json", privacy_summary)
 
     # --- Playoff bracket ---
-    bracket = build_bracket_public(league, schedule_by_week, raw_settings["regular_season_length"], weeks)
-    bracket_status = "built" if bracket is not None else "not_started"
-    if bracket is not None:
-        write_json(public_dir / "bracket.json", bracket)
+    bracket = build_bracket_public(season, schedule_by_week, raw_settings["regular_season_length"], weeks)
+    if bracket["champion"] is not None:
+        bracket_status = "decided"
+    elif bracket["rounds"]:
+        bracket_status = "in_progress"
+    else:
+        bracket_status = "not_started"
+    write_json(public_dir / "bracket.json", bracket)
 
     # --- Player weekly points, scoped to traded players ---
     points_path = public_dir / "traded_player_points.json"

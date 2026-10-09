@@ -15,6 +15,10 @@ export const getStanding = (
     .filter((m) => m.status === "final")
     .map((m: Matchup) => {
       return m.matchups.map((gm) => {
+        if (gm.home_score === null || gm.away_score === null) {
+          return gm;
+        }
+
         if (!records[gm.home_team_id]) {
           records[gm.home_team_id] = {
             wins: 0,
