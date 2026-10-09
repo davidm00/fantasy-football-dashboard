@@ -5,9 +5,9 @@ import {
   useParams,
   useRouteError,
 } from "react-router";
-import MatchupCard from "../components/MatchupCard";
-import SeasonReportPanel from "../components/home/SeasonReportPanel";
-import StandingsPanel from "../components/home/StandingsPanel";
+import MatchupCard from "../components/shared/MatchupCard";
+import SeasonReportPanel from "../components/shared/SeasonReportPanel";
+import StandingsPanel from "../components/shared/StandingsPanel";
 import WeekMetricsPanel from "../components/week/WeekMetricsPanel";
 import seasonList from "../data/seasons.json";
 import { getStanding } from "../utils/teamHelper";
@@ -159,6 +159,18 @@ function Week() {
                       insight.homeTeamId === result.home_team_id &&
                       insight.awayTeamId === result.away_team_id,
                   )?.text
+                }
+                detailTo={
+                  result.home_score !== null &&
+                    result.away_score !== null &&
+                    season.teams.some(
+                      ({ team_id }) => team_id === result.home_team_id,
+                    ) &&
+                    season.teams.some(
+                      ({ team_id }) => team_id === result.away_team_id,
+                    )
+                    ? `/seasons/${season.year}/weeks/${week}/matchups/${result.home_team_id}/${result.away_team_id}`
+                    : undefined
                 }
               />
             ))}

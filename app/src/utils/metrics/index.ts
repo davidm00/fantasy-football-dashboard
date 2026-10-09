@@ -1,5 +1,8 @@
 export {
   calculateSeasonMetrics,
+  getOptimalLineup,
+  getOptimalLineupPoints,
+  type OptimalLineupPlayer,
   type SeasonMetricSource,
   type SeasonMetrics,
   type SeasonSuperlative,
@@ -18,3 +21,7 @@ export {
   type WeekMetrics,
   type WeeklyTeamPerformance,
 } from "./weekMetrics";
+export {
+  calculateSeasonMatchupWeeks,
+  type SeasonMatchupWeek,
+} from "./seasonMatchups";

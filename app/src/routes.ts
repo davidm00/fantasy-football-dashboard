@@ -1,4 +1,5 @@
 import Home, { HomeErrorBoundary } from "./routes/Home.tsx";
+import Matchup, { MatchupErrorBoundary } from "./routes/Matchup.tsx";
 import NotFound from "./routes/NotFound.tsx";
 import Root from "./routes/Root.tsx";
 import Season from "./routes/Season.tsx";
@@ -9,6 +10,7 @@ import {
   latestSeasonLoader,
   seasonLoader,
   seasonHubLoader,
+  matchupDetailLoader,
   weekLoader,
 } from "./routes/loader.ts";
 
@@ -42,6 +44,12 @@ export const routes = [
             Component: Week,
             loader: weekLoader,
             ErrorBoundary: WeekErrorBoundary,
+          },
+          {
+            path: "weeks/:week/matchups/:homeTeamId/:awayTeamId",
+            Component: Matchup,
+            loader: matchupDetailLoader,
+            ErrorBoundary: MatchupErrorBoundary,
           },
         ],
       },

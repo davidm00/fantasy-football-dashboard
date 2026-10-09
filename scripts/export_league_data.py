@@ -1032,7 +1032,7 @@ def build_traded_player_points(
     return {"players": players_out}, fetched_count
 
 
-def serialize_pick_raw(pick: Any) -> dict[str, Any]:
+def serialize_pick_raw(pick: Any, position: str | None) -> dict[str, Any]:
     return {
         "round": pick.round_num,
         "round_pick": pick.round_pick,
@@ -1040,10 +1040,35 @@ def serialize_pick_raw(pick: Any) -> dict[str, Any]:
         "team_name": pick.team.team_name if pick.team else None,
         "player_id": pick.playerId,
         "player_name": pick.playerName,
+        "position": position,
         "bid_amount": pick.bid_amount,
         "is_keeper": pick.keeper_status,
         "nominating_team_id": pick.nominatingTeam.team_id if pick.nominatingTeam else None,
     }
+
+
+def fetch_draft_positions(league: League, player_ids: list[int]) -> dict[int, str]:
+    """Position comes straight from ESPN's player card, not from box scores,
+    so it's available even for a drafted player who was never rostered
+    (e.g. dropped before week 1 and never added back).
+
+    Caveat: this is each player's *current* primary position per ESPN, not
+    necessarily their position on draft day. A handful of players change
+    position over the years; for those, an old draft's position will drift
+    slightly from what it was at draft time. Rare, treated as acceptable.
+
+    Caller should only pass player_ids that aren't already cached from a
+    prior export; a position never changes often enough to look it up every
+    run, so a fresh run should need close to zero of these calls.
+    """
+    if not player_ids:
+        return {}
+    results = league.player_info(playerId=player_ids)
+    if results is None:
+        results = []
+    elif not isinstance(results, list):
+        results = [results]
+    return {player.playerId: player.position for player in results if player.position}
 
 
 def serialize_standing_raw(team: Any) -> dict[str, Any]:
@@ -1197,6 +1222,7 @@ def clean_pick_public(raw_pick: dict[str, Any]) -> dict[str, Any]:
         "team_name": raw_pick["team_name"],
         "player_id": raw_pick["player_id"],
         "player_name": raw_pick["player_name"],
+        "position": raw_pick["position"],
         "is_keeper": raw_pick["is_keeper"],
     }
 
@@ -1265,7 +1291,28 @@ def export_season(league: League, espn_to_public: dict[str, dict[str, str]], is_
     write_json(raw_dir / "standings.json", raw_standings)
     write_json(public_dir / "standings.json", [clean_standing_public(s) for s in raw_standings])
 
-    raw_picks = [serialize_pick_raw(p) for p in league.draft]
+    existing_raw_draft = load_json_if_exists(raw_dir / "draft.json") or {}
+    cached_positions = {
+        p["player_id"]: p["position"]
+        for p in existing_raw_draft.get("picks", [])
+        if p.get("position")
+    }
+    uncached_player_ids = sorted(
+        {p.playerId for p in league.draft if p.playerId and p.playerId not in cached_positions}
+    )
+    try:
+        fetched_positions = fetch_draft_positions(league, uncached_player_ids)
+    except Exception:  # noqa: BLE001
+        notes.append("draft player positions unavailable")
+        fetched_positions = {}
+    if uncached_player_ids:
+        time.sleep(REQUEST_DELAY_SECONDS)
+    draft_positions = {**cached_positions, **fetched_positions}
+    missing_positions = [p.playerName for p in league.draft if p.playerId not in draft_positions]
+    if missing_positions:
+        notes.append(f"no position found for drafted players: {missing_positions}")
+
+    raw_picks = [serialize_pick_raw(p, draft_positions.get(p.playerId)) for p in league.draft]
     write_json(raw_dir / "draft.json", {"picks": raw_picks})
     write_json(public_dir / "draft.json", {"picks": [clean_pick_public(p) for p in raw_picks]})
     if not league.draft:

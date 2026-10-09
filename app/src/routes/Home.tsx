@@ -9,7 +9,7 @@ import {
   PlayoffsSection,
   PreseasonSection,
   SeasonOverSection,
-} from "./home/HomeStateSections";
+} from "../components/home/HomeStateSections";
 import type { HomeLoaderData } from "./loader";
 import RouteErrorPage from "./RouteErrorPage";
 

@@ -1,8 +1,33 @@
-import { NavLink, Outlet, useNavigation } from "react-router";
+import { useState } from "react";
+import {
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigation,
+} from "react-router";
 import "../Styles.css";
 
 function Root() {
   const navigation = useNavigation();
+  const location = useLocation();
+  const [copyResult, setCopyResult] = useState<{
+    location: string;
+    status: "copied" | "error";
+  } | null>(null);
+  const locationKey =
+    `${location.pathname}${location.search}${location.hash}`;
+  const copyStatus =
+    copyResult?.location === locationKey ? copyResult.status : "idle";
+  const showCopyLink = location.pathname !== "/";
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopyResult({ location: locationKey, status: "copied" });
+    } catch {
+      setCopyResult({ location: locationKey, status: "error" });
+    }
+  };
 
   return (
     <div className="route-shell">
@@ -38,6 +63,19 @@ function Root() {
             </span>
           ))}
         </nav>
+        {showCopyLink && (
+          <button
+            className="app-copy-link"
+            type="button"
+            onClick={copyLink}
+          >
+            {copyStatus === "copied"
+              ? "Copied"
+              : copyStatus === "error"
+                ? "Unable to copy"
+                : "Copy link"}
+          </button>
+        )}
         {navigation.state !== "idle" && (
           <div
             className="route-pending"

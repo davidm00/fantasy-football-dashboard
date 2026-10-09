@@ -5046,6 +5046,32 @@
     ]
   },
   {
+    "id": "a1de4834-5faf-4617-9880-c2bd5a6221b7",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "RIDE THAT MEAT",
+    "scoring_period": 5,
+    "date": 1791561606977,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428718,
+        "player_name": "Tre Tucker",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4035687,
+        "player_name": "Michael Pittman Jr.",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "78eb25cc-3b55-4670-aad4-46b25663b7ae",
     "type": "WAIVER",
     "status": "FAILED_PLAYERALREADYDROPPED",
@@ -5403,6 +5429,32 @@
     ]
   },
   {
+    "id": "1b3a7309-d1f0-4b60-998e-8d53d603329e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 5,
+    "date": 1791561606977,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16013,
+        "player_name": "Raiders D/ST",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3915189,
+        "player_name": "Roquan Smith",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "28780276-7f8b-41b1-80a0-870fbd93ade2",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -5469,6 +5521,32 @@
         "player_id": 4869961,
         "player_name": "Chris Bell",
         "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "40e96e69-23eb-41f1-a16b-0f123f401d5c",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 12,
+    "team_name": "Certified Mid",
+    "scoring_period": 5,
+    "date": 1791561606977,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4690070,
+        "player_name": "Mitchell Tinsley",
+        "from_team_id": 0,
+        "to_team_id": 12
+      },
+      {
+        "type": "DROP",
+        "player_id": 3045523,
+        "player_name": "Kendrick Bourne",
+        "from_team_id": 12,
         "to_team_id": 0
       }
     ]
@@ -5831,6 +5909,32 @@
     ]
   },
   {
+    "id": "37ee9dcf-ba16-4ca8-9031-9a57cbb0526f",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 5,
+    "date": 1791561606978,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431545,
+        "player_name": "Will Shipley",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 5123663,
+        "player_name": "Isaac TeSlaa",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "07265232-4b39-4e67-8801-3dd927db958c",
     "type": "WAIVER",
     "status": "CANCELED",
@@ -5909,6 +6013,32 @@
     ]
   },
   {
+    "id": "005715ca-831f-4fcf-8952-41fe843197e4",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 5,
+    "date": 1791561606976,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431545,
+        "player_name": "Will Shipley",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4260409,
+        "player_name": "Derrick Barnes",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "0eff32f4-c442-4027-957d-7b98065c39ab",
     "type": "WAIVER",
     "status": "CANCELED",
@@ -5930,6 +6060,32 @@
         "player_id": 4686658,
         "player_name": "Mike Washington Jr.",
         "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ab54936f-bab0-436c-b65b-c60cfddd4b36",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Ay Bendito \ud83e\udd40",
+    "scoring_period": 5,
+    "date": 1791561606977,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4429086,
+        "player_name": "Michael Mayer",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4428850,
+        "player_name": "Dontayvion Wicks",
+        "from_team_id": 6,
         "to_team_id": 0
       }
     ]

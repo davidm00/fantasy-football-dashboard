@@ -1,6 +1,7 @@
 import type {
   BoxScore,
   Draft,
+  Lineup,
   Matchup,
   Settings,
   Standing,
@@ -41,12 +42,33 @@ export type TeamSeasonMetrics = {
   longestWinStreak: number;
   longestLossStreak: number;
   weeklyRanks: WeeklyRank[];
+  power: TeamPowerMetrics;
 };
 
 export type WeeklyRank = {
   week: number;
   rank: number;
   score: number;
+};
+
+export type PowerTrendPoint = {
+  week: number;
+  score: number;
+  rank: number;
+};
+
+export type TeamPowerMetrics = {
+  pointsPerGame: number | null;
+  seasonHigh: number | null;
+  seasonLow: number | null;
+  pointsVsLeagueAverage: number | null;
+  score: number | null;
+  rank: number | null;
+  rankChange: number | null;
+  trend: PowerTrendPoint[];
+  tier: string | null;
+  recentScore: number | null;
+  recentWeekCount: number;
 };
 
 export type ClosestGameMetric = {
@@ -78,9 +100,14 @@ export type BestPickupMetric = {
 export type DraftStealMetric = {
   teamId: number;
   playerName: string;
+  position: string;
   round: number;
   roundPick: number;
+  totalPoints: number;
   startedPoints: number;
+  positionRank: number;
+  positionCount: number;
+  teamPointShare: number;
 };
 
 export type SeasonSuperlative = {
@@ -116,6 +143,7 @@ export type SeasonMetrics = {
     lineupEfficiency: SeasonSuperlative;
     benchPoints: SeasonSuperlative;
     selfInflicted: SeasonSuperlative;
+    powerLeader: SeasonSuperlative;
   };
 };
 
@@ -135,7 +163,16 @@ type MutableTeamMetrics = TeamSeasonMetrics & {
   lineupOptimalPoints: number;
   currentWinStreak: number;
   currentLossStreak: number;
+  weeklyPowerInputs: WeeklyPowerInput[];
 };
+
+type WeeklyPowerInput = {
+  week: number;
+  score: number;
+  winValue: number;
+};
+
+const POWER_TIER_THRESHOLD = 0.95;
 
 const EMPTY_SUPERLATIVE: SeasonSuperlative = {
   label: "Not available",
@@ -178,11 +215,44 @@ const createTeamMetrics = (teamId: number): MutableTeamMetrics => ({
   longestWinStreak: 0,
   longestLossStreak: 0,
   weeklyRanks: [],
+  power: {
+    pointsPerGame: null,
+    seasonHigh: null,
+    seasonLow: null,
+    pointsVsLeagueAverage: null,
+    score: null,
+    rank: null,
+    rankChange: null,
+    trend: [],
+    tier: null,
+    recentScore: null,
+    recentWeekCount: 0,
+  },
   lineupActualPoints: 0,
   lineupOptimalPoints: 0,
   currentWinStreak: 0,
   currentLossStreak: 0,
+  weeklyPowerInputs: [],
 });
+
+function calculatePowerScore(inputs: WeeklyPowerInput[]) {
+  if (inputs.length === 0) return null;
+
+  const scores = inputs.map(({ score }) => score);
+  const average =
+    scores.reduce((total, score) => total + score, 0) / scores.length;
+  const winPercentage =
+    inputs.reduce((total, { winValue }) => total + winValue, 0) /
+    inputs.length;
+
+  return (
+    (6 * average +
+      2 * Math.max(...scores) +
+      2 * Math.min(...scores) +
+      400 * winPercentage) /
+    10
+  );
+}
 
 function recordResult(
   record: MetricRecord,
@@ -202,6 +272,7 @@ const FLEX_POSITIONS: Record<string, string[]> = {
 };
 
 const OFFENSIVE_POSITIONS = new Set(["QB", "RB", "WR", "TE", "K", "P"]);
+const DRAFT_VALUE_POSITIONS = new Set(["QB", "RB", "WR", "TE"]);
 
 function playerCanFillSlot(position: string, slot: string) {
   if (position === slot) return true;
@@ -228,14 +299,32 @@ export function getOptimalLineupPoints(
   lineup: BoxScore["home_lineup"],
   settings: Settings,
 ) {
+  return getOptimalLineup(lineup, settings).points;
+}
+
+export type OptimalLineupPlayer = Lineup & {
+  selectedSlot: string;
+};
+
+export function getOptimalLineup(
+  lineup: BoxScore["home_lineup"],
+  settings: Settings,
+) {
   const slots = getStarterSlots(settings);
   const fullMask = (1 << slots.length) - 1;
-  let states = new Map<number, number>([[0, 0]]);
+  let states = new Map<
+    number,
+    { points: number; players: OptimalLineupPlayer[] }
+  >([[0, { points: 0, players: [] }]]);
 
   for (const player of lineup) {
+    if (player.slot_position === "IR" || player.slot_position === "ER") {
+      continue;
+    }
+
     const nextStates = new Map(states);
 
-    for (const [mask, points] of states) {
+    for (const [mask, state] of states) {
       slots.forEach((slot, slotIndex) => {
         const slotBit = 1 << slotIndex;
 
@@ -244,11 +333,18 @@ export function getOptimalLineupPoints(
           playerCanFillSlot(player.position, slot)
         ) {
           const nextMask = mask | slotBit;
-          const nextPoints = points + player.points;
-          nextStates.set(
-            nextMask,
-            Math.max(nextStates.get(nextMask) ?? -Infinity, nextPoints),
-          );
+          const nextPoints = state.points + player.points;
+          const current = nextStates.get(nextMask);
+
+          if (!current || nextPoints > current.points) {
+            nextStates.set(nextMask, {
+              points: nextPoints,
+              players: [
+                ...state.players,
+                { ...player, selectedSlot: slot },
+              ],
+            });
+          }
         }
       });
     }
@@ -256,7 +352,12 @@ export function getOptimalLineupPoints(
     states = nextStates;
   }
 
-  return states.get(fullMask) ?? Math.max(0, ...states.values());
+  return (
+    states.get(fullMask) ??
+    [...states.values()].sort(
+      (left, right) => right.points - left.points,
+    )[0] ?? { points: 0, players: [] }
+  );
 }
 
 function getStarterPointsByPlayer(source: SeasonMetricSource) {
@@ -275,7 +376,11 @@ function getStarterPointsByPlayer(source: SeasonMetricSource) {
 
     for (const side of sides) {
       for (const player of side.lineup) {
-        if (player.slot_position === "BE" || player.slot_position === "IR") {
+        if (
+          player.slot_position === "BE" ||
+          player.slot_position === "IR" ||
+          player.slot_position === "ER"
+        ) {
           continue;
         }
 
@@ -286,6 +391,69 @@ function getStarterPointsByPlayer(source: SeasonMetricSource) {
   }
 
   return totals;
+}
+
+type DraftValueCandidate = DraftStealMetric & {
+  overallPick: number;
+  utilization: number;
+  valueScore: number;
+};
+
+function getPlayerSeasonTotals(source: SeasonMetricSource) {
+  const totals = new Map<
+    number,
+    { playerName: string; position: string; points: number }
+  >();
+
+  for (const boxScore of source.box_scores.filter(
+    (game) =>
+      game.status === "final" &&
+      !game.is_playoff &&
+      game.week <= source.settings.regular_season_length,
+  )) {
+    for (const player of [
+      ...boxScore.home_lineup,
+      ...boxScore.away_lineup,
+    ]) {
+      const current = totals.get(player.player_id);
+      totals.set(player.player_id, {
+        playerName: player.name,
+        position: player.position,
+        points: (current?.points ?? 0) + player.points,
+      });
+    }
+  }
+
+  return totals;
+}
+
+function getTeamScoringTotals(source: SeasonMetricSource) {
+  const totals = new Map<number, number>();
+
+  for (const boxScore of source.box_scores.filter(
+    (game) =>
+      game.status === "final" &&
+      !game.is_playoff &&
+      game.week <= source.settings.regular_season_length,
+  )) {
+    totals.set(
+      boxScore.home_team_id,
+      (totals.get(boxScore.home_team_id) ?? 0) + boxScore.home_score,
+    );
+    totals.set(
+      boxScore.away_team_id,
+      (totals.get(boxScore.away_team_id) ?? 0) + boxScore.away_score,
+    );
+  }
+
+  return totals;
+}
+
+function getDescendingPercentile(value: number, values: number[]) {
+  if (values.length <= 1) return 1;
+
+  const rank = 1 + values.filter((other) => other > value).length;
+  return 1 - (rank - 1) / (values.length - 1);
 }
 
 function getBenchBlunder(source: SeasonMetricSource) {
@@ -315,7 +483,9 @@ function getBenchBlunder(source: SeasonMetricSource) {
     for (const side of sides) {
       const starters = side.lineup.filter(
         (player) =>
-          player.slot_position !== "BE" && player.slot_position !== "IR",
+          player.slot_position !== "BE" &&
+          player.slot_position !== "IR" &&
+          player.slot_position !== "ER",
       );
       const bench = side.lineup.filter(
         (player) => player.slot_position === "BE",
@@ -389,28 +559,98 @@ function getDraftSteal(
   source: SeasonMetricSource,
   starterPoints: Map<string, number>,
 ) {
-  let best: (DraftStealMetric & { valueScore: number }) | null = null;
+  const eligiblePicks =
+    source.draft?.picks.filter(({ is_keeper }) => !is_keeper) ?? [];
+  const playerTotals = getPlayerSeasonTotals(source);
+  const teamScoring = getTeamScoringTotals(source);
+  const maxOverallPick = Math.max(
+    1,
+    ...eligiblePicks.map(
+      ({ round, round_pick: roundPick }) =>
+        (round - 1) * source.settings.team_count + roundPick,
+    ),
+  );
+  const candidates: DraftValueCandidate[] = eligiblePicks.flatMap((pick) => {
+    const player = playerTotals.get(pick.player_id);
+    if (!player || !DRAFT_VALUE_POSITIONS.has(player.position)) return [];
 
-  for (const pick of source.draft?.picks ?? []) {
     const startedPoints =
       starterPoints.get(`${pick.team_id}:${pick.player_id}`) ?? 0;
-    const valueScore = startedPoints * pick.round;
+    const teamPoints = teamScoring.get(pick.team_id) ?? 0;
+    const totalPoints = player.points;
 
-    if (!best || valueScore > best.valueScore) {
-      best = {
-        teamId: pick.team_id,
-        playerName: pick.player_name,
-        round: pick.round,
-        roundPick: pick.round_pick,
-        startedPoints: round(startedPoints, 2),
-        valueScore,
-      };
-    }
+    return [{
+      teamId: pick.team_id,
+      playerName: pick.player_name,
+      position: player.position,
+      round: pick.round,
+      roundPick: pick.round_pick,
+      totalPoints,
+      startedPoints,
+      positionRank: 0,
+      positionCount: 0,
+      teamPointShare: teamPoints > 0 ? startedPoints / teamPoints : 0,
+      overallPick:
+        (pick.round - 1) * source.settings.team_count + pick.round_pick,
+      utilization: totalPoints > 0 ? startedPoints / totalPoints : 0,
+      valueScore: 0,
+    }];
+  });
+
+  for (const candidate of candidates) {
+    const positionCandidates = candidates.filter(
+      ({ position }) => position === candidate.position,
+    );
+    const observedAtPosition = [...playerTotals.values()]
+      .filter(({ position }) => position === candidate.position)
+      .map(({ points }) => points);
+    candidate.positionRank =
+      1 +
+      observedAtPosition.filter(
+        (points) => points > candidate.totalPoints,
+      ).length;
+    candidate.positionCount = observedAtPosition.length;
+
+    const productionScore = getDescendingPercentile(
+      candidate.totalPoints,
+      observedAtPosition,
+    );
+    const contributionScore = getDescendingPercentile(
+      candidate.teamPointShare,
+      positionCandidates.map(({ teamPointShare }) => teamPointShare),
+    );
+    const draftCapitalScore =
+      maxOverallPick > 1
+        ? (candidate.overallPick - 1) / (maxOverallPick - 1)
+        : 0;
+
+    candidate.valueScore =
+      productionScore * 0.45 +
+      contributionScore * 0.25 +
+      draftCapitalScore * 0.2 +
+      Math.min(1, candidate.utilization) * 0.1;
   }
 
+  const best = candidates
+    .filter(({ totalPoints }) => totalPoints > 0)
+    .sort(
+      (left, right) =>
+        right.valueScore - left.valueScore ||
+        right.startedPoints - left.startedPoints ||
+        right.overallPick - left.overallPick,
+    )[0];
   if (!best) return null;
 
-  const { valueScore: _, ...metric } = best;
+  const {
+    overallPick: _overallPick,
+    utilization: _utilization,
+    valueScore: _valueScore,
+    ...metric
+  } = best;
+
+  metric.totalPoints = round(metric.totalPoints, 2);
+  metric.startedPoints = round(metric.startedPoints, 2);
+  metric.teamPointShare = round(metric.teamPointShare * 100);
   return metric;
 }
 
@@ -551,6 +791,16 @@ export function calculateSeasonMetrics(
 
       metrics.pointsFor += team.score;
       metrics.pointsAgainst += team.opponentScore;
+      metrics.weeklyPowerInputs.push({
+        week: week.week,
+        score: team.score,
+        winValue:
+          team.score > team.opponentScore
+            ? 1
+            : team.score < team.opponentScore
+              ? 0
+              : 0.5,
+      });
       recordResult(metrics.record, team.score, team.opponentScore);
       updateStreak(metrics, team.score, team.opponentScore);
 
@@ -620,6 +870,87 @@ export function calculateSeasonMetrics(
         metrics.selfInflictedLosses.push(boxScore.week);
       }
     }
+  }
+
+  const completedWeeks = regularSeasonMatchups.map(({ week }) => week);
+  const leaguePointsAverage =
+    teamMetrics.size > 0
+      ? [...teamMetrics.values()].reduce(
+          (total, { pointsFor }) => total + pointsFor,
+          0,
+        ) / teamMetrics.size
+      : 0;
+  const powerSnapshots = completedWeeks.map((week) => {
+    const rankings = [...teamMetrics.values()]
+      .flatMap((metrics) => {
+        const score = calculatePowerScore(
+          metrics.weeklyPowerInputs.filter((input) => input.week <= week),
+        );
+        return score === null ? [] : [{ teamId: metrics.teamId, score }];
+      })
+      .sort(
+        (left, right) =>
+          right.score - left.score || left.teamId - right.teamId,
+      );
+
+    return {
+      week,
+      rankings: rankings.map((entry, index) => ({
+        ...entry,
+        rank: index + 1,
+      })),
+    };
+  });
+  const currentPowerRanking =
+    powerSnapshots[powerSnapshots.length - 1]?.rankings ?? [];
+  let tierNumber = 1;
+  const tiers = new Map<number, number>();
+
+  currentPowerRanking.forEach((entry, index) => {
+    const previous = currentPowerRanking[index - 1];
+    if (previous && entry.score < previous.score * POWER_TIER_THRESHOLD) {
+      tierNumber += 1;
+    }
+    tiers.set(entry.teamId, tierNumber);
+  });
+  const lowestTier = tierNumber;
+
+  for (const metrics of teamMetrics.values()) {
+    const scores = metrics.weeklyPowerInputs.map(({ score }) => score);
+    const trend = powerSnapshots.flatMap(({ week, rankings }) => {
+      const entry = rankings.find(({ teamId }) => teamId === metrics.teamId);
+      return entry
+        ? [{ week, score: entry.score, rank: entry.rank }]
+        : [];
+    });
+    const current = trend[trend.length - 1];
+    const previous = trend[trend.length - 2];
+    const recentInputs = metrics.weeklyPowerInputs.slice(-3);
+    const teamTier = tiers.get(metrics.teamId);
+
+    metrics.power = {
+      pointsPerGame:
+        scores.length > 0
+          ? scores.reduce((total, score) => total + score, 0) / scores.length
+          : null,
+      seasonHigh: scores.length > 0 ? Math.max(...scores) : null,
+      seasonLow: scores.length > 0 ? Math.min(...scores) : null,
+      pointsVsLeagueAverage:
+        scores.length > 0 ? metrics.pointsFor - leaguePointsAverage : null,
+      score: current?.score ?? null,
+      rank: current?.rank ?? null,
+      rankChange:
+        current && previous ? previous.rank - current.rank : null,
+      trend,
+      tier:
+        teamTier === undefined
+          ? null
+          : teamTier === lowestTier && lowestTier > 1
+            ? "Taco"
+            : `T${teamTier}`,
+      recentScore: calculatePowerScore(recentInputs),
+      recentWeekCount: recentInputs.length,
+    };
   }
 
   for (const metrics of teamMetrics.values()) {
@@ -739,6 +1070,12 @@ export function calculateSeasonMetrics(
           explanation:
             "Losses where the manager's best valid lineup would have beaten the opponent.",
         },
+        powerLeader: {
+          ...EMPTY_SUPERLATIVE,
+          label: "Power leader",
+          explanation:
+            "A blended rating of scoring average, weekly ceiling and floor, and win percentage.",
+        },
       },
     };
   }
@@ -768,6 +1105,10 @@ export function calculateSeasonMetrics(
   const mostSelfInflicted = maxTeam(
     values,
     ({ selfInflictedLosses }) => selfInflictedLosses.length,
+  );
+  const powerLeader = maxTeam(
+    values.filter(({ power }) => power.score !== null),
+    ({ power }) => power.score ?? 0,
   );
   const latestWeek = Math.max(...regularSeasonMatchups.map(({ week }) => week));
   const topHalfSelector = ({
@@ -905,6 +1246,14 @@ export function calculateSeasonMetrics(
           "Losses where the manager's best valid lineup would have beaten the opponent.",
         value: getManagerName(source.teams, mostSelfInflicted.teamId),
         note: `${mostSelfInflicted.selfInflictedLosses.length} lineup-flipped losses`,
+      },
+      powerLeader: {
+        label: "Power leader",
+        presentation: "comparative",
+        explanation:
+          "Power score = (6 × scoring average + 2 × season high + 2 × season low + 400 × win percentage) ÷ 10.",
+        value: getManagerName(source.teams, powerLeader.teamId),
+        note: `${powerLeader.power.score?.toFixed(2)} · ${powerLeader.power.tier}`,
       },
     },
   };

@@ -1,4 +1,4 @@
-import type { MetricPresentation } from "../utils/metrics";
+import type { MetricPresentation } from "../../utils/metrics";
 import MetricTooltip from "./MetricTooltip";
 
 export type MetricCardData = {

@@ -7135,14 +7135,6 @@
         "points": 0
       },
       {
-        "player_id": 4035687,
-        "name": "Michael Pittman Jr.",
-        "position": "WR",
-        "pro_team": "PIT",
-        "slot_position": "BE",
-        "points": 0
-      },
-      {
         "player_id": 3116406,
         "name": "Tyreek Hill",
         "position": "WR",
@@ -7213,6 +7205,14 @@
         "pro_team": "LAC",
         "slot_position": "RB",
         "points": 0
+      },
+      {
+        "player_id": 4428718,
+        "name": "Tre Tucker",
+        "position": "WR",
+        "pro_team": "LV",
+        "slot_position": "BE",
+        "points": 0
       }
     ],
     "away_team_id": 6,
@@ -7267,14 +7267,6 @@
         "points": 0
       },
       {
-        "player_id": 4428850,
-        "name": "Dontayvion Wicks",
-        "position": "WR",
-        "pro_team": "PHI",
-        "slot_position": "BE",
-        "points": 0
-      },
-      {
         "player_id": -16027,
         "name": "Buccaneers D/ST",
         "position": "D/ST",
@@ -7311,7 +7303,7 @@
         "name": "Breece Hall",
         "position": "RB",
         "pro_team": "NYJ",
-        "slot_position": "RB",
+        "slot_position": "BE",
         "points": 0
       },
       {
@@ -7319,7 +7311,7 @@
         "name": "Braelon Allen",
         "position": "RB",
         "pro_team": "NYJ",
-        "slot_position": "BE",
+        "slot_position": "RB",
         "points": 0
       },
       {
@@ -7359,6 +7351,14 @@
         "name": "Dameon Pierce",
         "position": "RB",
         "pro_team": "PHI",
+        "slot_position": "BE",
+        "points": 0
+      },
+      {
+        "player_id": 4429086,
+        "name": "Michael Mayer",
+        "position": "TE",
+        "pro_team": "LV",
         "slot_position": "BE",
         "points": 0
       }
@@ -7801,19 +7801,19 @@
         "points": 0
       },
       {
-        "player_id": 3045523,
-        "name": "Kendrick Bourne",
-        "position": "WR",
-        "pro_team": "ARI",
-        "slot_position": "BE",
-        "points": 0
-      },
-      {
         "player_id": 4689936,
         "name": "Jake Bates",
         "position": "K",
         "pro_team": "DET",
         "slot_position": "K",
+        "points": 0
+      },
+      {
+        "player_id": 4690070,
+        "name": "Mitchell Tinsley",
+        "position": "WR",
+        "pro_team": "CIN",
+        "slot_position": "BE",
         "points": 0
       }
     ],
@@ -8535,14 +8535,6 @@
         "points": 9.0
       },
       {
-        "player_id": 4260409,
-        "name": "Derrick Barnes",
-        "position": "LB",
-        "pro_team": "DET",
-        "slot_position": "BE",
-        "points": 0
-      },
-      {
         "player_id": 4686612,
         "name": "Tre' Harris",
         "position": "WR",
@@ -8555,6 +8547,14 @@
         "name": "Mike Gesicki",
         "position": "TE",
         "pro_team": "CIN",
+        "slot_position": "BE",
+        "points": 0
+      },
+      {
+        "player_id": 4431545,
+        "name": "Will Shipley",
+        "position": "RB",
+        "pro_team": "PHI",
         "slot_position": "BE",
         "points": 0
       }
@@ -8616,19 +8616,11 @@
         "points": 0
       },
       {
-        "player_id": 3915189,
-        "name": "Roquan Smith",
-        "position": "LB",
-        "pro_team": "BAL",
-        "slot_position": "BE",
-        "points": 0
-      },
-      {
         "player_id": -16012,
         "name": "Chiefs D/ST",
         "position": "D/ST",
         "pro_team": "KC",
-        "slot_position": "D/ST",
+        "slot_position": "BE",
         "points": 0
       },
       {
@@ -8709,6 +8701,14 @@
         "position": "WR",
         "pro_team": "DET",
         "slot_position": "RB/WR/TE",
+        "points": 0
+      },
+      {
+        "player_id": -16013,
+        "name": "Raiders D/ST",
+        "position": "D/ST",
+        "pro_team": "LV",
+        "slot_position": "D/ST",
         "points": 0
       }
     ],

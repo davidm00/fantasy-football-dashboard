@@ -1,16 +1,16 @@
 import { Link } from "react-router";
 import type { MatchupResult, Team } from "../../models/models";
-import MatchupCard from "../../components/MatchupCard";
+import MatchupCard from "../shared/MatchupCard";
 import type {
   HomeLoaderState,
   HomeSeasonData,
-} from "../loader";
+} from "../../routes/loader";
 import { getStanding } from "../../utils/teamHelper";
-import HomeStateHeader from "../../components/home/HomeStateHeader";
-import SeasonReportPanel from "../../components/home/SeasonReportPanel";
-import StandingsPanel from "../../components/home/StandingsPanel";
-import SeasonSuperlatives from "../../components/home/SeasonSuperlatives";
-import BracketRoundColumn from "./BracketRoundColumn";
+import HomeStateHeader from "./HomeStateHeader";
+import SeasonReportPanel from "../shared/SeasonReportPanel";
+import StandingsPanel from "../shared/StandingsPanel";
+import SeasonSuperlatives from "./SeasonSuperlatives";
+import PlayoffBracket from "../shared/PlayoffBracket";
 import {
   EMPTY_RECORD,
   formatRecord,
@@ -69,6 +69,16 @@ export function BetweenWeeksSection({
               status={activeMatchup.status}
               teams={season.teams}
               records={records}
+              detailTo={
+                season.box_scores.some(
+                  (boxScore) =>
+                    boxScore.week === state.upcomingWeek &&
+                    boxScore.home_team_id === matchup.home_team_id &&
+                    boxScore.away_team_id === matchup.away_team_id,
+                )
+                  ? `/seasons/${season.year}/weeks/${state.upcomingWeek}/matchups/${matchup.home_team_id}/${matchup.away_team_id}`
+                  : undefined
+              }
             />
           ))}
         </div>
@@ -105,7 +115,7 @@ export function BetweenWeeksSection({
         items={[
           season.metrics.superlatives.mostPoints,
           season.metrics.superlatives.weeklyHighs,
-          season.metrics.superlatives.luckiest,
+          season.metrics.superlatives.powerLeader,
           season.metrics.superlatives.lineupEfficiency,
         ]}
       />
@@ -123,6 +133,7 @@ export function BetweenWeeksSection({
           title="Standings"
           subtitle={`After Week ${standingsWeek}`}
           season={season}
+          showPower
         />
       </div>
     </>
@@ -152,22 +163,14 @@ export function PlayoffsSection({
       <section className="home-panel home-bracket">
         <div className="home-section-heading">
           <h2>The bracket</h2>
-          <span>Full bracket view coming soon</span>
+          <Link to={`/seasons/${season.year}?tab=bracket`}>
+            View season bracket →
+          </Link>
         </div>
-        <div className="home-bracket-grid">
-          {[0, 1, 2].map((roundIndex) => (
-            <BracketRoundColumn
-              key={roundIndex}
-              roundIndex={roundIndex}
-              season={season}
-              seeds={seeds.map(({ team }) => team)}
-            />
-          ))}
-        </div>
-        <p className="home-panel-note">
-          Round 1 includes the opening games and byes. Later rounds show the
-          teams already known or the matchup each winner advances into.
-        </p>
+        <PlayoffBracket
+          season={season}
+          seeds={seeds.map(({ team }) => team)}
+        />
       </section>
       <section className="home-panel home-consolation">
         <strong>Consolation games</strong>
@@ -193,6 +196,7 @@ export function PlayoffsSection({
           subtitle="Final regular season"
           season={season}
           limit={6}
+          showPower
         />
       </div>
     </>
@@ -290,6 +294,7 @@ export function SeasonOverSection({
           subtitle="After the playoffs"
           season={season}
           final
+          showPower
         />
       </div>
     </>
@@ -377,6 +382,7 @@ export function PreseasonSection({
             season={previousSeason}
             limit={4}
             final
+            showPower
           />
         </div>
       )}

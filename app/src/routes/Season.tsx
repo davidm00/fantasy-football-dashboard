@@ -7,7 +7,9 @@ import {
   useRouteError,
   useSearchParams,
 } from "react-router";
-import MetricTooltip from "../components/MetricTooltip";
+import PlayoffBracket from "../components/shared/PlayoffBracket";
+import MetricTooltip from "../components/shared/MetricTooltip";
+import SeasonMatchupsView from "../components/season/SeasonMatchupsView";
 import seasonList from "../data/seasons.json";
 import type { Team } from "../models/models";
 import type {
@@ -19,6 +21,7 @@ import RouteErrorPage from "./RouteErrorPage";
 type SortKey =
   | "manager"
   | "record"
+  | "power"
   | "pointsFor"
   | "pointsAgainst"
   | "allPlay"
@@ -26,6 +29,7 @@ type SortKey =
   | "efficiency";
 
 type SortDirection = "ascending" | "descending";
+type SeasonTab = "standings" | "bracket" | "matchups";
 
 type StandingsRow = {
   rank: number;
@@ -39,6 +43,8 @@ const DERIVED_METRIC_EXPLANATIONS = {
   luck: "Actual wins minus expected wins from all-play performance. Positive values indicate a favorable schedule.",
   efficiency:
     "Points scored divided by the best valid lineup that could have been started from each week's roster.",
+  power:
+    "Power score = (6 × scoring average + 2 × season high + 2 × season low + 400 × win percentage) ÷ 10. The arrow shows movement since the previous completed week.",
 };
 
 export function SeasonErrorBoundary() {
@@ -194,10 +200,49 @@ function SeasonAward({
   );
 }
 
+function SeasonBracketView({
+  season,
+  seeds,
+}: {
+  season: SeasonLoaderData;
+  seeds: Team[];
+}) {
+  const champion = season.bracket.champion
+    ? season.teams.find(
+        ({ team_id }) => team_id === season.bracket.champion?.team_id,
+      )
+    : undefined;
+
+  return (
+    <section className="home-panel home-bracket season-bracket-view">
+      <div className="home-section-heading">
+        <div>
+          <span className="home-eyebrow">Playoffs</span>
+          <h2>Championship bracket</h2>
+        </div>
+        <span>{champion ? "Final" : "Updates as rounds are set"}</span>
+      </div>
+      {champion && (
+        <div className="season-bracket-champion">
+          <span>Champion</span>
+          <strong>{champion.team_name}</strong>
+          <small>{getManagerName(champion)}</small>
+        </div>
+      )}
+      <PlayoffBracket season={season} seeds={seeds} />
+    </section>
+  );
+}
+
 function Season() {
   const season = useLoaderData() as SeasonLoaderData;
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const tabParam = searchParams.get("tab");
+  const activeTab: SeasonTab =
+    tabParam === "bracket" || tabParam === "matchups"
+      ? tabParam
+      : "standings";
   const [sort, setSort] = useState<{
     key: SortKey;
     direction: SortDirection;
@@ -245,6 +290,23 @@ function Season() {
       ),
     [season.standings],
   );
+  const bracketSeeds = useMemo(
+    () =>
+      [...season.teams]
+        .sort(
+          (left, right) =>
+            (regularRanks.get(left.team_id) ?? Number.POSITIVE_INFINITY) -
+            (regularRanks.get(right.team_id) ?? Number.POSITIVE_INFINITY),
+        )
+        .slice(0, playoffTeamCount),
+    [playoffTeamCount, regularRanks, season.teams],
+  );
+  const requestedHighlightId = Number(searchParams.get("highlight"));
+  const highlightedTeamId = season.teams.some(
+    ({ team_id }) => team_id === requestedHighlightId,
+  )
+    ? requestedHighlightId
+    : null;
   const standingsRows = useMemo(() => {
     const rows: StandingsRow[] = season.teams.flatMap((team) => {
       const metrics = season.metrics.teams[team.team_id];
@@ -274,6 +336,11 @@ function Season() {
               right.metrics.record.losses - left.metrics.record.losses ||
               left.metrics.pointsFor - right.metrics.pointsFor;
           }
+          break;
+        case "power":
+          comparison =
+            (left.metrics.power.score ?? -1) -
+            (right.metrics.power.score ?? -1);
           break;
         case "pointsFor":
           comparison = left.metrics.pointsFor - right.metrics.pointsFor;
@@ -368,6 +435,24 @@ function Season() {
     setSort({ key: "record", direction: "descending" });
   };
 
+  const setSeasonTab = (tab: SeasonTab) => {
+    const next = new URLSearchParams(searchParams);
+
+    if (tab !== "standings") next.set("tab", tab);
+    else next.delete("tab");
+    if (tab !== "matchups") next.delete("highlight");
+
+    setSearchParams(next);
+  };
+
+  const setHighlightedTeam = (teamId: number | null) => {
+    const next = new URLSearchParams(searchParams);
+    next.set("tab", "matchups");
+    if (teamId === null) next.delete("highlight");
+    else next.set("highlight", String(teamId));
+    setSearchParams(next);
+  };
+
   return (
     <main className="season-hub">
       <header className="season-hub-header">
@@ -389,7 +474,11 @@ function Season() {
           <select
             value={season.year}
             onChange={(event) =>
-              navigate(`/seasons/${event.currentTarget.value}`)
+              navigate(
+                `/seasons/${event.currentTarget.value}${
+                  activeTab === "standings" ? "" : `?tab=${activeTab}`
+                }`,
+              )
             }
           >
             {[...seasonList]
@@ -404,8 +493,28 @@ function Season() {
       </header>
 
       <nav className="season-tabs" aria-label="Season sections">
-        <span aria-current="page">Standings</span>
-        {["Bracket", "Matchups", "Reports", "Draft", "Moves"].map(
+        <button
+          type="button"
+          aria-current={activeTab === "standings" ? "page" : undefined}
+          onClick={() => setSeasonTab("standings")}
+        >
+          Standings
+        </button>
+        <button
+          type="button"
+          aria-current={activeTab === "bracket" ? "page" : undefined}
+          onClick={() => setSeasonTab("bracket")}
+        >
+          Bracket
+        </button>
+        <button
+          type="button"
+          aria-current={activeTab === "matchups" ? "page" : undefined}
+          onClick={() => setSeasonTab("matchups")}
+        >
+          Matchups
+        </button>
+        {["Reports", "Draft", "Moves"].map(
           (tab) => (
             <button
               key={tab}
@@ -419,6 +528,25 @@ function Season() {
         )}
       </nav>
 
+      {activeTab === "bracket" && (
+        <SeasonBracketView season={season} seeds={bracketSeeds} />
+      )}
+
+      {activeTab === "matchups" && bracketSeeds[0] && (
+        <SeasonMatchupsView
+          year={season.year}
+          teams={season.teams}
+          weeks={season.matchupWeeks}
+          reports={season.reports}
+          regularSeasonLength={season.settings.regular_season_length}
+          defaultTeamId={bracketSeeds[0].team_id}
+          highlightedTeamId={highlightedTeamId}
+          onHighlight={setHighlightedTeam}
+        />
+      )}
+
+      {activeTab === "standings" && (
+        <>
       {scoringLeader && unluckiest && (
         <p className="season-narrative">
           <strong>{getManagerName(scoringLeader.team)}</strong> leads the
@@ -492,6 +620,14 @@ function Season() {
                 sortKey="record"
                 activeKey={sort.key}
                 direction={sort.direction}
+                onSort={handleSort}
+              />
+              <SortHeader
+                label="Power"
+                sortKey="power"
+                activeKey={sort.key}
+                direction={sort.direction}
+                tooltip={DERIVED_METRIC_EXPLANATIONS.power}
                 onSort={handleSort}
               />
               <SortHeader
@@ -690,13 +826,15 @@ function Season() {
             <SeasonAward
               kicker="Steal of the draft"
               title={`${getManagerName(draftTeam)}: ${awards.draftSteal.playerName} at R${awards.draftSteal.round}.${awards.draftSteal.roundPick}`}
-              body={`${awards.draftSteal.startedPoints.toFixed(2)} points for the drafting manager.`}
+              body={`${awards.draftSteal.position}${awards.draftSteal.positionRank} of ${awards.draftSteal.positionCount} with ${awards.draftSteal.totalPoints.toFixed(2)} points; ${awards.draftSteal.startedPoints.toFixed(2)} as a starter accounted for ${awards.draftSteal.teamPointShare.toFixed(1)}% of team scoring.`}
               cta="Draft tab coming soon"
-              explanation="Draft value balances started points with acquisition cost, rewarding productive players selected in later rounds."
+              explanation="Among drafted QB, RB, WR, and TE players, draft value weighs scoring rank within position (45%), share of the drafting team's scoring compared with other drafted players at that position (25%), draft capital (20%), and how much of the player's production the manager used in the starting lineup (10%). Keepers, kickers, and defenses are excluded because their listed draft cost and streaming value are not meaningfully comparable."
             />
           )}
         </div>
       </section>
+        </>
+      )}
     </main>
   );
 }
@@ -725,6 +863,40 @@ function SeasonStandingRow({
           <span>{team.team_name}</span>
         </th>
         <td>{formatRecord(metrics.record)}</td>
+        <td>
+          <div className="season-power-cell">
+            <strong>
+              {metrics.power.rank === null ? "—" : `#${metrics.power.rank}`}
+            </strong>
+            <span>
+              {metrics.power.score?.toFixed(1) ?? "—"}
+              {metrics.power.rankChange !== null && (
+                <i
+                  className={
+                    metrics.power.rankChange > 0
+                      ? "positive"
+                      : metrics.power.rankChange < 0
+                        ? "negative"
+                        : undefined
+                  }
+                  aria-label={
+                    metrics.power.rankChange > 0
+                      ? `up ${metrics.power.rankChange}`
+                      : metrics.power.rankChange < 0
+                        ? `down ${Math.abs(metrics.power.rankChange)}`
+                        : "no change"
+                  }
+                >
+                  {metrics.power.rankChange > 0
+                    ? `▲${metrics.power.rankChange}`
+                    : metrics.power.rankChange < 0
+                      ? `▼${Math.abs(metrics.power.rankChange)}`
+                      : "–"}
+                </i>
+              )}
+            </span>
+          </div>
+        </td>
         <td>{metrics.pointsFor.toFixed(2)}</td>
         <td>{metrics.pointsAgainst.toFixed(2)}</td>
         <td>{formatRecord(metrics.allPlayRecord)}</td>
@@ -763,7 +935,7 @@ function SeasonStandingRow({
       </tr>
       {rank === playoffTeamCount && (
         <tr className="season-playoff-cut">
-          <td colSpan={9}>
+          <td colSpan={10}>
             <span>Playoff line</span>
           </td>
         </tr>
@@ -793,7 +965,13 @@ function SeasonMobileStandingCard({
             <strong>{getManagerName(team)}</strong>
             <span>{team.team_name}</span>
           </div>
-          <strong>{formatRecord(metrics.record)}</strong>
+          <div className="season-mobile-standing-results">
+            <strong>{formatRecord(metrics.record)}</strong>
+            <span>
+              Power #{metrics.power.rank ?? "—"} ·{" "}
+              {metrics.power.score?.toFixed(1) ?? "—"}
+            </span>
+          </div>
         </div>
         <dl>
           <div>

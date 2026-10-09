@@ -7,6 +7,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4429795,
       "player_name": "Jahmyr Gibbs",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -16,6 +17,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4430807,
       "player_name": "Bijan Robinson",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -25,6 +27,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4362628,
       "player_name": "Ja'Marr Chase",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -34,6 +37,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4242335,
       "player_name": "Jonathan Taylor",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -43,6 +47,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4426515,
       "player_name": "Puka Nacua",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -52,6 +57,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4374302,
       "player_name": "Amon-Ra St. Brown",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -61,6 +67,7 @@
       "team_name": "Certified Mid",
       "player_id": 3117251,
       "player_name": "Christian McCaffrey",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -70,6 +77,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4379399,
       "player_name": "James Cook III",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -79,6 +87,7 @@
       "team_name": "Scam Little",
       "player_id": 4429160,
       "player_name": "De'Von Achane",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -88,6 +97,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4241389,
       "player_name": "CeeDee Lamb",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -97,6 +107,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4362238,
       "player_name": "Chase Brown",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -106,6 +117,7 @@
       "team_name": "RB Stash",
       "player_id": 4262921,
       "player_name": "Justin Jefferson",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -115,6 +127,7 @@
       "team_name": "RB Stash",
       "player_id": 3929630,
       "player_name": "Saquon Barkley",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -124,6 +137,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 3043078,
       "player_name": "Derrick Henry",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -133,6 +147,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4890973,
       "player_name": "Ashton Jeanty",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -142,6 +157,7 @@
       "team_name": "Scam Little",
       "player_id": 4258173,
       "player_name": "Nico Collins",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -151,6 +167,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4430737,
       "player_name": "Kyren Williams",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -160,6 +177,7 @@
       "team_name": "Certified Mid",
       "player_id": 4870808,
       "player_name": "Jeremiyah Love",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -169,6 +187,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4047646,
       "player_name": "A.J. Brown",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -178,6 +197,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4567048,
       "player_name": "Kenneth Walker III",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -187,6 +207,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4569618,
       "player_name": "Garrett Wilson",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -196,6 +217,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4426502,
       "player_name": "Drake London",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -205,6 +227,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 3918298,
       "player_name": "Josh Allen",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -214,6 +237,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4696981,
       "player_name": "Cam Skattebo",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -223,6 +247,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4595348,
       "player_name": "Malik Nabers",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -232,6 +257,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4361307,
       "player_name": "Trey McBride",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -241,6 +267,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4429615,
       "player_name": "Zay Flowers",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -250,6 +277,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4685472,
       "player_name": "Tetairoa McMillan",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -259,6 +287,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4612826,
       "player_name": "Ladd McConkey",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -268,6 +297,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4259545,
       "player_name": "D'Andre Swift",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -277,6 +307,7 @@
       "team_name": "Certified Mid",
       "player_id": 4723086,
       "player_name": "Colston Loveland",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -286,6 +317,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4372016,
       "player_name": "Jaylen Waddle",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -295,6 +327,7 @@
       "team_name": "Scam Little",
       "player_id": 4882093,
       "player_name": "Bhayshul Tuten",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -304,6 +337,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 3916387,
       "player_name": "Lamar Jackson",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -313,6 +347,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 16800,
       "player_name": "Davante Adams",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -322,6 +357,7 @@
       "team_name": "RB Stash",
       "player_id": 4685702,
       "player_name": "Quinshon Judkins",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -331,6 +367,7 @@
       "team_name": "RB Stash",
       "player_id": 4596448,
       "player_name": "Bucky Irving",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -340,6 +377,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4432665,
       "player_name": "Brock Bowers",
+      "position": "TE",
       "is_keeper": true
     },
     {
@@ -349,6 +387,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4431459,
       "player_name": "Tyler Warren",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -358,6 +397,7 @@
       "team_name": "Scam Little",
       "player_id": 3915416,
       "player_name": "DJ Moore",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -367,6 +407,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 3121422,
       "player_name": "Terry McLaurin",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -376,6 +417,7 @@
       "team_name": "Certified Mid",
       "player_id": 4239993,
       "player_name": "Tee Higgins",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -385,6 +427,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4426388,
       "player_name": "Jameson Williams",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -394,6 +437,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4685382,
       "player_name": "Omarion Hampton",
+      "position": "RB",
       "is_keeper": true
     },
     {
@@ -403,6 +447,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4430878,
       "player_name": "Jaxon Smith-Njigba",
+      "position": "WR",
       "is_keeper": true
     },
     {
@@ -412,6 +457,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4035538,
       "player_name": "David Montgomery",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -421,6 +467,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4431299,
       "player_name": "Rome Odunze",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -430,6 +477,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4241478,
       "player_name": "DeVonta Smith",
+      "position": "WR",
       "is_keeper": true
     },
     {
@@ -439,6 +487,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 3915511,
       "player_name": "Joe Burrow",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -448,6 +497,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4426354,
       "player_name": "George Pickens",
+      "position": "WR",
       "is_keeper": true
     },
     {
@@ -457,6 +507,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4685278,
       "player_name": "Luther Burden III",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -466,6 +517,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4569173,
       "player_name": "Rhamondre Stevenson",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -475,6 +527,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4040715,
       "player_name": "Jalen Hurts",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -484,6 +537,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4427366,
       "player_name": "Breece Hall",
+      "position": "RB",
       "is_keeper": true
     },
     {
@@ -493,6 +547,7 @@
       "team_name": "Certified Mid",
       "player_id": 4432708,
       "player_name": "Marvin Harrison Jr.",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -502,6 +557,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4360248,
       "player_name": "Kyle Pitts Sr.",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -511,6 +567,7 @@
       "team_name": "Scam Little",
       "player_id": 5083076,
       "player_name": "Harold Fannin Jr.",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -520,6 +577,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4047365,
       "player_name": "Josh Jacobs",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -529,6 +587,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4871023,
       "player_name": "Carnell Tate",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -538,6 +597,7 @@
       "team_name": "RB Stash",
       "player_id": 4431452,
       "player_name": "Drake Maye",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -547,6 +607,7 @@
       "team_name": "RB Stash",
       "player_id": 4567750,
       "player_name": "Emeka Egbuka",
+      "position": "WR",
       "is_keeper": true
     },
     {
@@ -556,6 +617,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4685512,
       "player_name": "Jadarian Price",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -565,6 +627,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4428331,
       "player_name": "Rashee Rice",
+      "position": "WR",
       "is_keeper": true
     },
     {
@@ -574,6 +637,7 @@
       "team_name": "Scam Little",
       "player_id": 4426348,
       "player_name": "Jayden Daniels",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -583,6 +647,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4361370,
       "player_name": "Chris Olave",
+      "position": "WR",
       "is_keeper": true
     },
     {
@@ -592,6 +657,7 @@
       "team_name": "Certified Mid",
       "player_id": 4239996,
       "player_name": "Travis Etienne Jr.",
+      "position": "RB",
       "is_keeper": true
     },
     {
@@ -601,6 +667,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4248528,
       "player_name": "Christian Watson",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -610,6 +677,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4432710,
       "player_name": "TreVeyon Henderson",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -619,6 +687,7 @@
       "team_name": "JSN My Pants",
       "player_id": 3040151,
       "player_name": "George Kittle",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -628,6 +697,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4361579,
       "player_name": "Javonte Williams",
+      "position": "RB",
       "is_keeper": true
     },
     {
@@ -637,6 +707,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 3916148,
       "player_name": "Tony Pollard",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -646,6 +717,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4038815,
       "player_name": "Rico Dowdle",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -655,6 +727,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4035687,
       "player_name": "Michael Pittman Jr.",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -664,6 +737,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4678008,
       "player_name": "Jonathon Brooks",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -673,6 +747,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 3128429,
       "player_name": "Courtland Sutton",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -682,6 +757,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4569987,
       "player_name": "Jaylen Warren",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -691,6 +767,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4432620,
       "player_name": "Parker Washington",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -700,6 +777,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4572680,
       "player_name": "Tucker Kraft",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -709,6 +787,7 @@
       "team_name": "Certified Mid",
       "player_id": 4047650,
       "player_name": "DK Metcalf",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -718,6 +797,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4697815,
       "player_name": "Rachaad White",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -727,6 +807,7 @@
       "team_name": "Scam Little",
       "player_id": 4360761,
       "player_name": "Michael Wilson",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -736,6 +817,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 3953687,
       "player_name": "Brandon Aubrey",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -745,6 +827,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 16737,
       "player_name": "Mike Evans",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -754,6 +837,7 @@
       "team_name": "RB Stash",
       "player_id": 4430027,
       "player_name": "Sam LaPorta",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -763,6 +847,7 @@
       "team_name": "RB Stash",
       "player_id": 4685415,
       "player_name": "Travis Hunter",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -772,6 +857,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4432773,
       "player_name": "Brian Thomas Jr.",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -781,6 +867,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4429023,
       "player_name": "MarShawn Lloyd",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -790,6 +877,7 @@
       "team_name": "Scam Little",
       "player_id": 3116165,
       "player_name": "Chris Godwin Jr.",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -799,6 +887,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 3138826,
       "player_name": "Fred Warner",
+      "position": "LB",
       "is_keeper": false
     },
     {
@@ -808,6 +897,7 @@
       "team_name": "Certified Mid",
       "player_id": 4360078,
       "player_name": "Alec Pierce",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -817,6 +907,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4038941,
       "player_name": "Justin Herbert",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -826,6 +917,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4371733,
       "player_name": "Kenny Gainwell",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -835,6 +927,7 @@
       "team_name": "JSN My Pants",
       "player_id": 2577417,
       "player_name": "Dak Prescott",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -844,6 +937,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 2976212,
       "player_name": "Stefon Diggs",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -853,6 +947,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4241416,
       "player_name": "Chuba Hubbard",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -862,6 +957,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 12483,
       "player_name": "Matthew Stafford",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -871,6 +967,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4241985,
       "player_name": "J.K. Dobbins",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -880,6 +977,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4701936,
       "player_name": "Matthew Golden",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -889,6 +987,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 15847,
       "player_name": "Travis Kelce",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -898,6 +997,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4429096,
       "player_name": "Blake Corum",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -907,6 +1007,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4569587,
       "player_name": "Wan'Dale Robinson",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -916,6 +1017,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4429025,
       "player_name": "Quentin Johnston",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -925,6 +1027,7 @@
       "team_name": "Certified Mid",
       "player_id": 4431611,
       "player_name": "Caleb Williams",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -934,6 +1037,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4870653,
       "player_name": "KC Concepcion",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -943,6 +1047,7 @@
       "team_name": "Scam Little",
       "player_id": 4608686,
       "player_name": "Kyle Monangai",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -952,6 +1057,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4568490,
       "player_name": "RJ Harvey",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -961,6 +1067,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4360569,
       "player_name": "Jordan Mason",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -970,6 +1077,7 @@
       "team_name": "RB Stash",
       "player_id": 3042519,
       "player_name": "Aaron Jones Sr.",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -979,6 +1087,7 @@
       "team_name": "RB Stash",
       "player_id": 4870795,
       "player_name": "Makai Lemon",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -988,6 +1097,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4360310,
       "player_name": "Trevor Lawrence",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -997,6 +1107,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4688813,
       "player_name": "Josh Downs",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1006,6 +1117,7 @@
       "team_name": "Scam Little",
       "player_id": 4683062,
       "player_name": "Xavier Worthy",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1015,6 +1127,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 3046779,
       "player_name": "Jared Goff",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1024,6 +1137,7 @@
       "team_name": "Certified Mid",
       "player_id": 4710714,
       "player_name": "De'Zhaun Stribling",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1033,6 +1147,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4426385,
       "player_name": "Zach Charbonnet",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1042,6 +1157,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4575131,
       "player_name": "Jacory Croskey-Merritt",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1051,6 +1167,7 @@
       "team_name": "JSN My Pants",
       "player_id": 3916433,
       "player_name": "Jakobi Meyers",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1060,6 +1177,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4428557,
       "player_name": "Tyjae Spears",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1069,6 +1187,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4429205,
       "player_name": "Jordan Addison",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1078,6 +1197,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 3121023,
       "player_name": "Dallas Goedert",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1087,6 +1207,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 3126486,
       "player_name": "Deebo Samuel Sr.",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1096,6 +1217,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4429059,
       "player_name": "Woody Marks",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1105,6 +1227,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4362619,
       "player_name": "Chris Rodriguez Jr.",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1114,6 +1237,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4373626,
       "player_name": "Tyler Allgeier",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1123,6 +1247,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4360689,
       "player_name": "Tyler Shough",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1132,6 +1257,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4682648,
       "player_name": "Malachi Fields",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1141,6 +1267,7 @@
       "team_name": "Certified Mid",
       "player_id": 4361050,
       "player_name": "Isaiah Likely",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1150,6 +1277,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4428718,
       "player_name": "Tre Tucker",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1159,6 +1287,7 @@
       "team_name": "Scam Little",
       "player_id": 4362249,
       "player_name": "Jayden Reed",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1168,6 +1297,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4695883,
       "player_name": "Jalen Coker",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1177,6 +1307,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4043130,
       "player_name": "Jordyn Brooks",
+      "position": "LB",
       "is_keeper": false
     },
     {
@@ -1186,6 +1317,7 @@
       "team_name": "RB Stash",
       "player_id": 4876017,
       "player_name": "Carson Schwesinger",
+      "position": "LB",
       "is_keeper": false
     },
     {
@@ -1195,6 +1327,7 @@
       "team_name": "RB Stash",
       "player_id": 4880281,
       "player_name": "Jordyn Tyson",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1204,6 +1337,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4242355,
       "player_name": "Jake Ferguson",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1213,6 +1347,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4686658,
       "player_name": "Mike Washington Jr.",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1222,6 +1357,7 @@
       "team_name": "Scam Little",
       "player_id": 4361432,
       "player_name": "Romeo Doubs",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1231,6 +1367,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": -16034,
       "player_name": "Texans D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1240,6 +1377,7 @@
       "team_name": "Certified Mid",
       "player_id": 5081397,
       "player_name": "Dylan Sampson",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1249,6 +1387,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4373678,
       "player_name": "Khalil Shakir",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1258,6 +1397,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 3929645,
       "player_name": "Juwan Johnson",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1267,6 +1407,7 @@
       "team_name": "JSN My Pants",
       "player_id": 15818,
       "player_name": "Keenan Allen",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1276,6 +1417,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 3139477,
       "player_name": "Patrick Mahomes",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1285,6 +1427,7 @@
       "team_name": "Smack That Ahh",
       "player_id": -16014,
       "player_name": "Rams D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1294,6 +1437,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 2971573,
       "player_name": "Ka'imi Fairbairn",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1303,6 +1447,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4569465,
       "player_name": "Jack Campbell",
+      "position": "LB",
       "is_keeper": false
     },
     {
@@ -1312,6 +1457,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4870847,
       "player_name": "Ja'Kobi Lane",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1321,6 +1467,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4032473,
       "player_name": "Rashid Shaheed",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1330,6 +1477,7 @@
       "team_name": "JSN My Pants",
       "player_id": 2473037,
       "player_name": "Jason Myers",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1339,6 +1487,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 3925357,
       "player_name": "Calvin Ridley",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1348,6 +1497,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 3116365,
       "player_name": "Mark Andrews",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1357,6 +1507,7 @@
       "team_name": "Certified Mid",
       "player_id": 4361741,
       "player_name": "Brock Purdy",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1366,6 +1517,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4574716,
       "player_name": "Harrison Mevis",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1375,6 +1527,7 @@
       "team_name": "Scam Little",
       "player_id": 3728281,
       "player_name": "Blake Cashman",
+      "position": "LB",
       "is_keeper": false
     },
     {
@@ -1384,6 +1537,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4689114,
       "player_name": "Jaxson Dart",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1393,6 +1547,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4430834,
       "player_name": "Jalen McMillan",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1402,6 +1557,7 @@
       "team_name": "RB Stash",
       "player_id": 4385690,
       "player_name": "Dalton Kincaid",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1411,6 +1567,7 @@
       "team_name": "RB Stash",
       "player_id": -16007,
       "player_name": "Broncos D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1420,6 +1577,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 4832955,
       "player_name": "Emmett Johnson",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1429,6 +1587,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4366031,
       "player_name": "Tank Dell",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1438,6 +1597,7 @@
       "team_name": "Scam Little",
       "player_id": 4686361,
       "player_name": "Cam Little",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1447,6 +1607,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4426338,
       "player_name": "Bo Nix",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1456,6 +1617,7 @@
       "team_name": "Certified Mid",
       "player_id": 3916655,
       "player_name": "Maxx Crosby",
+      "position": "DE",
       "is_keeper": false
     },
     {
@@ -1465,6 +1627,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4362081,
       "player_name": "Cameron Dicker",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1474,6 +1637,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4430968,
       "player_name": "Kimani Vidal",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1483,6 +1647,7 @@
       "team_name": "JSN My Pants",
       "player_id": 3912547,
       "player_name": "Sam Darnold",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1492,6 +1657,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4362759,
       "player_name": "Nick Bolton",
+      "position": "LB",
       "is_keeper": false
     },
     {
@@ -1501,6 +1667,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 3122132,
       "player_name": "Myles Garrett",
+      "position": "DE",
       "is_keeper": false
     },
     {
@@ -1510,6 +1677,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4241474,
       "player_name": "Brian Robinson Jr.",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1519,6 +1687,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 4429022,
       "player_name": "Kayshon Boutte",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1528,6 +1697,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4036378,
       "player_name": "Jordan Love",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1537,6 +1707,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4034949,
       "player_name": "Eddy Pineiro",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1546,6 +1717,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4869523,
       "player_name": "Nick Emmanwori",
+      "position": "CB",
       "is_keeper": false
     },
     {
@@ -1555,6 +1727,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4575517,
       "player_name": "Kyle Hamilton",
+      "position": "S",
       "is_keeper": false
     },
     {
@@ -1564,6 +1737,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4035369,
       "player_name": "Jeffery Simmons",
+      "position": "DT",
       "is_keeper": false
     },
     {
@@ -1573,6 +1747,7 @@
       "team_name": "Certified Mid",
       "player_id": 3055899,
       "player_name": "Harrison Butker",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1582,6 +1757,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 3117256,
       "player_name": "Dalton Schultz",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1591,6 +1767,7 @@
       "team_name": "Scam Little",
       "player_id": 4702555,
       "player_name": "Jonah Coleman",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1600,6 +1777,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 3054850,
       "player_name": "Alvin Kamara",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1609,6 +1787,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 3917315,
       "player_name": "Kyler Murray",
+      "position": "QB",
       "is_keeper": false
     },
     {
@@ -1618,6 +1797,7 @@
       "team_name": "RB Stash",
       "player_id": 4241463,
       "player_name": "Jerry Jeudy",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1627,6 +1807,7 @@
       "team_name": "RB Stash",
       "player_id": 4697745,
       "player_name": "Tyler Loop",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1636,6 +1817,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": -16026,
       "player_name": "Seahawks D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1645,6 +1827,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": 4429834,
       "player_name": "Cedric Gray",
+      "position": "LB",
       "is_keeper": false
     },
     {
@@ -1654,6 +1837,7 @@
       "team_name": "Scam Little",
       "player_id": -16017,
       "player_name": "Patriots D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1663,6 +1847,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4635008,
       "player_name": "Keon Coleman",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1672,6 +1857,7 @@
       "team_name": "Certified Mid",
       "player_id": -16033,
       "player_name": "Ravens D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1681,6 +1867,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": 4038441,
       "player_name": "Justice Hill",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1690,6 +1877,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": -16024,
       "player_name": "Chargers D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1699,6 +1887,7 @@
       "team_name": "JSN My Pants",
       "player_id": 4569559,
       "player_name": "Devaughn Vele",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1708,6 +1897,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": -16023,
       "player_name": "Steelers D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1717,6 +1907,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 4361529,
       "player_name": "Isiah Pacheco",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1726,6 +1917,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": -16018,
       "player_name": "Saints D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1735,6 +1927,7 @@
       "team_name": "Ay Bendito \ud83e\udd40",
       "player_id": 3123076,
       "player_name": "David Njoku",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1744,6 +1937,7 @@
       "team_name": "Smack That Ahh",
       "player_id": 5082424,
       "player_name": "Dominic Zvada",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1753,6 +1947,7 @@
       "team_name": "Chase ma Ballz",
       "player_id": 4240603,
       "player_name": "Malik Davis",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1762,6 +1957,7 @@
       "team_name": "JSN My Pants",
       "player_id": -16005,
       "player_name": "Browns D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1771,6 +1967,7 @@
       "team_name": "Road to the Wildcard",
       "player_id": 4567104,
       "player_name": "Will Reichard",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1780,6 +1977,7 @@
       "team_name": "RIDE THAT MEAT",
       "player_id": -16021,
       "player_name": "Eagles D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1789,6 +1987,7 @@
       "team_name": "Certified Mid",
       "player_id": 4036133,
       "player_name": "T.J. Hockenson",
+      "position": "TE",
       "is_keeper": false
     },
     {
@@ -1798,6 +1997,7 @@
       "team_name": "Sorry This Had 2 Happen 2 U",
       "player_id": 4869748,
       "player_name": "Zavion Thomas",
+      "position": "WR",
       "is_keeper": false
     },
     {
@@ -1807,6 +2007,7 @@
       "team_name": "Scam Little",
       "player_id": 4429013,
       "player_name": "Tank Bigsby",
+      "position": "RB",
       "is_keeper": false
     },
     {
@@ -1816,6 +2017,7 @@
       "team_name": "Coke, Criminals, and Handcuffs",
       "player_id": -16009,
       "player_name": "Packers D/ST",
+      "position": "D/ST",
       "is_keeper": false
     },
     {
@@ -1825,6 +2027,7 @@
       "team_name": "Team Mickey Mouse",
       "player_id": 3150744,
       "player_name": "Chase McLaughlin",
+      "position": "K",
       "is_keeper": false
     },
     {
@@ -1834,6 +2037,7 @@
       "team_name": "RB Stash",
       "player_id": 3052587,
       "player_name": "Baker Mayfield",
+      "position": "QB",
       "is_keeper": false
     }
   ]

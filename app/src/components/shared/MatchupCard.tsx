@@ -1,10 +1,10 @@
-import type { MatchupResult, Team, WeekStatus } from "../models/models";
+import type { MatchupResult, Team, WeekStatus } from "../../models/models";
 import {
   EMPTY_RECORD,
   formatRecord,
   getTeam,
   type TeamRecord,
-} from "../utils/homeViewUtils";
+} from "../../utils/homeViewUtils";
 
 function MatchupCard({
   matchup,
@@ -12,12 +12,14 @@ function MatchupCard({
   teams,
   records,
   insight,
+  detailTo,
 }: {
   matchup: MatchupResult;
   status: WeekStatus;
   teams: Team[];
   records: Record<number, TeamRecord>;
   insight?: string;
+  detailTo?: string;
 }) {
   const home = getTeam(teams, matchup.home_team_id);
   const away = getTeam(teams, matchup.away_team_id);
@@ -33,8 +35,8 @@ function MatchupCard({
     awayWon = matchup.away_score > matchup.home_score;
   }
 
-  return (
-    <article className="home-pairing-card">
+  const card = (
+    <>
       <span className={`home-status home-status-${status}`}>
         {status === "in_progress"
           ? "In progress"
@@ -57,6 +59,16 @@ function MatchupCard({
         isLoser={homeWon}
       />
       {insight && <p className="matchup-insight">{insight}</p>}
+    </>
+  );
+
+  return (
+    <article className="home-pairing-card">
+      {detailTo ? (
+        <Link className="home-pairing-card-link" to={detailTo}>
+          {card}
+        </Link>
+      ) : card}
     </article>
   );
 }
@@ -94,3 +106,4 @@ function TeamLine({
 }
 
 export default MatchupCard;
+import { Link } from "react-router";

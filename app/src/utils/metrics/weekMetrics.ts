@@ -69,7 +69,11 @@ function getStarterPositionTotals(lineup: BoxScore["home_lineup"]) {
   const totals = new Map<string, number>();
 
   for (const player of lineup) {
-    if (player.slot_position === "BE" || player.slot_position === "IR") {
+    if (
+      player.slot_position === "BE" ||
+      player.slot_position === "IR" ||
+      player.slot_position === "ER"
+    ) {
       continue;
     }
 
@@ -84,7 +88,9 @@ function getTopStarter(lineup: BoxScore["home_lineup"]) {
   return [...lineup]
     .filter(
       (player) =>
-        player.slot_position !== "BE" && player.slot_position !== "IR",
+        player.slot_position !== "BE" &&
+        player.slot_position !== "IR" &&
+        player.slot_position !== "ER",
     )
     .sort((left, right) => right.points - left.points)[0];
 }

@@ -1,6 +1,38 @@
 import type { BracketGame, Team } from "../../models/models";
-import type { HomeSeasonData } from "../loader";
+import type { HomeSeasonData } from "../../routes/loader";
 import { getTeam } from "../../utils/homeViewUtils";
+
+type BracketSeason = Pick<
+  HomeSeasonData,
+  "bracket" | "settings" | "teams"
+>;
+
+function PlayoffBracket({
+  season,
+  seeds,
+}: {
+  season: BracketSeason;
+  seeds: Team[];
+}) {
+  return (
+    <>
+      <div className="home-bracket-grid">
+        {[0, 1, 2].map((roundIndex) => (
+          <BracketRoundColumn
+            key={roundIndex}
+            roundIndex={roundIndex}
+            season={season}
+            seeds={seeds}
+          />
+        ))}
+      </div>
+      <p className="home-panel-note">
+        Round 1 includes the opening games and byes. Later rounds show the
+        teams already known or the matchup each winner advances into.
+      </p>
+    </>
+  );
+}
 
 function BracketRoundColumn({
   roundIndex,
@@ -8,7 +40,7 @@ function BracketRoundColumn({
   seeds,
 }: {
   roundIndex: number;
-  season: HomeSeasonData;
+  season: BracketSeason;
   seeds: Team[];
 }) {
   const labels = ["Round 1 · Quarterfinals", "Semifinals", "Championship"];
@@ -143,4 +175,4 @@ function getPlaceholderBracketGames(roundIndex: number, seeds: Team[]) {
   ];
 }
 
-export default BracketRoundColumn;
+export default PlayoffBracket;

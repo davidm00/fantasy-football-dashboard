@@ -10,8 +10,12 @@ import {
 } from "../utils/seasonDataLoader";
 import { reportsList, type Report } from "../data/reportsList";
 import {
+  calculateSeasonMatchupWeeks,
   calculateSeasonMetrics,
   calculateWeekMetrics,
+  getOptimalLineup,
+  type OptimalLineupPlayer,
+  type SeasonMatchupWeek,
   type SeasonMetrics,
   type WeekMetrics,
 } from "../utils/metrics";
@@ -92,6 +96,23 @@ export type WeekLoaderData = {
   weekMetrics: WeekMetrics;
 };
 
+export type MatchupDetailLoaderData = {
+  season: HomeSeasonData;
+  week: number;
+  matchupIndex: number;
+  matchup: HomeSeasonData["matchups"][number]["matchups"][number];
+  status: HomeSeasonData["matchups"][number]["status"];
+  boxScore: HomeSeasonData["box_scores"][number];
+  records: SeasonMatchupWeek["records"];
+  homeOptimalLineup: OptimalLineupPlayer[];
+  awayOptimalLineup: OptimalLineupPlayer[];
+  homePerformance: WeekMetrics["performances"][number] | undefined;
+  awayPerformance: WeekMetrics["performances"][number] | undefined;
+  matchupInsight: string | null;
+  closestGame: boolean;
+  report: Report | null;
+};
+
 const SEASON_HUB_FILES = [
   ...HOME_SEASON_FILES,
   SeasonFile.Draft,
@@ -102,7 +123,9 @@ type SeasonHubFiles = LoadedSeasonFiles<typeof SEASON_HUB_FILES>;
 
 export type SeasonLoaderData = SeasonHubFiles & {
   year: number;
+  reports: Report[];
   metrics: SeasonMetrics;
+  matchupWeeks: SeasonMatchupWeek[];
 };
 
 async function loadHomeSeasonData(year: number): Promise<HomeSeasonData> {
@@ -264,8 +287,13 @@ export async function seasonHubLoader({ params }: LoaderFunctionArgs) {
 
   return {
     year,
+    reports: reportsList.filter((report) => report.season === year),
     ...files,
     metrics: calculateSeasonMetrics({ year, ...files }),
+    matchupWeeks: calculateSeasonMatchupWeeks(
+      files.matchups,
+      files.teams,
+    ),
   } satisfies SeasonLoaderData;
 }
 
@@ -299,4 +327,98 @@ export async function weekLoader({ params }: LoaderFunctionArgs) {
     week,
     weekMetrics: calculateWeekMetrics(season, week, historicalScores),
   } satisfies WeekLoaderData;
+}
+
+export async function matchupDetailLoader({
+  params,
+}: LoaderFunctionArgs) {
+  assertValidSeason(params.season);
+  const week = await assertValidWeek(params.season, params.week);
+  const homeTeamId = Number(params.homeTeamId);
+  const awayTeamId = Number(params.awayTeamId);
+
+  if (
+    !Number.isInteger(homeTeamId) ||
+    !Number.isInteger(awayTeamId) ||
+    homeTeamId <= 0 ||
+    awayTeamId <= 0
+  ) {
+    throw new Response("invalid matchup", {
+      status: 404,
+      statusText: "Matchup not found",
+    });
+  }
+
+  const season = await loadHomeSeasonData(Number(params.season));
+  const matchupWeek = season.matchups.find((item) => item.week === week);
+  const matchupIndex = matchupWeek?.matchups.findIndex(
+    (item) =>
+      item.home_team_id === homeTeamId &&
+      item.away_team_id === awayTeamId,
+  ) ?? -1;
+  const matchup = matchupWeek?.matchups[matchupIndex];
+  const boxScore = season.box_scores.find(
+    (item) =>
+      item.week === week &&
+      item.home_team_id === homeTeamId &&
+      item.away_team_id === awayTeamId,
+  );
+
+  if (!matchupWeek || !matchup || !boxScore) {
+    throw new Response(`${homeTeamId} vs ${awayTeamId}`, {
+      status: 404,
+      statusText: "Matchup not found",
+    });
+  }
+
+  const weekMetrics = calculateWeekMetrics(season, week);
+  const seasonMetrics = calculateSeasonMetrics(season, week);
+  const records = calculateSeasonMatchupWeeks(
+    season.matchups,
+    season.teams,
+  ).find((item) => item.week === week)?.records ?? {};
+  const closest = seasonMetrics.awards.closestGame;
+
+  return {
+    season,
+    week,
+    matchupIndex,
+    matchup,
+    status: matchupWeek.status,
+    boxScore,
+    records,
+    homeOptimalLineup: getOptimalLineup(
+      boxScore.home_lineup,
+      season.settings,
+    ).players,
+    awayOptimalLineup: getOptimalLineup(
+      boxScore.away_lineup,
+      season.settings,
+    ).players,
+    homePerformance: weekMetrics.performances.find(
+      ({ teamId }) => teamId === homeTeamId,
+    ),
+    awayPerformance: weekMetrics.performances.find(
+      ({ teamId }) => teamId === awayTeamId,
+    ),
+    matchupInsight:
+      weekMetrics.matchupInsights.find(
+        (insight) =>
+          insight.homeTeamId === homeTeamId &&
+          insight.awayTeamId === awayTeamId,
+      )?.text ?? null,
+    closestGame:
+      closest?.week === week &&
+      closest.winnerTeamId ===
+        (boxScore.home_score >= boxScore.away_score
+          ? homeTeamId
+          : awayTeamId) &&
+      closest.loserTeamId ===
+        (boxScore.home_score >= boxScore.away_score
+          ? awayTeamId
+          : homeTeamId),
+    report:
+      season.reports.find(({ week: reportWeek }) => reportWeek === week) ??
+      null,
+  } satisfies MatchupDetailLoaderData;
 }

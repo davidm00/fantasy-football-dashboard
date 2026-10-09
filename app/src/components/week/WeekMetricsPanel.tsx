@@ -1,7 +1,7 @@
 import type { Team } from "../../models/models";
 import type { WeekMetrics } from "../../utils/metrics";
-import MetricCard from "../MetricCard";
-import MetricTooltip from "../MetricTooltip";
+import MetricCard from "../shared/MetricCard";
+import MetricTooltip from "../shared/MetricTooltip";
 
 const getTeam = (teams: Team[], teamId: number) =>
   teams.find((team) => team.team_id === teamId);

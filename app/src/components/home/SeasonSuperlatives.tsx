@@ -1,5 +1,5 @@
 import type { SeasonSuperlative } from "../../utils/metrics";
-import MetricCard from "../MetricCard";
+import MetricCard from "../shared/MetricCard";
 
 function SeasonSuperlatives({
   title,
