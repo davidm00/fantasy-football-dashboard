@@ -7,7 +7,10 @@ name: Fetch latest league data
 # needing to store that mapping anywhere.
 on:
   schedule:
-    # Tuesday mornings, 10:00 UTC, during the NFL season (Sept - Jan).
+    # Post-game updates after Thursday, Sunday, and Monday nights
+    # (Friday, Monday, and Tuesday at 05:00 UTC), during Sept - Jan.
+    - cron: "0 5 * 9-12,1 1,2,5"
+    # Keep the existing Tuesday morning refresh at 10:00 UTC.
     - cron: "0 10 * 9-12,1 2"
   workflow_dispatch: {} # allows manually running this from the Actions tab
 
