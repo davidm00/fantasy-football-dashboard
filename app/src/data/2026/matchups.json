@@ -179,9 +179,9 @@
       },
       {
         "home_team_id": 1,
-        "home_score": 3.4,
+        "home_score": 5.5,
         "away_team_id": 2,
-        "away_score": 6.6
+        "away_score": 28.0
       },
       {
         "home_team_id": 12,
@@ -191,21 +191,21 @@
       },
       {
         "home_team_id": 4,
-        "home_score": 5.7,
+        "home_score": 13.8,
         "away_team_id": 9,
-        "away_score": 5.5
+        "away_score": 17.2
       },
       {
         "home_team_id": 5,
-        "home_score": 17.4,
+        "home_score": 39.4,
         "away_team_id": 8,
-        "away_score": 7.0
+        "away_score": 16.0
       },
       {
         "home_team_id": 11,
         "home_score": 0.0,
         "away_team_id": 7,
-        "away_score": 12.9
+        "away_score": 14.2
       }
     ]
   },

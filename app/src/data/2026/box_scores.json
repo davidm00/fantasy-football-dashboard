@@ -7369,7 +7369,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 1,
-    "home_score": 3.4,
+    "home_score": 5.5,
     "home_lineup": [
       {
         "player_id": 4426515,
@@ -7513,11 +7513,11 @@
         "position": "TE",
         "pro_team": "TB",
         "slot_position": "TE",
-        "points": 3.4
+        "points": 5.5
       }
     ],
     "away_team_id": 2,
-    "away_score": 6.6,
+    "away_score": 28.0,
     "away_lineup": [
       {
         "player_id": 4430807,
@@ -7557,7 +7557,7 @@
         "position": "WR",
         "pro_team": "DAL",
         "slot_position": "WR",
-        "points": 6.6
+        "points": 28.0
       },
       {
         "player_id": 3916148,
@@ -7971,7 +7971,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 4,
-    "home_score": 5.7,
+    "home_score": 13.8,
     "home_lineup": [
       {
         "player_id": 4242335,
@@ -8035,7 +8035,7 @@
         "position": "QB",
         "pro_team": "DAL",
         "slot_position": "QB",
-        "points": 5.7
+        "points": 13.8
       },
       {
         "player_id": 4429096,
@@ -8119,7 +8119,7 @@
       }
     ],
     "away_team_id": 9,
-    "away_score": 5.5,
+    "away_score": 17.2,
     "away_lineup": [
       {
         "player_id": 4262921,
@@ -8135,7 +8135,7 @@
         "position": "WR",
         "pro_team": "TB",
         "slot_position": "RB/WR/TE",
-        "points": 5.5
+        "points": 17.2
       },
       {
         "player_id": 3042519,
@@ -8264,7 +8264,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 5,
-    "home_score": 17.4,
+    "home_score": 39.4,
     "home_lineup": [
       {
         "player_id": 4241389,
@@ -8272,7 +8272,7 @@
         "position": "WR",
         "pro_team": "DAL",
         "slot_position": "WR",
-        "points": 1.4
+        "points": 2.9
       },
       {
         "player_id": 4890973,
@@ -8384,7 +8384,7 @@
         "position": "RB",
         "pro_team": "TB",
         "slot_position": "RB",
-        "points": 11.0
+        "points": 31.5
       },
       {
         "player_id": 4635008,
@@ -8412,7 +8412,7 @@
       }
     ],
     "away_team_id": 8,
-    "away_score": 7.0,
+    "away_score": 16.0,
     "away_lineup": [
       {
         "player_id": 4362238,
@@ -8492,7 +8492,7 @@
         "position": "TE",
         "pro_team": "DAL",
         "slot_position": "BE",
-        "points": 1.2
+        "points": 4.9
       },
       {
         "player_id": 4832955,
@@ -8516,7 +8516,7 @@
         "position": "K",
         "pro_team": "TB",
         "slot_position": "K",
-        "points": 1.0
+        "points": 7.0
       },
       {
         "player_id": 4685720,
@@ -8532,7 +8532,7 @@
         "position": "LB",
         "pro_team": "TB",
         "slot_position": "DP",
-        "points": 6.0
+        "points": 9.0
       },
       {
         "player_id": 4260409,
@@ -8713,7 +8713,7 @@
       }
     ],
     "away_team_id": 7,
-    "away_score": 12.9,
+    "away_score": 14.2,
     "away_lineup": [
       {
         "player_id": 4362628,
@@ -8761,7 +8761,7 @@
         "position": "RB",
         "pro_team": "DAL",
         "slot_position": "RB",
-        "points": 12.9
+        "points": 14.2
       },
       {
         "player_id": 3128429,
