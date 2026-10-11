@@ -10,6 +10,7 @@ import {
 import PlayoffBracket from "../components/shared/PlayoffBracket";
 import MetricTooltip from "../components/shared/MetricTooltip";
 import SeasonMatchupsView from "../components/season/SeasonMatchupsView";
+import SeasonReportsView from "../components/season/SeasonReportsView";
 import seasonList from "../data/seasons.json";
 import type { Team } from "../models/models";
 import type {
@@ -29,7 +30,7 @@ type SortKey =
   | "efficiency";
 
 type SortDirection = "ascending" | "descending";
-type SeasonTab = "standings" | "bracket" | "matchups";
+type SeasonTab = "standings" | "bracket" | "matchups" | "reports";
 
 type StandingsRow = {
   rank: number;
@@ -240,7 +241,9 @@ function Season() {
   const [searchParams, setSearchParams] = useSearchParams();
   const tabParam = searchParams.get("tab");
   const activeTab: SeasonTab =
-    tabParam === "bracket" || tabParam === "matchups"
+    tabParam === "bracket" ||
+    tabParam === "matchups" ||
+    tabParam === "reports"
       ? tabParam
       : "standings";
   const [sort, setSort] = useState<{
@@ -514,7 +517,14 @@ function Season() {
         >
           Matchups
         </button>
-        {["Reports", "Draft", "Moves"].map(
+        <button
+          type="button"
+          aria-current={activeTab === "reports" ? "page" : undefined}
+          onClick={() => setSeasonTab("reports")}
+        >
+          Reports
+        </button>
+        {["Draft", "Moves"].map(
           (tab) => (
             <button
               key={tab}
@@ -543,6 +553,10 @@ function Season() {
           highlightedTeamId={highlightedTeamId}
           onHighlight={setHighlightedTeam}
         />
+      )}
+
+      {activeTab === "reports" && (
+        <SeasonReportsView year={season.year} reports={season.reports} />
       )}
 
       {activeTab === "standings" && (
