@@ -310,9 +310,35 @@
     "week": 5,
     "date": 1791417862577,
     "team_ids": [
-      3
+      3,
+      9
     ],
-    "items": [],
-    "source": "unknown"
+    "items": [
+      {
+        "player_id": 4373678,
+        "player_name": "Khalil Shakir",
+        "from_team_id": 3,
+        "to_team_id": 9
+      },
+      {
+        "player_id": 4432710,
+        "player_name": "TreVeyon Henderson",
+        "from_team_id": 9,
+        "to_team_id": 3
+      },
+      {
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 9,
+        "to_team_id": 3
+      },
+      {
+        "player_id": 4426385,
+        "player_name": "Zach Charbonnet",
+        "from_team_id": 3,
+        "to_team_id": 9
+      }
+    ],
+    "source": "espn"
   }
 ]
