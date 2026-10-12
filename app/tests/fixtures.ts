@@ -49,8 +49,12 @@ export function loadMatchup(season: SeasonLoaderData, week: number, homeTeamId: 
     status: matchupWeek.status,
     records: matchupWeek.records,
     recordsThroughWeek: matchupWeek.recordsThroughWeek,
-    homeOptimalLineup: getOptimalLineup(boxScore.home_lineup, season.settings).players,
-    awayOptimalLineup: getOptimalLineup(boxScore.away_lineup, season.settings).players,
+    homeOptimalLineup: matchupWeek.status === "final"
+      ? getOptimalLineup(boxScore.home_lineup, season.settings).players
+      : [],
+    awayOptimalLineup: matchupWeek.status === "final"
+      ? getOptimalLineup(boxScore.away_lineup, season.settings).players
+      : [],
     homePerformance: metrics.performances.find(({ teamId }) => teamId === homeTeamId),
     awayPerformance: metrics.performances.find(({ teamId }) => teamId === awayTeamId),
     matchupInsight: null, closestGame: false, report: null,

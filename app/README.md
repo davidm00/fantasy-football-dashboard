@@ -22,6 +22,10 @@ player added to the starting lineup, and displaced starters are labeled on the
 bench. Teal summaries identify a whole set of changes that would turn a final
 loss into a win with the opponent's actual lineup held unchanged. They do not
 claim that an individual substitution caused the result.
+Best-possible lineups are available only after the week is final. Pending and
+in-progress matchups retain actual lineups; weekly lineup efficiency and points
+left on bench remain unavailable until final scores, rather than treating
+players awaiting kickoff as zero-point missed opportunities.
 
 ## Link previews and deployment
 

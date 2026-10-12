@@ -207,7 +207,7 @@ export function MatchupErrorBoundary() {
 
 function Matchup() {
   const data = useLoaderData() as MatchupDetailLoaderData;
-  const [bestPossible, setBestPossible] = useState(false);
+  const [bestPossibleSelected, setBestPossible] = useState(false);
   const {
     season,
     week,
@@ -217,6 +217,8 @@ function Matchup() {
     homePerformance,
     awayPerformance,
   } = data;
+  const bestPossibleAvailable = status === "final";
+  const bestPossible = bestPossibleAvailable && bestPossibleSelected;
   const home = season.teams.find(
     ({ team_id }) => team_id === matchup.home_team_id,
   );
@@ -331,7 +333,7 @@ function Matchup() {
             : status === "final"
               ? `Regular-season records through Week ${data.recordsThroughWeek}.`
               : `Records entering Week ${week}, through finalized Week ${data.recordsThroughWeek}.`}
-        {status !== "final" && " Scores and lineup analysis are provisional."}
+        {status !== "final" && " Scores are provisional."}
       </p>
 
       {(data.closestGame || selfInflictedManager || data.matchupInsight) && (
@@ -367,16 +369,18 @@ function Matchup() {
             <button
               type="button"
               aria-pressed={bestPossible}
+              disabled={!bestPossibleAvailable}
+              aria-describedby="matchup-lineup-explanation"
               onClick={() => setBestPossible(true)}
             >
               Best possible
             </button>
           </div>
         </header>
-        <p>
-          Hindsight-optimal lineups use the scores available in this snapshot,
-          not pregame projections. They do not judge whether a decision was
-          reasonable before kickoff.
+        <p id="matchup-lineup-explanation">
+          {bestPossibleAvailable
+            ? "Hindsight-optimal lineups use final scores, not pregame projections. They do not judge whether a decision was reasonable before kickoff."
+            : "Best possible is available after the week is final. Actual lineups stay visible while games are pending or in progress, so players awaiting kickoff are not treated as missed opportunities."}
         </p>
         {bestPossible && (
           <div className="matchup-substitutions">

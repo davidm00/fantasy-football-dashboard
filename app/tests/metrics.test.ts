@@ -27,6 +27,20 @@ describe("provisional weekly metrics", () => {
     const metrics = calculateWeekMetrics(finalSeason, 5);
     expect(metrics.performances.every(({ result }) => ["W", "L", "T"].includes(result))).toBe(true);
     expect(metrics.cards.some(({ label }) => label === "Self-inflicted loss")).toBe(true);
+    expect(metrics.performances.every(({ lineupEfficiency, pointsLeftOnBench }) =>
+      lineupEfficiency !== null && pointsLeftOnBench !== null,
+    )).toBe(true);
+  });
+
+  it("withholds hindsight lineup metrics and awards until final", () => {
+    const metrics = calculateWeekMetrics(season, 5);
+    expect(metrics.performances.length).toBeGreaterThan(0);
+    expect(metrics.performances.every(({ lineupEfficiency, pointsLeftOnBench }) =>
+      lineupEfficiency === null && pointsLeftOnBench === null,
+    )).toBe(true);
+    expect(metrics.cards.some(({ label }) =>
+      label === "Biggest lineup swing" || label === "Self-inflicted loss",
+    )).toBe(false);
   });
 
   it("does not create loss narratives for tied games", () => {

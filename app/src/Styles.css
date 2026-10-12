@@ -3336,6 +3336,11 @@ select.btn-primary {
   box-shadow: 0 1px 3px rgb(15 23 42 / 0.12);
 }
 
+.matchup-lineups button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 .matchup-lineup-heading,
 .matchup-lineup-row {
   display: grid;

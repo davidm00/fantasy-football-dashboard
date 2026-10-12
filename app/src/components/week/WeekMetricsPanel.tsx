@@ -31,6 +31,14 @@ function WeekMetricsPanel({
         </span>
       </div>
 
+      {provisional && (
+        <p>
+          Lineup efficiency and points left on bench are available after the
+          week is final, so players awaiting kickoff are not treated as missed
+          opportunities.
+        </p>
+      )}
+
       {metrics.performances.length === 0 ? (
         <p className="week-empty">
           Weekly metrics will appear when scoring data is available.

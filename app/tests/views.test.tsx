@@ -52,6 +52,35 @@ describe("audit view regressions", () => {
     expect(current).toContain("Leading");
     expect(current).not.toContain("Updates as scores change");
     expect(current).toContain("Points left on bench");
+    expect(current).toContain("available after the week is final");
+    expect(current).not.toContain("Biggest lineup swing");
+  });
+
+  it.each(["in_progress", "not_started"] as const)(
+    "keeps actual lineups and disables best possible for %s games",
+    (status) => {
+      const fixture = { ...loadMatchup(currentSeason, 5, 12, 10), status };
+      const markup = renderRoute(Matchup, fixture);
+      expect(markup).toMatch(/<button[^>]*aria-pressed="false"[^>]*disabled=""[^>]*>Best possible<\/button>/);
+      expect(markup).toContain('aria-describedby="matchup-lineup-explanation"');
+      expect(markup).toContain("Best possible is available after the week is final");
+      expect(markup).not.toContain("Subbed in");
+      expect(markup).not.toContain("Subbed out");
+      const starters = markup.slice(markup.indexOf('class="matchup-lineup-heading"'), markup.indexOf("<h3>Bench"));
+      for (const player of [...fixture.boxScore.home_lineup, ...fixture.boxScore.away_lineup]) {
+        if (!["BE", "IR", "ER"].includes(player.slot_position)) {
+          expect(starters).toContain(player.name);
+        }
+      }
+    },
+  );
+
+  it("keeps best possible available for final games", () => {
+    const markup = renderRoute(Matchup, loadMatchup(historicalSeason, 1, 10, 2));
+    const button = markup.match(/<button[^>]*>Best possible<\/button>/)?.[0];
+    expect(button).toBeDefined();
+    expect(button).not.toContain("disabled");
+    expect(markup).toContain("Hindsight-optimal lineups use final scores");
   });
 
   it("never calls an unfinished or tied matchup a self-inflicted loss", () => {

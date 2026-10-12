@@ -391,14 +391,12 @@ export async function matchupDetailLoader({
     boxScore,
     records: recordSnapshot?.records ?? {},
     recordsThroughWeek: recordSnapshot?.recordsThroughWeek ?? 0,
-    homeOptimalLineup: getOptimalLineup(
-      boxScore.home_lineup,
-      season.settings,
-    ).players,
-    awayOptimalLineup: getOptimalLineup(
-      boxScore.away_lineup,
-      season.settings,
-    ).players,
+    homeOptimalLineup: matchupWeek.status === "final"
+      ? getOptimalLineup(boxScore.home_lineup, season.settings).players
+      : [],
+    awayOptimalLineup: matchupWeek.status === "final"
+      ? getOptimalLineup(boxScore.away_lineup, season.settings).players
+      : [],
     homePerformance: weekMetrics.performances.find(
       ({ teamId }) => teamId === homeTeamId,
     ),

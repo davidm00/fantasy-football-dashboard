@@ -249,7 +249,7 @@ export function calculateWeekMetrics(
     }
 
     const lineupData = lineupByTeam.get(team.teamId);
-    const optimalPoints = lineupData
+    const optimalPoints = status === "final" && lineupData
       ? getOptimalLineupPoints(lineupData.lineup, source.settings)
       : null;
 
@@ -410,7 +410,7 @@ export function calculateWeekMetrics(
       note: `${mostBenchPoints.pointsLeftOnBench.toFixed(2)} points`,
       presentation: "comparative",
       explanation:
-        "Hindsight-optimal valid lineup points minus actual starter points. During unfinished games, this is provisional and changes with the next data refresh.",
+        "Hindsight-optimal valid lineup points minus actual starter points, calculated after the week is final.",
     });
   }
 
