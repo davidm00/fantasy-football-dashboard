@@ -3287,9 +3287,22 @@ select.btn-primary {
   white-space: nowrap;
 }
 
+.matchup-lineup-player strong.substituted {
+  text-decoration: underline;
+  text-decoration-color: #0f766e;
+  text-decoration-thickness: 0.14rem;
+  text-underline-offset: 0.18rem;
+}
+
 .matchup-lineup-player small {
   color: #64748b;
   font-size: 0.64rem;
+}
+
+.matchup-lineup-player small em {
+  color: #0f766e;
+  font-style: normal;
+  font-weight: 750;
 }
 
 .matchup-lineup-player-right {

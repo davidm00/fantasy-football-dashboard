@@ -86,19 +86,24 @@ function getBench(
 function LineupPlayer({
   player,
   highlight,
+  substituted,
   align,
 }: {
   player: Lineup | undefined;
   highlight: boolean;
+  substituted: boolean;
   align: "left" | "right";
 }) {
   if (!player) return <span />;
 
   return (
     <span className={`matchup-lineup-player matchup-lineup-player-${align}`}>
-      <strong>{player.name}</strong>
+      <strong className={substituted ? "substituted" : undefined}>
+        {player.name}
+      </strong>
       <small>
         {player.position} {player.pro_team}
+        {substituted && <em> · Subbed in</em>}
       </small>
       {highlight && <i aria-label="Decisive lineup decision" />}
     </span>
@@ -110,12 +115,16 @@ function LineupRows({
   away,
   homeHighlightId,
   awayHighlightId,
+  homeSubstitutionIds,
+  awaySubstitutionIds,
   bench = false,
 }: {
   home: Lineup[];
   away: Lineup[];
   homeHighlightId?: number;
   awayHighlightId?: number;
+  homeSubstitutionIds?: ReadonlySet<number>;
+  awaySubstitutionIds?: ReadonlySet<number>;
   bench?: boolean;
 }) {
   return Array.from(
@@ -133,6 +142,10 @@ function LineupRows({
           <LineupPlayer
             player={homePlayer}
             highlight={homePlayer?.player_id === homeHighlightId}
+            substituted={
+              homePlayer !== undefined &&
+              (homeSubstitutionIds?.has(homePlayer.player_id) ?? false)
+            }
             align="left"
           />
           <strong
@@ -153,6 +166,10 @@ function LineupRows({
           <LineupPlayer
             player={awayPlayer}
             highlight={awayPlayer?.player_id === awayHighlightId}
+            substituted={
+              awayPlayer !== undefined &&
+              (awaySubstitutionIds?.has(awayPlayer.player_id) ?? false)
+            }
             align="right"
           />
         </div>
@@ -415,6 +432,16 @@ function Matchup() {
           away={awayStarters}
           homeHighlightId={decisiveHomeId}
           awayHighlightId={decisiveAwayId}
+          homeSubstitutionIds={bestPossible ? new Set(
+            data.homeOptimalLineup
+              .filter(({ player_id }) => !homeActualIds.has(player_id))
+              .map(({ player_id }) => player_id),
+          ) : undefined}
+          awaySubstitutionIds={bestPossible ? new Set(
+            data.awayOptimalLineup
+              .filter(({ player_id }) => !awayActualIds.has(player_id))
+              .map(({ player_id }) => player_id),
+          ) : undefined}
         />
         <h3>Bench</h3>
         <LineupRows
@@ -425,8 +452,10 @@ function Matchup() {
           bench
         />
         <p>
+          {bestPossible &&
+            "Underlined players marked “Subbed in” replace actual starters. "}
           Orange marks the lineup decision with the largest impact on this
-          result. Player names can support profile links in a future view.
+          result.
         </p>
       </section>
 
