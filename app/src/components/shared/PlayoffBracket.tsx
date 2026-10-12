@@ -1,10 +1,12 @@
 import type { BracketGame, Team } from "../../models/models";
+import { Link } from "react-router";
 import type { HomeSeasonData } from "../../routes/loader";
 import { getTeam } from "../../utils/homeViewUtils";
+import { getPlayoffRounds } from "../../utils/playoffRounds";
 
 type BracketSeason = Pick<
   HomeSeasonData,
-  "bracket" | "settings" | "teams"
+  "year" | "bracket" | "settings" | "teams" | "box_scores"
 >;
 
 function PlayoffBracket({
@@ -14,13 +16,17 @@ function PlayoffBracket({
   season: BracketSeason;
   seeds: Team[];
 }) {
+  const rounds = getPlayoffRounds(season.settings, season.bracket);
   return (
     <>
       <div className="home-bracket-grid">
-        {[0, 1, 2].map((roundIndex) => (
+        {rounds.map(({ week, label }, roundIndex) => (
           <BracketRoundColumn
-            key={roundIndex}
+            key={week}
             roundIndex={roundIndex}
+            roundCount={rounds.length}
+            week={week}
+            label={label}
             season={season}
             seeds={seeds}
           />
@@ -36,23 +42,41 @@ function PlayoffBracket({
 
 function BracketRoundColumn({
   roundIndex,
+  roundCount,
+  week,
+  label,
   season,
   seeds,
 }: {
   roundIndex: number;
+  roundCount: number;
+  week: number;
+  label: string;
   season: BracketSeason;
   seeds: Team[];
 }) {
-  const labels = ["Round 1 · Quarterfinals", "Semifinals", "Championship"];
-  const week = season.settings.regular_season_length + roundIndex + 1;
   const round = season.bracket.rounds.find((item) => item.week === week);
   const games = round?.games.filter(
     (game) => game.tier === "WINNERS_BRACKET",
   );
+  const getDetailPath = (game: BracketGame) => {
+    if (game.is_bye) return undefined;
+    const boxScore = season.box_scores.find(
+      (boxScore) =>
+        boxScore.week === week &&
+        ((boxScore.home_team_id === game.home_team_id &&
+          boxScore.away_team_id === game.away_team_id) ||
+         (boxScore.home_team_id === game.away_team_id &&
+          boxScore.away_team_id === game.home_team_id)),
+    );
+    return boxScore
+      ? `/seasons/${season.year}/weeks/${week}/matchups/${boxScore.home_team_id}/${boxScore.away_team_id}`
+      : undefined;
+  };
 
   return (
     <div className="home-bracket-round">
-      <h3>{labels[roundIndex]}</h3>
+      <h3>{label}</h3>
       <span>Week {week}</span>
       <div>
         {games?.length
@@ -61,9 +85,10 @@ function BracketRoundColumn({
                 key={`${week}-${game.home_team_id}-${game.away_team_id}-${index}`}
                 game={game}
                 teams={season.teams}
+                detailTo={getDetailPath(game)}
               />
             ))
-          : getPlaceholderBracketGames(roundIndex, seeds).map(
+          : getPlaceholderBracketGames(roundIndex, roundCount, seeds).map(
               (game, index) => (
                 <article
                   className="home-bracket-game"
@@ -84,9 +109,11 @@ function BracketRoundColumn({
 function BracketGameCard({
   game,
   teams,
+  detailTo,
 }: {
   game: BracketGame;
   teams: Team[];
+  detailTo?: string;
 }) {
   const home = game.home_team_id
     ? getTeam(teams, game.home_team_id)
@@ -109,17 +136,39 @@ function BracketGameCard({
         </strong>
       )}
       <small>{game.is_bye ? "Advances automatically" : "Playoff game"}</small>
+      {detailTo && <Link to={detailTo}>See the box score</Link>}
+      {!game.is_bye && !detailTo && (
+        <small>Box score not available for this pairing.</small>
+      )}
     </article>
   );
 }
 
-function getPlaceholderBracketGames(roundIndex: number, seeds: Team[]) {
+function getPlaceholderBracketGames(roundIndex: number, roundCount: number, seeds: Team[]) {
   const seed = (index: number) =>
     seeds[index]
       ? `[${index + 1}] ${seeds[index].team_name}`
       : `Seed ${index + 1}`;
 
-  if (roundIndex === 0) {
+  if (roundCount === 1 || roundIndex === roundCount - 1) {
+    return [
+      {
+        status: "Waiting",
+        home: roundCount === 1 ? seed(0) : "Semifinal 1 winner",
+        away: roundCount === 1 ? seed(1) : "Semifinal 2 winner",
+        note: "Championship game",
+      },
+    ];
+  }
+
+  if (roundCount === 2) {
+    return [
+      { status: "Not started", home: seed(0), away: seed(3), note: "Semifinal 1" },
+      { status: "Not started", home: seed(1), away: seed(2), note: "Semifinal 2" },
+    ];
+  }
+
+  if (roundCount === 3 && roundIndex === 0) {
     return [
       {
         status: "Bye",
@@ -148,7 +197,7 @@ function getPlaceholderBracketGames(roundIndex: number, seeds: Team[]) {
     ];
   }
 
-  if (roundIndex === 1) {
+  if (roundCount === 3 && roundIndex === 1) {
     return [
       {
         status: "Waiting",
@@ -166,12 +215,7 @@ function getPlaceholderBracketGames(roundIndex: number, seeds: Team[]) {
   }
 
   return [
-    {
-      status: "Waiting",
-      home: "Semifinal 1 winner",
-      away: "Semifinal 2 winner",
-      note: "Championship game",
-    },
+    { status: "Waiting", home: "TBD", away: "TBD", note: "Pairings not set" },
   ];
 }
 

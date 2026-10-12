@@ -7,6 +7,7 @@ type RouteErrorPageProps = {
   description: string;
   linkTo: string;
   linkLabel: string;
+  retry?: boolean;
 };
 
 function RouteErrorPage({
@@ -16,6 +17,7 @@ function RouteErrorPage({
   description,
   linkTo,
   linkLabel,
+  retry = false,
 }: RouteErrorPageProps) {
   return (
     <main className="route-page route-state-page">
@@ -27,9 +29,20 @@ function RouteErrorPage({
           <span className="route-error-eyebrow">{eyebrow}</span>
           <h1 id="route-error-title">{title}</h1>
           <p>{description}</p>
-          <Link className="route-error-link" to={linkTo}>
-            {linkLabel}
-          </Link>
+          <div className="route-error-actions">
+            {retry && (
+              <button
+                className="route-error-link"
+                type="button"
+                onClick={() => window.location.reload()}
+              >
+                Retry this page
+              </button>
+            )}
+            <Link className={retry ? "home-secondary-link" : "route-error-link"} to={linkTo}>
+              {linkLabel}
+            </Link>
+          </div>
         </div>
       </section>
     </main>

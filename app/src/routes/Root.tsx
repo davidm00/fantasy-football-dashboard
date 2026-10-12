@@ -6,6 +6,7 @@ import {
   useNavigation,
 } from "react-router";
 import "../Styles.css";
+import DataFreshness from "../components/shared/DataFreshness";
 
 function Root() {
   const navigation = useNavigation();
@@ -86,6 +87,7 @@ function Root() {
           </div>
         )}
       </header>
+      <DataFreshness />
       <Outlet />
     </div>
   );

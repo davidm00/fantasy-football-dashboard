@@ -17,6 +17,8 @@ import type {
   SeasonLoaderData,
 } from "./loader";
 import type { TeamSeasonMetrics } from "../utils/metrics";
+import { getPlayoffRounds } from "../utils/playoffRounds";
+import { getManagerName } from "../utils/homeViewUtils";
 import RouteErrorPage from "./RouteErrorPage";
 
 type SortKey =
@@ -40,13 +42,24 @@ type StandingsRow = {
 
 const DERIVED_METRIC_EXPLANATIONS = {
   allPlay:
-    "The record this manager would have if they played every other team each completed week.",
-  luck: "Actual wins minus expected wins from all-play performance. Positive values indicate a favorable schedule.",
+    "Your combined record against every other team in each completed regular-season week, not just your scheduled opponent.",
+  luck: "Measured in wins: actual wins minus expected wins from all-play performance. +0.7 means about 0.7 more wins than your weekly scoring would predict; positive values indicate a favorable schedule.",
   efficiency:
-    "Points scored divided by the best valid lineup that could have been started from each week's roster.",
+    "Actual starter points divided by hindsight-optimal valid lineup points across completed regular-season weeks. 100% means no points left on the bench.",
   power:
-    "Power score = (6 × scoring average + 2 × season high + 2 × season low + 400 × win percentage) ÷ 10. The arrow shows movement since the previous completed week.",
+    "A scoring-and-record strength score; higher is better. Power = (6 × scoring average + 2 × season high + 2 × season low + 400 × win percentage) ÷ 10. The arrow shows rank movement since the previous completed week.",
 };
+
+const SORT_OPTIONS: { key: SortKey; label: string }[] = [
+  { key: "record", label: "Standings" },
+  { key: "manager", label: "Manager" },
+  { key: "power", label: "Power" },
+  { key: "pointsFor", label: "Points scored" },
+  { key: "pointsAgainst", label: "Points against" },
+  { key: "allPlay", label: "All-play" },
+  { key: "luck", label: "Schedule luck" },
+  { key: "efficiency", label: "Lineup efficiency" },
+];
 
 export function SeasonErrorBoundary() {
   const error = useRouteError();
@@ -62,7 +75,8 @@ export function SeasonErrorBoundary() {
         code="Error"
         eyebrow="Unable to load season"
         title="Something went wrong"
-        description="We couldn't load this season right now. Return to the latest season and try again."
+        description="We couldn't load this season right now. Retry this page without losing your place."
+        retry
         linkTo={`/seasons/${newestSeason}`}
         linkLabel={`View the ${newestSeason} season`}
       />
@@ -87,9 +101,6 @@ const formatRecord = ({
   ties,
 }: TeamSeasonMetrics["record"]) =>
   `${wins}-${losses}${ties ? `-${ties}` : ""}`;
-
-const getManagerName = (team: Team) =>
-  team.owners.map(({ name }) => name).join(" & ") || team.team_name;
 
 const getHeatClass = (rank: number, teamCount: number) => {
   if (rank <= Math.ceil(teamCount / 4)) return "season-rank-top";
@@ -221,7 +232,7 @@ function SeasonBracketView({
           <span className="home-eyebrow">Playoffs</span>
           <h2>Championship bracket</h2>
         </div>
-        <span>{champion ? "Final" : "Updates as rounds are set"}</span>
+        <span>{champion ? "Final" : "Pairings from the latest snapshot"}</span>
       </div>
       {champion && (
         <div className="season-bracket-champion">
@@ -237,6 +248,7 @@ function SeasonBracketView({
 
 function Season() {
   const season = useLoaderData() as SeasonLoaderData;
+  const seasonComplete = season.bracket.champion !== null;
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const tabParam = searchParams.get("tab");
@@ -255,7 +267,16 @@ function Season() {
   );
   const showFinal =
     hasFinalStandings && searchParams.get("view") === "final";
-  const playoffTeamCount = Math.min(
+  const openingPlayoffWeek = getPlayoffRounds(season.settings, season.bracket)[0]?.week;
+  const openingPlayoffTeams = new Set(
+    season.bracket.rounds
+      .find(({ week }) => week === openingPlayoffWeek)?.games
+      .filter(({ tier }) => tier === "WINNERS_BRACKET")
+      .flatMap(({ home_team_id, away_team_id }) =>
+        [home_team_id, away_team_id].filter((id): id is number => id !== null),
+      ),
+  );
+  const playoffTeamCount = openingPlayoffTeams.size || Math.min(
     season.settings.team_count,
     Math.max(2, Math.floor(season.settings.team_count / 2)),
   );
@@ -417,6 +438,20 @@ function Season() {
   const draftTeam = season.teams.find(
     ({ team_id }) => team_id === awards.draftSteal?.teamId,
   );
+  const benchBlunderGame = season.box_scores.find(
+    (game) =>
+      game.week === awards.benchBlunder?.week &&
+      (game.home_team_id === awards.benchBlunder.teamId ||
+        game.away_team_id === awards.benchBlunder.teamId),
+  );
+  const closestGameBoxScore = season.box_scores.find(
+    (game) =>
+      game.week === awards.closestGame?.week &&
+      ((game.home_team_id === awards.closestGame.winnerTeamId &&
+        game.away_team_id === awards.closestGame.loserTeamId) ||
+       (game.away_team_id === awards.closestGame.winnerTeamId &&
+        game.home_team_id === awards.closestGame.loserTeamId)),
+  );
 
   const handleSort = (key: SortKey) => {
     setSort((current) => ({
@@ -462,9 +497,8 @@ function Season() {
         <div>
           <h1>{season.year} season</h1>
           <p>
-            Week {season.metrics.throughWeek} of{" "}
-            {season.settings.regular_season_length} played ·{" "}
-            {playoffTeamCount} of {season.settings.team_count} make the
+            {seasonComplete ? "Completed season" : `Regular-season Week ${season.metrics.throughWeek} of ${season.settings.regular_season_length} finalized`} ·{" "}
+            {playoffTeamCount} of {season.settings.team_count} {seasonComplete ? "made" : "make"} the
             playoffs
             {season.settings.waiver_type === "faab" &&
               ` · $${season.settings.faab_budget ?? 100} FAAB`}
@@ -544,6 +578,7 @@ function Season() {
 
       {activeTab === "matchups" && bracketSeeds[0] && (
         <SeasonMatchupsView
+          key={season.year}
           year={season.year}
           teams={season.teams}
           weeks={season.matchupWeeks}
@@ -561,15 +596,15 @@ function Season() {
 
       {activeTab === "standings" && (
         <>
-      {scoringLeader && unluckiest && (
+      {scoringLeader && unluckiest && season.metrics.throughWeek > 0 && (
         <p className="season-narrative">
-          <strong>{getManagerName(scoringLeader.team)}</strong> leads the
+          <strong>{getManagerName(scoringLeader.team)}</strong> {seasonComplete ? "led" : "leads"} the
           league with {scoringLeader.metrics.pointsFor.toFixed(1)} points
-          and has the weekly high{" "}
+          and {seasonComplete ? "had" : "has had"} the weekly high{" "}
           {scoringLeader.metrics.weeklyHighs} time
           {scoringLeader.metrics.weeklyHighs === 1 ? "" : "s"}.{" "}
-          <strong>{getManagerName(unluckiest.team)}</strong> has had the
-          toughest schedule so far: {unluckiestPointsRank}
+          <strong>{getManagerName(unluckiest.team)}</strong> {seasonComplete ? "finished with" : "currently has"} the
+          lowest schedule luck: {unluckiestPointsRank}
           {unluckiestPointsRank === 1
             ? "st"
             : unluckiestPointsRank === 2
@@ -603,12 +638,40 @@ function Season() {
             Final (after playoffs)
           </button>
         </div>
+        <div className="season-sort-picker">
+          <label>
+            <span>Sort by</span>
+            <select
+              value={sort.key}
+              onChange={(event) => {
+                const option = SORT_OPTIONS.find(({ key }) => key === event.currentTarget.value);
+                if (option) {
+                  setSort({ key: option.key, direction: option.key === "manager" ? "ascending" : "descending" });
+                }
+              }}
+            >
+              {SORT_OPTIONS.map(({ key, label }) => (
+                <option key={key} value={key}>{label}</option>
+              ))}
+            </select>
+          </label>
+          <button
+            type="button"
+            aria-label={`Sort ${sort.direction === "descending" ? "ascending" : "descending"}`}
+            onClick={() => setSort((current) => ({
+              ...current,
+              direction: current.direction === "descending" ? "ascending" : "descending",
+            }))}
+          >
+            {sort.direction === "descending" ? "Descending ↓" : "Ascending ↑"}
+          </button>
+        </div>
         <div className="season-rank-legend">
           <span>Weekly scoring rank:</span>
-          <span><i className="season-rank-top" />1 to 3</span>
-          <span><i className="season-rank-upper" />4 to 6</span>
-          <span><i className="season-rank-lower" />7 to 9</span>
-          <span><i className="season-rank-bottom" />10 to 12</span>
+          <span><i className="season-rank-top" />1 to {Math.ceil(season.settings.team_count / 4)}</span>
+          <span><i className="season-rank-upper" />{Math.ceil(season.settings.team_count / 4) + 1} to {Math.ceil(season.settings.team_count / 2)}</span>
+          <span><i className="season-rank-lower" />{Math.ceil(season.settings.team_count / 2) + 1} to {Math.ceil(season.settings.team_count * 3 / 4)}</span>
+          <span><i className="season-rank-bottom" />{Math.ceil(season.settings.team_count * 3 / 4) + 1} to {season.settings.team_count}</span>
         </div>
       </div>
 
@@ -667,7 +730,7 @@ function Season() {
                 onSort={handleSort}
               />
               <SortHeader
-                label="Luck"
+                label="Schedule luck"
                 sortKey="luck"
                 activeKey={sort.key}
                 direction={sort.direction}
@@ -695,27 +758,28 @@ function Season() {
                 year={season.year}
                 teamCount={season.settings.team_count}
                 playoffTeamCount={playoffTeamCount}
+                showPlayoffLine={!showFinal && sort.key === "record" && sort.direction === "descending"}
               />
             ))}
           </tbody>
         </table>
       </div>
       <div className="season-standings-mobile">
-        {[...standingsRows]
-          .sort((left, right) => left.rank - right.rank)
-          .map((row) => (
+        {standingsRows.map((row) => (
             <SeasonMobileStandingCard
               key={row.team.team_id}
               {...row}
               year={season.year}
               teamCount={season.settings.team_count}
               playoffTeamCount={playoffTeamCount}
+              showPlayoffLine={!showFinal && sort.key === "record" && sort.direction === "descending"}
             />
           ))}
       </div>
       <p className="season-table-note">
-        Select a header to sort. Each form cell opens that week. Lineup
-        efficiency compares actual points with the best valid lineup.
+        Use the sort controls or a table header to sort. Rank numbers remain
+        standings positions. Each form cell opens that week. Metrics describe
+        completed regular-season games, even in the final-placement view.
       </p>
 
       <section className="season-weekly-panel" aria-labelledby="weekly-ranks">
@@ -806,15 +870,17 @@ function Season() {
       </section>
 
       <section className="season-awards" aria-labelledby="season-awards">
-        <h2 id="season-awards">Season so far</h2>
+        <h2 id="season-awards">{seasonComplete ? "Season highlights" : "Season so far"}</h2>
         <div>
           {awards.closestGame && closestWinner && closestLoser && (
             <SeasonAward
               kicker="Closest game"
               title={`${getManagerName(closestWinner)} ${awards.closestGame.winnerScore.toFixed(2)}, ${getManagerName(closestLoser)} ${awards.closestGame.loserScore.toFixed(2)}`}
               body={`Week ${awards.closestGame.week}, decided by ${awards.closestGame.margin.toFixed(2)} points.`}
-              cta="See the box score"
-              href={`/seasons/${season.year}/weeks/${awards.closestGame.week}`}
+              cta={closestGameBoxScore ? "See the box score" : "View week"}
+              href={closestGameBoxScore
+                ? `/seasons/${season.year}/weeks/${closestGameBoxScore.week}/matchups/${closestGameBoxScore.home_team_id}/${closestGameBoxScore.away_team_id}`
+                : `/seasons/${season.year}/weeks/${awards.closestGame.week}`}
             />
           )}
           {awards.benchBlunder && benchTeam && (
@@ -822,9 +888,11 @@ function Season() {
               kicker="Bench blunder"
               title={`${getManagerName(benchTeam)} benched ${awards.benchBlunder.benchedPlayer}`}
               body={`Week ${awards.benchBlunder.week}. ${awards.benchBlunder.benchedPlayer} scored ${awards.benchBlunder.benchPoints.toFixed(2)}; ${awards.benchBlunder.startedPlayer} scored ${awards.benchBlunder.starterPoints.toFixed(2)}.`}
-              cta="See the box score"
-              href={`/seasons/${season.year}/weeks/${awards.benchBlunder.week}`}
-              explanation="The largest points gap where a benched player was eligible to replace a lower-scoring starter."
+              cta={benchBlunderGame ? "See the box score" : "View week"}
+              href={benchBlunderGame
+                ? `/seasons/${season.year}/weeks/${benchBlunderGame.week}/matchups/${benchBlunderGame.home_team_id}/${benchBlunderGame.away_team_id}`
+                : `/seasons/${season.year}/weeks/${awards.benchBlunder.week}`}
+              explanation="The largest eligible starter-to-bench points gap, identified in hindsight, not a judgment of the pregame decision."
             />
           )}
           {awards.bestPickup && pickupTeam && (
@@ -840,7 +908,7 @@ function Season() {
             <SeasonAward
               kicker="Steal of the draft"
               title={`${getManagerName(draftTeam)}: ${awards.draftSteal.playerName} at R${awards.draftSteal.round}.${awards.draftSteal.roundPick}`}
-              body={`${awards.draftSteal.position}${awards.draftSteal.positionRank} of ${awards.draftSteal.positionCount} with ${awards.draftSteal.totalPoints.toFixed(2)} points; ${awards.draftSteal.startedPoints.toFixed(2)} as a starter accounted for ${awards.draftSteal.teamPointShare.toFixed(1)}% of team scoring.`}
+              body={`${awards.draftSteal.position}${awards.draftSteal.positionRank} of ${awards.draftSteal.positionCount} with ${awards.draftSteal.totalPoints.toFixed(2)} points; ${awards.draftSteal.startedPoints.toFixed(2)} as a starter accounted for ${(awards.draftSteal.teamPointShare * 100).toFixed(1)}% of team scoring.`}
               cta="Draft tab coming soon"
               explanation="Among drafted QB, RB, WR, and TE players, draft value weighs scoring rank within position (45%), share of the drafting team's scoring compared with other drafted players at that position (25%), draft capital (20%), and how much of the player's production the manager used in the starting lineup (10%). Keepers, kickers, and defenses are excluded because their listed draft cost and streaming value are not meaningfully comparable."
             />
@@ -860,10 +928,12 @@ function SeasonStandingRow({
   year,
   teamCount,
   playoffTeamCount,
+  showPlayoffLine,
 }: StandingsRow & {
   year: number;
   teamCount: number;
   playoffTeamCount: number;
+  showPlayoffLine: boolean;
 }) {
   const form = metrics.weeklyRanks.slice(-5);
   const luckWidth = Math.min(50, (Math.abs(metrics.luck) / 2) * 50);
@@ -947,7 +1017,7 @@ function SeasonStandingRow({
           </div>
         </td>
       </tr>
-      {rank === playoffTeamCount && (
+      {showPlayoffLine && rank === playoffTeamCount && (
         <tr className="season-playoff-cut">
           <td colSpan={10}>
             <span>Playoff line</span>
@@ -965,10 +1035,12 @@ function SeasonMobileStandingCard({
   year,
   teamCount,
   playoffTeamCount,
+  showPlayoffLine,
 }: StandingsRow & {
   year: number;
   teamCount: number;
   playoffTeamCount: number;
+  showPlayoffLine: boolean;
 }) {
   return (
     <>
@@ -981,9 +1053,10 @@ function SeasonMobileStandingCard({
           </div>
           <div className="season-mobile-standing-results">
             <strong>{formatRecord(metrics.record)}</strong>
-            <span>
+            <span className="metric-label">
               Power #{metrics.power.rank ?? "—"} ·{" "}
               {metrics.power.score?.toFixed(1) ?? "—"}
+              <MetricTooltip label="Power">{DERIVED_METRIC_EXPLANATIONS.power}</MetricTooltip>
             </span>
           </div>
         </div>
@@ -993,18 +1066,27 @@ function SeasonMobileStandingCard({
             <dd>{metrics.pointsFor.toFixed(1)}</dd>
           </div>
           <div>
-            <dt>All-play</dt>
+            <dt className="metric-label">
+              All-play
+              <MetricTooltip label="All-play">{DERIVED_METRIC_EXPLANATIONS.allPlay}</MetricTooltip>
+            </dt>
             <dd>{formatRecord(metrics.allPlayRecord)}</dd>
           </div>
           <div>
-            <dt>Luck</dt>
+            <dt className="metric-label">
+              Schedule luck
+              <MetricTooltip label="Schedule luck">{DERIVED_METRIC_EXPLANATIONS.luck}</MetricTooltip>
+            </dt>
             <dd>
               {metrics.luck > 0 ? "+" : ""}
               {metrics.luck.toFixed(1)}
             </dd>
           </div>
           <div>
-            <dt>Efficiency</dt>
+            <dt className="metric-label">
+              Efficiency
+              <MetricTooltip label="Lineup efficiency">{DERIVED_METRIC_EXPLANATIONS.efficiency}</MetricTooltip>
+            </dt>
             <dd>
               {metrics.lineupEfficiency === null
                 ? "—"
@@ -1027,7 +1109,7 @@ function SeasonMobileStandingCard({
           </div>
         </div>
       </article>
-      {rank === playoffTeamCount && (
+      {showPlayoffLine && rank === playoffTeamCount && (
         <div className="season-mobile-playoff-line">
           <span>Playoff line</span>
         </div>

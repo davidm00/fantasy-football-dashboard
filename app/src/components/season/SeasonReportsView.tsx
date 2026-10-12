@@ -26,6 +26,7 @@ function SeasonReportsView({
                 } from the ${year} season.`
               : `No weekly reports are available for the ${year} season.`}
           </p>
+          <p>Only available reports are listed. Missing weeks have no archived PDF.</p>
         </div>
       </header>
 

@@ -104,6 +104,7 @@ export type MatchupDetailLoaderData = {
   status: HomeSeasonData["matchups"][number]["status"];
   boxScore: HomeSeasonData["box_scores"][number];
   records: SeasonMatchupWeek["records"];
+  recordsThroughWeek: number;
   homeOptimalLineup: OptimalLineupPlayer[];
   awayOptimalLineup: OptimalLineupPlayer[];
   homePerformance: WeekMetrics["performances"][number] | undefined;
@@ -293,6 +294,7 @@ export async function seasonHubLoader({ params }: LoaderFunctionArgs) {
     matchupWeeks: calculateSeasonMatchupWeeks(
       files.matchups,
       files.teams,
+      files.settings.regular_season_length,
     ),
   } satisfies SeasonLoaderData;
 }
@@ -373,10 +375,11 @@ export async function matchupDetailLoader({
 
   const weekMetrics = calculateWeekMetrics(season, week);
   const seasonMetrics = calculateSeasonMetrics(season, week);
-  const records = calculateSeasonMatchupWeeks(
+  const recordSnapshot = calculateSeasonMatchupWeeks(
     season.matchups,
     season.teams,
-  ).find((item) => item.week === week)?.records ?? {};
+    season.settings.regular_season_length,
+  ).find((item) => item.week === week);
   const closest = seasonMetrics.awards.closestGame;
 
   return {
@@ -386,7 +389,8 @@ export async function matchupDetailLoader({
     matchup,
     status: matchupWeek.status,
     boxScore,
-    records,
+    records: recordSnapshot?.records ?? {},
+    recordsThroughWeek: recordSnapshot?.recordsThroughWeek ?? 0,
     homeOptimalLineup: getOptimalLineup(
       boxScore.home_lineup,
       season.settings,

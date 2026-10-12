@@ -16,6 +16,11 @@ export const formatRecord = ({ wins, losses, ties }: TeamRecord) =>
 export const getTeam = (teams: Team[], teamId: number) =>
   teams.find((team) => team.team_id === teamId);
 
+export const getManagerName = (team: Team | undefined) =>
+  team?.owners.map(({ name }) => name).join(" & ") ||
+  team?.team_name ||
+  "Unknown manager";
+
 export const getLatestReport = (season: HomeSeasonData) =>
   [...season.reports].sort((left, right) => right.week - left.week)[0];
 

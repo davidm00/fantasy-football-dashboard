@@ -11,6 +11,7 @@ import SeasonReportPanel from "../shared/SeasonReportPanel";
 import StandingsPanel from "../shared/StandingsPanel";
 import SeasonSuperlatives from "./SeasonSuperlatives";
 import PlayoffBracket from "../shared/PlayoffBracket";
+import { getPlayoffRounds } from "../../utils/playoffRounds";
 import {
   EMPTY_RECORD,
   formatRecord,
@@ -55,11 +56,18 @@ export function BetweenWeeksSection({
     <>
       <section className="home-hero" aria-labelledby="home-week-title">
         <span className="home-eyebrow">{season.year} · Regular season</span>
-        <h1 id="home-week-title">Week {state.upcomingWeek} matchups</h1>
+        <div className="home-section-heading">
+          <h1 id="home-week-title">Week {state.upcomingWeek} matchups</h1>
+          <Link className="section-route-link" to={`/seasons/${season.year}/weeks/${state.upcomingWeek}`}>
+            View full week →
+          </Link>
+        </div>
         <p className="home-summary">
           {activeMatchup?.status === "in_progress"
             ? "Games are in progress. Records reflect finalized games."
-            : "Games have not started. Records reflect finalized games."}
+            : activeMatchup?.status === "final"
+              ? "Games are final. Records include this week."
+              : "Games have not started. Records reflect finalized games."}
         </p>
         <div className="home-pairings">
           {activeMatchup?.matchups.map((matchup) => (
@@ -147,17 +155,17 @@ export function PlayoffsSection({
   season: HomeSeasonData;
   state: Extract<HomeLoaderState, { kind: "playoffs" }>;
 }) {
-  const round = Math.max(
-    1,
-    state.week - season.settings.regular_season_length,
-  );
+  const rounds = getPlayoffRounds(season.settings, season.bracket);
+  const roundIndex = rounds.findIndex(({ week }) => week === state.week);
   const seeds = getSeasonStandings(season).slice(0, 6);
 
   return (
     <>
       <HomeStateHeader
         eyebrow={`${season.year} · Playoffs`}
-        title={`Round ${round}: ${round === 1 ? "quarterfinals" : round === 2 ? "semifinals" : "championship"}`}
+        title={roundIndex >= 0
+          ? `Round ${roundIndex + 1}: ${rounds[roundIndex].label}`
+          : "Playoffs"}
         description={`Week ${state.week} · playoff bracket and final regular-season seeds`}
       />
       <section className="home-panel home-bracket">

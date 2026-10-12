@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 import sharp from "sharp";
 
 const appRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -8,6 +9,12 @@ const dataRoot = path.join(appRoot, "src", "data");
 const distRoot = path.join(appRoot, "dist");
 const siteUrl = (process.env.SITE_URL ?? "https://ian-book-believers.vercel.app")
   .replace(/\/$/, "");
+const siteOrigin = new URL(siteUrl);
+if (!["http:", "https:"].includes(siteOrigin.protocol) ||
+    siteOrigin.pathname !== "/" || siteOrigin.search || siteOrigin.hash ||
+    siteOrigin.username || siteOrigin.password) {
+  throw new Error("SITE_URL must be an HTTP(S) site origin, without a path.");
+}
 const baseHtml = await readFile(path.join(distRoot, "index.html"), "utf8");
 const seasons = JSON.parse(
   await readFile(path.join(dataRoot, "seasons.json"), "utf8"),
@@ -37,20 +44,27 @@ const replaceMeta = (html, attribute, key, value) => {
   const pattern = new RegExp(
     `<meta\\s+${attribute}="${escapedKey}"\\s+content="[^"]*"\\s*/?>`,
   );
+  if (!pattern.test(html)) {
+    throw new Error(`Missing preview metadata template: ${attribute}="${key}"`);
+  }
   return html.replace(
     pattern,
-    `<meta ${attribute}="${key}" content="${escapeText(value)}" />`,
+    () => `<meta ${attribute}="${key}" content="${escapeText(value)}" />`,
   );
 };
 
 const buildHtml = ({ title, description, route, imagePath, imageAlt }) => {
   const url = `${siteUrl}${route}`;
   const imageUrl = `${siteUrl}${imagePath}`;
+  if (!/<title>[^<]*<\/title>/.test(baseHtml) ||
+      !/<link rel="canonical" href="[^"]*" \/>/.test(baseHtml)) {
+    throw new Error("Missing title or canonical URL in the preview template.");
+  }
   let html = baseHtml
-    .replace(/<title>[^<]*<\/title>/, `<title>${escapeText(title)}</title>`)
+    .replace(/<title>[^<]*<\/title>/, () => `<title>${escapeText(title)}</title>`)
     .replace(
       /<link rel="canonical" href="[^"]*" \/>/,
-      `<link rel="canonical" href="${escapeText(url)}" />`,
+      () => `<link rel="canonical" href="${escapeText(url)}" />`,
     );
 
   html = replaceMeta(html, "name", "description", description);
@@ -85,8 +99,8 @@ const previewSvg = ({
     <rect x="0" y="0" width="18" height="630" fill="#f59e0b"/>
     <text x="72" y="76" fill="#f8fafc" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="3">IAN BOOK BELIEVERS</text>
     <text x="72" y="142" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">${escapeText(eyebrow)}</text>
-    <text x="72" y="220" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="800">${escapeText(title)}</text>
-    <text x="72" y="270" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="25">${escapeText(subtitle)}</text>
+    <text x="72" y="220" fill="#ffffff" font-family="Arial, sans-serif" font-size="${Math.min(58, 1056 / Math.max(1, Array.from(title).length))}" font-weight="800">${escapeText(title)}</text>
+    <text x="72" y="270" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="${Math.min(25, 1056 / Math.max(1, Array.from(subtitle).length))}">${escapeText(subtitle)}</text>
     <line x1="72" y1="315" x2="1128" y2="315" stroke="#31506d" stroke-width="2"/>
     <text x="72" y="370" fill="#8fa8bf" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1">${escapeText(leftLabel)}</text>
     <text x="72" y="438" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="800">${escapeText(leftValue)}</text>
@@ -103,8 +117,11 @@ const writePreview = async ({
   metadata,
   image,
 }) => {
+  const svg = previewSvg(image);
+  const imageHash = createHash("sha256").update(svg).digest("hex").slice(0, 12);
+  const versionedImageRoute = imageRoute.replace(/\.png$/, `-${imageHash}.png`);
   const htmlPath = path.join(distRoot, `${route.slice(1)}.html`);
-  const imagePath = path.join(distRoot, imageRoute.slice(1));
+  const imagePath = path.join(distRoot, versionedImageRoute.slice(1));
   await Promise.all([
     mkdir(path.dirname(htmlPath), { recursive: true }),
     mkdir(path.dirname(imagePath), { recursive: true }),
@@ -112,18 +129,19 @@ const writePreview = async ({
   await Promise.all([
     writeFile(
       htmlPath,
-      buildHtml({ ...metadata, route, imagePath: imageRoute }),
+      buildHtml({ ...metadata, route, imagePath: versionedImageRoute }),
     ),
-    sharp(Buffer.from(previewSvg(image))).png().toFile(imagePath),
+    sharp(Buffer.from(svg)).png().toFile(imagePath),
   ]);
 };
 
 for (const year of seasons) {
   const seasonRoot = path.join(dataRoot, String(year));
-  const [teams, matchupWeeks, settings] = await Promise.all([
+  const [teams, matchupWeeks, settings, boxScores] = await Promise.all([
     readFile(path.join(seasonRoot, "teams.json"), "utf8").then(JSON.parse),
     readFile(path.join(seasonRoot, "matchups.json"), "utf8").then(JSON.parse),
     readFile(path.join(seasonRoot, "settings.json"), "utf8").then(JSON.parse),
+    readFile(path.join(seasonRoot, "box_scores.json"), "utf8").then(JSON.parse),
   ]);
   const teamsById = new Map(teams.map((team) => [team.team_id, team]));
   const seasonRoute = `/seasons/${year}`;
@@ -145,7 +163,7 @@ for (const year of seasons) {
       leftValue: String(settings.team_count),
       rightLabel: "WEEKS",
       rightValue: String(matchupWeeks.length),
-      footer: "ian-book-believers.vercel.app",
+      footer: siteOrigin.host,
     },
   });
 
@@ -153,7 +171,9 @@ for (const year of seasons) {
     const weekRoute = `${seasonRoute}/weeks/${matchupWeek.week}`;
     const weekImageRoute =
       `/link-previews/seasons/${year}/weeks/${matchupWeek.week}.png`;
-    const gameCount = matchupWeek.matchups.length;
+    const gameCount = matchupWeek.matchups.filter(
+      ({ away_team_id }) => away_team_id !== null,
+    ).length;
     const status =
       matchupWeek.status === "final"
         ? "Final"
@@ -182,8 +202,18 @@ for (const year of seasons) {
     });
 
     for (const matchup of matchupWeek.matchups) {
+      const boxScore = boxScores.find(
+        (game) =>
+          game.week === matchupWeek.week &&
+          game.home_team_id === matchup.home_team_id &&
+          game.away_team_id === matchup.away_team_id,
+      );
+      if (matchup.away_team_id === null || !boxScore) continue;
       const home = teamsById.get(matchup.home_team_id);
       const away = teamsById.get(matchup.away_team_id);
+      if (!home || !away) {
+        throw new Error(`Unknown matchup team in ${year} week ${matchupWeek.week}.`);
+      }
       const homeName = getManagerName(home);
       const awayName = getManagerName(away);
       const matchupRoute =
@@ -192,14 +222,14 @@ for (const year of seasons) {
         `/link-previews/seasons/${year}/weeks/${matchupWeek.week}` +
         `/matchups/${matchup.home_team_id}-${matchup.away_team_id}.png`;
       const score =
-        `${formatScore(matchup.home_score)}–${formatScore(matchup.away_score)}`;
+        `${formatScore(boxScore.home_score)}–${formatScore(boxScore.away_score)}`;
 
       await writePreview({
         route: matchupRoute,
         imageRoute: matchupImageRoute,
         metadata: {
           title: `${homeName} vs ${awayName} | ${year} Week ${matchupWeek.week}`,
-          description: `${homeName} ${formatScore(matchup.home_score)}, ${awayName} ${formatScore(matchup.away_score)} — ${status} in week ${matchupWeek.week} of the ${year} season.`,
+          description: `${homeName} ${formatScore(boxScore.home_score)}, ${awayName} ${formatScore(boxScore.away_score)} — ${status} in week ${matchupWeek.week} of the ${year} season.`,
           imageAlt: `${homeName} versus ${awayName}, ${score}, ${year} week ${matchupWeek.week}`,
         },
         image: {
@@ -207,9 +237,9 @@ for (const year of seasons) {
           title: `${homeName} vs ${awayName}`,
           subtitle: `${home?.team_name ?? ""} vs ${away?.team_name ?? ""}`,
           leftLabel: homeName.toUpperCase(),
-          leftValue: formatScore(matchup.home_score),
+          leftValue: formatScore(boxScore.home_score),
           rightLabel: awayName.toUpperCase(),
-          rightValue: formatScore(matchup.away_score),
+          rightValue: formatScore(boxScore.away_score),
           footer: `Ian Book Believers · ${score}`,
         },
       });

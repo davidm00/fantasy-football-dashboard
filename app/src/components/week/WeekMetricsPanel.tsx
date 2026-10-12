@@ -2,6 +2,7 @@ import type { Team } from "../../models/models";
 import type { WeekMetrics } from "../../utils/metrics";
 import MetricCard from "../shared/MetricCard";
 import MetricTooltip from "../shared/MetricTooltip";
+import { getManagerName } from "../../utils/homeViewUtils";
 
 const getTeam = (teams: Team[], teamId: number) =>
   teams.find((team) => team.team_id === teamId);
@@ -13,16 +14,20 @@ function WeekMetricsPanel({
   metrics: WeekMetrics;
   teams: Team[];
 }) {
-  const live = metrics.status === "in_progress";
+  const provisional = metrics.status === "in_progress";
 
   return (
     <section className="week-metrics" aria-labelledby="week-metrics-title">
       <div className="home-section-heading">
         <h2 id="week-metrics-title">
-          Week metrics{live ? " · Live" : ""}
+          Week metrics{provisional ? " · Provisional" : ""}
         </h2>
         <span>
-          {live ? "Updates as scores change" : "Calculated from final scores"}
+          {provisional
+            ? "Snapshot scores; outcomes are not final"
+            : metrics.status === "final"
+              ? "Calculated from final scores"
+              : "Awaiting scoring data"}
         </span>
       </div>
 
@@ -61,16 +66,16 @@ function WeekMetricsPanel({
                       Lineup efficiency
                       <MetricTooltip label="weekly lineup efficiency">
                         Points scored divided by the best valid lineup the
-                        manager could have started this week.
+                        manager could have started this week, using hindsight.
                       </MetricTooltip>
                     </span>
                   </th>
                   <th scope="col">
                     <span className="metric-label">
-                      Bench points
-                      <MetricTooltip label="weekly bench points">
-                        Best possible lineup points minus actual lineup
-                        points.
+                      Points left on bench
+                      <MetricTooltip label="weekly points left on bench">
+                        Extra points available from a valid hindsight-optimal
+                        lineup, not the total points scored by the bench.
                       </MetricTooltip>
                     </span>
                   </th>
@@ -89,7 +94,7 @@ function WeekMetricsPanel({
                       <td>{performance.rank}</td>
                       <th scope="row">
                         <strong>
-                          {team?.owners[0]?.name ?? "Unknown manager"}
+                          {getManagerName(team)}
                         </strong>
                         <span>{team?.team_name ?? "Unknown team"}</span>
                       </th>
@@ -101,7 +106,7 @@ function WeekMetricsPanel({
                           {performance.result}
                         </strong>
                         <span>
-                          {opponent?.owners[0]?.name ?? "Opponent"} ·{" "}
+                          {getManagerName(opponent)} ·{" "}
                           {performance.opponentScore.toFixed(2)}
                         </span>
                       </td>
@@ -143,7 +148,7 @@ function WeekMetricsPanel({
                   </div>
                   <div className="week-mobile-manager">
                     <strong>
-                      {team?.owners[0]?.name ?? "Unknown manager"}
+                      {getManagerName(team)}
                     </strong>
                     <span>{team?.team_name ?? "Unknown team"}</span>
                   </div>
@@ -157,13 +162,19 @@ function WeekMetricsPanel({
                       {performance.result}
                     </strong>
                     <span>
-                      vs {opponent?.owners[0]?.name ?? "opponent"} ·{" "}
+                      vs {getManagerName(opponent)} ·{" "}
                       {performance.opponentScore.toFixed(2)}
                     </span>
                   </div>
                   <dl>
                     <div>
-                      <dt>All-play</dt>
+                      <dt className="metric-label">
+                        All-play
+                        <MetricTooltip label="weekly all-play">
+                          Your record against every other team this week;
+                          provisional until the games are final.
+                        </MetricTooltip>
+                      </dt>
                       <dd>
                         {performance.allPlayRecord.wins}-
                         {performance.allPlayRecord.losses}
@@ -173,7 +184,13 @@ function WeekMetricsPanel({
                       </dd>
                     </div>
                     <div>
-                      <dt>Efficiency</dt>
+                      <dt className="metric-label">
+                        Efficiency
+                        <MetricTooltip label="weekly lineup efficiency">
+                          Actual starter points divided by hindsight-optimal
+                          valid lineup points, expressed as a percentage.
+                        </MetricTooltip>
+                      </dt>
                       <dd>
                         {performance.lineupEfficiency === null
                           ? "—"
@@ -181,7 +198,13 @@ function WeekMetricsPanel({
                       </dd>
                     </div>
                     <div>
-                      <dt>Bench</dt>
+                      <dt className="metric-label">
+                        Points left
+                        <MetricTooltip label="weekly points left on bench">
+                          Extra points available from a valid hindsight-optimal
+                          lineup, not the total bench score.
+                        </MetricTooltip>
+                      </dt>
                       <dd>
                         {performance.pointsLeftOnBench === null
                           ? "—"

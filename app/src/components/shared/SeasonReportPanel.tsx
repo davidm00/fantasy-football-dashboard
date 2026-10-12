@@ -37,7 +37,7 @@ function SeasonReportPanel({
       ) : (
         <>
           <h2>No report available</h2>
-          <p>A report has not been published for this stage of the season.</p>
+          <p>No archived report is available for this week or stage of the season.</p>
         </>
       )}
     </section>

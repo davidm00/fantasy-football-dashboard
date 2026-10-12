@@ -6,14 +6,9 @@ import type { SeasonMatchupWeek } from "../../utils/metrics";
 import {
   EMPTY_RECORD,
   formatRecord,
+  getManagerName,
   type TeamRecord,
 } from "../../utils/homeViewUtils";
-
-function getManagerName(team: Team | undefined) {
-  return team?.owners.map(({ name }) => name).join(" & ") ||
-    team?.team_name ||
-    "Unknown manager";
-}
 
 function getWeekSummary(week: SeasonMatchupWeek, teams: Team[]) {
   const scores = week.matchups.flatMap((matchup) => [
@@ -40,6 +35,7 @@ function getWeekSummary(week: SeasonMatchupWeek, teams: Team[]) {
     return [{
       winnerId: homeWon ? matchup.home_team_id : matchup.away_team_id,
       margin: Math.abs(matchup.home_score - matchup.away_score),
+      tied: matchup.home_score === matchup.away_score,
     }];
   }).sort((left, right) => left.margin - right.margin)[0];
   const findTeam = (teamId: number) =>
@@ -53,7 +49,9 @@ function getWeekSummary(week: SeasonMatchupWeek, teams: Team[]) {
       ? `${getManagerName(findTeam(low.teamId))} ${low.score.toFixed(2)}`
       : null,
     closest: closest
-      ? `${getManagerName(findTeam(closest.winnerId))} by ${closest.margin.toFixed(2)}`
+      ? closest.tied
+        ? "Tied"
+        : `${getManagerName(findTeam(closest.winnerId))} ${week.status === "final" ? "by" : "leads by"} ${closest.margin.toFixed(2)}`
       : null,
   };
 }
@@ -101,6 +99,7 @@ function CompactMatchupCard({
         score={matchup.home_score}
         record={records[matchup.home_team_id] ?? EMPTY_RECORD}
         winner={homeWon}
+        highlighted={highlightedTeamId === matchup.home_team_id}
       />
       {away && (
         <CompactTeamLine
@@ -108,6 +107,7 @@ function CompactMatchupCard({
           score={matchup.away_score}
           record={records[matchup.away_team_id] ?? EMPTY_RECORD}
           winner={awayWon}
+          highlighted={highlightedTeamId === matchup.away_team_id}
         />
       )}
     </>
@@ -137,14 +137,16 @@ function CompactTeamLine({
   score,
   record,
   winner,
+  highlighted,
 }: {
   team: Team | undefined;
   score: number | null;
   record: TeamRecord;
   winner: boolean;
+  highlighted?: boolean;
 }) {
   return (
-    <div className={winner ? "winner" : undefined}>
+    <div className={`${winner ? "winner " : ""}${highlighted ? "highlighted-manager" : ""}`}>
       <span>
         <strong>{getManagerName(team)}</strong>
         <small>{formatRecord(record)}</small>
@@ -184,9 +186,7 @@ function SeasonMatchupsView({
     ({ status, week }) =>
       status === "not_started" && week > regularSeasonLength,
   );
-  const sortedWeeks = weeks
-    .filter(({ week }) => week <= regularSeasonLength)
-    .sort((left, right) => left.week - right.week);
+  const sortedWeeks = [...weeks].sort((left, right) => left.week - right.week);
   const latestVisibleWeek = visibleWeeks[0]?.week ?? 1;
   const [selectedTeamId, setSelectedTeamId] = useState(
     highlightedTeamId ?? defaultTeamId,
@@ -205,7 +205,7 @@ function SeasonMatchupsView({
       block: "start",
     });
     window.history.replaceState(
-      null,
+      window.history.state,
       "",
       `${window.location.pathname}${window.location.search}#season-matchups-week-${week}`,
     );
@@ -215,8 +215,8 @@ function SeasonMatchupsView({
     <section className="season-matchups-view">
       <p className="season-matchups-intro">
         Every game of the season, newest first. Records on each card are
-        <strong> as of that week</strong>, so you can revisit the race at any
-        point.
+        <strong> regular-season records through the last finalized week</strong>,
+        labeled on each week. Playoff games do not change those records.
       </p>
 
       <div className="season-matchups-controls">
@@ -309,6 +309,13 @@ function SeasonMatchupsView({
                   <Link to={`/seasons/${year}/weeks/${week.week}`}>
                     Week {week.week} page{report ? ", with its report" : ""} →
                   </Link>
+                </p>
+                <p>
+                  {week.week > regularSeasonLength
+                    ? `Final regular-season records through Week ${week.recordsThroughWeek}.`
+                    : week.status === "final"
+                      ? `Records through Week ${week.recordsThroughWeek}.`
+                      : `Entering Week ${week.week}; records through Week ${week.recordsThroughWeek}.`}
                 </p>
               </header>
               <div className="season-matchup-grid">

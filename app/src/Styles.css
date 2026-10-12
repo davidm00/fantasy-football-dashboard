@@ -2,6 +2,107 @@
   --card-width: 18.5rem;
 }
 
+.data-freshness {
+  width: min(100%, 75rem);
+  margin-inline: auto;
+  padding: 0.75rem clamp(1rem, 3vw, 1.5rem) 0;
+  color: #475569;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.data-freshness p {
+  margin: 0;
+}
+
+.data-freshness time {
+  font-weight: 700;
+}
+
+.route-error-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.route-error-actions button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.season-sort-picker {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.season-sort-picker label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.season-sort-picker select,
+.season-sort-picker button {
+  min-height: 2.75rem;
+  padding: 0.5rem 0.65rem;
+  color: #334155;
+  font: inherit;
+  font-size: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+}
+
+.season-sort-picker button {
+  cursor: pointer;
+}
+
+.season-matchup-card .highlighted-manager {
+  border-left: 3px solid var(--season-accent);
+  padding-left: 0.5rem;
+  background: rgb(15 118 110 / 0.08);
+}
+
+.matchup-record-context {
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.matchup-substitutions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.matchup-substitutions article {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid #dbe3ec;
+  border-radius: 0.5rem;
+  overflow-wrap: anywhere;
+}
+
+.matchup-substitutions p,
+.matchup-substitutions span {
+  display: block;
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+}
+
+.matchup-substitutions .matchup-result-impact {
+  padding: 0.5rem;
+  color: #0f766e;
+  font-weight: 700;
+  background: #ccfbf1;
+  border-radius: 0.3rem;
+}
+
 .season-mobile-standing-results {
   display: flex;
   align-items: flex-end;
@@ -143,7 +244,7 @@
 
   .season-mobile-standing-card dl {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.4rem;
     margin: 0.85rem 0 0;
   }
@@ -1539,7 +1640,7 @@ select.btn-primary {
 
 .home-bracket-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 1rem;
   margin-top: 1.25rem;
 }
@@ -1745,8 +1846,8 @@ select.btn-primary {
 
 .metric-tooltip summary {
   display: inline-grid;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0;
   place-items: center;
   color: #5f6c7d;
@@ -1785,6 +1886,20 @@ select.btn-primary {
   border-radius: 0.45rem;
   box-shadow: var(--shadow-md);
   transform: translateX(-50%);
+}
+
+@media (max-width: 700px) {
+  .metric-tooltip > span {
+    position: fixed;
+    top: auto;
+    right: 1rem;
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    left: 1rem;
+    width: auto;
+    max-height: min(12rem, calc(100svh - 2rem));
+    overflow-y: auto;
+    transform: none;
+  }
 }
 
 .season-hub {
@@ -2867,6 +2982,18 @@ select.btn-primary {
   color: #0f766e;
 }
 
+.week-result-leading {
+  color: #0f766e;
+}
+
+.week-result-trailing {
+  color: #c2410c;
+}
+
+.week-result-tied {
+  color: #64748b;
+}
+
 .week-result-l {
   color: #c2410c;
 }
@@ -3289,7 +3416,7 @@ select.btn-primary {
 
 .matchup-lineup-player strong.substituted {
   text-decoration: underline;
-  text-decoration-color: #0f766e;
+  text-decoration-color: #f97316;
   text-decoration-thickness: 0.14rem;
   text-underline-offset: 0.18rem;
 }
@@ -3300,7 +3427,7 @@ select.btn-primary {
 }
 
 .matchup-lineup-player small em {
-  color: #0f766e;
+  color: #c2410c;
   font-style: normal;
   font-weight: 750;
 }
@@ -3563,6 +3690,10 @@ select.btn-primary {
     gap: 1.5rem;
   }
 
+  .matchup-substitutions {
+    grid-template-columns: 1fr;
+  }
+
   .home-champion-banner {
     padding: 1.5rem;
   }
@@ -3743,17 +3874,6 @@ select.btn-primary {
     padding-inline: 0.9rem;
   }
 
-  .metric-tooltip > span {
-    position: fixed;
-    top: auto;
-    right: 1rem;
-    bottom: max(1rem, env(safe-area-inset-bottom));
-    left: 1rem;
-    width: auto;
-    max-height: min(12rem, calc(100svh - 2rem));
-    overflow-y: auto;
-    transform: none;
-  }
 }
 
 .season-hub {

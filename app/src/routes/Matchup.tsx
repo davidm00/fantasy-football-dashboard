@@ -5,24 +5,20 @@ import {
   useLoaderData,
   useRouteError,
 } from "react-router";
-import type { Lineup, Team } from "../models/models";
+import type { Lineup } from "../models/models";
 import {
   EMPTY_RECORD,
   formatRecord,
+  getManagerName,
 } from "../utils/homeViewUtils";
 import type { OptimalLineupPlayer } from "../utils/metrics";
+import { getLineupChanges } from "../utils/lineupChanges";
 import type { MatchupDetailLoaderData } from "./loader";
 import RouteErrorPage from "./RouteErrorPage";
 
 type DisplayPlayer = Lineup & {
   displaySlot: string;
 };
-
-function getManagerName(team: Team | undefined) {
-  return team?.owners.map(({ name }) => name).join(" & ") ||
-    team?.team_name ||
-    "Unknown manager";
-}
 
 function getStarterSlotOrder(rosterSlots: Record<string, number>) {
   return Object.entries(rosterSlots).flatMap(([slot, count]) =>
@@ -85,13 +81,13 @@ function getBench(
 
 function LineupPlayer({
   player,
-  highlight,
   substituted,
+  removed,
   align,
 }: {
   player: Lineup | undefined;
-  highlight: boolean;
   substituted: boolean;
+  removed: boolean;
   align: "left" | "right";
 }) {
   if (!player) return <span />;
@@ -104,8 +100,9 @@ function LineupPlayer({
       <small>
         {player.position} {player.pro_team}
         {substituted && <em> · Subbed in</em>}
+        {removed && <em> · Subbed out</em>}
       </small>
-      {highlight && <i aria-label="Decisive lineup decision" />}
+      {substituted && <i aria-label="Added to hindsight-optimal lineup" />}
     </span>
   );
 }
@@ -113,18 +110,18 @@ function LineupPlayer({
 function LineupRows({
   home,
   away,
-  homeHighlightId,
-  awayHighlightId,
   homeSubstitutionIds,
   awaySubstitutionIds,
+  homeRemovedIds,
+  awayRemovedIds,
   bench = false,
 }: {
-  home: Lineup[];
-  away: Lineup[];
-  homeHighlightId?: number;
-  awayHighlightId?: number;
+  home: (Lineup & { displaySlot?: string })[];
+  away: (Lineup & { displaySlot?: string })[];
   homeSubstitutionIds?: ReadonlySet<number>;
   awaySubstitutionIds?: ReadonlySet<number>;
+  homeRemovedIds?: ReadonlySet<number>;
+  awayRemovedIds?: ReadonlySet<number>;
   bench?: boolean;
 }) {
   return Array.from(
@@ -133,24 +130,28 @@ function LineupRows({
       const homePlayer = home[index];
       const awayPlayer = away[index];
       const slot =
-        (homePlayer as DisplayPlayer | undefined)?.displaySlot ??
-        (awayPlayer as DisplayPlayer | undefined)?.displaySlot ??
+        homePlayer?.displaySlot ??
+        awayPlayer?.displaySlot ??
         "BE";
 
       return (
         <div className="matchup-lineup-row" key={`${slot}-${index}`}>
           <LineupPlayer
             player={homePlayer}
-            highlight={homePlayer?.player_id === homeHighlightId}
             substituted={
               homePlayer !== undefined &&
               (homeSubstitutionIds?.has(homePlayer.player_id) ?? false)
+            }
+            removed={
+              homePlayer !== undefined &&
+              (homeRemovedIds?.has(homePlayer.player_id) ?? false)
             }
             align="left"
           />
           <strong
             className={
-              homePlayer?.player_id === homeHighlightId ? "highlight" : undefined
+              homePlayer && homeSubstitutionIds?.has(homePlayer.player_id)
+                ? "highlight" : undefined
             }
           >
             {homePlayer?.points.toFixed(2) ?? "—"}
@@ -158,17 +159,21 @@ function LineupRows({
           <span>{bench ? "BE" : slot}</span>
           <strong
             className={
-              awayPlayer?.player_id === awayHighlightId ? "highlight" : undefined
+              awayPlayer && awaySubstitutionIds?.has(awayPlayer.player_id)
+                ? "highlight" : undefined
             }
           >
             {awayPlayer?.points.toFixed(2) ?? "—"}
           </strong>
           <LineupPlayer
             player={awayPlayer}
-            highlight={awayPlayer?.player_id === awayHighlightId}
             substituted={
               awayPlayer !== undefined &&
               (awaySubstitutionIds?.has(awayPlayer.player_id) ?? false)
+            }
+            removed={
+              awayPlayer !== undefined &&
+              (awayRemovedIds?.has(awayPlayer.player_id) ?? false)
             }
             align="right"
           />
@@ -195,6 +200,7 @@ export function MatchupErrorBoundary() {
       }
       linkTo="/seasons"
       linkLabel="Back to seasons"
+      retry={!missing}
     />
   );
 }
@@ -219,8 +225,6 @@ function Matchup() {
   );
   const homeName = getManagerName(home);
   const awayName = getManagerName(away);
-  const homeWon = boxScore.home_score > boxScore.away_score;
-  const awayWon = boxScore.away_score > boxScore.home_score;
   const margin = Math.abs(boxScore.home_score - boxScore.away_score);
   const slotOrder = useMemo(
     () => getStarterSlotOrder(season.settings.roster_slots),
@@ -248,48 +252,18 @@ function Matchup() {
     awayStarters,
     bestPossible,
   );
-  const homeActualIds = new Set(
-    boxScore.home_lineup
-      .filter(({ slot_position }) =>
-        slot_position !== "BE" &&
-        slot_position !== "IR" &&
-        slot_position !== "ER"
-      )
-      .map(({ player_id }) => player_id),
-  );
-  const awayActualIds = new Set(
-    boxScore.away_lineup
-      .filter(({ slot_position }) =>
-        slot_position !== "BE" &&
-        slot_position !== "IR" &&
-        slot_position !== "ER"
-      )
-      .map(({ player_id }) => player_id),
-  );
-  const homeDecisiveBench = data.homeOptimalLineup
-    .filter(({ player_id }) => !homeActualIds.has(player_id))
-    .sort((left, right) => right.points - left.points)[0];
-  const awayDecisiveBench = data.awayOptimalLineup
-    .filter(({ player_id }) => !awayActualIds.has(player_id))
-    .sort((left, right) => right.points - left.points)[0];
+  const homeChanges = getLineupChanges(boxScore.home_lineup, data.homeOptimalLineup);
+  const awayChanges = getLineupChanges(boxScore.away_lineup, data.awayOptimalLineup);
+  const homeOptimalTotal = getOptimalTotal(data.homeOptimalLineup);
+  const awayOptimalTotal = getOptimalTotal(data.awayOptimalLineup);
   const selfInflictedHome =
-    !homeWon &&
-    homePerformance?.pointsLeftOnBench !== null &&
-    (homePerformance?.score ?? 0) +
-      (homePerformance?.pointsLeftOnBench ?? 0) >
-      boxScore.away_score;
+    status === "final" &&
+    boxScore.home_score < boxScore.away_score &&
+    homeOptimalTotal > boxScore.away_score;
   const selfInflictedAway =
-    !awayWon &&
-    awayPerformance?.pointsLeftOnBench !== null &&
-    (awayPerformance?.score ?? 0) +
-      (awayPerformance?.pointsLeftOnBench ?? 0) >
-      boxScore.home_score;
-  const decisiveHomeId = selfInflictedHome
-    ? homeDecisiveBench?.player_id
-    : undefined;
-  const decisiveAwayId = selfInflictedAway
-    ? awayDecisiveBench?.player_id
-    : undefined;
+    status === "final" &&
+    boxScore.away_score < boxScore.home_score &&
+    awayOptimalTotal > boxScore.home_score;
   const matchupWeek = season.matchups.find(({ week: itemWeek }) =>
     itemWeek === week
   );
@@ -308,11 +282,6 @@ function Matchup() {
     : selfInflictedAway
       ? awayName
       : null;
-  const decisivePlayer = selfInflictedHome
-    ? homeDecisiveBench
-    : selfInflictedAway
-      ? awayDecisiveBench
-      : undefined;
 
   return (
     <main className="matchup-detail">
@@ -343,7 +312,9 @@ function Matchup() {
         </div>
         <div>
           <span className={`home-status home-status-${status}`}>{statusLabel}</span>
-          {status === "final" && <strong>by {margin.toFixed(2)}</strong>}
+          {status === "final" && (
+            <strong>{margin === 0 ? "Tied" : `by ${margin.toFixed(2)}`}</strong>
+          )}
         </div>
         <div>
           <small>{away?.team_name} · {formatRecord(data.records[matchup.away_team_id] ?? EMPTY_RECORD)}</small>
@@ -352,34 +323,32 @@ function Matchup() {
           <span>{awayPerformance ? `${awayPerformance.rank} of ${season.settings.team_count} in points this week` : ""}</span>
         </div>
       </section>
+      <p className="matchup-record-context">
+        {data.recordsThroughWeek === 0
+          ? "No finalized regular-season games yet."
+          : week > season.settings.regular_season_length
+            ? "Records are final regular-season records."
+            : status === "final"
+              ? `Regular-season records through Week ${data.recordsThroughWeek}.`
+              : `Records entering Week ${week}, through finalized Week ${data.recordsThroughWeek}.`}
+        {status !== "final" && " Scores and lineup analysis are provisional."}
+      </p>
 
       {(data.closestGame || selfInflictedManager || data.matchupInsight) && (
         <section className="matchup-story">
           <div>
             {data.closestGame && <span>Closest game of {season.year}</span>}
-            {selfInflictedManager && <span>Self-inflicted loss</span>}
+            {selfInflictedManager && <span>Hindsight lineup swing</span>}
           </div>
           <h1>
             {selfInflictedManager
-              ? `${selfInflictedManager} lost by ${margin.toFixed(2)}${decisivePlayer ? ` with ${decisivePlayer.name} on the bench` : ""}.`
+              ? `${selfInflictedManager}'s optimal lineup could have changed the result.`
               : data.matchupInsight}
           </h1>
           <p>
             {selfInflictedManager
-              ? `The best valid lineup would have scored ${
-                  selfInflictedHome
-                    ? homePerformance?.score &&
-                      (
-                        homePerformance.score +
-                        (homePerformance.pointsLeftOnBench ?? 0)
-                      ).toFixed(2)
-                    : awayPerformance?.score &&
-                      (
-                        awayPerformance.score +
-                        (awayPerformance.pointsLeftOnBench ?? 0)
-                      ).toFixed(2)
-                }, enough to change the result.`
-              : "The largest position-group scoring difference in this matchup."}
+              ? `With the opponent's lineup held unchanged, the hindsight-optimal lineup would have scored ${(selfInflictedHome ? homeOptimalTotal : awayOptimalTotal).toFixed(2)}, enough to turn the loss into a win.`
+              : `The largest position-group scoring difference in this matchup${status === "final" ? "." : " so far; provisional until final."}`}
           </p>
         </section>
       )}
@@ -404,6 +373,40 @@ function Matchup() {
             </button>
           </div>
         </header>
+        <p>
+          Hindsight-optimal lineups use the scores available in this snapshot,
+          not pregame projections. They do not judge whether a decision was
+          reasonable before kickoff.
+        </p>
+        {bestPossible && (
+          <div className="matchup-substitutions">
+            {[
+              { name: homeName, changes: homeChanges, total: homeOptimalTotal,
+                score: boxScore.home_score, changesResult: selfInflictedHome },
+              { name: awayName, changes: awayChanges, total: awayOptimalTotal,
+                score: boxScore.away_score, changesResult: selfInflictedAway },
+            ].map(({ name, changes, total, score, changesResult }, index) => (
+              <article key={index}>
+                <strong>{name}</strong>
+                {changes.added.length || changes.removed.length ? (
+                  <>
+                    <p><b>In:</b> {changes.added.map(({ name }) => name).join(", ") || "No additions"}</p>
+                    <p><b>Out:</b> {changes.removed.map(({ name }) => name).join(", ") || "No removals"}</p>
+                    <span>Lineup gain: +{Math.max(0, total - score).toFixed(2)} points</span>
+                    {changesResult && (
+                      <span className="matchup-result-impact">
+                        Together, these changes turn the final loss into a win
+                        against the opponent's actual lineup.
+                      </span>
+                    )}
+                  </>
+                ) : (
+                  <p>No substitutions needed.</p>
+                )}
+              </article>
+            ))}
+          </div>
+        )}
         <div className="matchup-lineup-heading">
           <strong>
             {homeName}
@@ -430,32 +433,21 @@ function Matchup() {
         <LineupRows
           home={homeStarters}
           away={awayStarters}
-          homeHighlightId={decisiveHomeId}
-          awayHighlightId={decisiveAwayId}
-          homeSubstitutionIds={bestPossible ? new Set(
-            data.homeOptimalLineup
-              .filter(({ player_id }) => !homeActualIds.has(player_id))
-              .map(({ player_id }) => player_id),
-          ) : undefined}
-          awaySubstitutionIds={bestPossible ? new Set(
-            data.awayOptimalLineup
-              .filter(({ player_id }) => !awayActualIds.has(player_id))
-              .map(({ player_id }) => player_id),
-          ) : undefined}
+          homeSubstitutionIds={bestPossible ? homeChanges.addedIds : undefined}
+          awaySubstitutionIds={bestPossible ? awayChanges.addedIds : undefined}
         />
         <h3>Bench</h3>
         <LineupRows
           home={homeBench}
           away={awayBench}
-          homeHighlightId={decisiveHomeId}
-          awayHighlightId={decisiveAwayId}
+          homeRemovedIds={bestPossible ? homeChanges.removedIds : undefined}
+          awayRemovedIds={bestPossible ? awayChanges.removedIds : undefined}
           bench
         />
         <p>
-          {bestPossible &&
-            "Underlined players marked “Subbed in” replace actual starters. "}
-          Orange marks the lineup decision with the largest impact on this
-          result.
+          {bestPossible
+            ? "Orange markers and underlined names identify every player added to the starting lineup. \"Subbed out\" identifies displaced starters. Teal labels mark a result-changing lineup as a whole."
+            : "Select Best possible to see every hindsight substitution."}
         </p>
       </section>
 
@@ -466,7 +458,7 @@ function Matchup() {
             {getOptimalTotal(data.homeOptimalLineup).toFixed(2)} vs{" "}
             {getOptimalTotal(data.awayOptimalLineup).toFixed(2)}
           </strong>
-          <small>Optimal valid starters from each roster.</small>
+          <small>Hindsight-optimal valid starters; provisional during unfinished games.</small>
         </article>
         <article>
           <span>Lineup efficiency</span>

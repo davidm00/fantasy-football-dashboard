@@ -2,11 +2,16 @@
 
 ## App functionality (so far)
 
-- Pick a season and week (selectors + prev/next), see that week's matchup
-  cards (teams, scores, win-loss record through that week).
-- View that week's report PDF inline, with open-in-full-screen and
-  download links; a sidebar lists other reports for the selected season.
-- This will keep changing as more of the app gets built.
+- Browse season standings, weekly scoring ranks, historical matchups, playoff
+  brackets, and season highlights. Standings sorting and metric explanations
+  are available on both desktop and mobile.
+- Open week and individual matchup pages with scores, regular-season record
+  context, lineup analysis, and hindsight-optimal substitution indicators.
+- Read or download archived weekly PDFs from season and week pages.
+- Scores are timestamped snapshots, not a live feed; unfinished-game metrics
+  are provisional and outcome awards require final results.
+- Production builds generate route-specific HTML metadata and preview images
+  for shared season, week, and available matchup links.
 
 ## Project layout
 
@@ -26,6 +31,9 @@ npm run dev
 ```
 
 Build for production with `npm run build`, preview with `npm run preview`.
+Run regression tests with `npm test` and validate built preview artifacts with
+`npm run test:previews`. See [app deployment notes](app/README.md) for clean URL
+routing and production preview verification.
 
 ## Getting your ESPN cookies into `.env`
 
@@ -81,7 +89,8 @@ most recent full run.
 ### Automated weekly refresh (GitHub Action)
 
 `.github/workflows/fetch-league-data.yml` runs the full export automatically
-every Tuesday morning during the NFL season (Sept-Jan), and can also be
+after Thursday, Sunday, and Monday game nights at 05:00 UTC, plus Tuesday
+morning at 10:00 UTC during the NFL season (Sept-Jan), and can also be
 triggered manually from the Actions tab. It:
 
 1. Runs `check_espn_connection.py` first as a fast pre-flight check (fails
@@ -102,11 +111,8 @@ triggered manually from the Actions tab. It:
 - Reports live at `/app/public/reports/<season>/week-<NN>.pdf`, where `<NN>`
   is a two-digit, zero-padded week number (e.g. `reports/2026/week-05.pdf`).
 - Exactly one report per week. There are no preseason or "week 0" reports.
-- The file path is derived from `season` + `week` at render time — it is
-  never stored anywhere.
-- Each report also needs an entry in a hand-kept report list (season, week,
-  title, author, publish date). That list and its type are maintained by
-  hand in the app code — this scaffold does not create it.
+- Each report has an entry in `app/src/data/reportsList.ts` containing season,
+  week, title, PDF path, page count, and file size.
 - If a given week has no report, the app should show a "no report this
   week" state instead of a broken link.
 
@@ -166,4 +172,3 @@ never contain a real ESPN ID, last name, or SWID.
   `python scripts/generate_people_draft.py`. It's local-only (gitignored)
   and re-running it never changes an ID already assigned, for the same
   freeze reason as above.
-

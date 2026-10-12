@@ -2,6 +2,7 @@ import Home, { HomeErrorBoundary } from "./routes/Home.tsx";
 import Matchup, { MatchupErrorBoundary } from "./routes/Matchup.tsx";
 import NotFound from "./routes/NotFound.tsx";
 import Root from "./routes/Root.tsx";
+import LoadingPage from "./routes/LoadingPage.tsx";
 import Season from "./routes/Season.tsx";
 import Week, { WeekErrorBoundary } from "./routes/Week.tsx";
 import { SeasonErrorBoundary } from "./routes/Season.tsx";
@@ -18,6 +19,7 @@ export const routes = [
   {
     path: "/",
     Component: Root,
+    HydrateFallback: LoadingPage,
     children: [
       {
         index: true,

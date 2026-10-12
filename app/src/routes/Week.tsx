@@ -48,7 +48,8 @@ export function WeekErrorBoundary() {
         code="Error"
         eyebrow="Unable to load week"
         title="Something went wrong"
-        description="We couldn't load this week right now. Return to the season overview and try again."
+        description="We couldn't load this week right now. Retry this page without losing your place."
+        retry
         linkTo={seasonPath}
         linkLabel={season ? `Back to the ${season} season` : "Back to home"}
       />
@@ -76,6 +77,15 @@ function Week() {
     season.matchups,
     week,
     season.settings.regular_season_length,
+  );
+  const recordsThroughWeek = season.matchups.reduce(
+    (latest, item) =>
+      item.status === "final" &&
+      item.week <= week &&
+      item.week <= season.settings.regular_season_length
+        ? Math.max(latest, item.week)
+        : latest,
+    0,
   );
   const weekNumbers = Object.keys(season.settings.week_status)
     .map(Number)
@@ -108,7 +118,7 @@ function Week() {
       <header className="week-header">
         <div>
           <span className="home-eyebrow">
-            {season.year} · Regular season
+            {season.year} · {week > season.settings.regular_season_length ? "Playoffs" : "Regular season"}
           </span>
           <div className="week-title-row">
             <h1>Week {week}</h1>
@@ -117,8 +127,13 @@ function Week() {
             </span>
           </div>
           <p>
-            Matchup scores and standings reflect the data available for this
-            week.
+            {status === "final"
+              ? `Final scores. Regular-season records through finalized Week ${recordsThroughWeek}.`
+              : `${status === "not_started" ? "Games have not started." : "Provisional scores."} ${
+                  recordsThroughWeek > 0
+                    ? `Records entering Week ${week}, through finalized Week ${recordsThroughWeek}.`
+                    : "No finalized regular-season games yet."
+                }`}
           </p>
         </div>
         <nav className="week-navigation" aria-label="Adjacent weeks">
@@ -190,8 +205,10 @@ function Week() {
           eyebrow={`Week ${week} report`}
         />
         <StandingsPanel
-          title="Standings"
-          subtitle={`Through Week ${week}`}
+          title="Regular-season standings"
+          subtitle={recordsThroughWeek > 0
+            ? `Through finalized Week ${recordsThroughWeek}`
+            : "No finalized games yet"}
           season={season}
           throughWeek={week}
         />

@@ -17,7 +17,7 @@ export type WeeklyTeamPerformance = {
   rank: number;
   score: number;
   opponentScore: number;
-  result: "W" | "L" | "T";
+  result: "W" | "L" | "T" | "Leading" | "Trailing" | "Tied";
   allPlayRecord: MetricRecord;
   lineupEfficiency: number | null;
   pointsLeftOnBench: number | null;
@@ -105,6 +105,9 @@ export function calculateWeekMetrics(
     matchupWeek?.status ??
     source.settings.week_status[String(week)] ??
     "not_started";
+  if (status === "not_started") {
+    return { status, performances: [], cards: [], matchupInsights: [] };
+  }
   const scores = (matchupWeek?.matchups ?? []).flatMap((matchup) => {
     if (matchup.home_score === null || matchup.away_score === null) {
       return [];
@@ -129,7 +132,10 @@ export function calculateWeekMetrics(
     (left, right) => right.score - left.score || left.teamId - right.teamId,
   );
   const boxScores = source.box_scores.filter(
-    (boxScore) => boxScore.week === week,
+    (boxScore) =>
+      boxScore.week === week &&
+      boxScore.home_team_id !== null &&
+      boxScore.away_team_id !== null,
   );
   const lineupByTeam = new Map<
     number,
@@ -186,7 +192,7 @@ export function calculateWeekMetrics(
       const insight = {
         homeTeamId: boxScore.home_team_id,
         awayTeamId: boxScore.away_team_id,
-        text: `${getManagerName(source.teams, homeAdvantage ? boxScore.home_team_id : boxScore.away_team_id)} held a ${Math.abs(positionEdge.difference).toFixed(1)}-point ${positionEdge.position} advantage.`,
+        text: `${getManagerName(source.teams, homeAdvantage ? boxScore.home_team_id : boxScore.away_team_id)} ${status === "final" ? "held" : "currently has"} a ${Math.abs(positionEdge.difference).toFixed(1)}-point ${positionEdge.position} advantage.`,
       };
       matchupInsights.push(insight);
 
@@ -217,7 +223,8 @@ export function calculateWeekMetrics(
       : boxScore.home_lineup;
     const topStarter = getTopStarter(losingLineup);
 
-    if (topStarter && losingScore > 0) {
+    if (status === "final" && boxScore.home_score !== boxScore.away_score &&
+        topStarter && losingScore > 0) {
       const share = (topStarter.points / losingScore) * 100;
 
       if (!strongestLosingStar || share > strongestLosingStar.share) {
@@ -251,10 +258,10 @@ export function calculateWeekMetrics(
       rank: index + 1,
       result:
         team.score > team.opponentScore
-          ? "W"
+          ? status === "final" ? "W" : "Leading"
           : team.score < team.opponentScore
-            ? "L"
-            : "T",
+            ? status === "final" ? "L" : "Trailing"
+            : status === "final" ? "T" : "Tied",
       allPlayRecord,
       lineupEfficiency:
         optimalPoints && optimalPoints > 0
@@ -285,24 +292,29 @@ export function calculateWeekMetrics(
   const cards: WeekMetricCard[] = [];
   const highScorer = performances[0];
 
-  if (highScorer) {
-    const history = historicalScores.length
-      ? historicalScores
-      : performances.map(({ score }) => score);
+  if (highScorer && historicalScores.length > 0 &&
+      week <= source.settings.regular_season_length) {
+    const history = historicalScores;
     const scoresBelow = history.filter(
       (score) => score < highScorer.score,
     ).length;
     const percentile = (scoresBelow / history.length) * 100;
     const historicalRank =
       history.filter((score) => score > highScorer.score).length + 1;
-
     cards.push({
-      label: "Historic heat",
+      label: status === "final" ? "Historic heat" : "Historic pace · provisional",
       value: `${getManagerName(source.teams, highScorer.teamId)} · ${highScorer.score.toFixed(2)}`,
-      note: `${percentile.toFixed(1)}th percentile · #${historicalRank} of ${history.length}`,
+      note: `${percentile.toFixed(1)}th percentile · ${status === "final" ? "rank" : "would rank"} #${historicalRank} among ${history.length} completed scores`,
       presentation: "narrative",
       explanation:
         "This score's percentile and rank among all completed regular-season team scores in league history.",
+    });
+  } else if (highScorer) {
+    cards.push({
+      label: status === "final" ? "Top score" : "Top score so far",
+      value: `${getManagerName(source.teams, highScorer.teamId)} · ${highScorer.score.toFixed(2)}`,
+      note: `Highest score among ${performances.length} teams this week`,
+      presentation: "direct",
     });
   }
 
@@ -359,7 +371,7 @@ export function calculateWeekMetrics(
     closestGame.away_score !== null
   ) {
     cards.push({
-      label: "Closest game",
+      label: status === "final" ? "Closest game" : "Closest game so far",
       value: `${Math.abs(closestGame.home_score - closestGame.away_score).toFixed(2)} points`,
       note: "Smallest matchup margin",
       presentation: "direct",
@@ -398,7 +410,7 @@ export function calculateWeekMetrics(
       note: `${mostBenchPoints.pointsLeftOnBench.toFixed(2)} points`,
       presentation: "comparative",
       explanation:
-        "Best possible lineup points minus the points scored by the manager's actual starters this week.",
+        "Hindsight-optimal valid lineup points minus actual starter points. During unfinished games, this is provisional and changes with the next data refresh.",
     });
   }
 

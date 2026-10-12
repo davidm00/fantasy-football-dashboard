@@ -1,4 +1,48 @@
-# React + TypeScript + Vite
+# Ian Book Believers dashboard
+
+## Development and validation
+
+```sh
+npm install
+npm run dev
+npm test
+npm run lint
+npm run build
+npm run test:previews
+```
+
+Scores are committed snapshots, not a live feed. The global update timestamp
+comes from `src/data/last_export.json`. Scheduled exports follow game nights;
+in-progress metrics are provisional, and outcome awards wait for final scores.
+Standings and matchup records exclude playoff games. Historical bracket rounds
+come from each season's settings and bracket data.
+
+Best-possible lineups are hindsight-optimal. Orange markers identify **every**
+player added to the starting lineup, and displaced starters are labeled on the
+bench. Teal summaries identify a whole set of changes that would turn a final
+loss into a win with the opponent's actual lineup held unchanged. They do not
+claim that an individual substitution caused the result.
+
+## Link previews and deployment
+
+`npm run build` runs TypeScript, Vite, then
+`scripts/generate-link-previews.mjs`. It generates crawler-readable HTML and
+1200x630 PNG cards for seasons, weeks, and matchups with available box scores.
+Byes and future games without a box score do not get misleading matchup pages.
+Image filenames are content-hashed so updated scores receive a new image URL.
+
+Vercel must use `app/` as its project root. The configuration runs the full
+build, serves `dist/`, and resolves generated `.html` files through clean URLs
+before the extensionless SPA fallback. `SITE_URL` can override the canonical
+site origin; it defaults to `https://ian-book-believers.vercel.app`.
+
+`npm run test:previews` verifies every generated route, metadata URL, PNG
+dimension, and React entrypoint. Vite's local preview server does not implement
+Vercel clean URLs: use `/seasons/2025.html` to inspect generated metadata locally.
+After deployment, check extensionless URLs and PNG content types with `curl`;
+social platforms may cache older page metadata until they re-scrape the URL.
+
+## Tooling reference
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 

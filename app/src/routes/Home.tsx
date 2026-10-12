@@ -92,6 +92,7 @@ export function HomeErrorBoundary() {
       eyebrow="Unable to open link"
       title="Something went wrong"
       description="We couldn't process this shared link."
+      retry
       linkTo="/"
       linkLabel="Back to dashboard"
     />

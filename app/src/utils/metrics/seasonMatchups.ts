@@ -3,6 +3,7 @@ import type { TeamRecord } from "../homeViewUtils";
 
 export type SeasonMatchupWeek = Matchup & {
   records: Record<number, TeamRecord>;
+  recordsThroughWeek: number;
 };
 
 const createRecord = (): TeamRecord => ({ wins: 0, losses: 0, ties: 0 });
@@ -10,15 +11,18 @@ const createRecord = (): TeamRecord => ({ wins: 0, losses: 0, ties: 0 });
 export function calculateSeasonMatchupWeeks(
   matchups: Matchup[],
   teams: Team[],
+  regularSeasonLength: number,
 ): SeasonMatchupWeek[] {
   const records = new Map(
     teams.map(({ team_id: teamId }) => [teamId, createRecord()]),
   );
 
+  let recordsThroughWeek = 0;
   return [...matchups]
     .sort((left, right) => left.week - right.week)
     .map((week) => {
-      if (week.status === "final") {
+      if (week.status === "final" && week.week <= regularSeasonLength) {
+        recordsThroughWeek = week.week;
         for (const matchup of week.matchups) {
           const home = records.get(matchup.home_team_id);
           const away = records.get(matchup.away_team_id);
@@ -47,6 +51,7 @@ export function calculateSeasonMatchupWeeks(
 
       return {
         ...week,
+        recordsThroughWeek,
         records: Object.fromEntries(
           [...records].map(([teamId, record]) => [
             teamId,
