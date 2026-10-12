@@ -42,6 +42,32 @@ Vercel clean URLs: use `/seasons/2025.html` to inspect generated metadata locall
 After deployment, check extensionless URLs and PNG content types with `curl`;
 social platforms may cache older page metadata until they re-scrape the URL.
 
+### Vercel CLI troubleshooting
+
+Use the CLI without a global installation:
+
+```sh
+npx --yes vercel@latest login
+npx --yes vercel@latest whoami
+npx --yes vercel@latest project inspect ian-book-believers --scope davidm00s-projects
+npx --yes vercel@latest list ian-book-believers --scope davidm00s-projects
+npx --yes vercel@latest inspect https://ian-book-believers.vercel.app --scope davidm00s-projects
+```
+
+Complete login in your normal browser. To read a deployment's build logs, run
+`npx --yes vercel@latest inspect <deployment-url> --logs --scope davidm00s-projects`.
+Check Vercel's deployment history directly: GitHub deployment records may not
+reflect deployments created manually in Vercel.
+
+If pushes do not create deployments, verify the connected repository, production
+branch (`main`), GitHub App permissions, account login connection, and build-skip
+settings. Empty commits are not a reliable trigger test when unaffected projects
+can be skipped; use an actual change within `app/` and confirm the deployed SHA.
+Redeploying an old deployment may rebuild its old commit rather than latest
+`main`. CLI production deployment is separate from these inspection commands;
+link the existing project from the repository root before deploying, so its
+configured `app/` root directory is respected.
+
 ## Tooling reference
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
