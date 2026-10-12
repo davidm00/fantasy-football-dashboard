@@ -451,7 +451,9 @@ function Matchup() {
         <p>
           {bestPossible
             ? "Orange markers and underlined names identify every player added to the starting lineup. \"Subbed out\" identifies displaced starters. Teal labels mark a result-changing lineup as a whole."
-            : "Select Best possible to see every hindsight substitution."}
+            : bestPossibleAvailable
+              ? "Select Best possible to see every hindsight substitution."
+              : "Actual lineups are shown until the week is final."}
         </p>
       </section>
 
@@ -459,16 +461,18 @@ function Matchup() {
         <article>
           <span>Best possible lineups</span>
           <strong>
-            {getOptimalTotal(data.homeOptimalLineup).toFixed(2)} vs{" "}
-            {getOptimalTotal(data.awayOptimalLineup).toFixed(2)}
+            {bestPossibleAvailable
+              ? `${homeOptimalTotal.toFixed(2)} vs ${awayOptimalTotal.toFixed(2)}`
+              : "Available after the week is final"}
           </strong>
-          <small>Hindsight-optimal valid starters; provisional during unfinished games.</small>
+          <small>Hindsight-optimal valid starters, using final scores.</small>
         </article>
         <article>
           <span>Lineup efficiency</span>
           <strong>
-            {homePerformance?.lineupEfficiency?.toFixed(1) ?? "—"}% vs{" "}
-            {awayPerformance?.lineupEfficiency?.toFixed(1) ?? "—"}%
+            {bestPossibleAvailable
+              ? `${formatEfficiency(homePerformance?.lineupEfficiency)} vs ${formatEfficiency(awayPerformance?.lineupEfficiency)}`
+              : "Available after the week is final"}
           </strong>
           <small>Points scored divided by best possible.</small>
         </article>
@@ -487,5 +491,8 @@ function Matchup() {
 
 const getOptimalTotal = (lineup: OptimalLineupPlayer[]) =>
   lineup.reduce((total, player) => total + player.points, 0);
+
+const formatEfficiency = (value: number | null | undefined) =>
+  value === null || value === undefined ? "—" : `${value.toFixed(1)}%`;
 
 export default Matchup;

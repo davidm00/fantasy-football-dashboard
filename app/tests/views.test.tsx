@@ -66,6 +66,12 @@ describe("audit view regressions", () => {
       expect(markup).toContain("Best possible is available after the week is final");
       expect(markup).not.toContain("Subbed in");
       expect(markup).not.toContain("Subbed out");
+      const summary = markup.slice(markup.indexOf('class="matchup-detail-metrics"'));
+      expect(summary.match(/Available after the week is final/g)).toHaveLength(2);
+      expect(summary).not.toContain("0.00 vs 0.00");
+      expect(summary).not.toContain("—%");
+      expect(markup).not.toContain("Select Best possible");
+      expect(markup).not.toContain("provisional during unfinished games");
       const starters = markup.slice(markup.indexOf('class="matchup-lineup-heading"'), markup.indexOf("<h3>Bench"));
       for (const player of [...fixture.boxScore.home_lineup, ...fixture.boxScore.away_lineup]) {
         if (!["BE", "IR", "ER"].includes(player.slot_position)) {
