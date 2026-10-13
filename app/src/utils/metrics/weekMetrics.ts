@@ -329,7 +329,7 @@ export function calculateWeekMetrics(
     });
   }
 
-  const scheduleRobbery = performances.find(
+  const scheduleRobbery = [...performances].reverse().find(
     ({ result, rank }) =>
       result === "W" && rank > Math.ceil(performances.length / 2),
   );
@@ -345,7 +345,7 @@ export function calculateWeekMetrics(
       note: `Won while ranking ${scheduleRobbery.rank} of ${performances.length} in points`,
       presentation: "narrative",
       explanation:
-        "A matchup win by a manager who scored in the bottom half of the league this week.",
+        "The lowest-scoring matchup winner, provided they scored in the bottom half of the league this week.",
     });
   } else if (brutalBeat) {
     cards.push({

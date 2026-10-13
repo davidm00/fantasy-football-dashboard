@@ -54,7 +54,9 @@ describe("provisional weekly metrics", () => {
     };
     const metrics = calculateWeekMetrics(tiedSeason, 5);
     expect(metrics.performances.every(({ result }) => result === "T")).toBe(true);
-    expect(metrics.cards.some(({ label }) => label === "Star performance wasted" || label === "Self-inflicted loss")).toBe(false);
+    expect(metrics.cards.some(({ label }) =>
+      label === "Star performance wasted" || label === "Self-inflicted loss" || label === "Schedule robbery",
+    )).toBe(false);
   });
 
   it("hides metrics for not-started weeks, including zero scores", () => {
@@ -72,6 +74,46 @@ describe("provisional weekly metrics", () => {
     const metrics = calculateWeekMetrics(playoffSeason, 15);
     expect(metrics.cards.every(({ note }) => !note.includes("Unknown manager"))).toBe(true);
     expect(metrics.matchupInsights.every(({ awayTeamId }) => awayTeamId !== null)).toBe(true);
+  });
+});
+
+describe("schedule robbery selection", () => {
+  it("chooses Joey rather than Cesar as the lowest-scoring Week 5 winner", () => {
+    const season = loadSeason(2026, { "5": "final" });
+    const metrics = calculateWeekMetrics(season, 5);
+    const winners = metrics.performances.filter(({ result }) => result === "W");
+    const robbery = metrics.cards.find(({ label }) => label === "Schedule robbery");
+
+    expect(winners.some(({ teamId, rank }) => teamId === 7 && rank === 8)).toBe(true);
+    expect(winners.find(({ teamId }) => teamId === 10)).toMatchObject({
+      score: 112.5, rank: 11, result: "W",
+    });
+    expect(robbery).toMatchObject({
+      value: "Joey",
+      note: "Won while ranking 11 of 12 in points",
+    });
+    expect(metrics.performances.map(({ rank }) => rank)).toEqual(
+      Array.from({ length: 12 }, (_, index) => index + 1),
+    );
+  });
+
+  it("does not award schedule robbery when all winners score in the top half", () => {
+    const season = loadSeason(2026, { "5": "final" });
+    const metrics = calculateWeekMetrics({
+      ...season,
+      box_scores: [],
+      matchups: [{
+        week: 5,
+        status: "final",
+        matchups: [
+          { home_team_id: 1, away_team_id: 2, home_score: 200, away_score: 90 },
+          { home_team_id: 3, away_team_id: 4, home_score: 190, away_score: 100 },
+        ],
+      }],
+    }, 5);
+
+    expect(metrics.cards.some(({ label }) => label === "Schedule robbery")).toBe(false);
+    expect(metrics.performances.filter(({ result }) => result === "W").map(({ rank }) => rank)).toEqual([1, 2]);
   });
 });
 
