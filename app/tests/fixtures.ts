@@ -13,7 +13,10 @@ export function readSeasonFile<T>(year: number, name: string): T {
   return JSON.parse(readFileSync(new URL(`../src/data/${year}/${name}.json`, import.meta.url), "utf8"));
 }
 
-export function loadSeason(year: number): SeasonLoaderData {
+export function loadSeason(
+  year: number,
+  weekStatuses: Settings["week_status"] = {},
+): SeasonLoaderData {
   const files = {
     settings: readSeasonFile<Settings>(year, "settings"),
     teams: readSeasonFile<Team[]>(year, "teams"),
@@ -24,6 +27,15 @@ export function loadSeason(year: number): SeasonLoaderData {
     draft: readSeasonFile<Draft>(year, "draft"),
     transactions: readSeasonFile<Transaction[]>(year, "transactions"),
   };
+  files.settings.week_status = { ...files.settings.week_status, ...weekStatuses };
+  files.matchups = files.matchups.map((week) => ({
+    ...week,
+    status: weekStatuses[week.week] ?? week.status,
+  }));
+  files.box_scores = files.box_scores.map((game) => ({
+    ...game,
+    status: weekStatuses[game.week] ?? game.status,
+  }));
   return {
     ...files,
     year,

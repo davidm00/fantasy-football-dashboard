@@ -6,7 +6,7 @@ import { getPlayoffRounds } from "../src/utils/playoffRounds";
 import { loadSeason } from "./fixtures";
 
 describe("provisional weekly metrics", () => {
-  const season = loadSeason(2026);
+  const season = loadSeason(2026, { "5": "in_progress", "6": "not_started" });
 
   it("shows current leads, not completed wins or losses", () => {
     const metrics = calculateWeekMetrics(season, 5, [100, 150, 200]);

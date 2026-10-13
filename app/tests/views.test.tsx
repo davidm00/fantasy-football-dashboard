@@ -9,7 +9,7 @@ import { loadMatchup, loadSeason, renderRoute } from "./fixtures";
 
 describe("audit view regressions", () => {
   const historicalSeason = loadSeason(2025);
-  const currentSeason = loadSeason(2026);
+  const currentSeason = loadSeason(2026, { "5": "in_progress" });
 
   it("uses retrospective copy and correctly scaled draft percentages", () => {
     const award = historicalSeason.metrics.awards.draftSteal;
