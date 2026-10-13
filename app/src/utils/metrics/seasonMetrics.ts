@@ -311,7 +311,11 @@ export function getOptimalLineup(
   settings: Settings,
 ) {
   const slots = getStarterSlots(settings);
-  const fullMask = (1 << slots.length) - 1;
+  const requiredMask = slots.reduce(
+    (mask, slot, slotIndex) =>
+      slot === "D/ST" ? mask : mask | (1 << slotIndex),
+    0,
+  );
   let states = new Map<
     number,
     { points: number; players: OptimalLineupPlayer[] }
@@ -352,12 +356,18 @@ export function getOptimalLineup(
     states = nextStates;
   }
 
-  return (
-    states.get(fullMask) ??
-    [...states.values()].sort(
-      (left, right) => right.points - left.points,
-    )[0] ?? { points: 0, players: [] }
-  );
+  const validStates = [...states.entries()]
+    .filter(([mask]) => (mask & requiredMask) === requiredMask)
+    .map(([, state]) => state);
+  const candidates = validStates.length > 0
+    ? validStates
+    : [...states.values()];
+
+  return candidates.sort(
+    (left, right) =>
+      right.points - left.points ||
+      left.players.length - right.players.length,
+  )[0] ?? { points: 0, players: [] };
 }
 
 function getStarterPointsByPlayer(source: SeasonMetricSource) {

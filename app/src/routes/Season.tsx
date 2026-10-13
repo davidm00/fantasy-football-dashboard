@@ -267,6 +267,7 @@ function Season() {
   );
   const showFinal =
     hasFinalStandings && searchParams.get("view") === "final";
+  const showCards = searchParams.get("layout") === "cards";
   const openingPlayoffWeek = getPlayoffRounds(season.settings, season.bracket)[0]?.week;
   const openingPlayoffTeams = new Set(
     season.bracket.rounds
@@ -473,6 +474,13 @@ function Season() {
     setSort({ key: "record", direction: "descending" });
   };
 
+  const setStandingsLayout = (cards: boolean) => {
+    const next = new URLSearchParams(searchParams);
+    if (cards) next.set("layout", "cards");
+    else next.delete("layout");
+    setSearchParams(next);
+  };
+
   const setSeasonTab = (tab: SeasonTab) => {
     const next = new URLSearchParams(searchParams);
 
@@ -638,6 +646,26 @@ function Season() {
             Final (after playoffs)
           </button>
         </div>
+        <div
+          className="season-view-toggle"
+          role="group"
+          aria-label="Standings layout"
+        >
+          <button
+            type="button"
+            aria-pressed={!showCards}
+            onClick={() => setStandingsLayout(false)}
+          >
+            Table
+          </button>
+          <button
+            type="button"
+            aria-pressed={showCards}
+            onClick={() => setStandingsLayout(true)}
+          >
+            Cards
+          </button>
+        </div>
         <div className="season-sort-picker">
           <label>
             <span>Sort by</span>
@@ -675,6 +703,11 @@ function Season() {
         </div>
       </div>
 
+      {!showCards && (
+        <>
+      <p className="season-mobile-table-hint">
+        Full standings table · Swipe horizontally to compare every metric.
+      </p>
       <div className="season-table-shell">
         <table className="season-standings-table">
           <caption>
@@ -764,6 +797,9 @@ function Season() {
           </tbody>
         </table>
       </div>
+        </>
+      )}
+      {showCards && (
       <div className="season-standings-mobile">
         {standingsRows.map((row) => (
             <SeasonMobileStandingCard
@@ -776,8 +812,10 @@ function Season() {
             />
           ))}
       </div>
+      )}
       <p className="season-table-note">
-        Use the sort controls or a table header to sort. Rank numbers remain
+        Use the sort controls{!showCards && " or a table header"} to sort.
+        Switch between Table and Cards to change the layout. Rank numbers remain
         standings positions. Each form cell opens that week. Metrics describe
         completed regular-season games, even in the final-placement view.
       </p>

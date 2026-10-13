@@ -29,13 +29,25 @@ describe("audit view regressions", () => {
   });
 
   it("offers sorting and metric explanations on mobile cards", () => {
-    const markup = renderRoute(Season, currentSeason);
+    const markup = renderRoute(Season, currentSeason, "/seasons/2026?layout=cards");
     expect(markup).toContain("Sort by");
     expect(markup).toContain("Schedule luck");
     const mobile = markup.slice(markup.indexOf('class="season-standings-mobile"'));
     expect(mobile).toContain('aria-label="Explain Power"');
     expect(mobile).toContain('aria-label="Explain All-play"');
     expect(mobile).toContain('aria-label="Explain Schedule luck"');
+    expect(markup).not.toContain('class="season-standings-table"');
+    expect(markup).not.toContain('class="season-mobile-table-hint"');
+    expect(markup).toMatch(/<button[^>]*aria-pressed="true"[^>]*>Cards<\/button>/);
+  });
+
+  it("defaults to the table without also showing compact cards", () => {
+    const markup = renderRoute(Season, currentSeason);
+    expect(markup).toContain('aria-label="Standings layout"');
+    expect(markup).toContain('class="season-standings-table"');
+    expect(markup).not.toContain('class="season-standings-mobile"');
+    expect(markup).toMatch(/<button[^>]*aria-pressed="true"[^>]*>Table<\/button>/);
+    expect(markup).toMatch(/<button[^>]*aria-pressed="false"[^>]*>Cards<\/button>/);
   });
 
   it("labels playoff weeks and provisional results truthfully", () => {

@@ -84,13 +84,22 @@ function LineupPlayer({
   substituted,
   removed,
   align,
+  empty = false,
 }: {
   player: Lineup | undefined;
   substituted: boolean;
   removed: boolean;
   align: "left" | "right";
+  empty?: boolean;
 }) {
-  if (!player) return <span />;
+  if (!player) {
+    return empty ? (
+      <span className={`matchup-lineup-player matchup-lineup-player-${align} matchup-lineup-empty`}>
+        <strong>Empty</strong>
+        <small>No player used</small>
+      </span>
+    ) : <span />;
+  }
 
   return (
     <span className={`matchup-lineup-player matchup-lineup-player-${align}`}>
@@ -115,6 +124,8 @@ function LineupRows({
   homeRemovedIds,
   awayRemovedIds,
   bench = false,
+  slotOrder,
+  showEmptySlots = false,
 }: {
   home: (Lineup & { displaySlot?: string })[];
   away: (Lineup & { displaySlot?: string })[];
@@ -123,17 +134,50 @@ function LineupRows({
   homeRemovedIds?: ReadonlySet<number>;
   awayRemovedIds?: ReadonlySet<number>;
   bench?: boolean;
+  slotOrder?: string[];
+  showEmptySlots?: boolean;
 }) {
-  return Array.from(
-    { length: Math.max(home.length, away.length) },
-    (_, index) => {
-      const homePlayer = home[index];
-      const awayPlayer = away[index];
-      const slot =
-        homePlayer?.displaySlot ??
-        awayPlayer?.displaySlot ??
-        "BE";
+  const rows = slotOrder
+    ? (() => {
+        const remainingHome = [...home];
+        const remainingAway = [...away];
+        const slotRows = slotOrder.map((slot) => {
+          const takePlayer = (players: typeof home) => {
+          const index = players.findIndex(
+            ({ displaySlot }) => displaySlot === slot,
+          );
+          return index < 0 ? undefined : players.splice(index, 1)[0];
+        };
+          return {
+            slot,
+            homePlayer: takePlayer(remainingHome),
+            awayPlayer: takePlayer(remainingAway),
+          };
+        });
+        const remainingRows = Array.from(
+          { length: Math.max(remainingHome.length, remainingAway.length) },
+          (_, index) => ({
+            slot:
+              remainingHome[index]?.displaySlot ??
+              remainingAway[index]?.displaySlot ??
+              "—",
+            homePlayer: remainingHome[index],
+            awayPlayer: remainingAway[index],
+          }),
+        );
+        return [...slotRows, ...remainingRows];
+      })()
+    : Array.from(
+        { length: Math.max(home.length, away.length) },
+        (_, index) => ({
+          slot: "BE",
+          homePlayer: home[index],
+          awayPlayer: away[index],
+        }),
+      );
 
+  return rows.map(
+    ({ slot, homePlayer, awayPlayer }, index) => {
       return (
         <div className="matchup-lineup-row" key={`${slot}-${index}`}>
           <LineupPlayer
@@ -147,6 +191,7 @@ function LineupRows({
               (homeRemovedIds?.has(homePlayer.player_id) ?? false)
             }
             align="left"
+            empty={showEmptySlots}
           />
           <strong
             className={
@@ -176,6 +221,7 @@ function LineupRows({
               (awayRemovedIds?.has(awayPlayer.player_id) ?? false)
             }
             align="right"
+            empty={showEmptySlots}
           />
         </div>
       );
@@ -439,6 +485,8 @@ function Matchup() {
           away={awayStarters}
           homeSubstitutionIds={bestPossible ? homeChanges.addedIds : undefined}
           awaySubstitutionIds={bestPossible ? awayChanges.addedIds : undefined}
+          slotOrder={slotOrder}
+          showEmptySlots={bestPossible}
         />
         <h3>Bench</h3>
         <LineupRows

@@ -103,6 +103,39 @@ describe("hindsight substitutions", () => {
     expect(changes.added).toEqual([]);
     expect(changes.removed).toEqual([]);
   });
+
+  it.each([
+    { points: -3, selected: false },
+    { points: 0, selected: false },
+    { points: 3, selected: true },
+  ])("$points-point defense selected: $selected", ({ points, selected }) => {
+    const defense = {
+      ...player(2, "D/ST", points),
+      position: "D/ST",
+    };
+    const result = getOptimalLineup(
+      [player(1, "RB", 10), defense],
+      { ...settings, roster_slots: { RB: 1, "D/ST": 1 } },
+    );
+
+    expect(result.players.some(({ player_id }) => player_id === defense.player_id)).toBe(selected);
+    expect(result.points).toBe(10 + (selected ? points : 0));
+  });
+
+  it("treats Devon's unused Week 5 defense as an empty optimal slot", () => {
+    const season = loadSeason(2026);
+    const game = season.box_scores.find(
+      ({ week, home_team_id, away_team_id }) =>
+        week === 5 && (home_team_id === 2 || away_team_id === 2),
+    );
+    expect(game).toBeDefined();
+    const lineup = game?.home_team_id === 2
+      ? game.home_lineup
+      : game?.away_lineup ?? [];
+    const optimal = getOptimalLineup(lineup, season.settings);
+
+    expect(optimal.players.some(({ position }) => position === "D/ST")).toBe(false);
+  });
 });
 
 describe("historical playoff and record context", () => {

@@ -177,15 +177,39 @@
   border-top: 1px solid #e2e8f0;
 }
 
-.season-standings-mobile,
-.week-metrics-mobile-list {
+.week-metrics-mobile-list,
+.season-mobile-table-hint {
   display: none;
 }
 
 @media (max-width: 700px) {
   .season-table-shell {
-    display: none;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
   }
+
+  .season-standings-table {
+    min-width: 52rem;
+    font-size: 0.72rem;
+  }
+
+  .season-standings-table th,
+  .season-standings-table td {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .season-standings-table tbody th {
+    min-width: 9rem;
+  }
+
+  .season-mobile-table-hint {
+    display: block;
+    margin: 1rem 0 0.45rem;
+    color: var(--text);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+}
 
   .season-standings-mobile {
     display: flex;
@@ -320,6 +344,7 @@
     content: "";
   }
 
+@media (max-width: 700px) {
   .week-metrics-table-shell {
     display: none;
   }
@@ -3435,6 +3460,12 @@ select.btn-primary {
   color: #c2410c;
   font-style: normal;
   font-weight: 750;
+}
+
+.matchup-lineup-empty strong,
+.matchup-lineup-empty small {
+  color: #94a3b8;
+  font-style: italic;
 }
 
 .matchup-lineup-player-right {
