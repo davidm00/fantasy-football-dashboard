@@ -1869,7 +1869,7 @@ select.btn-primary {
   text-transform: none;
 }
 
-.metric-tooltip summary {
+.metric-tooltip-trigger {
   display: inline-grid;
   width: 1.5rem;
   height: 1.5rem;
@@ -1886,44 +1886,63 @@ select.btn-primary {
   border-radius: 50%;
 }
 
-.metric-tooltip summary::-webkit-details-marker {
-  display: none;
+.metric-tooltip-trigger[aria-expanded="true"] {
+  color: #ffffff;
+  background: #0f766e;
+  border-color: #0f766e;
 }
 
-.metric-tooltip summary:focus-visible {
+.metric-tooltip-trigger:focus-visible {
   outline: 3px solid rgb(15 118 110 / 0.2);
   outline-offset: 2px;
 }
 
-.metric-tooltip > span {
-  position: absolute;
-  z-index: 20;
-  top: calc(100% + 0.5rem);
-  left: 50%;
+.metric-tooltip-panel {
+  position: fixed;
+  inset: var(--metric-tooltip-top) auto auto var(--metric-tooltip-left);
   width: min(17rem, calc(100vw - 2rem));
+  max-height: calc(100svh - 2rem);
+  margin: 0;
   padding: 0.65rem 0.75rem;
+  overflow-y: auto;
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.45;
   white-space: normal;
   background: #0f172a;
+  border: 0;
   border-radius: 0.45rem;
   box-shadow: var(--shadow-md);
-  transform: translateX(-50%);
+}
+
+.metric-tooltip-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.metric-tooltip-heading > button {
+  min-height: 2.5rem;
+  padding: 0.35rem 0.65rem;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+  background: #334155;
+  border: 1px solid #64748b;
+  border-radius: 0.3rem;
 }
 
 @media (max-width: 700px) {
-  .metric-tooltip > span {
-    position: fixed;
+  .metric-tooltip-panel {
     top: auto;
     right: 1rem;
     bottom: max(1rem, env(safe-area-inset-bottom));
     left: 1rem;
     width: auto;
     max-height: min(12rem, calc(100svh - 2rem));
-    overflow-y: auto;
-    transform: none;
   }
 }
 

@@ -4,12 +4,27 @@ import Week from "../src/routes/Week";
 import Matchup from "../src/routes/Matchup";
 import PlayoffBracket from "../src/components/shared/PlayoffBracket";
 import RouteErrorPage from "../src/routes/RouteErrorPage";
+import MetricTooltip from "../src/components/shared/MetricTooltip";
 import { calculateWeekMetrics } from "../src/utils/metrics";
 import { loadMatchup, loadSeason, renderRoute } from "./fixtures";
 
 describe("audit view regressions", () => {
   const historicalSeason = loadSeason(2025);
   const currentSeason = loadSeason(2026, { "5": "in_progress" });
+
+  it("uses exclusive auto popovers with named explanations and close controls", () => {
+    function TooltipFixture() {
+      return <MetricTooltip label="Power">Scoring and record strength.</MetricTooltip>;
+    }
+    const markup = renderRoute(TooltipFixture);
+    expect(markup).toContain('popover="auto"');
+    expect(markup).toContain('aria-expanded="false"');
+    expect(markup).toContain('aria-label="Power explanation"');
+    expect(markup).toContain("<strong>Power</strong>");
+    expect(markup).toContain('aria-label="Close Power explanation"');
+    expect(markup).toContain('popoverTargetAction="hide"');
+    expect(markup).not.toContain("<details");
+  });
 
   it("uses retrospective copy and correctly scaled draft percentages", () => {
     const award = historicalSeason.metrics.awards.draftSteal;
