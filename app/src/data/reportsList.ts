@@ -88,4 +88,12 @@ export const reportsList: Report[] = [
     pageCount: 1,
     fileSize: 127098,
   },
+  {
+    season: 2026,
+    week: 5,
+    title: "Ian Book Believers Weekly",
+    path: "/reports/2026/week-05.pdf",
+    pageCount: 1,
+    fileSize: 120414,
+  },
 ];
