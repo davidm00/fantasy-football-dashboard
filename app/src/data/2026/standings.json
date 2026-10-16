@@ -37,7 +37,7 @@
     "losses": 1,
     "ties": 0,
     "points_for": 774.3,
-    "points_against": 695.9
+    "points_against": 696.65
   },
   {
     "team_id": 5,
@@ -46,7 +46,7 @@
     "wins": 3,
     "losses": 2,
     "ties": 0,
-    "points_for": 734.5999999999999,
+    "points_for": 735.3499999999999,
     "points_against": 659.0
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "team_id": 3,
-    "team_name": "RIDE THAT MEAT",
+    "team_name": "Weeenie Man",
     "final_standing": 0,
     "wins": 2,
     "losses": 3,
