@@ -43,7 +43,7 @@ type StandingsRow = {
 const DERIVED_METRIC_EXPLANATIONS = {
   allPlay:
     "Your combined record against every other team in each completed regular-season week, not just your scheduled opponent.",
-  luck: "Measured in wins: actual wins minus expected wins from all-play performance. +0.7 means about 0.7 more wins than your weekly scoring would predict; positive values indicate a favorable schedule.",
+  luck: "Schedule luck measures how much your actual record benefited or suffered from which opponents you faced, holding everyone’s actual weekly scores fixed. Measured in wins: actual wins minus expected wins from all-play performance. +0.7 means about 0.7 more wins than your weekly scoring would predict; positive values indicate a favorable schedule.",
   efficiency:
     "Actual starter points divided by hindsight-optimal valid lineup points across completed regular-season weeks. 100% means no points left on the bench.",
   power:
