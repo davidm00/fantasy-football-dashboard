@@ -3,120 +3,120 @@
     "team_id": 4,
     "team_name": "JSN My Pants",
     "final_standing": 0,
-    "wins": 5,
+    "wins": 6,
     "losses": 0,
     "ties": 0,
-    "points_for": 863.3499999999999,
-    "points_against": 714.9
+    "points_for": 997.9999999999999,
+    "points_against": 829.0
   },
   {
     "team_id": 2,
     "team_name": "Smack That Ahh",
     "final_standing": 0,
-    "wins": 4,
+    "wins": 5,
     "losses": 1,
     "ties": 0,
-    "points_for": 807.4499999999999,
-    "points_against": 773.75
-  },
-  {
-    "team_id": 7,
-    "team_name": "Chase ma Ballz",
-    "final_standing": 0,
-    "wins": 4,
-    "losses": 1,
-    "ties": 0,
-    "points_for": 783.4999999999999,
-    "points_against": 630.45
+    "points_for": 936.8,
+    "points_against": 892.8
   },
   {
     "team_id": 8,
     "team_name": "Team Mickey Mouse",
     "final_standing": 0,
     "wins": 4,
-    "losses": 1,
+    "losses": 2,
     "ties": 0,
-    "points_for": 774.3,
-    "points_against": 696.65
+    "points_for": 927.4499999999999,
+    "points_against": 883.3
+  },
+  {
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "final_standing": 0,
+    "wins": 4,
+    "losses": 2,
+    "ties": 0,
+    "points_for": 897.5999999999999,
+    "points_against": 765.1
+  },
+  {
+    "team_id": 3,
+    "team_name": "Weeenie Man",
+    "final_standing": 0,
+    "wins": 3,
+    "losses": 3,
+    "ties": 0,
+    "points_for": 863.65,
+    "points_against": 876.0
   },
   {
     "team_id": 5,
-    "team_name": "Al Queda \ud83e\udd1d Isis",
+    "team_name": "F'N BUM ASS MFS",
     "final_standing": 0,
     "wins": 3,
-    "losses": 2,
+    "losses": 3,
     "ties": 0,
-    "points_for": 735.3499999999999,
-    "points_against": 659.0
+    "points_for": 849.3999999999999,
+    "points_against": 805.45
+  },
+  {
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "final_standing": 0,
+    "wins": 3,
+    "losses": 3,
+    "ties": 0,
+    "points_for": 815.5999999999999,
+    "points_against": 826.65
+  },
+  {
+    "team_id": 12,
+    "team_name": "Certified Mid",
+    "final_standing": 0,
+    "wins": 3,
+    "losses": 3,
+    "ties": 0,
+    "points_for": 804.6999999999999,
+    "points_against": 863.05
   },
   {
     "team_id": 10,
     "team_name": "Scam Little",
     "final_standing": 0,
     "wins": 3,
-    "losses": 2,
-    "ties": 0,
-    "points_for": 662.15,
-    "points_against": 700.95
-  },
-  {
-    "team_id": 3,
-    "team_name": "Weeenie Man",
-    "final_standing": 0,
-    "wins": 2,
     "losses": 3,
     "ties": 0,
-    "points_for": 695.0,
-    "points_against": 749.3
-  },
-  {
-    "team_id": 11,
-    "team_name": "Sorry This Had 2 Happen 2 U",
-    "final_standing": 0,
-    "wins": 2,
-    "losses": 3,
-    "ties": 0,
-    "points_for": 669.15,
-    "points_against": 712.6
-  },
-  {
-    "team_id": 12,
-    "team_name": "Certified Mid",
-    "final_standing": 0,
-    "wins": 2,
-    "losses": 3,
-    "ties": 0,
-    "points_for": 618.05,
-    "points_against": 709.9
+    "points_for": 788.85,
+    "points_against": 869.6
   },
   {
     "team_id": 1,
     "team_name": "This is Why I Drink",
     "final_standing": 0,
-    "wins": 1,
+    "wins": 2,
     "losses": 4,
     "ties": 0,
-    "points_for": 783.75,
-    "points_against": 796.15
+    "points_for": 928.85,
+    "points_against": 904.8
   },
   {
     "team_id": 6,
     "team_name": "Ay Bendito My PA \ud83e\udd40",
     "final_standing": 0,
     "wins": 0,
-    "losses": 5,
+    "losses": 6,
     "ties": 0,
-    "points_for": 734.45,
-    "points_against": 864.35
+    "points_for": 853.5,
+    "points_against": 993.7
   },
   {
     "team_id": 9,
     "team_name": "RB Stash",
     "final_standing": 0,
     "wins": 0,
-    "losses": 5,
+    "losses": 6,
     "ties": 0,
-    "points_for": 648.6,
-    "points_against": 767.1
+    "points_for": 757.25,
+    "points_against": 912.2
   }
 ]
