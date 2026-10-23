@@ -7541,5 +7541,1368 @@
         "to_team_id": 0
       }
     ]
+  },
+  {
+    "id": "ab37909c-9fba-43c6-94d7-48a2c9deb0ea",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 7,
+    "date": 1792684809447,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917315,
+        "player_name": "Kyler Murray",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361529,
+        "player_name": "Isiah Pacheco",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2f4df7e9-f810-4a29-8ec4-37eac4396e1b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792598418622,
+    "bid_amount": 18,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4686658,
+        "player_name": "Mike Washington Jr.",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "1b396f89-7b44-443f-b3a6-1fb863e15ab3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 7,
+    "date": 1792598418625,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4426386,
+        "player_name": "Roschon Johnson",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4428557,
+        "player_name": "Tyjae Spears",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "96fb2b0a-e698-4b18-a82c-e2f16bc2e8f1",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792598418629,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5083754,
+        "player_name": "Ryan Flournoy",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4249087,
+        "player_name": "Matt Gay",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "7d6b3a95-d493-4f96-815d-9129a06c977b",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 7,
+    "date": 1792598418628,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429013,
+        "player_name": "Tank Bigsby",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ea67df39-b19e-457f-b30f-d83bd9d508bb",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792684809449,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4710855,
+        "player_name": "Konata Mumpfield",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3121422,
+        "player_name": "Terry McLaurin",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b05bb9c6-4083-4e34-bf89-6c6f0b188b43",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792501680920,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "dfac753c-d9f3-456a-85cf-4cd340b2260e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 7,
+    "date": 1792598418624,
+    "bid_amount": 7,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685415,
+        "player_name": "Travis Hunter",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 3116164,
+        "player_name": "Mike Gesicki",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "68409d8b-a438-4ea8-b0f2-fb1fa075025d",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792598418629,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360516,
+        "player_name": "Tyrone Tracy Jr.",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4431492,
+        "player_name": "Roman Wilson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "295bba99-061d-4ff5-bec9-51a39d838d7e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 7,
+    "date": 1792598418625,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4586312,
+        "player_name": "Jaylin Noel",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "b718d4d4-3045-4147-a160-117a1a9c15f1",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792598418629,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4586312,
+        "player_name": "Jaylin Noel",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 2973405,
+        "player_name": "Kalif Raymond",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6ed84200-07eb-41e1-accb-9ab86f273b24",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792598418624,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4686658,
+        "player_name": "Mike Washington Jr.",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 16731,
+        "player_name": "Brandin Cooks",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "bd608a5e-97ab-4876-a700-a2b8d96d598b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 7,
+    "date": 1792598418626,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16005,
+        "player_name": "Browns D/ST",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4686612,
+        "player_name": "Tre' Harris",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "35a50518-d367-48f9-8a2b-d35d9ee2f77d",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792590190721,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2977187,
+        "player_name": "Cooper Kupp",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3121422,
+        "player_name": "Terry McLaurin",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "628c2ac6-3113-4ad1-9ff1-819c1b12cb4c",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Man",
+    "scoring_period": 7,
+    "date": 1792684809449,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16029,
+        "player_name": "Panthers D/ST",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": -16011,
+        "player_name": "Colts D/ST",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "bd129be7-6460-460a-a3a7-18e2c49deb9b",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792504239891,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 15864,
+        "player_name": "Geno Smith",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "e954f79e-f545-422a-92af-ae43de04008a",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792596116434,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360078,
+        "player_name": "Alec Pierce",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "68f5b46b-1f12-4ee4-bad7-24dde5c8616c",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792590260842,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5083754,
+        "player_name": "Ryan Flournoy",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4431492,
+        "player_name": "Roman Wilson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f9be8871-bc82-4e0d-ad5b-bd77dee95461",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792598418626,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3052587,
+        "player_name": "Baker Mayfield",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "5f5360eb-e8d6-4f80-a72a-ab9072d5eb4c",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792561032441,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "ddb5f328-3672-45d9-bcb4-7cff44abf702",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 7,
+    "date": 1792684809449,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4371733,
+        "player_name": "Kenny Gainwell",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4702555,
+        "player_name": "Jonah Coleman",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "66af5d76-6d1f-4986-aeee-8368cd7e119e",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 7,
+    "date": 1792598418627,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360635,
+        "player_name": "Chig Okonkwo",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "07a932d5-3154-447a-93aa-179b39b6c37c",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792598418626,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16020,
+        "player_name": "Jets D/ST",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "478389ca-9398-4cf1-8a6d-58c061d1a578",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792598418629,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 8439,
+        "player_name": "Aaron Rodgers",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "9745e3c5-2057-4959-a21d-e0190c889bee",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 7,
+    "date": 1792598418628,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 17372,
+        "player_name": "Chris Boswell",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4362759,
+        "player_name": "Nick Bolton",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "055cd66c-6dee-4421-a22a-509b7a097451",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 3,
+    "team_name": "Weeenie Man",
+    "scoring_period": 7,
+    "date": 1792598418624,
+    "bid_amount": 5,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 3116365,
+        "player_name": "Mark Andrews",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ef9deb4d-0de4-43f4-9e6f-f37682803f4b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792598418623,
+    "bid_amount": 10,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360516,
+        "player_name": "Tyrone Tracy Jr.",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "d7cc06bf-bd5e-451d-9259-eaf2da8b441b",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 7,
+    "date": 1792598418627,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360078,
+        "player_name": "Alec Pierce",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "92f8bcd7-8eb6-442f-b559-9826f72d089d",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 7,
+    "date": 1792598418628,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 17372,
+        "player_name": "Chris Boswell",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4034949,
+        "player_name": "Eddy Pineiro",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ae120b72-b141-434d-a9ff-52c3a826aa6b",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792504243515,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4686658,
+        "player_name": "Mike Washington Jr.",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16007,
+        "player_name": "Broncos D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b132261f-243d-4814-b05d-3f23ffbc94c7",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792598418623,
+    "bid_amount": 14,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "3254275c-71a1-4a79-93d0-684575f69687",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 7,
+    "date": 1792598418630,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4036378,
+        "player_name": "Jordan Love",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "45d2ba6f-5131-47cb-bfac-b9d78c694232",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 7,
+    "date": 1792598418630,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428863,
+        "player_name": "Evan Williams",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4685724,
+        "player_name": "Will Anderson Jr.",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "7c073e49-382e-4cc5-a857-2330c592f6bb",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792529668886,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4570037,
+        "player_name": "Terrance Ferguson",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 16731,
+        "player_name": "Brandin Cooks",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "cf0bba32-7fde-4a53-9c6e-acd74c73c155",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792684809450,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361409,
+        "player_name": "Jahan Dotson",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 2973405,
+        "player_name": "Kalif Raymond",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6a601455-3a45-43a6-b708-c846a4bead18",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792503784364,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360078,
+        "player_name": "Alec Pierce",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": -16007,
+        "player_name": "Broncos D/ST",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "368dddc6-f0df-4373-892b-d8895feec592",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792500777661,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360078,
+        "player_name": "Alec Pierce",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "626a65de-984e-4971-8fea-f8b27673088b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 7,
+    "date": 1792598418622,
+    "bid_amount": 20,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3912547,
+        "player_name": "Sam Darnold",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "9dec6832-9c4c-4945-a907-26319a402bac",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792598418625,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360516,
+        "player_name": "Tyrone Tracy Jr.",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 16731,
+        "player_name": "Brandin Cooks",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8726d39d-e67d-4b70-ae20-77c78eb77e28",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792504237240,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3052587,
+        "player_name": "Baker Mayfield",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "60fe36d6-4556-4212-bc5e-ce287d3ea2ec",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 7,
+    "date": 1792509395274,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3068267,
+        "player_name": "Austin Ekeler",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "77402322-2ac4-49dd-9613-cf6d91bbe78e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792684809450,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081432,
+        "player_name": "Antonio Williams",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4431492,
+        "player_name": "Roman Wilson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "715e4aff-80a2-4b25-9b6f-c79e933a00b3",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792598418629,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3895856,
+        "player_name": "Christian Kirk",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3121422,
+        "player_name": "Terry McLaurin",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a3a7184e-34f2-49be-b4cd-e08bf1d77c6f",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 7,
+    "date": 1792502649852,
+    "bid_amount": 20,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3912547,
+        "player_name": "Sam Darnold",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "cec2461e-e73e-417c-87a6-0fedb43642a3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 7,
+    "date": 1792684809448,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4249087,
+        "player_name": "Matt Gay",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4362759,
+        "player_name": "Nick Bolton",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "13d80765-69b4-4241-98d1-120752042b21",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792633680771,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2977187,
+        "player_name": "Cooper Kupp",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3121422,
+        "player_name": "Terry McLaurin",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d50b78a1-729c-469c-a92d-49245c86a26e",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792633373557,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4371733,
+        "player_name": "Kenny Gainwell",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 3121422,
+        "player_name": "Terry McLaurin",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "4ca8d8cb-af38-4c10-a102-396ccd6c0d00",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 7,
+    "date": 1792684809448,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917315,
+        "player_name": "Kyler Murray",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 4429013,
+        "player_name": "Tank Bigsby",
+        "from_team_id": 10,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6637cd33-07e4-4017-8d85-df1ad35fde65",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Man",
+    "scoring_period": 7,
+    "date": 1792684809448,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4876017,
+        "player_name": "Carson Schwesinger",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 3116365,
+        "player_name": "Mark Andrews",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2a937644-39e7-485b-9986-7cb150643979",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 7,
+    "date": 1792598418630,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4427728,
+        "player_name": "Bam Knight",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4428557,
+        "player_name": "Tyjae Spears",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "bf06d1df-2071-4019-9cf4-afcf9a0ebcfb",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792598418624,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3052587,
+        "player_name": "Baker Mayfield",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "2cfa18a2-f9a0-4a72-bdb9-5a07a3e24aac",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792598418626,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16005,
+        "player_name": "Browns D/ST",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "97abde74-4d60-4f87-83c7-3b40427042aa",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "This is Why I Drink",
+    "scoring_period": 7,
+    "date": 1792684809448,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4249087,
+        "player_name": "Matt Gay",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 2971573,
+        "player_name": "Ka'imi Fairbairn",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "87f6a478-0c4d-4653-9fd6-01ae9a3240b0",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792590270240,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360516,
+        "player_name": "Tyrone Tracy Jr.",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4249087,
+        "player_name": "Matt Gay",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f507426e-adda-4656-9316-52ca1fb6a3e1",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "F'N BUM ASS MFS",
+    "scoring_period": 7,
+    "date": 1792598418627,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3895856,
+        "player_name": "Christian Kirk",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 16731,
+        "player_name": "Brandin Cooks",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ef2142ea-ee01-4d00-88c7-862d024d691b",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 7,
+    "date": 1792598418623,
+    "bid_amount": 10,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432577,
+        "player_name": "C.J. Stroud",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361529,
+        "player_name": "Isiah Pacheco",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a6e07cad-7a61-4c35-a891-317c8c1d6898",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 7,
+    "date": 1792633748871,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361409,
+        "player_name": "Jahan Dotson",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 2973405,
+        "player_name": "Kalif Raymond",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
   }
 ]
