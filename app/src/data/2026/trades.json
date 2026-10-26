@@ -346,9 +346,23 @@
     "week": 7,
     "date": 1792726412808,
     "team_ids": [
+      7,
       9
     ],
-    "items": [],
-    "source": "unknown"
+    "items": [
+      {
+        "player_id": 4696981,
+        "player_name": "Cam Skattebo",
+        "from_team_id": 9,
+        "to_team_id": 7
+      },
+      {
+        "player_id": 2976212,
+        "player_name": "Stefon Diggs",
+        "from_team_id": 7,
+        "to_team_id": 9
+      }
+    ],
+    "source": "espn"
   }
 ]
