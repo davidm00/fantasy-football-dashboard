@@ -10613,7 +10613,7 @@
   },
   {
     "week": 7,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 10,
     "home_score": 119.6,
@@ -10780,7 +10780,7 @@
         "position": "WR",
         "pro_team": "PHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 3915511,
@@ -10876,7 +10876,7 @@
         "position": "RB",
         "pro_team": "PHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 11.8
       },
       {
         "player_id": 4361411,
@@ -10914,10 +10914,10 @@
   },
   {
     "week": 7,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 2,
-    "home_score": 108.15,
+    "home_score": 123.85,
     "home_lineup": [
       {
         "player_id": 4430807,
@@ -10957,7 +10957,7 @@
         "position": "WR",
         "pro_team": "DAL",
         "slot_position": "WR",
-        "points": 0
+        "points": 15.7
       },
       {
         "player_id": 3916148,
@@ -11065,7 +11065,7 @@
       }
     ],
     "away_team_id": 9,
-    "away_score": 93.5,
+    "away_score": 104.8,
     "away_lineup": [
       {
         "player_id": 4262921,
@@ -11153,7 +11153,7 @@
         "position": "TE",
         "pro_team": "PHI",
         "slot_position": "TE",
-        "points": 0
+        "points": 11.3
       },
       {
         "player_id": 12483,
@@ -11207,10 +11207,10 @@
   },
   {
     "week": 7,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 3,
-    "home_score": 135.75,
+    "home_score": 150.85,
     "home_lineup": [
       {
         "player_id": 4374302,
@@ -11274,7 +11274,7 @@
         "position": "RB",
         "pro_team": "PHI",
         "slot_position": "RB",
-        "points": 0
+        "points": 15.1
       },
       {
         "player_id": 4431452,
@@ -11500,7 +11500,7 @@
   },
   {
     "week": 7,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 1,
     "home_score": 133.5,
@@ -11651,7 +11651,7 @@
       }
     ],
     "away_team_id": 7,
-    "away_score": 134.55,
+    "away_score": 156.05,
     "away_lineup": [
       {
         "player_id": 4362628,
@@ -11699,7 +11699,7 @@
         "position": "RB",
         "pro_team": "DAL",
         "slot_position": "RB",
-        "points": 0
+        "points": 21.5
       },
       {
         "player_id": 3128429,
@@ -11793,7 +11793,7 @@
   },
   {
     "week": 7,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 12,
     "home_score": 110.75,
@@ -11944,7 +11944,7 @@
       }
     ],
     "away_team_id": 11,
-    "away_score": 110.0,
+    "away_score": 121.0,
     "away_lineup": [
       {
         "player_id": 4379399,
@@ -12064,7 +12064,7 @@
         "position": "WR",
         "pro_team": "DAL",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 11.0
       },
       {
         "player_id": 4710855,
@@ -12094,10 +12094,10 @@
   },
   {
     "week": 7,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 4,
-    "home_score": 147.95,
+    "home_score": 158.45,
     "home_lineup": [
       {
         "player_id": 4242335,
@@ -12161,7 +12161,7 @@
         "position": "QB",
         "pro_team": "DAL",
         "slot_position": "BE",
-        "points": 0
+        "points": 31.4
       },
       {
         "player_id": 4429096,
@@ -12217,7 +12217,7 @@
         "position": "LB",
         "pro_team": "PHI",
         "slot_position": "DP",
-        "points": 0
+        "points": 10.5
       },
       {
         "player_id": -16025,
@@ -12237,7 +12237,7 @@
       }
     ],
     "away_team_id": 5,
-    "away_score": 143.65,
+    "away_score": 182.05,
     "away_lineup": [
       {
         "player_id": 4241389,
@@ -12245,7 +12245,7 @@
         "position": "WR",
         "pro_team": "DAL",
         "slot_position": "WR",
-        "points": 0
+        "points": 24.4
       },
       {
         "player_id": 4890973,
@@ -12293,7 +12293,7 @@
         "position": "K",
         "pro_team": "DAL",
         "slot_position": "K",
-        "points": 0
+        "points": 14.0
       },
       {
         "player_id": 4695883,
