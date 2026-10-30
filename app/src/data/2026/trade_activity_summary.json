@@ -8,7 +8,7 @@
     },
     "3": {
       "declined": 5,
-      "cancelled": 35,
+      "cancelled": 38,
       "pending": 1
     },
     "7": {
@@ -32,7 +32,7 @@
       "pending": 0
     },
     "1": {
-      "declined": 11,
+      "declined": 13,
       "cancelled": 9,
       "pending": 1
     },
