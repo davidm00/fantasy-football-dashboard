@@ -9081,32 +9081,6 @@
     ]
   },
   {
-    "id": "0a32c64e-f471-4cb3-afa6-354a6ab75aec",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 5,
-    "team_name": "Cesar Fan Club President",
-    "scoring_period": 8,
-    "date": 1793203207511,
-    "bid_amount": 3,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 15864,
-        "player_name": "Geno Smith",
-        "from_team_id": 0,
-        "to_team_id": 5
-      },
-      {
-        "type": "DROP",
-        "player_id": 3052587,
-        "player_name": "Baker Mayfield",
-        "from_team_id": 5,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "c4fb7845-e27e-43c0-b044-ba4b96b026cb",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -9128,6 +9102,536 @@
         "player_id": 4876017,
         "player_name": "Carson Schwesinger",
         "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "5323e09a-9687-4df6-8e63-fadb935a55a0",
+    "type": "WAIVER",
+    "status": "FAILED_TRADE_RESERVED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 8,
+    "date": 1793376007316,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4428850,
+        "player_name": "Dontayvion Wicks",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "309b64ca-0a1b-44c9-bb55-cca7b8d40906",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Man",
+    "scoring_period": 8,
+    "date": 1793203207515,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16004,
+        "player_name": "Bengals D/ST",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": -16029,
+        "player_name": "Panthers D/ST",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "487dd0cd-4a74-4408-a381-d2e020edb32d",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Cesar Fan Club Vice President",
+    "scoring_period": 8,
+    "date": 1793203207511,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360635,
+        "player_name": "Chig Okonkwo",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "b3269068-16c6-4665-9f9c-007ea236758a",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 8,
+    "date": 1793289608304,
+    "bid_amount": 9,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360423,
+        "player_name": "Michael Penix Jr.",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917315,
+        "player_name": "Kyler Murray",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "5ed8e5e1-43a9-46e1-9e4d-3eaf99b36e9a",
+    "type": "WAIVER",
+    "status": "FAILED_POSITIONLIMIT",
+    "team_id": 5,
+    "team_name": "Cesar Fan Club President",
+    "scoring_period": 8,
+    "date": 1793203207512,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360423,
+        "player_name": "Michael Penix Jr.",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": -16020,
+        "player_name": "Jets D/ST",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "9711295e-bedd-4475-88ce-db37851680db",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 8,
+    "date": 1793203207513,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360635,
+        "player_name": "Chig Okonkwo",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361411,
+        "player_name": "Pat Freiermuth",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "94a17910-f6a2-4dd8-81ad-299cbb0c1477",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 8,
+    "date": 1793203207511,
+    "bid_amount": 4,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4360635,
+        "player_name": "Chig Okonkwo",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": -16025,
+        "player_name": "49ers D/ST",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d3efd542-7e0f-4f3b-bf51-19985f7d9d63",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 8,
+    "date": 1793552414875,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4430968,
+        "player_name": "Kimani Vidal",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361411,
+        "player_name": "Pat Freiermuth",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "5900868d-8045-468a-8635-0999ec17227b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 8,
+    "date": 1793203207515,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3110565,
+        "player_name": "Quincy Williams",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 8439,
+        "player_name": "Aaron Rodgers",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "806cf522-ec50-4f93-aff2-d380c93ae900",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 12,
+    "team_name": "Certified Mid",
+    "scoring_period": 8,
+    "date": 1793289608306,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116389,
+        "player_name": "Samaje Perine",
+        "from_team_id": 0,
+        "to_team_id": 12
+      },
+      {
+        "type": "DROP",
+        "player_id": 3916655,
+        "player_name": "Maxx Crosby",
+        "from_team_id": 12,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "cc1bf7a6-802d-4fb7-a382-ad2b15767821",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 8,
+    "date": 1793203207510,
+    "bid_amount": 7,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4686468,
+        "player_name": "Seth McGowan",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4373626,
+        "player_name": "Tyler Allgeier",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "80b6da07-d4bf-4aab-b0c3-94a029df08c0",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 8,
+    "date": 1793462405347,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4242512,
+        "player_name": "Malik Willis",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4710855,
+        "player_name": "Konata Mumpfield",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "e7e7d954-69e0-4aab-81bf-26fba7e2d79e",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Cesar Fan Club Vice President",
+    "scoring_period": 8,
+    "date": 1793203207513,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2578570,
+        "player_name": "Jacoby Brissett",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "60dcf87a-d54d-42de-abbd-91e39ad1a36b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Man",
+    "scoring_period": 8,
+    "date": 1793203207509,
+    "bid_amount": 20,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4870795,
+        "player_name": "Makai Lemon",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4596334,
+        "player_name": "Keaton Mitchell",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "28c6a68e-fef7-43c5-8928-a2392344d0b5",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 5,
+    "team_name": "Cesar Fan Club President",
+    "scoring_period": 8,
+    "date": 1793289608306,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116389,
+        "player_name": "Samaje Perine",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 15864,
+        "player_name": "Geno Smith",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "b136bb27-7398-486c-9d3d-5cc6f6d4183d",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 5,
+    "team_name": "Cesar Fan Club President",
+    "scoring_period": 8,
+    "date": 1793203207512,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081397,
+        "player_name": "Dylan Sampson",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": -16020,
+        "player_name": "Jets D/ST",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "014f562f-62c2-4aa3-95c0-b5c204b04d6b",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Cesar Fan Club Vice President",
+    "scoring_period": 8,
+    "date": 1793289608305,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 8439,
+        "player_name": "Aaron Rodgers",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "18081354-0e6c-4c59-b3c4-989688c5d201",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 8,
+    "date": 1793376007316,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685279,
+        "player_name": "Jaydon Blue",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "a4be3579-671d-47dc-9d23-3347f587431a",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 8,
+    "date": 1793552414875,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4432773,
+        "player_name": "Brian Thomas Jr.",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4428850,
+        "player_name": "Dontayvion Wicks",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "2810b4a4-59e7-4ea3-a7cb-98d2f255bb76",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 8,
+    "date": 1793203207515,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16004,
+        "player_name": "Bengals D/ST",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": -16012,
+        "player_name": "Chiefs D/ST",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "fcac06e6-fe6d-45b0-bc0c-e531b088aca2",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 1,
+    "team_name": "Cesar Fan Club Vice President",
+    "scoring_period": 8,
+    "date": 1793203207514,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 15864,
+        "player_name": "Geno Smith",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "0a32c64e-f471-4cb3-afa6-354a6ab75aec",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Cesar Fan Club President",
+    "scoring_period": 8,
+    "date": 1793203207511,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 15864,
+        "player_name": "Geno Smith",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 3052587,
+        "player_name": "Baker Mayfield",
+        "from_team_id": 5,
         "to_team_id": 0
       }
     ]
@@ -9211,32 +9715,6 @@
     ]
   },
   {
-    "id": "309b64ca-0a1b-44c9-bb55-cca7b8d40906",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 3,
-    "team_name": "Weeenie Man",
-    "scoring_period": 8,
-    "date": 1793203207515,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": -16004,
-        "player_name": "Bengals D/ST",
-        "from_team_id": 0,
-        "to_team_id": 3
-      },
-      {
-        "type": "DROP",
-        "player_id": -16029,
-        "player_name": "Panthers D/ST",
-        "from_team_id": 3,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "8c6607d6-06f6-41f2-a9b8-378e91ec9c74",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -9259,25 +9737,6 @@
         "player_name": "Matt Gay",
         "from_team_id": 10,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "487dd0cd-4a74-4408-a381-d2e020edb32d",
-    "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 1,
-    "team_name": "Cesar Fan Club Vice President",
-    "scoring_period": 8,
-    "date": 1793203207511,
-    "bid_amount": 3,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4360635,
-        "player_name": "Chig Okonkwo",
-        "from_team_id": 0,
-        "to_team_id": 1
       }
     ]
   },
@@ -9334,80 +9793,21 @@
     ]
   },
   {
-    "id": "b3269068-16c6-4665-9f9c-007ea236758a",
+    "id": "a369ffa4-be37-4ad8-a80c-653c2692feb0",
     "type": "WAIVER",
     "status": "EXECUTED",
-    "team_id": 2,
-    "team_name": "Smack That Ahh",
-    "scoring_period": 8,
-    "date": 1793289608304,
-    "bid_amount": 9,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4360423,
-        "player_name": "Michael Penix Jr.",
-        "from_team_id": 0,
-        "to_team_id": 2
-      },
-      {
-        "type": "DROP",
-        "player_id": 3917315,
-        "player_name": "Kyler Murray",
-        "from_team_id": 2,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "5ed8e5e1-43a9-46e1-9e4d-3eaf99b36e9a",
-    "type": "WAIVER",
-    "status": "FAILED_POSITIONLIMIT",
-    "team_id": 5,
-    "team_name": "Cesar Fan Club President",
-    "scoring_period": 8,
-    "date": 1793203207512,
-    "bid_amount": 3,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4360423,
-        "player_name": "Michael Penix Jr.",
-        "from_team_id": 0,
-        "to_team_id": 5
-      },
-      {
-        "type": "DROP",
-        "player_id": -16020,
-        "player_name": "Jets D/ST",
-        "from_team_id": 5,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "9711295e-bedd-4475-88ce-db37851680db",
-    "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
     "team_id": 6,
     "team_name": "Go Get Some Wins Bro",
     "scoring_period": 8,
-    "date": 1793203207513,
+    "date": 1793462405347,
     "bid_amount": 0,
     "items": [
       {
         "type": "ADD",
-        "player_id": 4360635,
-        "player_name": "Chig Okonkwo",
+        "player_id": 4428850,
+        "player_name": "Dontayvion Wicks",
         "from_team_id": 0,
         "to_team_id": 6
-      },
-      {
-        "type": "DROP",
-        "player_id": 4361411,
-        "player_name": "Pat Freiermuth",
-        "from_team_id": 6,
-        "to_team_id": 0
       }
     ]
   },
@@ -9573,32 +9973,6 @@
     ]
   },
   {
-    "id": "94a17910-f6a2-4dd8-81ad-299cbb0c1477",
-    "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 4,
-    "team_name": "JSN My Pants",
-    "scoring_period": 8,
-    "date": 1793203207511,
-    "bid_amount": 4,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4360635,
-        "player_name": "Chig Okonkwo",
-        "from_team_id": 0,
-        "to_team_id": 4
-      },
-      {
-        "type": "DROP",
-        "player_id": -16025,
-        "player_name": "49ers D/ST",
-        "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "0d108ef8-a937-43ff-8206-3bcf8d277e8e",
     "type": "WAIVER",
     "status": "PENDING",
@@ -9620,32 +9994,6 @@
         "player_id": -16025,
         "player_name": "49ers D/ST",
         "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "5900868d-8045-468a-8635-0999ec17227b",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 11,
-    "team_name": "Sorry This Had 2 Happen 2 U",
-    "scoring_period": 8,
-    "date": 1793203207515,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 3110565,
-        "player_name": "Quincy Williams",
-        "from_team_id": 0,
-        "to_team_id": 11
-      },
-      {
-        "type": "DROP",
-        "player_id": 8439,
-        "player_name": "Aaron Rodgers",
-        "from_team_id": 11,
         "to_team_id": 0
       }
     ]
@@ -9741,58 +10089,6 @@
     ]
   },
   {
-    "id": "806cf522-ec50-4f93-aff2-d380c93ae900",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 12,
-    "team_name": "Certified Mid",
-    "scoring_period": 8,
-    "date": 1793289608306,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 3116389,
-        "player_name": "Samaje Perine",
-        "from_team_id": 0,
-        "to_team_id": 12
-      },
-      {
-        "type": "DROP",
-        "player_id": 3916655,
-        "player_name": "Maxx Crosby",
-        "from_team_id": 12,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "cc1bf7a6-802d-4fb7-a382-ad2b15767821",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 4,
-    "team_name": "JSN My Pants",
-    "scoring_period": 8,
-    "date": 1793203207510,
-    "bid_amount": 7,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4686468,
-        "player_name": "Seth McGowan",
-        "from_team_id": 0,
-        "to_team_id": 4
-      },
-      {
-        "type": "DROP",
-        "player_id": 4373626,
-        "player_name": "Tyler Allgeier",
-        "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "7e954aa3-e0b6-4720-b1c4-8c230a117c0f",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -9819,21 +10115,21 @@
     ]
   },
   {
-    "id": "e7e7d954-69e0-4aab-81bf-26fba7e2d79e",
+    "id": "b587c306-0747-412e-b2bf-4459caa4abe9",
     "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 1,
-    "team_name": "Cesar Fan Club Vice President",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
     "scoring_period": 8,
-    "date": 1793203207513,
-    "bid_amount": 1,
+    "date": 1793462405347,
+    "bid_amount": 0,
     "items": [
       {
         "type": "ADD",
-        "player_id": 2578570,
-        "player_name": "Jacoby Brissett",
+        "player_id": 4715355,
+        "player_name": "Darius Cooper",
         "from_team_id": 0,
-        "to_team_id": 1
+        "to_team_id": 6
       }
     ]
   },
@@ -9876,84 +10172,6 @@
     ]
   },
   {
-    "id": "60dcf87a-d54d-42de-abbd-91e39ad1a36b",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 3,
-    "team_name": "Weeenie Man",
-    "scoring_period": 8,
-    "date": 1793203207509,
-    "bid_amount": 20,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4870795,
-        "player_name": "Makai Lemon",
-        "from_team_id": 0,
-        "to_team_id": 3
-      },
-      {
-        "type": "DROP",
-        "player_id": 4596334,
-        "player_name": "Keaton Mitchell",
-        "from_team_id": 3,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "28c6a68e-fef7-43c5-8928-a2392344d0b5",
-    "type": "WAIVER",
-    "status": "FAILED_PLAYERALREADYDROPPED",
-    "team_id": 5,
-    "team_name": "Cesar Fan Club President",
-    "scoring_period": 8,
-    "date": 1793289608306,
-    "bid_amount": 1,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 3116389,
-        "player_name": "Samaje Perine",
-        "from_team_id": 0,
-        "to_team_id": 5
-      },
-      {
-        "type": "DROP",
-        "player_id": 15864,
-        "player_name": "Geno Smith",
-        "from_team_id": 5,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "b136bb27-7398-486c-9d3d-5cc6f6d4183d",
-    "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 5,
-    "team_name": "Cesar Fan Club President",
-    "scoring_period": 8,
-    "date": 1793203207512,
-    "bid_amount": 2,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 5081397,
-        "player_name": "Dylan Sampson",
-        "from_team_id": 0,
-        "to_team_id": 5
-      },
-      {
-        "type": "DROP",
-        "player_id": -16020,
-        "player_name": "Jets D/ST",
-        "from_team_id": 5,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "5d22ca95-70aa-40da-a653-b3a8686f073a",
     "type": "WAIVER",
     "status": "CANCELED",
@@ -9976,25 +10194,6 @@
         "player_name": "Foyesade Oluokun",
         "from_team_id": 3,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "014f562f-62c2-4aa3-95c0-b5c204b04d6b",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 1,
-    "team_name": "Cesar Fan Club Vice President",
-    "scoring_period": 8,
-    "date": 1793289608305,
-    "bid_amount": 1,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 8439,
-        "player_name": "Aaron Rodgers",
-        "from_team_id": 0,
-        "to_team_id": 1
       }
     ]
   },
@@ -10063,39 +10262,32 @@
     ]
   },
   {
-    "id": "2810b4a4-59e7-4ea3-a7cb-98d2f255bb76",
+    "id": "9d3bf80b-9928-406f-bd7f-608458ea6e1c",
     "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 11,
-    "team_name": "Sorry This Had 2 Happen 2 U",
+    "status": "FAILED_TRADE_RESERVED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
     "scoring_period": 8,
-    "date": 1793203207515,
+    "date": 1793376007317,
     "bid_amount": 0,
     "items": [
       {
         "type": "ADD",
-        "player_id": -16004,
-        "player_name": "Bengals D/ST",
+        "player_id": 4360078,
+        "player_name": "Alec Pierce",
         "from_team_id": 0,
-        "to_team_id": 11
-      },
-      {
-        "type": "DROP",
-        "player_id": -16012,
-        "player_name": "Chiefs D/ST",
-        "from_team_id": 11,
-        "to_team_id": 0
+        "to_team_id": 6
       }
     ]
   },
   {
-    "id": "fcac06e6-fe6d-45b0-bc0c-e531b088aca2",
+    "id": "82a9ef8e-78c8-497d-bfe8-29cc146003a3",
     "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 1,
-    "team_name": "Cesar Fan Club Vice President",
+    "status": "CANCELED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
     "scoring_period": 8,
-    "date": 1793203207514,
+    "date": 1793425363212,
     "bid_amount": 0,
     "items": [
       {
@@ -10103,7 +10295,14 @@
         "player_id": 15864,
         "player_name": "Geno Smith",
         "from_team_id": 0,
-        "to_team_id": 1
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4710855,
+        "player_name": "Konata Mumpfield",
+        "from_team_id": 11,
+        "to_team_id": 0
       }
     ]
   }
