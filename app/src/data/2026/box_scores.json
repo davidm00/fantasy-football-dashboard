@@ -12387,7 +12387,7 @@
   },
   {
     "week": 8,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 6,
     "home_score": 167.95,
@@ -12538,7 +12538,7 @@
       }
     ],
     "away_team_id": 9,
-    "away_score": 76.85,
+    "away_score": 92.75,
     "away_lineup": [
       {
         "player_id": 4262921,
@@ -12602,15 +12602,7 @@
         "position": "RB",
         "pro_team": "SEA",
         "slot_position": "BE",
-        "points": 0
-      },
-      {
-        "player_id": -16034,
-        "name": "Texans D/ST",
-        "position": "D/ST",
-        "pro_team": "HOU",
-        "slot_position": "D/ST",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4241985,
@@ -12658,7 +12650,7 @@
         "position": "RB",
         "pro_team": "SEA",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 5.9
       },
       {
         "player_id": 4575517,
@@ -12675,15 +12667,23 @@
         "pro_team": "WSH",
         "slot_position": "WR",
         "points": 12.8
+      },
+      {
+        "player_id": -16003,
+        "name": "Bears D/ST",
+        "position": "D/ST",
+        "pro_team": "CHI",
+        "slot_position": "D/ST",
+        "points": 10.0
       }
     ]
   },
   {
     "week": 8,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 8,
-    "home_score": 118.25,
+    "home_score": 135.0,
     "home_lineup": [
       {
         "player_id": 4362238,
@@ -12731,7 +12731,7 @@
         "position": "RB",
         "pro_team": "SEA",
         "slot_position": "BE",
-        "points": 0
+        "points": 5.7
       },
       {
         "player_id": 16737,
@@ -12771,7 +12771,7 @@
         "position": "D/ST",
         "pro_team": "SEA",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 1.0
       },
       {
         "player_id": 3150744,
@@ -12803,7 +12803,7 @@
         "position": "LB",
         "pro_team": "SEA",
         "slot_position": "DP",
-        "points": 0
+        "points": 15.75
       },
       {
         "player_id": 4685415,
@@ -12895,7 +12895,7 @@
         "position": "RB",
         "pro_team": "CHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4683062,
@@ -12943,7 +12943,7 @@
         "position": "RB",
         "pro_team": "SEA",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.9
       },
       {
         "player_id": 4429023,
@@ -12981,10 +12981,10 @@
   },
   {
     "week": 8,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 7,
-    "home_score": 137.6,
+    "home_score": 156.2,
     "home_lineup": [
       {
         "player_id": 4362628,
@@ -13024,7 +13024,7 @@
         "position": "WR",
         "pro_team": "CHI",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 18.6
       },
       {
         "player_id": 4361579,
@@ -13156,7 +13156,7 @@
         "position": "WR",
         "pro_team": "CHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 12.7
       },
       {
         "player_id": 4426354,
@@ -13274,7 +13274,7 @@
   },
   {
     "week": 8,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 11,
     "home_score": 107.4,
@@ -13425,7 +13425,7 @@
       }
     ],
     "away_team_id": 3,
-    "away_score": 135.75,
+    "away_score": 163.65,
     "away_lineup": [
       {
         "player_id": 4374302,
@@ -13449,7 +13449,7 @@
         "position": "RB",
         "pro_team": "CHI",
         "slot_position": "RB",
-        "points": 0
+        "points": 27.9
       },
       {
         "player_id": 4248528,
@@ -13567,7 +13567,7 @@
   },
   {
     "week": 8,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 5,
     "home_score": 145.55,
@@ -13868,10 +13868,10 @@
   },
   {
     "week": 8,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 4,
-    "home_score": 105.6,
+    "home_score": 130.4,
     "home_lineup": [
       {
         "player_id": 4242335,
@@ -13903,7 +13903,7 @@
         "position": "WR",
         "pro_team": "SEA",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 23.8
       },
       {
         "player_id": 4569173,
@@ -13967,7 +13967,7 @@
         "position": "K",
         "pro_team": "SEA",
         "slot_position": "K",
-        "points": 0
+        "points": 1.0
       },
       {
         "player_id": 4569559,
@@ -14011,7 +14011,7 @@
       }
     ],
     "away_team_id": 12,
-    "away_score": 81.8,
+    "away_score": 111.75,
     "away_lineup": [
       {
         "player_id": 3117251,
@@ -14035,7 +14035,7 @@
         "position": "TE",
         "pro_team": "CHI",
         "slot_position": "TE",
-        "points": 0
+        "points": 11.5
       },
       {
         "player_id": 4239993,
@@ -14075,7 +14075,7 @@
         "position": "QB",
         "pro_team": "CHI",
         "slot_position": "QB",
-        "points": 0
+        "points": 18.45
       },
       {
         "player_id": 4361050,
