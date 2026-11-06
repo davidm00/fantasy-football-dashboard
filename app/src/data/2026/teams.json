@@ -1,7 +1,7 @@
 [
   {
     "team_id": 1,
-    "team_name": "This is Why I Drink",
+    "team_name": "Cesar Fan Club Vice President",
     "owners": [
       {
         "id": "m01",
@@ -21,7 +21,7 @@
   },
   {
     "team_id": 3,
-    "team_name": "Weeenie Man",
+    "team_name": "Weeenie Monarch",
     "owners": [
       {
         "id": "m03",
@@ -41,7 +41,7 @@
   },
   {
     "team_id": 5,
-    "team_name": "F'N BUM ASS MFS",
+    "team_name": "Cesar Fan Club President",
     "owners": [
       {
         "id": "m05",

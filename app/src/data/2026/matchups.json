@@ -253,85 +253,85 @@
   },
   {
     "week": 7,
-    "status": "not_started",
+    "status": "final",
     "matchups": [
       {
         "home_team_id": 10,
-        "home_score": null,
+        "home_score": 119.6,
         "away_team_id": 6,
-        "away_score": null
+        "away_score": 170.95
       },
       {
         "home_team_id": 2,
-        "home_score": null,
+        "home_score": 123.85,
         "away_team_id": 9,
-        "away_score": null
+        "away_score": 104.8
       },
       {
         "home_team_id": 3,
-        "home_score": null,
+        "home_score": 150.85,
         "away_team_id": 8,
-        "away_score": null
+        "away_score": 93.55
       },
       {
         "home_team_id": 1,
-        "home_score": null,
+        "home_score": 133.5,
         "away_team_id": 7,
-        "away_score": null
+        "away_score": 156.05
       },
       {
         "home_team_id": 12,
-        "home_score": null,
+        "home_score": 110.75,
         "away_team_id": 11,
-        "away_score": null
+        "away_score": 124.0
       },
       {
         "home_team_id": 4,
-        "home_score": null,
+        "home_score": 158.45,
         "away_team_id": 5,
-        "away_score": null
+        "away_score": 182.05
       }
     ]
   },
   {
     "week": 8,
-    "status": "not_started",
+    "status": "final",
     "matchups": [
       {
         "home_team_id": 6,
-        "home_score": null,
+        "home_score": 167.95,
         "away_team_id": 9,
-        "away_score": null
+        "away_score": 92.75
       },
       {
         "home_team_id": 8,
-        "home_score": null,
+        "home_score": 135.0,
         "away_team_id": 10,
-        "away_score": null
+        "away_score": 163.9
       },
       {
         "home_team_id": 7,
-        "home_score": null,
+        "home_score": 156.2,
         "away_team_id": 2,
-        "away_score": null
+        "away_score": 170.95
       },
       {
         "home_team_id": 11,
-        "home_score": null,
+        "home_score": 107.4,
         "away_team_id": 3,
-        "away_score": null
+        "away_score": 163.65
       },
       {
         "home_team_id": 5,
-        "home_score": null,
+        "home_score": 145.55,
         "away_team_id": 1,
-        "away_score": null
+        "away_score": 130.8
       },
       {
         "home_team_id": 4,
-        "home_score": null,
+        "home_score": 130.4,
         "away_team_id": 12,
-        "away_score": null
+        "away_score": 111.75
       }
     ]
   },
