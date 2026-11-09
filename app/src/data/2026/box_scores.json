@@ -14164,7 +14164,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 8,
-    "home_score": 29.2,
+    "home_score": 115.25,
     "home_lineup": [
       {
         "player_id": 4362238,
@@ -14172,7 +14172,7 @@
         "position": "RB",
         "pro_team": "CIN",
         "slot_position": "RB",
-        "points": 0
+        "points": 10.5
       },
       {
         "player_id": 3043078,
@@ -14188,7 +14188,7 @@
         "position": "WR",
         "pro_team": "LAR",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4432665,
@@ -14196,7 +14196,7 @@
         "position": "TE",
         "pro_team": "LV",
         "slot_position": "TE",
-        "points": 0
+        "points": 22.3
       },
       {
         "player_id": 4871023,
@@ -14212,7 +14212,7 @@
         "position": "RB",
         "pro_team": "SEA",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 11.8
       },
       {
         "player_id": 16737,
@@ -14220,7 +14220,7 @@
         "position": "WR",
         "pro_team": "SF",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4360569,
@@ -14244,7 +14244,7 @@
         "position": "RB",
         "pro_team": "KC",
         "slot_position": "BE",
-        "points": 0
+        "points": 9.4
       },
       {
         "player_id": -16026,
@@ -14252,7 +14252,7 @@
         "position": "D/ST",
         "pro_team": "SEA",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 10.0
       },
       {
         "player_id": 3150744,
@@ -14260,7 +14260,7 @@
         "position": "K",
         "pro_team": "TB",
         "slot_position": "K",
-        "points": 0
+        "points": 10.0
       },
       {
         "player_id": 4685720,
@@ -14268,7 +14268,7 @@
         "position": "QB",
         "pro_team": "CAR",
         "slot_position": "BE",
-        "points": 0
+        "points": 27.1
       },
       {
         "player_id": 4685261,
@@ -14284,7 +14284,7 @@
         "position": "LB",
         "pro_team": "SEA",
         "slot_position": "DP",
-        "points": 0
+        "points": 9.75
       },
       {
         "player_id": 4685415,
@@ -14300,7 +14300,7 @@
         "position": "TE",
         "pro_team": "WSH",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 11.7
       },
       {
         "player_id": 4597500,
@@ -14308,11 +14308,11 @@
         "position": "WR",
         "pro_team": "NYJ",
         "slot_position": "WR",
-        "points": 0
+        "points": 0.0
       }
     ],
     "away_team_id": 6,
-    "away_score": 0.0,
+    "away_score": 133.05,
     "away_lineup": [
       {
         "player_id": 4429795,
@@ -14320,7 +14320,7 @@
         "position": "RB",
         "pro_team": "DET",
         "slot_position": "RB",
-        "points": 0
+        "points": 13.4
       },
       {
         "player_id": 4241478,
@@ -14328,7 +14328,7 @@
         "position": "WR",
         "pro_team": "PHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 3915511,
@@ -14336,7 +14336,7 @@
         "position": "QB",
         "pro_team": "CIN",
         "slot_position": "QB",
-        "points": 0
+        "points": 38.25
       },
       {
         "player_id": 4038815,
@@ -14352,7 +14352,7 @@
         "position": "WR",
         "pro_team": "SF",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4241474,
@@ -14360,7 +14360,7 @@
         "position": "RB",
         "pro_team": "ATL",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": -16027,
@@ -14368,7 +14368,7 @@
         "position": "D/ST",
         "pro_team": "TB",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 11.0
       },
       {
         "player_id": 4571557,
@@ -14376,7 +14376,7 @@
         "position": "K",
         "pro_team": "IND",
         "slot_position": "K",
-        "points": 0
+        "points": 16.0
       },
       {
         "player_id": 4426388,
@@ -14384,7 +14384,7 @@
         "position": "WR",
         "pro_team": "DET",
         "slot_position": "WR",
-        "points": 0
+        "points": 5.0
       },
       {
         "player_id": 4427366,
@@ -14392,7 +14392,7 @@
         "position": "RB",
         "pro_team": "NYJ",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 11.7
       },
       {
         "player_id": 4685247,
@@ -14400,7 +14400,7 @@
         "position": "RB",
         "pro_team": "NYJ",
         "slot_position": "RB",
-        "points": 0
+        "points": 5.4
       },
       {
         "player_id": 4430027,
@@ -14408,7 +14408,7 @@
         "position": "TE",
         "pro_team": "DET",
         "slot_position": "TE",
-        "points": 0
+        "points": 7.2
       },
       {
         "player_id": 4036378,
@@ -14416,7 +14416,7 @@
         "position": "QB",
         "pro_team": "GB",
         "slot_position": "BE",
-        "points": 0
+        "points": 45.9
       },
       {
         "player_id": 4428863,
@@ -14424,7 +14424,7 @@
         "position": "S",
         "pro_team": "GB",
         "slot_position": "DP",
-        "points": 0
+        "points": 15.0
       },
       {
         "player_id": 4360438,
@@ -14432,7 +14432,7 @@
         "position": "WR",
         "pro_team": "SF",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4912274,
@@ -14440,7 +14440,7 @@
         "position": "RB",
         "pro_team": "DET",
         "slot_position": "BE",
-        "points": 0
+        "points": 6.35
       },
       {
         "player_id": 3116164,
@@ -14448,7 +14448,7 @@
         "position": "TE",
         "pro_team": "CIN",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 3.1
       },
       {
         "player_id": 4682648,
@@ -14456,7 +14456,7 @@
         "position": "WR",
         "pro_team": "NYG",
         "slot_position": "WR",
-        "points": 0
+        "points": 7.0
       }
     ]
   },
@@ -14465,7 +14465,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 9,
-    "home_score": 0.0,
+    "home_score": 100.0,
     "home_lineup": [
       {
         "player_id": 4262921,
@@ -14481,7 +14481,7 @@
         "position": "WR",
         "pro_team": "TB",
         "slot_position": "WR",
-        "points": 0
+        "points": 6.9
       },
       {
         "player_id": 3042519,
@@ -14513,15 +14513,15 @@
         "position": "WR",
         "pro_team": "IND",
         "slot_position": "BE",
-        "points": 0
+        "points": 5.4
       },
       {
         "player_id": 3054850,
         "name": "Alvin Kamara",
         "position": "RB",
         "pro_team": "NO",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "RB/WR/TE",
+        "points": 7.9
       },
       {
         "player_id": 4887558,
@@ -14529,15 +14529,7 @@
         "position": "RB",
         "pro_team": "SEA",
         "slot_position": "BE",
-        "points": 0
-      },
-      {
-        "player_id": 4241985,
-        "name": "J.K. Dobbins",
-        "position": "RB",
-        "pro_team": "DEN",
-        "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 3121023,
@@ -14545,7 +14537,7 @@
         "position": "TE",
         "pro_team": "PHI",
         "slot_position": "TE",
-        "points": 0
+        "points": 10.0
       },
       {
         "player_id": 12483,
@@ -14553,22 +14545,14 @@
         "position": "QB",
         "pro_team": "LAR",
         "slot_position": "QB",
-        "points": 0
-      },
-      {
-        "player_id": 14880,
-        "name": "Kirk Cousins",
-        "position": "QB",
-        "pro_team": "LV",
-        "slot_position": "BE",
-        "points": 0
+        "points": 13.5
       },
       {
         "player_id": 4373678,
         "name": "Khalil Shakir",
         "position": "WR",
         "pro_team": "BUF",
-        "slot_position": "RB/WR/TE",
+        "slot_position": "BE",
         "points": 0
       },
       {
@@ -14577,7 +14561,7 @@
         "position": "RB",
         "pro_team": "SEA",
         "slot_position": "RB",
-        "points": 0
+        "points": 9.6
       },
       {
         "player_id": 4575517,
@@ -14593,7 +14577,7 @@
         "position": "WR",
         "pro_team": "WSH",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 8.1
       },
       {
         "player_id": -16003,
@@ -14601,11 +14585,27 @@
         "position": "D/ST",
         "pro_team": "CHI",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 13.0
+      },
+      {
+        "player_id": 4043130,
+        "name": "Jordyn Brooks",
+        "position": "LB",
+        "pro_team": "MIA",
+        "slot_position": "DP",
+        "points": 16.0
+      },
+      {
+        "player_id": 4689936,
+        "name": "Jake Bates",
+        "position": "K",
+        "pro_team": "DET",
+        "slot_position": "K",
+        "points": 15.0
       }
     ],
     "away_team_id": 7,
-    "away_score": 6.8,
+    "away_score": 205.45,
     "away_lineup": [
       {
         "player_id": 4362628,
@@ -14613,7 +14613,7 @@
         "position": "WR",
         "pro_team": "CIN",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 31.5
       },
       {
         "player_id": 4426502,
@@ -14621,7 +14621,7 @@
         "position": "WR",
         "pro_team": "ATL",
         "slot_position": "WR",
-        "points": 0
+        "points": 11.8
       },
       {
         "player_id": 4429615,
@@ -14637,7 +14637,7 @@
         "position": "RB",
         "pro_team": "HOU",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4685278,
@@ -14645,7 +14645,7 @@
         "position": "WR",
         "pro_team": "CHI",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 22.2
       },
       {
         "player_id": 4361579,
@@ -14653,7 +14653,7 @@
         "position": "RB",
         "pro_team": "DAL",
         "slot_position": "RB",
-        "points": 0
+        "points": 22.4
       },
       {
         "player_id": 3128429,
@@ -14661,7 +14661,7 @@
         "position": "WR",
         "pro_team": "DEN",
         "slot_position": "BE",
-        "points": 0
+        "points": 15.5
       },
       {
         "player_id": 15847,
@@ -14669,7 +14669,7 @@
         "position": "TE",
         "pro_team": "KC",
         "slot_position": "TE",
-        "points": 0
+        "points": 17.3
       },
       {
         "player_id": 4362619,
@@ -14685,7 +14685,7 @@
         "position": "QB",
         "pro_team": "KC",
         "slot_position": "QB",
-        "points": 0
+        "points": 22.9
       },
       {
         "player_id": 4870653,
@@ -14693,7 +14693,7 @@
         "position": "WR",
         "pro_team": "CLE",
         "slot_position": "BE",
-        "points": 0
+        "points": 18.8
       },
       {
         "player_id": 4430539,
@@ -14708,16 +14708,16 @@
         "name": "Cam Skattebo",
         "position": "RB",
         "pro_team": "NYG",
-        "slot_position": "RB",
-        "points": 0
+        "slot_position": "BE",
+        "points": 0.0
       },
       {
         "player_id": 5081397,
         "name": "Dylan Sampson",
         "position": "RB",
         "pro_team": "CLE",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "RB",
+        "points": 7.8
       },
       {
         "player_id": 2971573,
@@ -14725,7 +14725,7 @@
         "position": "K",
         "pro_team": "HOU",
         "slot_position": "K",
-        "points": 0
+        "points": 17.0
       },
       {
         "player_id": -16034,
@@ -14733,7 +14733,7 @@
         "position": "D/ST",
         "pro_team": "HOU",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 12.0
       },
       {
         "player_id": 4876017,
@@ -14741,7 +14741,7 @@
         "position": "LB",
         "pro_team": "CLE",
         "slot_position": "DP",
-        "points": 0
+        "points": 33.75
       }
     ]
   },
@@ -14750,15 +14750,15 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 10,
-    "home_score": 25.9,
+    "home_score": 96.6,
     "home_lineup": [
       {
         "player_id": 4258173,
         "name": "Nico Collins",
         "position": "WR",
         "pro_team": "HOU",
-        "slot_position": "RB/WR/TE",
-        "points": 0
+        "slot_position": "WR",
+        "points": 15.5
       },
       {
         "player_id": 4882093,
@@ -14773,7 +14773,7 @@
         "name": "DJ Moore",
         "position": "WR",
         "pro_team": "BUF",
-        "slot_position": "WR",
+        "slot_position": "RB/WR/TE",
         "points": 0
       },
       {
@@ -14782,7 +14782,7 @@
         "position": "TE",
         "pro_team": "CLE",
         "slot_position": "TE",
-        "points": 0
+        "points": 12.2
       },
       {
         "player_id": 4426348,
@@ -14790,7 +14790,7 @@
         "position": "QB",
         "pro_team": "WSH",
         "slot_position": "QB",
-        "points": 0
+        "points": 19.3
       },
       {
         "player_id": 4360761,
@@ -14798,7 +14798,7 @@
         "position": "WR",
         "pro_team": "ARI",
         "slot_position": "WR",
-        "points": 0
+        "points": 12.0
       },
       {
         "player_id": 3116165,
@@ -14806,7 +14806,7 @@
         "position": "WR",
         "pro_team": "TB",
         "slot_position": "BE",
-        "points": 0
+        "points": 4.8
       },
       {
         "player_id": 4608686,
@@ -14814,7 +14814,7 @@
         "position": "RB",
         "pro_team": "CHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4683062,
@@ -14822,7 +14822,7 @@
         "position": "WR",
         "pro_team": "KC",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 10.8
       },
       {
         "player_id": 4361432,
@@ -14830,7 +14830,7 @@
         "position": "WR",
         "pro_team": "NE",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 3728281,
@@ -14854,7 +14854,7 @@
         "position": "D/ST",
         "pro_team": "NE",
         "slot_position": "D/ST",
-        "points": 0
+        "points": -5.0
       },
       {
         "player_id": 4429023,
@@ -14862,7 +14862,7 @@
         "position": "RB",
         "pro_team": "GB",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4371733,
@@ -14870,7 +14870,7 @@
         "position": "RB",
         "pro_team": "TB",
         "slot_position": "BE",
-        "points": 0
+        "points": 10.6
       },
       {
         "player_id": 4426338,
@@ -14878,7 +14878,7 @@
         "position": "QB",
         "pro_team": "DEN",
         "slot_position": "BE",
-        "points": 0
+        "points": 20.05
       },
       {
         "player_id": 4567156,
@@ -14886,7 +14886,7 @@
         "position": "WR",
         "pro_team": "WSH",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4040761,
@@ -14894,11 +14894,11 @@
         "position": "RB",
         "pro_team": "NYG",
         "slot_position": "RB",
-        "points": 0
+        "points": 5.9
       }
     ],
     "away_team_id": 11,
-    "away_score": 0.0,
+    "away_score": 87.8,
     "away_lineup": [
       {
         "player_id": 4379399,
@@ -14914,7 +14914,7 @@
         "position": "TE",
         "pro_team": "ATL",
         "slot_position": "TE",
-        "points": 0
+        "points": 5.3
       },
       {
         "player_id": 3138826,
@@ -14922,7 +14922,7 @@
         "position": "LB",
         "pro_team": "SF",
         "slot_position": "DP",
-        "points": 0
+        "points": 13.0
       },
       {
         "player_id": 3046779,
@@ -14930,15 +14930,15 @@
         "position": "QB",
         "pro_team": "DET",
         "slot_position": "QB",
-        "points": 0
+        "points": 5.0
       },
       {
         "player_id": 4869645,
         "name": "Caleb Douglas",
         "position": "WR",
         "pro_team": "MIA",
-        "slot_position": "RB/WR/TE",
-        "points": 0
+        "slot_position": "BE",
+        "points": 13.0
       },
       {
         "player_id": -16012,
@@ -14946,7 +14946,7 @@
         "position": "D/ST",
         "pro_team": "KC",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 12.0
       },
       {
         "player_id": 4575131,
@@ -14954,7 +14954,7 @@
         "position": "RB",
         "pro_team": "WSH",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 3929645,
@@ -14962,7 +14962,7 @@
         "position": "TE",
         "pro_team": "NO",
         "slot_position": "BE",
-        "points": 0
+        "points": 11.4
       },
       {
         "player_id": 4612826,
@@ -14970,7 +14970,7 @@
         "position": "WR",
         "pro_team": "LAC",
         "slot_position": "WR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4567048,
@@ -14978,7 +14978,7 @@
         "position": "RB",
         "pro_team": "KC",
         "slot_position": "RB",
-        "points": 0
+        "points": 36.3
       },
       {
         "player_id": 4567104,
@@ -14993,8 +14993,8 @@
         "name": "Tank Dell",
         "position": "WR",
         "pro_team": "HOU",
-        "slot_position": "WR",
-        "points": 0
+        "slot_position": "BE",
+        "points": 20.5
       },
       {
         "player_id": 4569587,
@@ -15009,16 +15009,16 @@
         "name": "Ryan Flournoy",
         "position": "WR",
         "pro_team": "DAL",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "RB/WR/TE",
+        "points": 7.3
       },
       {
         "player_id": 5081432,
         "name": "Antonio Williams",
         "position": "WR",
         "pro_team": "WSH",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "WR",
+        "points": 5.5
       },
       {
         "player_id": 4367209,
@@ -15026,7 +15026,7 @@
         "position": "TE",
         "pro_team": "MIA",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 3.4
       },
       {
         "player_id": 4242512,
@@ -15034,7 +15034,7 @@
         "position": "QB",
         "pro_team": "MIA",
         "slot_position": "BE",
-        "points": 0
+        "points": 3.1
       },
       {
         "player_id": 4635008,
@@ -15051,7 +15051,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 2,
-    "home_score": 0.0,
+    "home_score": 163.45,
     "home_lineup": [
       {
         "player_id": 4430807,
@@ -15059,7 +15059,7 @@
         "position": "RB",
         "pro_team": "ATL",
         "slot_position": "RB",
-        "points": 0
+        "points": 26.7
       },
       {
         "player_id": 3918298,
@@ -15075,7 +15075,7 @@
         "position": "TE",
         "pro_team": "ARI",
         "slot_position": "TE",
-        "points": 0
+        "points": 12.4
       },
       {
         "player_id": 4431299,
@@ -15083,15 +15083,15 @@
         "position": "WR",
         "pro_team": "CHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 16.0
       },
       {
         "player_id": 4426354,
         "name": "George Pickens",
         "position": "WR",
         "pro_team": "DAL",
-        "slot_position": "WR",
-        "points": 0
+        "slot_position": "BE",
+        "points": 0.0
       },
       {
         "player_id": 3916148,
@@ -15107,7 +15107,7 @@
         "position": "RB",
         "pro_team": "CAR",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4241416,
@@ -15115,7 +15115,7 @@
         "position": "RB",
         "pro_team": "CAR",
         "slot_position": "RB",
-        "points": 0
+        "points": 13.6
       },
       {
         "player_id": 4701936,
@@ -15123,7 +15123,7 @@
         "position": "WR",
         "pro_team": "GB",
         "slot_position": "WR",
-        "points": 0
+        "points": 32.4
       },
       {
         "player_id": 4429205,
@@ -15138,8 +15138,8 @@
         "name": "Woody Marks",
         "position": "RB",
         "pro_team": "HOU",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "RB/WR/TE",
+        "points": 8.4
       },
       {
         "player_id": -16014,
@@ -15147,7 +15147,7 @@
         "position": "D/ST",
         "pro_team": "LAR",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 11.0
       },
       {
         "player_id": 4870847,
@@ -15162,8 +15162,8 @@
         "name": "Denzel Boston",
         "position": "WR",
         "pro_team": "CLE",
-        "slot_position": "RB/WR/TE",
-        "points": 0
+        "slot_position": "WR",
+        "points": 15.8
       },
       {
         "player_id": 4869461,
@@ -15171,7 +15171,7 @@
         "position": "K",
         "pro_team": "GB",
         "slot_position": "K",
-        "points": 0
+        "points": 16.0
       },
       {
         "player_id": 4566094,
@@ -15179,7 +15179,7 @@
         "position": "LB",
         "pro_team": "MIA",
         "slot_position": "DP",
-        "points": 0
+        "points": 19.75
       },
       {
         "player_id": 4711533,
@@ -15187,7 +15187,7 @@
         "position": "RB",
         "pro_team": "MIA",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 7.4
       },
       {
         "player_id": 4360698,
@@ -15195,11 +15195,11 @@
         "position": "QB",
         "pro_team": "PHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 14.85
       }
     ],
     "away_team_id": 5,
-    "away_score": 12.0,
+    "away_score": 135.4,
     "away_lineup": [
       {
         "player_id": 4241389,
@@ -15207,15 +15207,15 @@
         "position": "WR",
         "pro_team": "DAL",
         "slot_position": "WR",
-        "points": 0
+        "points": 33.5
       },
       {
         "player_id": 4890973,
         "name": "Ashton Jeanty",
         "position": "RB",
         "pro_team": "LV",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "RB",
+        "points": 7.0
       },
       {
         "player_id": 3916387,
@@ -15231,23 +15231,23 @@
         "position": "TE",
         "pro_team": "IND",
         "slot_position": "TE",
-        "points": 0
+        "points": 8.4
       },
       {
         "player_id": 4047365,
         "name": "Josh Jacobs",
         "position": "RB",
         "pro_team": "GB",
-        "slot_position": "RB",
-        "points": 0
+        "slot_position": "RB/WR/TE",
+        "points": 0.5
       },
       {
         "player_id": 4428331,
         "name": "Rashee Rice",
         "position": "WR",
         "pro_team": "KC",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "WR",
+        "points": 9.9
       },
       {
         "player_id": 3953687,
@@ -15255,15 +15255,15 @@
         "position": "K",
         "pro_team": "DAL",
         "slot_position": "K",
-        "points": 0
+        "points": 9.0
       },
       {
         "player_id": 4695883,
         "name": "Jalen Coker",
         "position": "WR",
         "pro_team": "CAR",
-        "slot_position": "WR",
-        "points": 0
+        "slot_position": "BE",
+        "points": 6.6
       },
       {
         "player_id": 4696044,
@@ -15271,7 +15271,7 @@
         "position": "RB",
         "pro_team": "SF",
         "slot_position": "BE",
-        "points": 0
+        "points": 7.0
       },
       {
         "player_id": 2612151,
@@ -15279,7 +15279,7 @@
         "position": "LB",
         "pro_team": "DEN",
         "slot_position": "DP",
-        "points": 0
+        "points": 6.0
       },
       {
         "player_id": 4880281,
@@ -15287,39 +15287,31 @@
         "position": "WR",
         "pro_team": "NO",
         "slot_position": "BE",
-        "points": 0
+        "points": 5.0
       },
       {
         "player_id": 4685702,
         "name": "Quinshon Judkins",
         "position": "RB",
         "pro_team": "CLE",
-        "slot_position": "RB/WR/TE",
-        "points": 0
+        "slot_position": "RB",
+        "points": 5.5
       },
       {
         "player_id": 4596448,
         "name": "Bucky Irving",
         "position": "RB",
         "pro_team": "TB",
-        "slot_position": "RB",
-        "points": 0
+        "slot_position": "RB/WR/TE",
+        "points": 28.5
       },
       {
         "player_id": 4723820,
         "name": "Omar Cooper Jr.",
         "position": "WR",
         "pro_team": "NYJ",
-        "slot_position": "RB/WR/TE",
-        "points": 0
-      },
-      {
-        "player_id": 3046439,
-        "name": "Hunter Henry",
-        "position": "TE",
-        "pro_team": "NE",
         "slot_position": "BE",
-        "points": 0
+        "points": 13.8
       },
       {
         "player_id": -16030,
@@ -15330,20 +15322,28 @@
         "points": 12.0
       },
       {
-        "player_id": 4241555,
-        "name": "Elijah Mitchell",
-        "position": "RB",
-        "pro_team": "PHI",
-        "slot_position": "BE",
-        "points": 0
-      },
-      {
-        "player_id": 2991662,
-        "name": "Mack Hollins",
-        "position": "WR",
+        "player_id": 4831959,
+        "name": "Eli Raridon",
+        "position": "TE",
         "pro_team": "NE",
         "slot_position": "BE",
-        "points": 0
+        "points": 8.2
+      },
+      {
+        "player_id": 4360423,
+        "name": "Michael Penix Jr.",
+        "position": "QB",
+        "pro_team": "ATL",
+        "slot_position": "QB",
+        "points": 15.1
+      },
+      {
+        "player_id": 4569682,
+        "name": "Audric Estime",
+        "position": "RB",
+        "pro_team": "NO",
+        "slot_position": "BE",
+        "points": 14.7
       }
     ]
   },
@@ -15352,7 +15352,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 3,
-    "home_score": 15.75,
+    "home_score": 122.8,
     "home_lineup": [
       {
         "player_id": 4374302,
@@ -15360,7 +15360,7 @@
         "position": "WR",
         "pro_team": "DET",
         "slot_position": "WR",
-        "points": 0
+        "points": 18.1
       },
       {
         "player_id": 4047646,
@@ -15368,7 +15368,7 @@
         "position": "WR",
         "pro_team": "NE",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4259545,
@@ -15376,7 +15376,7 @@
         "position": "RB",
         "pro_team": "CHI",
         "slot_position": "RB",
-        "points": 0
+        "points": 3.1
       },
       {
         "player_id": 4248528,
@@ -15384,7 +15384,7 @@
         "position": "WR",
         "pro_team": "GB",
         "slot_position": "WR",
-        "points": 0
+        "points": 30.1
       },
       {
         "player_id": 4572680,
@@ -15392,7 +15392,7 @@
         "position": "TE",
         "pro_team": "GB",
         "slot_position": "TE",
-        "points": 0
+        "points": 1.9
       },
       {
         "player_id": 3116406,
@@ -15408,7 +15408,7 @@
         "position": "WR",
         "pro_team": "NYG",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 9.3
       },
       {
         "player_id": 3929630,
@@ -15416,7 +15416,7 @@
         "position": "RB",
         "pro_team": "PHI",
         "slot_position": "RB",
-        "points": 0
+        "points": 8.2
       },
       {
         "player_id": 4431452,
@@ -15424,7 +15424,7 @@
         "position": "QB",
         "pro_team": "NE",
         "slot_position": "QB",
-        "points": 0
+        "points": 21.25
       },
       {
         "player_id": 3050073,
@@ -15440,7 +15440,7 @@
         "position": "WR",
         "pro_team": "LV",
         "slot_position": "BE",
-        "points": 0
+        "points": 11.0
       },
       {
         "player_id": 4599739,
@@ -15456,7 +15456,7 @@
         "position": "RB",
         "pro_team": "NE",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4870795,
@@ -15464,7 +15464,7 @@
         "position": "WR",
         "pro_team": "PHI",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 12.1
       },
       {
         "player_id": 3917232,
@@ -15480,7 +15480,7 @@
         "position": "D/ST",
         "pro_team": "CIN",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 3.0
       },
       {
         "player_id": 3045147,
@@ -15488,11 +15488,19 @@
         "position": "RB",
         "pro_team": "ARI",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
+      },
+      {
+        "player_id": 4874509,
+        "name": "DJ Giddens",
+        "position": "RB",
+        "pro_team": "IND",
+        "slot_position": "BE",
+        "points": 0.0
       }
     ],
     "away_team_id": 4,
-    "away_score": 0.0,
+    "away_score": 153.2,
     "away_lineup": [
       {
         "player_id": 4242335,
@@ -15500,15 +15508,15 @@
         "position": "RB",
         "pro_team": "IND",
         "slot_position": "RB",
-        "points": 0
+        "points": 9.4
       },
       {
         "player_id": 4569618,
         "name": "Garrett Wilson",
         "position": "WR",
         "pro_team": "NYJ",
-        "slot_position": "WR",
-        "points": 0
+        "slot_position": "BE",
+        "points": 0.0
       },
       {
         "player_id": 4685472,
@@ -15516,7 +15524,7 @@
         "position": "WR",
         "pro_team": "CAR",
         "slot_position": "WR",
-        "points": 0
+        "points": 15.6
       },
       {
         "player_id": 4430878,
@@ -15524,7 +15532,7 @@
         "position": "WR",
         "pro_team": "SEA",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 12.1
       },
       {
         "player_id": 4569173,
@@ -15532,7 +15540,7 @@
         "position": "RB",
         "pro_team": "NE",
         "slot_position": "RB",
-        "points": 0
+        "points": 14.8
       },
       {
         "player_id": 3040151,
@@ -15540,7 +15548,7 @@
         "position": "TE",
         "pro_team": "SF",
         "slot_position": "TE",
-        "points": 0
+        "points": 9.8
       },
       {
         "player_id": 4569987,
@@ -15556,7 +15564,7 @@
         "position": "QB",
         "pro_team": "DAL",
         "slot_position": "QB",
-        "points": 0
+        "points": 26.85
       },
       {
         "player_id": 4429096,
@@ -15564,7 +15572,7 @@
         "position": "RB",
         "pro_team": "LAR",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 11.8
       },
       {
         "player_id": 3916433,
@@ -15579,8 +15587,8 @@
         "name": "Keenan Allen",
         "position": "WR",
         "pro_team": "IND",
-        "slot_position": "BE",
-        "points": 0
+        "slot_position": "WR",
+        "points": 8.1
       },
       {
         "player_id": 2473037,
@@ -15588,7 +15596,7 @@
         "position": "K",
         "pro_team": "SEA",
         "slot_position": "K",
-        "points": 0
+        "points": 6.0
       },
       {
         "player_id": 4569559,
@@ -15596,7 +15604,7 @@
         "position": "WR",
         "pro_team": "NO",
         "slot_position": "BE",
-        "points": 0
+        "points": 3.7
       },
       {
         "player_id": 3917657,
@@ -15604,7 +15612,7 @@
         "position": "LB",
         "pro_team": "PHI",
         "slot_position": "DP",
-        "points": 0
+        "points": 19.75
       },
       {
         "player_id": 4432577,
@@ -15612,7 +15620,7 @@
         "position": "QB",
         "pro_team": "HOU",
         "slot_position": "BE",
-        "points": 0
+        "points": 47.2
       },
       {
         "player_id": 4686468,
@@ -15620,7 +15628,7 @@
         "position": "RB",
         "pro_team": "IND",
         "slot_position": "BE",
-        "points": 0
+        "points": 11.2
       },
       {
         "player_id": -16025,
@@ -15628,7 +15636,7 @@
         "position": "D/ST",
         "pro_team": "SF",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 19.0
       }
     ]
   },
@@ -15637,7 +15645,7 @@
     "status": "in_progress",
     "is_playoff": false,
     "home_team_id": 1,
-    "home_score": 14.1,
+    "home_score": 157.2,
     "home_lineup": [
       {
         "player_id": 4426515,
@@ -15645,7 +15653,7 @@
         "position": "WR",
         "pro_team": "LAR",
         "slot_position": "WR",
-        "points": 0
+        "points": 36.5
       },
       {
         "player_id": 4685382,
@@ -15653,7 +15661,7 @@
         "position": "RB",
         "pro_team": "LAC",
         "slot_position": "BE",
-        "points": 0
+        "points": 6.0
       },
       {
         "player_id": 4432620,
@@ -15669,7 +15677,7 @@
         "position": "QB",
         "pro_team": "NO",
         "slot_position": "QB",
-        "points": 0
+        "points": 24.35
       },
       {
         "player_id": 4569603,
@@ -15677,7 +15685,7 @@
         "position": "WR",
         "pro_team": "MIA",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 4.1
       },
       {
         "player_id": -16016,
@@ -15693,7 +15701,7 @@
         "position": "LB",
         "pro_team": "LV",
         "slot_position": "DP",
-        "points": 0
+        "points": 21.75
       },
       {
         "player_id": 4568490,
@@ -15701,7 +15709,7 @@
         "position": "RB",
         "pro_team": "DEN",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4697815,
@@ -15709,7 +15717,7 @@
         "position": "RB",
         "pro_team": "WSH",
         "slot_position": "BE",
-        "points": 0
+        "points": 8.4
       },
       {
         "player_id": 4372016,
@@ -15717,7 +15725,7 @@
         "position": "WR",
         "pro_team": "DEN",
         "slot_position": "BE",
-        "points": 0
+        "points": 3.2
       },
       {
         "player_id": 4361370,
@@ -15725,7 +15733,7 @@
         "position": "WR",
         "pro_team": "NO",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 16.8
       },
       {
         "player_id": 4430737,
@@ -15733,7 +15741,7 @@
         "position": "RB",
         "pro_team": "LAR",
         "slot_position": "RB",
-        "points": 0
+        "points": 9.1
       },
       {
         "player_id": 4686658,
@@ -15741,7 +15749,7 @@
         "position": "RB",
         "pro_team": "LV",
         "slot_position": "BE",
-        "points": 0
+        "points": -0.3
       },
       {
         "player_id": 4360516,
@@ -15749,7 +15757,7 @@
         "position": "RB",
         "pro_team": "NYG",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4702555,
@@ -15757,7 +15765,7 @@
         "position": "RB",
         "pro_team": "DEN",
         "slot_position": "RB",
-        "points": 0
+        "points": 18.8
       },
       {
         "player_id": 4429086,
@@ -15765,7 +15773,7 @@
         "position": "TE",
         "pro_team": "LV",
         "slot_position": "TE",
-        "points": 0
+        "points": 4.7
       },
       {
         "player_id": 4360078,
@@ -15773,7 +15781,7 @@
         "position": "WR",
         "pro_team": "IND",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4249087,
@@ -15781,11 +15789,11 @@
         "position": "K",
         "pro_team": "LV",
         "slot_position": "K",
-        "points": 0
+        "points": 7.0
       }
     ],
     "away_team_id": 12,
-    "away_score": 1.0,
+    "away_score": 142.75,
     "away_lineup": [
       {
         "player_id": 3117251,
@@ -15793,7 +15801,7 @@
         "position": "RB",
         "pro_team": "SF",
         "slot_position": "RB",
-        "points": 0
+        "points": 22.7
       },
       {
         "player_id": 4870808,
@@ -15801,7 +15809,7 @@
         "position": "RB",
         "pro_team": "ARI",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4723086,
@@ -15809,7 +15817,7 @@
         "position": "TE",
         "pro_team": "CHI",
         "slot_position": "TE",
-        "points": 0
+        "points": 9.4
       },
       {
         "player_id": 4239993,
@@ -15817,7 +15825,7 @@
         "position": "WR",
         "pro_team": "CIN",
         "slot_position": "WR",
-        "points": 0
+        "points": 20.2
       },
       {
         "player_id": 4432708,
@@ -15825,7 +15833,7 @@
         "position": "WR",
         "pro_team": "HOU",
         "slot_position": "BE",
-        "points": 0
+        "points": 4.0
       },
       {
         "player_id": 4239996,
@@ -15833,7 +15841,7 @@
         "position": "RB",
         "pro_team": "NO",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4047650,
@@ -15849,7 +15857,7 @@
         "position": "QB",
         "pro_team": "CHI",
         "slot_position": "BE",
-        "points": 0
+        "points": 11.55
       },
       {
         "player_id": 4361050,
@@ -15857,7 +15865,7 @@
         "position": "TE",
         "pro_team": "NYG",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 16.3
       },
       {
         "player_id": 4361741,
@@ -15865,7 +15873,7 @@
         "position": "QB",
         "pro_team": "SF",
         "slot_position": "QB",
-        "points": 0
+        "points": 29.6
       },
       {
         "player_id": 3055899,
@@ -15873,7 +15881,7 @@
         "position": "K",
         "pro_team": "KC",
         "slot_position": "K",
-        "points": 0
+        "points": 4.0
       },
       {
         "player_id": -16033,
@@ -15897,7 +15905,7 @@
         "position": "WR",
         "pro_team": "NE",
         "slot_position": "WR",
-        "points": 0
+        "points": 15.2
       },
       {
         "player_id": 4427728,
@@ -15905,7 +15913,7 @@
         "position": "RB",
         "pro_team": "ARI",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4362759,
@@ -15913,7 +15921,7 @@
         "position": "LB",
         "pro_team": "KC",
         "slot_position": "DP",
-        "points": 0
+        "points": 17.75
       },
       {
         "player_id": 3116389,
@@ -15921,7 +15929,7 @@
         "position": "RB",
         "pro_team": "CIN",
         "slot_position": "BE",
-        "points": 0
+        "points": 5.05
       },
       {
         "player_id": 4373626,
@@ -15929,7 +15937,7 @@
         "position": "RB",
         "pro_team": "ARI",
         "slot_position": "RB",
-        "points": 0
+        "points": 6.6
       }
     ]
   }
