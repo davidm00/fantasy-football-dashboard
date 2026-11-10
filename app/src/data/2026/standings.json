@@ -3,120 +3,120 @@
     "team_id": 4,
     "team_name": "JSN My Pants",
     "final_standing": 0,
-    "wins": 7,
+    "wins": 8,
     "losses": 1,
     "ties": 0,
-    "points_for": 1286.85,
-    "points_against": 1122.8
+    "points_for": 1440.05,
+    "points_against": 1258.6
   },
   {
     "team_id": 2,
     "team_name": "Smack That Ahh",
     "final_standing": 0,
-    "wins": 7,
+    "wins": 8,
     "losses": 1,
     "ties": 0,
-    "points_for": 1231.6,
-    "points_against": 1153.8
+    "points_for": 1410.25,
+    "points_against": 1289.2
   },
   {
     "team_id": 7,
     "team_name": "Jhajuan Fan Club President",
     "final_standing": 0,
-    "wins": 5,
+    "wins": 6,
     "losses": 3,
     "ties": 0,
-    "points_for": 1209.85,
-    "points_against": 1069.55
+    "points_for": 1415.3,
+    "points_against": 1181.45
   },
   {
     "team_id": 3,
     "team_name": "Weeenie Monarch",
     "final_standing": 0,
     "wins": 5,
-    "losses": 3,
+    "losses": 4,
     "ties": 0,
-    "points_for": 1178.15,
-    "points_against": 1076.95
+    "points_for": 1313.95,
+    "points_against": 1230.15
   },
   {
     "team_id": 5,
     "team_name": "Ten out of Ten",
     "final_standing": 0,
     "wins": 5,
-    "losses": 3,
+    "losses": 4,
     "ties": 0,
-    "points_for": 1176.9999999999998,
-    "points_against": 1094.7
+    "points_for": 1312.3999999999999,
+    "points_against": 1273.35
+  },
+  {
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "final_standing": 0,
+    "wins": 5,
+    "losses": 4,
+    "ties": 0,
+    "points_for": 1198.3000000000002,
+    "points_against": 1289.05
   },
   {
     "team_id": 8,
     "team_name": "Team Mickey Mouse",
     "final_standing": 0,
     "wins": 4,
-    "losses": 4,
+    "losses": 5,
     "ties": 0,
-    "points_for": 1156.0,
-    "points_against": 1198.8
-  },
-  {
-    "team_id": 10,
-    "team_name": "Scam Little",
-    "final_standing": 0,
-    "wins": 4,
-    "losses": 4,
-    "ties": 0,
-    "points_for": 1073.1000000000001,
-    "points_against": 1175.55
+    "points_for": 1271.25,
+    "points_against": 1331.85
   },
   {
     "team_id": 11,
     "team_name": "Sorry This Had 2 Happen 2 U",
     "final_standing": 0,
     "wins": 4,
-    "losses": 4,
+    "losses": 5,
     "ties": 0,
-    "points_for": 1047.0,
-    "points_against": 1101.05
+    "points_for": 1160.5,
+    "points_against": 1226.25
+  },
+  {
+    "team_id": 1,
+    "team_name": "Kill Me Before",
+    "final_standing": 0,
+    "wins": 3,
+    "losses": 6,
+    "ties": 0,
+    "points_for": 1356.35,
+    "points_against": 1357.95
+  },
+  {
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "final_standing": 0,
+    "wins": 3,
+    "losses": 6,
+    "ties": 0,
+    "points_for": 1325.45,
+    "points_against": 1321.3
   },
   {
     "team_id": 12,
     "team_name": "League full of DLs",
     "final_standing": 0,
     "wins": 3,
-    "losses": 5,
-    "ties": 0,
-    "points_for": 1027.1999999999998,
-    "points_against": 1117.45
-  },
-  {
-    "team_id": 1,
-    "team_name": "Kill Me Before",
-    "final_standing": 0,
-    "wins": 2,
     "losses": 6,
     "ties": 0,
-    "points_for": 1193.1499999999999,
-    "points_against": 1206.4
-  },
-  {
-    "team_id": 6,
-    "team_name": "Go Get Some Wins Bro",
-    "final_standing": 0,
-    "wins": 2,
-    "losses": 6,
-    "ties": 0,
-    "points_for": 1192.4,
-    "points_against": 1206.05
+    "points_for": 1178.7499999999998,
+    "points_against": 1280.65
   },
   {
     "team_id": 9,
     "team_name": "RB Stash",
     "final_standing": 0,
     "wins": 0,
-    "losses": 8,
+    "losses": 9,
     "ties": 0,
-    "points_for": 954.8,
-    "points_against": 1204.0
+    "points_for": 1066.7,
+    "points_against": 1409.45
   }
 ]

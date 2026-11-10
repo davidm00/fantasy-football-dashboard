@@ -337,7 +337,7 @@
   },
   {
     "week": 9,
-    "status": "in_progress",
+    "status": "final",
     "matchups": [
       {
         "home_team_id": 8,
@@ -347,33 +347,33 @@
       },
       {
         "home_team_id": 9,
-        "home_score": 100.0,
+        "home_score": 111.9,
         "away_team_id": 7,
         "away_score": 205.45
       },
       {
         "home_team_id": 10,
-        "home_score": 96.6,
+        "home_score": 125.2,
         "away_team_id": 11,
-        "away_score": 87.8
+        "away_score": 113.5
       },
       {
         "home_team_id": 2,
-        "home_score": 163.45,
+        "home_score": 178.65,
         "away_team_id": 5,
         "away_score": 135.4
       },
       {
         "home_team_id": 3,
-        "home_score": 122.8,
+        "home_score": 135.8,
         "away_team_id": 4,
         "away_score": 153.2
       },
       {
         "home_team_id": 1,
-        "home_score": 157.2,
+        "home_score": 163.2,
         "away_team_id": 12,
-        "away_score": 142.75
+        "away_score": 151.55
       }
     ]
   },
