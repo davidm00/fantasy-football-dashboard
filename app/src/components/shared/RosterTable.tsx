@@ -25,10 +25,11 @@ export function RosterPlayer({ player, status, align }: {
   </span>;
 }
 
-export default function RosterTable({ caption, starters, bench, onMove, move, emptyPoints = false }: {
+export default function RosterTable({ caption, starters, bench, reserves, onMove, move, emptyPoints = false }: {
   caption: string;
   starters: RosterRow[];
   bench?: RosterRow[];
+  reserves?: RosterRow[];
   onMove?: (playerId: number) => void;
   move?: {
     player: Lineup;
@@ -41,6 +42,7 @@ export default function RosterTable({ caption, starters, bench, onMove, move, em
   const sorter = useTableSort([
     ...starters.map((row, index) => ({ ...row, index, group: "starter" })),
     ...(bench ?? []).map((row, index) => ({ ...row, index, group: "bench" })),
+    ...(reserves ?? []).map((row, index) => ({ ...row, index, group: "reserve" })),
   ], {
     slot: { value: (row) => row.index },
     player: { value: (row) => row.player?.name },
@@ -48,9 +50,11 @@ export default function RosterTable({ caption, starters, bench, onMove, move, em
   }, { key: "slot", direction: "ascending" }, "roster");
   const renderRow = (row: typeof sorter.rows[number], key: string) => {
     const player = row.player;
+    const readOnly = row.group === "reserve" || ["IR", "ER"].includes(row.slot)
+      || (player !== undefined && ["IR", "ER"].includes(player.slot_position));
     const destination = row.group === "bench" ? null : row.index;
-    const source = move?.player.player_id === player?.player_id;
-    const here = move && !source && move.canMove(destination);
+    const source = !readOnly && move?.player.player_id === player?.player_id;
+    const here = move && !readOnly && !source && move.canMove(destination);
     const occurrence = starters.slice(0, row.index + 1).filter(({ slot }) => slot === row.slot).length;
     const target = destination === null ? `bench beside ${player?.name ?? "this player"}`
       : `${row.slot}${starters.filter(({ slot }) => slot === row.slot).length > 1 ? ` ${occurrence}` : ""}`;
@@ -58,7 +62,9 @@ export default function RosterTable({ caption, starters, bench, onMove, move, em
     <th scope="row"><RosterSlot slot={row.slot} /></th>
     <td><RosterPlayer player={row.player} status={row.status} /></td>
     <td className="roster-points">{row.player?.points.toFixed(2) ?? (emptyPoints ? "0.00" : "—")}</td>
-    {onMove && <td className="roster-action">{move
+    {onMove && <td className="roster-action">{readOnly
+      ? <span className="activity-note" title="IR/ER players cannot be moved.">Locked</span>
+      : move
       ? <button type="button" id={player ? `roster-move-${player.player_id}` : undefined}
           data-roster-move data-roster-destination={here || undefined}
           aria-disabled={!here && !source || undefined} tabIndex={!here && !source ? -1 : undefined}
@@ -67,7 +73,7 @@ export default function RosterTable({ caption, starters, bench, onMove, move, em
           onClick={() => here ? move.onHere(destination) : move.onCancel()}>
           {here ? "Here" : source ? "Cancel" : "Move"}
         </button>
-      : player && !["IR", "ER"].includes(player.slot_position) &&
+      : player &&
       <button type="button" id={`roster-move-${player.player_id}`} data-roster-move
         aria-label={`Move ${player.name}`} onClick={() => onMove(player.player_id)}>Move</button>}
     </td>}
@@ -92,6 +98,10 @@ export default function RosterTable({ caption, starters, bench, onMove, move, em
         </tr>
         {bench.length ? sorter.rows.filter(({ group }) => group === "bench").map((row) => renderRow(row, `bench-${row.player?.player_id}`))
           : <tr><td colSpan={onMove ? 4 : 3} className="roster-empty">No bench players.</td></tr>}
+      </tbody>}
+      {!!reserves?.length && <tbody className="roster-reserves">
+        <tr className="roster-section"><td colSpan={onMove ? 4 : 3}>IR / ER <small>{reserves.length} {reserves.length === 1 ? "player" : "players"} · read-only</small></td></tr>
+        {sorter.rows.filter(({ group }) => group === "reserve").map((row) => renderRow(row, `reserve-${row.index}`))}
       </tbody>}
     </table>
   </div>;

@@ -76,8 +76,8 @@ they are usage receipts, not automatic fleece verdicts.
 Season pickup/draft award actions open the corresponding manager-filtered
 activity views rather than placeholders. Draft scoring shares are fractions
 internally and converted to percentages once for display.
-On mobile, supporting panels are collapsed above the main content; on desktop
-they sit alongside it. Primary embedded actions have bordered, 44px-minimum
+On mobile, Draft/Moves supporting panels are collapsed above the main content;
+on desktop they sit alongside it. Primary embedded actions have bordered, 44px-minimum
 tap targets, and inline navigation links are visibly underlined.
 
 `/seasons/<year>/trades/<trade-id>` compares actual results, optimal actual
@@ -88,6 +88,13 @@ weeks only. Never unwind later trades or regenerate playoffs. Missing
 score/position/required-slot coverage excludes a week, with a visible reason.
 Later trades and restored players on the actual opponent are explicitly
 flagged; this comparison is not a feasible rewritten league.
+The trade page leads with both managers' post-trade results, production receipts
+and optimal paths, all visible without opening an accordion. A separate Manager
+lineup details section below contains the manager/week selectors and sandbox.
+Those selectors affect only that section, never the both-manager comparison.
+Actual starters are labeled with the selected manager and week; original-player
+usage is separately labeled as pre-trade history, and efficiency as full-season
+context. These reference sections are also expanded, not hidden in accordions.
 
 The editable sandbox defaults to an optimal reversed-trade lineup. Individual
 slot selections live in `team`, `week` and comma-separated `lineup` URL
@@ -100,7 +107,9 @@ bench. Eligible starters swap; bench replacements send displaced starters to
 the bench. Invalid destinations look disabled, and clicking one, clicking
 elsewhere or pressing Escape cancels without changing the lineup. There is no
 move dialog. Any starter can be benched, including all starters if desired;
-empty slots score zero. IR/ER restrictions remain in place. Sorting changes
+empty slots score zero. IR/ER players appear directly after the bench in the
+same roster, labeled read-only rather than hidden in a reserves accordion.
+They cannot be moved to or from reserve slots. Sorting changes
 display order, not assignments. Users can restore Optimal and inspect
 the bench. Summary records remain optimal; a custom lineup evaluates the
 selected week only. Prior starter usage and season lineup efficiency are

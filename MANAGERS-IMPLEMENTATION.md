@@ -249,3 +249,41 @@ all narrative cards must disclose that distinction.
 
 Documentation is updated. Changes remain uncommitted/unpushed; unrelated local
 decisions are untouched.
+
+## Trade hierarchy correction
+
+The sandbox-first layout and collapsed comparison did not follow the supplied
+trade mock's comparison-first hierarchy. Restore that hierarchy without changing
+the intentionally documented scenario/coverage model:
+
+- [x] Show both managers' post-trade results, production receipts and optimal
+  paths first, without feature accordions.
+- [x] Put the editable lineup below in a separate Manager lineup details section,
+  with its own manager/week selectors. Keep shared comparison results independent.
+- [x] Expand actual starters and label every lineup with its manager/week.
+  Separate pre-trade original-player usage and full-season efficiency context
+  from selected-week results.
+- [x] Verify ordering, scope labels, selection/reload, editor interactions and
+  responsive presentation.
+
+Verified at 1280px, 390px and 320px: comparison-first ordering, expanded main
+sections, no document overflow, manager/week changes and reload, Edit Week
+navigation, Escape cancellation, bench moves and persisted custom lineups,
+Optimal reset, and unchanged comparison/actual references after edits.
+Desktop and mobile screenshots were reviewed. All 53 targeted manager/trade
+tests, lint, production build and 5 preview checks pass, including the empty
+post-trade coverage state. These follow-up layout changes are not yet committed.
+
+### Inline reserve rows
+
+- [x] Show IR/ER players below the bench in the same roster component, with
+  their slot, player and observed points. Remove the separate reserves accordion.
+- [x] Keep reserve rows read-only, with no Move/Here controls regardless of
+  active move state. Clicking a reserve row still cancels an active move.
+- [x] Verify reserve rendering, sorting, cancellation and responsive behavior.
+
+All 56 targeted manager/trade tests, lint and production build pass. Browser
+checks at 1280px, 390px and 320px confirm inline reserves after the bench,
+no reserve move controls in neutral/active states, click-to-cancel, sorting/reset
+without score or membership changes, and no document overflow. Mobile reserve
+rows were visually reviewed.

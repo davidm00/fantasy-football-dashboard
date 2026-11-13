@@ -4,7 +4,7 @@ import type { BoxScore, Lineup, Trade } from "../src/models/models";
 import { getDraftUsage, getManagers, getManagerGames, getManagerRivals, getRivalryMeetings, getTradeReceipts, getTradeScenario, getScenarioMove, suggestedSelections, validateScenarioSelections } from "../src/utils/managerMetrics";
 import RosterTable from "../src/components/shared/RosterTable";
 import SelectField from "../src/components/shared/SelectField";
-import { getAvailableWeeks, isSeasonInProgress } from "../src/utils/homeViewUtils";
+import { getAvailableWeeks, getManagerName, isSeasonInProgress } from "../src/utils/homeViewUtils";
 import { compareTableValues } from "../src/hooks/useTableSort";
 import { getDraftColumn, getDraftHeat, getFaabLedger } from "../src/utils/activityMetrics";
 import Managers from "../src/routes/Managers";
@@ -485,6 +485,31 @@ describe("manager and activity views", () => {
       expect(markup).toContain('aria-label="Reset roster sort"');
     });
 
+    it("shows reserves in the roster after the bench without allowing moves in either direction", () => {
+      for (const moving of [false, true]) {
+        const markup = renderRoute(() => <RosterTable caption="Roster with reserves"
+          starters={[{ slot: "RB", player: player(1, 10) }]}
+          bench={[{ slot: "BE", player: player(2, 5, "BE") }]}
+          reserves={[{ slot: "IR", player: player(3, 0, "IR") }, { slot: "ER", player: player(4, 0, "ER") }]}
+          onMove={() => {}} move={moving ? { player: player(1, 10), canMove: () => true,
+            onHere: () => {}, onCancel: () => {} } : undefined} />);
+        const reserves = markup.slice(markup.indexOf('<tbody class="roster-reserves">'));
+        expect(markup.indexOf("Bench")).toBeLessThan(markup.indexOf("IR / ER"));
+        expect(reserves).toContain("Player 3");
+        expect(reserves).toContain("Player 4");
+        expect(reserves).toContain("read-only");
+        expect(reserves.match(/>Locked<\/span>/g)).toHaveLength(2);
+        expect(reserves).not.toContain("<button");
+        expect(reserves).not.toContain("data-roster-destination");
+      }
+    });
+
+    it("omits the reserve section when no reserves are present", () => {
+      const markup = renderRoute(() => <RosterTable caption="Roster"
+        starters={[{ slot: "RB", player: player(1, 10) }]} reserves={[]} />);
+      expect(markup).not.toContain("roster-reserves");
+    });
+
     describe("draft heat map", () => {
       it("keeps snake-draft columns aligned across odd and even rounds", () => {
         expect(getDraftColumn(1, 1, 12)).toBe(1);
@@ -568,9 +593,58 @@ describe("manager and activity views", () => {
   it("restores custom shared lineups without treating them as optimal", () => {
     const markup = renderRoute(TradePage, { season: scenarioSeason(), trade },
       "/seasons/2026/trades/test-trade?team=1&week=2&lineup=3");
-    expect(markup).toContain("Your edited lineup");
+    expect(markup).toContain("edited lineup");
     expect(markup).toContain("12.00");
-    expect(markup).toContain("Season summaries below remain optimal");
+    expect(markup).toContain("Comparisons above remain optimal");
+  });
+
+  it("leads with a visible both-manager comparison, followed by separate manager details", () => {
+    const markup = renderRoute(TradePage, { season: scenarioSeason(), trade }, "/seasons/2026/trades/test-trade");
+    expect(markup).toContain('<section class="trade-comparison"');
+    expect(markup).toContain('<section class="activity-view lineup-editor"');
+    expect(markup.indexOf('id="trade-comparison-heading"')).toBeLessThan(markup.indexOf('id="lineup-sandbox"'));
+    expect(markup.indexOf('id="lineup-sandbox"')).toBeLessThan(markup.indexOf("Selected manager"));
+    expect(markup).toContain("Week 2 · Both managers");
+    expect(markup).not.toContain("<summary>Post-trade results");
+    expect(markup).not.toContain("<summary>Actual starters");
+    expect(markup).not.toContain("<summary>Was this a fleece?");
+    expect(markup).toContain('class="lineup-reference" aria-labelledby="actual-starters-heading"');
+  });
+
+  it("labels selected-manager details and distinguishes weekly, pre-trade and full-season scope", () => {
+    const source = scenarioSeason();
+    for (const teamId of trade.team_ids) {
+      const name = getManagerName(source.teams.find(({ team_id }) => team_id === teamId));
+      const markup = renderRoute(TradePage, { season: source, trade },
+        `/seasons/2026/trades/test-trade?team=${teamId}&week=2`);
+      expect(markup).toContain(`${name} · Actual Week 2 starters`);
+      expect(markup).toContain(`${name} · Week 2 keep-original roster`);
+      expect(markup).toContain(`${name} · Original-player usage before this trade`);
+      expect(markup).toContain("Before Week 1, not the selected post-trade week");
+      expect(markup).toContain(`${name} · 2026 full-season lineup efficiency`);
+      expect(markup).toContain("Full-season context, not just the selected week or post-trade period");
+      expect(markup).toContain("Week 2 · Both managers");
+    }
+  });
+
+  it("keeps the comparison and details sections visible when no post-trade weeks are finalized", () => {
+    const markup = renderRoute(TradePage, { season: scenarioSeason(), trade: { ...trade, week: 2 } },
+      "/seasons/2026/trades/test-trade");
+    expect(markup).toContain("No finalized post-trade weeks yet");
+    expect(markup).toContain("Manager lineup details");
+    expect(markup).toContain("No finalized full weeks after this trade yet");
+    expect(markup).not.toContain("Infinity");
+    expect(markup).not.toContain("Try a keep-original lineup");
+  });
+
+  it("includes scenario IR players in the main roster instead of a separate disclosure", () => {
+    const source = scenarioSeason();
+    source.box_scores[0].home_lineup.push(player(99, 0, "IR"));
+    const markup = renderRoute(TradePage, { season: source, trade }, "/seasons/2026/trades/test-trade");
+    expect(markup).toContain('class="roster-reserves"');
+    expect(markup).toContain("Player 99");
+    expect(markup).not.toContain("Unavailable reserves");
+    expect(markup).not.toContain("Excluded reserves");
   });
 
   it("shows a visible reset for invalid shared lineups", () => {

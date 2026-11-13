@@ -9,7 +9,6 @@ import TradeLineupEditor from "../components/shared/TradeLineupEditor";
 import SortHeader from "../components/shared/SortHeader";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useTableSort } from "../hooks/useTableSort";
-import SidePanel from "../components/shared/SidePanel";
 import ActivityLayout from "../components/shared/ActivityLayout";
 import TradeReceipt from "../components/shared/TradeReceipt";
 import TrendChart from "../components/shared/TrendChart";
@@ -29,7 +28,7 @@ function TradeScenarioResults({ season, teamId, scenario }: {
     caveats: { value: (row) => [...row.issues, ...row.collision].join(" ") },
   }, { key: "week", direction: "ascending" }, `trade${teamId}`);
   return <section className="activity-view">
-    <header className="activity-heading"><h2><TeamManagerLinks season={season} teamId={teamId} /></h2>
+    <header className="activity-heading"><h3><TeamManagerLinks season={season} teamId={teamId} /></h3>
       <button type="button" className="table-reset" onClick={sorter.reset} disabled={sorter.isDefault}>Reset sort</button>
     </header>
     {scenario.laterTrades.length > 0 && <aside className="lineup-caution">
@@ -76,6 +75,11 @@ export default function TradePage() {
   const scenarios = useMemo(() => trade.team_ids.map((teamId) => ({
     teamId, scenario: getTradeScenario(season, trade, teamId),
   })), [season, trade]);
+  const weeks = scenarios.flatMap(({ scenario }) => scenario.weeks.map(({ week }) => week));
+  const firstWeek = Math.min(...weeks);
+  const lastWeek = Math.max(...weeks);
+  const comparisonRange = !weeks.length ? "No finalized post-trade weeks yet"
+    : firstWeek === lastWeek ? `Week ${firstWeek}` : `Weeks ${firstWeek}–${lastWeek}`;
   return <main className="season-hub trade-page">
     <nav className="breadcrumbs" aria-label="Breadcrumb"><Link to={`/seasons/${season.year}`}>{season.year}</Link><span>/</span>
       <Link to={`/seasons/${season.year}?tab=moves&type=trade`}>Trades</Link><span>/</span><span aria-current="page">Week {trade.week}</span>
@@ -90,30 +94,33 @@ export default function TradePage() {
       </div>)}
     </div>
     <p className="activity-note">One trade reversed, not a rewritten league. Opponent scores and later roster moves stay unchanged.</p>
-    <ActivityLayout><div className="activity-main">
-    <TradeLineupEditor season={season} trade={trade} />
-    <details className="quiet-disclosure">
-      <summary>How this scenario works</summary>
-      <p>Compare hindsight-optimal actual rosters with hindsight-optimal rosters keeping the original players, against opponents' unchanged actual scores.</p>
-      <p>Starts Week {trade.week + 1}, the first full week after this trade. Finalized regular-season weeks only; no future projections or playoff simulation.
-        Later moves remain as recorded. Actual results are shown separately.</p>
-      <p>These are optimal-lineup scenario records, not the record you necessarily would have achieved. Missing data is excluded, not scored as zero.
-        Restored players retain observed IR/ER restrictions.</p>
-      <p className="activity-note">Source: {trade.source === "espn" ? "ESPN record" : `reconstructed (${trade.source})`}</p>
-    </details>
-    <details className="quiet-disclosure trade-results">
-      <summary>Post-trade results · optimal comparisons</summary>
-      <p className="activity-note">These summaries do not change when you edit an individual week's lineup.</p>
+    <section className="trade-comparison" aria-labelledby="trade-comparison-heading">
+      <header className="activity-heading"><div>
+        <h2 id="trade-comparison-heading">Post-trade results</h2>
+        <p className="activity-note">{season.year} · {comparisonRange} · Both managers.
+          {" "}Changing the manager or editing a lineup below does not change this comparison.</p>
+      </div></header>
+    <ActivityLayout><div className="activity-main trade-results">
       {scenarios.map(({ teamId, scenario }) => <TradeScenarioResults key={teamId} season={season} teamId={teamId} scenario={scenario} />)}
-    </details>
+      <details className="quiet-disclosure">
+        <summary>How this comparison works</summary>
+        <p>Compare hindsight-optimal actual rosters with hindsight-optimal rosters keeping the original players, against opponents' unchanged actual scores.</p>
+        <p>Starts Week {trade.week + 1}, the first full week after this trade. Finalized regular-season weeks only; no future projections or playoff simulation.
+          Later moves remain as recorded. Actual results are shown separately.</p>
+        <p>These are optimal-lineup scenario records, not the record you necessarily would have achieved. Missing data is excluded, not scored as zero.
+          Restored players retain observed IR/ER restrictions.</p>
+        <p className="activity-note">Source: {trade.source === "espn" ? "ESPN record" : `reconstructed (${trade.source})`}</p>
+      </details>
     </div><aside className="activity-sidebar">
-      <SidePanel title="Was this a fleece?">
+      <section className="activity-view" aria-labelledby="trade-receipts-heading">
+        <h3 id="trade-receipts-heading">Was this a fleece?</h3>
         <TradeReceipt season={season} trade={trade} />
         <p className="activity-note">Who got the production is one part of the story. The editor tests what the original players could have done—not whether anyone “won” the deal.</p>
-      </SidePanel>
-      <SidePanel title="Optimal lineup paths">
+      </section>
+      <section className="activity-view" aria-labelledby="trade-paths-heading">
+        <h3 id="trade-paths-heading">Optimal lineup paths</h3>
         {scenarios.map(({ teamId, scenario }) => <section key={teamId} className="trade-path">
-          <h3><TeamManagerLinks season={season} teamId={teamId} /></h3>
+          <h4><TeamManagerLinks season={season} teamId={teamId} /></h4>
           <TrendChart label={`${getManagerName(season.teams.find(({ team_id }) => team_id === teamId))} optimal post-trade lineups`}
             labels={scenario.weeks.map(({ week }) => `Week ${week}`)}
             series={[{ name: "Actual roster", values: scenario.weeks.map(({ actualOptimal }) => actualOptimal) },
@@ -121,8 +128,10 @@ export default function TradePage() {
           <small>{scenario.covered}/{scenario.weeks.length} weeks covered</small>
         </section>)}
         <p className="activity-note">Hindsight-optimal weekly points, not realized trade value. Missing weeks are gaps; these graphs do not change with custom editor selections.</p>
-      </SidePanel>
+      </section>
     </aside></ActivityLayout>
+    </section>
+    <TradeLineupEditor season={season} trade={trade} />
     <Link to={`/seasons/${season.year}?tab=moves&type=trade`}>Back to {season.year} trades →</Link>
   </main>;
 }

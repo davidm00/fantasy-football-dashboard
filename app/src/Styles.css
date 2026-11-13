@@ -2109,7 +2109,7 @@ select.btn-primary {
 }
 
 .activity-side-panel h3,
-.trade-path h3 {
+.trade-path h4 {
   margin: 0;
   font-size: 0.85rem;
 }
@@ -2384,6 +2384,7 @@ select.btn-primary {
 }
 
 .activity-heading h2,
+.activity-heading h3,
 .activity-item h3 {
   margin: 0;
 }
@@ -2698,6 +2699,24 @@ select.btn-primary {
 
 .lineup-editor {
   scroll-margin-top: 12rem;
+}
+
+.trade-page .lineup-editor {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.lineup-reference {
+  display: grid;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.lineup-editor h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 750;
 }
 
 .lineup-toolbar {
@@ -3057,8 +3076,31 @@ select.btn-primary {
   line-height: 1.4;
 }
 
-.trade-results > .activity-view {
-  margin-block: 1.25rem;
+.trade-comparison {
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.5rem 2rem;
+}
+
+.trade-comparison h2,
+.trade-comparison h3 {
+  margin: 0;
+}
+
+.trade-comparison h2 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.trade-comparison h3 {
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.trade-results {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .draft-board-view {

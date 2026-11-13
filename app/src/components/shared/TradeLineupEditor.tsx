@@ -67,6 +67,7 @@ export default function TradeLineupEditor({ season, trade }: { season: SeasonLoa
     setParams(next, { flushSync: true });
   };
   const metric = season.metrics.teams[teamId];
+  const managerName = getManagerName(season.teams.find(({ team_id }) => team_id === teamId));
   const selectedIds = new Set(parsed.selections.filter((id) => id !== null));
   const movingPlayer = canEdit && move?.context === context
     ? pool.find(({ player_id }) => player_id === move.playerId) : undefined;
@@ -103,23 +104,17 @@ export default function TradeLineupEditor({ season, trade }: { season: SeasonLoa
   const reserves = pool.filter(({ slot_position }) => ["IR", "ER"].includes(slot_position));
   return <section className="activity-view lineup-editor" id="lineup-sandbox" aria-labelledby="lineup-editor-heading">
     <header className="activity-heading"><div>
-      <h2 id="lineup-editor-heading">Try a keep-original lineup</h2>
-      <p className="activity-note">Choose Move, then Here on an eligible roster row or the bench. Original marks a player restored from this trade.</p>
+      <h2 id="lineup-editor-heading">Manager lineup details</h2>
+      <p className="activity-note">Choose a manager and week. The lineup and actual starters below belong to that manager for that week;
+        the comparison above always includes both managers.</p>
     </div></header>
     <div className="lineup-toolbar">
       <div className="activity-controls">
-        <SelectField label="Scenario manager" value={String(teamId)} onChange={(value) => update("team", value)}
+        <SelectField label="Selected manager" value={String(teamId)} onChange={(value) => update("team", value)}
           options={trade.team_ids.map((id) => ({ value: String(id), label: getManagerName(season.teams.find(({ team_id }) => team_id === id)) }))} />
-        <SelectField label="Scenario week" value={String(selectedWeek ?? "")} onChange={(value) => update("week", value)}
+        <SelectField label="Selected week" value={String(selectedWeek ?? "")} onChange={(value) => update("week", value)}
           options={available.length ? [...available].reverse().map(({ week }) => ({ value: String(week), label: `Week ${week}` }))
             : [{ value: "", label: "No finalized weeks" }]} />
-      </div>
-      <div className="lineup-presets" role="group" aria-label="Starting lineup presets">
-        <button type="button" aria-pressed={!params.has("lineup")} onClick={() => setLineup(null)}
-          disabled={!game || !!game.issues.length}>Optimal lineup</button>
-        <button type="button" disabled={!game || !!game.issues.length} onClick={() =>
-          game && setLineup(suggestedSelections(season, trade, teamId, game.actualLineup, pool))
-        }>Preserve actual starters</button>
       </div>
     </div>
     {!validTeam || (selectedWeek !== undefined && !game) || parsed.issues.length > 0
@@ -130,15 +125,27 @@ export default function TradeLineupEditor({ season, trade }: { season: SeasonLoa
       : !game ? <p className="activity-empty">No finalized full weeks after this trade yet.</p>
       : game.issues.length ? <aside className="scenario-warning"><strong>Lineup unavailable for Week {game.week}.</strong><p>{game.issues.join(" ")}</p></aside>
       : <>
+        <header className="activity-heading"><div>
+          <h3>Try a keep-original lineup</h3>
+          <p className="activity-note">{managerName} · {season.year} Week {game.week}.
+            {" "}Choose Move, then Here on an eligible roster row or the bench. Original marks a player restored from this trade.</p>
+        </div>
+          <div className="lineup-presets" role="group" aria-label="Starting lineup presets">
+            <button type="button" aria-pressed={!params.has("lineup")} onClick={() => setLineup(null)}>Optimal lineup</button>
+            <button type="button" onClick={() =>
+              setLineup(suggestedSelections(season, trade, teamId, game.actualLineup, pool))
+            }>Preserve actual starters</button>
+          </div>
+        </header>
         <div className="lineup-score-strip" aria-live="polite" aria-atomic="true">
-          <div><span>Your edited lineup{!params.has("lineup") && " · optimal"}</span>
+          <div><span>{managerName} · edited lineup{!params.has("lineup") && " · optimal"}</span>
             <strong>{total?.toFixed(2)} <small>{total === null ? "—" : resultOf(total, game.opponentScore)}</small></strong>
           </div>
           <span className="lineup-score-versus">vs</span>
           <div><span>{getManagerName(season.teams.find(({ team_id }) => team_id === game.opponentId))} · actual</span>
             <strong>{game.opponentScore.toFixed(2)}</strong>
           </div>
-          <p>Actual score: {game.score.toFixed(2)} · {game.result}
+          <p>{managerName} · actual score: {game.score.toFixed(2)} · {game.result}
             {total !== null && ` · ${total - game.score >= 0 ? "+" : ""}${(total - game.score).toFixed(2)} points`}
             {" · "}<Link className="section-route-link activity-cta" to={game.path}>View actual matchup →</Link>
           </p>
@@ -153,7 +160,8 @@ export default function TradeLineupEditor({ season, trade }: { season: SeasonLoa
         {moveError?.context === context && <p role="alert" className="lineup-caution">{moveError.message}</p>}
         {movingPlayer && <p className="roster-move-hint" role="status">Moving <strong>{movingPlayer.name}</strong>.
           {" "}Choose Here; click elsewhere or press Escape to cancel.</p>}
-        <RosterTable caption={`Week ${game.week} keep-original roster`} starters={starters} bench={bench}
+        <RosterTable caption={`${managerName} · Week ${game.week} keep-original roster`} starters={starters} bench={bench}
+          reserves={reserves.map((player) => ({ slot: player.slot_position, player, status: status(player.player_id) }))}
           emptyPoints onMove={(playerId) => setMove({ context, playerId })}
           move={movingPlayer ? {
             player: movingPlayer,
@@ -170,29 +178,29 @@ export default function TradeLineupEditor({ season, trade }: { season: SeasonLoa
               setLineup(result.selections);
             },
           } : undefined} />
-        {reserves.length > 0 && <details className="quiet-disclosure">
-          <summary>Unavailable reserves ({reserves.length})</summary>
-          <p className="activity-note">Observed IR/ER restrictions remain in place; these players cannot be moved into the lineup.</p>
-          <RosterTable caption="Excluded reserves" starters={reserves.map((player) => ({ slot: player.slot_position, player }))} />
-        </details>}
-        <p className="activity-note">Copy link saves this week’s lineup. Season summaries below remain optimal, not customized.</p>
-        <details className="quiet-disclosure">
-          <summary>Actual starters &amp; player usage</summary>
-          <RosterTable caption={`Actual Week ${game.week} starters`} starters={slots.map((slot, index) => ({
+        <p className="activity-note">Copy link saves this manager’s selected-week lineup. Comparisons above remain optimal, not customized.</p>
+        <section className="lineup-reference" aria-labelledby="actual-starters-heading">
+          <h3 id="actual-starters-heading">{managerName} · Actual Week {game.week} starters</h3>
+          <p className="activity-note">As played in {season.year} Week {game.week}, not the edited keep-original lineup.</p>
+          <RosterTable caption={`${managerName} · Actual Week ${game.week} starters`} starters={slots.map((slot, index) => ({
             slot, player: game.actualLineup.find(({ player_id }) => player_id === actualSelections[index]),
           }))} />
           <p className="activity-note">“Preserve actual starters” keeps unaffected starters in their actual slots, then fills gaps with eligible original players,
             preferring more starts before the trade week. It is a suggestion, not a historical fact.</p>
-          <h3>How often were the original players started?</h3>
-          <p className="activity-note">Observed finalized regular-season roster weeks before Week {trade.week}; missing snapshots are not counted.</p>
+        </section>
+        <section className="lineup-reference" aria-labelledby="original-usage-heading">
+          <h3 id="original-usage-heading">{managerName} · Original-player usage before this trade</h3>
+          <p className="activity-note">{season.year} · Before Week {trade.week}, not the selected post-trade week.
+            {" "}Observed finalized regular-season roster weeks only; missing snapshots are not counted.</p>
           <ul className="lineup-usage">{getOriginalPlayerUsage(season, trade, teamId).map((usage) => <li key={usage.player_id}>
             <strong>{usage.player_name}</strong>
             <span>{usage.starts} starts / {usage.rosterWeeks} roster weeks · {usage.starterPoints.toFixed(2)} starter points</span>
           </li>)}</ul>
-          <p className="activity-note">Actual season lineup efficiency: {metric?.lineupEfficiency == null ? "Unavailable" : `${metric.lineupEfficiency.toFixed(1)}%`}
+          <p className="activity-note">{managerName} · {season.year} full-season lineup efficiency: {metric?.lineupEfficiency == null ? "Unavailable" : `${metric.lineupEfficiency.toFixed(1)}%`}
             <MetricTooltip label="Actual season lineup efficiency">Actual starter points divided by hindsight-optimal actual-roster points across finalized regular-season weeks. This is not a prediction of how this manager would have started the restored players.</MetricTooltip>
+            {" "}Full-season context, not just the selected week or post-trade period.
           </p>
-        </details>
+        </section>
       </>}
   </section>;
 }
