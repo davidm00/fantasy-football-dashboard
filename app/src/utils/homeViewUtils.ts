@@ -1,4 +1,5 @@
-import type { Team } from "../models/models";
+import type { Settings, Team, WeekStatus } from "../models/models";
+import seasonYears from "../data/seasons.json";
 import type { HomeSeasonData } from "../routes/loader";
 import { getStanding } from "./teamHelper";
 
@@ -9,6 +10,18 @@ export type TeamRecord = {
 };
 
 export const EMPTY_RECORD: TeamRecord = { wins: 0, losses: 0, ties: 0 };
+
+export const hasWeekStarted = (status: WeekStatus | undefined) =>
+  status === "final" || status === "in_progress";
+
+export const getAvailableWeeks = (weekStatus: Record<string, WeekStatus>) =>
+  Object.entries(weekStatus).filter(([, status]) => hasWeekStarted(status))
+    .map(([week]) => Number(week)).filter((week) => Number.isSafeInteger(week) && week > 0)
+    .sort((a, b) => a - b);
+
+export const isSeasonInProgress = (season: { year: number; settings: Settings }) =>
+  season.year === Math.max(...seasonYears) &&
+  Object.values(season.settings.week_status).some((status) => status !== "final");
 
 export const formatRecord = ({ wins, losses, ties }: TeamRecord) =>
   `${wins}-${losses}${ties ? `-${ties}` : ""}`;

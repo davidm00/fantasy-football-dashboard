@@ -43,6 +43,19 @@ describe("audit view regressions", () => {
     expect(boxScoreLinks.every((href) => /\/weeks\/\d+\/matchups\/\d+\/\d+$/.test(href))).toBe(true);
   });
 
+  it("links pickup and draft highlights to implemented, manager-filtered activity views", () => {
+    for (const year of [2022, 2023, 2024, 2025, 2026]) {
+      const season = loadSeason(year);
+      const markup = renderRoute(Season, season);
+      const { bestPickup, draftSteal } = season.metrics.awards;
+      if (bestPickup) expect(markup).toContain(`href="/seasons/${year}?tab=moves&amp;team=${bestPickup.teamId}"`);
+      if (draftSteal) expect(markup).toContain(`href="/seasons/${year}?tab=draft&amp;team=${draftSteal.teamId}"`);
+      expect(markup).not.toContain("tab coming soon");
+      expect(markup).not.toContain("season-award-disabled");
+      expect(markup).not.toContain("as a starter after being added");
+    }
+  });
+
   it("offers sorting and metric explanations on mobile cards", () => {
     const markup = renderRoute(Season, currentSeason, "/seasons/2026?layout=cards");
     expect(markup).toContain("Sort by");

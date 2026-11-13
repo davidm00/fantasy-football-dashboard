@@ -1,5 +1,6 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import type { CSSProperties } from "react";
+import { usePopoverDismissal } from "../../hooks/usePopoverDismissal";
 
 function MetricTooltip({
   label,
@@ -21,33 +22,7 @@ function MetricTooltip({
     "--metric-tooltip-top": `${position.top}px`,
   };
 
-  useEffect(() => {
-    if (!open) return;
-    const panel = popover.current;
-    const dismiss = (event: Event) => {
-      if (
-        event.type === "scroll" &&
-        event.target instanceof Node &&
-        panel?.contains(event.target)
-      ) {
-        return;
-      }
-      panel?.hidePopover();
-    };
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== "Escape") return;
-      panel?.hidePopover();
-      trigger.current?.focus({ preventScroll: true });
-    };
-    window.addEventListener("scroll", dismiss, true);
-    window.addEventListener("resize", dismiss);
-    window.addEventListener("keydown", onKeyDown);
-    return () => {
-      window.removeEventListener("scroll", dismiss, true);
-      window.removeEventListener("resize", dismiss);
-      window.removeEventListener("keydown", onKeyDown);
-    };
-  }, [open]);
+  usePopoverDismissal(open, popover, trigger);
 
   return (
     <span className="metric-tooltip">

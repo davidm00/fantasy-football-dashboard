@@ -3,10 +3,12 @@ import { Link } from "react-router";
 import type { Report } from "../../data/reportsList";
 import type { MatchupResult, Team, WeekStatus } from "../../models/models";
 import type { SeasonMatchupWeek } from "../../utils/metrics";
+import SelectField from "../shared/SelectField";
 import {
   EMPTY_RECORD,
   formatRecord,
   getManagerName,
+  hasWeekStarted,
   type TeamRecord,
 } from "../../utils/homeViewUtils";
 
@@ -176,17 +178,9 @@ function SeasonMatchupsView({
   onHighlight: (teamId: number | null) => void;
 }) {
   const visibleWeeks = [...weeks]
-    .filter(({ status }) => status !== "not_started")
+    .filter(({ status }) => hasWeekStarted(status))
     .sort((left, right) => right.week - left.week);
-  const futureWeeks = weeks.filter(
-    ({ status, week }) =>
-      status === "not_started" && week <= regularSeasonLength,
-  );
-  const hasFuturePlayoffs = weeks.some(
-    ({ status, week }) =>
-      status === "not_started" && week > regularSeasonLength,
-  );
-  const sortedWeeks = [...weeks].sort((left, right) => left.week - right.week);
+  const sortedWeeks = [...visibleWeeks].sort((left, right) => left.week - right.week);
   const latestVisibleWeek = visibleWeeks[0]?.week ?? 1;
   const [selectedTeamId, setSelectedTeamId] = useState(
     highlightedTeamId ?? defaultTeamId,
@@ -224,11 +218,6 @@ function SeasonMatchupsView({
           <span>Jump to week</span>
           <nav aria-label="Jump to week">
             {sortedWeeks.map((week) =>
-              week.status === "not_started" ? (
-                <span key={week.week} aria-disabled="true">
-                  W{week.week}
-                </span>
-              ) : (
                 <button
                   key={week.week}
                   type="button"
@@ -238,32 +227,22 @@ function SeasonMatchupsView({
                 >
                   W{week.week}
                 </button>
-              ),
+              ,
             )}
           </nav>
         </div>
         <div className="season-highlight-control">
-          <label>
-            <span>Manager</span>
-            <select
-              value={selectedManagerId}
-              onChange={(event) => {
-                const teamId = Number(event.currentTarget.value);
+          <SelectField label="Manager" value={String(selectedManagerId)}
+              onChange={(value) => {
+                const teamId = Number(value);
                 setSelectedTeamId(teamId);
                 onHighlight(teamId);
               }}
-            >
-              {[...teams]
+              options={[...teams]
                 .sort((left, right) =>
                   getManagerName(left).localeCompare(getManagerName(right)),
                 )
-                .map((team) => (
-                  <option key={team.team_id} value={team.team_id}>
-                    {getManagerName(team)}
-                  </option>
-                ))}
-            </select>
-          </label>
+                .map((team) => ({ value: String(team.team_id), label: getManagerName(team) }))} />
           <button
             type="button"
             className="season-highlight-toggle"
@@ -337,20 +316,7 @@ function SeasonMatchupsView({
         })}
       </div>
 
-      {(futureWeeks.length > 0 || hasFuturePlayoffs) && (
-        <div className="season-matchups-upcoming">
-          <strong>
-            {futureWeeks.length > 0
-              ? `Weeks ${futureWeeks[0].week} to ${futureWeeks[futureWeeks.length - 1].week}`
-              : "Upcoming games"}
-            {hasFuturePlayoffs ? " and the playoffs" : ""}
-          </strong>
-          <span>
-            Not played yet. Upcoming weeks will appear here when scores are
-            available.
-          </span>
-        </div>
-      )}
+      {!visibleWeeks.length && <p className="activity-empty">Games will appear after the season starts.</p>}
     </section>
   );
 }

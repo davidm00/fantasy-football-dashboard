@@ -5,6 +5,21 @@ import { getLineupChanges } from "../src/utils/lineupChanges";
 import { getPlayoffRounds } from "../src/utils/playoffRounds";
 import { loadSeason } from "./fixtures";
 
+it("keeps draft scoring share as a fraction, with percentage conversion left to the view", () => {
+  for (const year of [2022, 2023, 2024, 2025, 2026]) {
+    const season = loadSeason(year);
+    const award = season.metrics.awards.draftSteal;
+    expect(award).not.toBeNull();
+    if (!award) continue;
+    const teamPoints = season.box_scores.filter((game) => game.status === "final" && !game.is_playoff &&
+      game.week <= season.settings.regular_season_length).reduce((sum, game) =>
+        sum + (game.home_team_id === award.teamId ? game.home_score : game.away_team_id === award.teamId ? game.away_score : 0), 0);
+    expect(award.teamPointShare).toBeCloseTo(award.startedPoints / teamPoints, 4);
+    expect(award.teamPointShare).toBeGreaterThanOrEqual(0);
+    expect(award.teamPointShare).toBeLessThanOrEqual(1);
+  }
+});
+
 describe("provisional weekly metrics", () => {
   const season = loadSeason(2026, { "5": "in_progress", "6": "not_started" });
 

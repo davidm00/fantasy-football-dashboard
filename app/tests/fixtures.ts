@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { createMemoryRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import type { SeasonLoaderData, MatchupDetailLoaderData } from "../src/routes/loader";
-import type { BoxScore, Bracket, Draft, Matchup, Settings, Standing, Team, Transaction } from "../src/models/models";
+import type { BoxScore, Bracket, Draft, Matchup, Settings, Standing, Team, Transaction, Trade, TradedPlayerPoints } from "../src/models/models";
 import { reportsList } from "../src/data/reportsList";
 import { calculateSeasonMetrics, calculateSeasonMatchupWeeks, calculateWeekMetrics, getOptimalLineup } from "../src/utils/metrics";
 
@@ -26,6 +26,8 @@ export function loadSeason(
     bracket: readSeasonFile<Bracket>(year, "bracket"),
     draft: readSeasonFile<Draft>(year, "draft"),
     transactions: readSeasonFile<Transaction[]>(year, "transactions"),
+    trades: readSeasonFile<Trade[]>(year, "trades"),
+    traded_player_points: readSeasonFile<TradedPlayerPoints>(year, "traded_player_points"),
   };
   files.settings.week_status = { ...files.settings.week_status, ...weekStatuses };
   files.matchups = files.matchups.map((week) => ({

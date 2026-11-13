@@ -8,6 +8,8 @@ import type {
   Standing,
   Team,
   Transaction,
+  Trade,
+  TradedPlayerPoints,
   WeekStatus,
 } from "../models/models";
 
@@ -24,6 +26,8 @@ export const SeasonFile = {
   Teams: "teams",
   Transactions: "transactions",
   Bracket: "bracket",
+  Trades: "trades",
+  TradedPlayerPoints: "traded_player_points",
 } as const;
 
 export type SeasonFile = (typeof SeasonFile)[keyof typeof SeasonFile];
@@ -37,6 +41,8 @@ export type SeasonFileDataMap = {
   [SeasonFile.Standings]: Standing[];
   [SeasonFile.Teams]: Team[];
   [SeasonFile.Transactions]: Transaction[];
+  [SeasonFile.Trades]: Trade[];
+  [SeasonFile.TradedPlayerPoints]: TradedPlayerPoints;
 };
 
 export type LoadableSeasonFile = keyof SeasonFileDataMap;

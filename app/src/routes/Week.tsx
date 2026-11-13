@@ -13,6 +13,7 @@ import seasonList from "../data/seasons.json";
 import { getStanding } from "../utils/teamHelper";
 import RouteErrorPage from "./RouteErrorPage";
 import type { WeekLoaderData } from "./loader";
+import { getAvailableWeeks } from "../utils/homeViewUtils";
 
 export function WeekErrorBoundary() {
   const error = useRouteError();
@@ -87,9 +88,7 @@ function Week() {
         : latest,
     0,
   );
-  const weekNumbers = Object.keys(season.settings.week_status)
-    .map(Number)
-    .sort((left, right) => left - right);
+  const weekNumbers = getAvailableWeeks(season.settings.week_status);
   const weekIndex = weekNumbers.indexOf(week);
   const previousWeek = weekNumbers[weekIndex - 1];
   const nextWeek = weekNumbers[weekIndex + 1];

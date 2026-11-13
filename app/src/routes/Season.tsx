@@ -1,4 +1,8 @@
 import { useMemo, useState } from "react";
+import SelectField from "../components/shared/SelectField";
+import SortHeader from "../components/shared/SortHeader";
+import { compareTableValues, useTableSort, type SortColumn } from "../hooks/useTableSort";
+import { getAvailableWeeks } from "../utils/homeViewUtils";
 import {
   isRouteErrorResponse,
   Link,
@@ -11,6 +15,7 @@ import PlayoffBracket from "../components/shared/PlayoffBracket";
 import MetricTooltip from "../components/shared/MetricTooltip";
 import SeasonMatchupsView from "../components/season/SeasonMatchupsView";
 import SeasonReportsView from "../components/season/SeasonReportsView";
+import { SeasonDraftView, SeasonMovesView } from "../components/season/SeasonActivity";
 import seasonList from "../data/seasons.json";
 import type { Team } from "../models/models";
 import type {
@@ -22,6 +27,8 @@ import { getManagerName } from "../utils/homeViewUtils";
 import RouteErrorPage from "./RouteErrorPage";
 
 type SortKey =
+  | "rank"
+  | "form"
   | "manager"
   | "record"
   | "power"
@@ -32,7 +39,7 @@ type SortKey =
   | "efficiency";
 
 type SortDirection = "ascending" | "descending";
-type SeasonTab = "standings" | "bracket" | "matchups" | "reports";
+type SeasonTab = "standings" | "bracket" | "matchups" | "reports" | "draft" | "moves";
 
 type StandingsRow = {
   rank: number;
@@ -59,6 +66,8 @@ const SORT_OPTIONS: { key: SortKey; label: string }[] = [
   { key: "allPlay", label: "All-play" },
   { key: "luck", label: "Schedule luck" },
   { key: "efficiency", label: "Lineup efficiency" },
+  { key: "rank", label: "Standing rank" },
+  { key: "form", label: "Recent scoring rank" },
 ];
 
 export function SeasonErrorBoundary() {
@@ -109,48 +118,6 @@ const getHeatClass = (rank: number, teamCount: number) => {
   return "season-rank-bottom";
 };
 
-function SortHeader({
-  label,
-  sortKey,
-  activeKey,
-  direction,
-  align = "right",
-  tooltip,
-  onSort,
-}: {
-  label: string;
-  sortKey: SortKey;
-  activeKey: SortKey;
-  direction: SortDirection;
-  align?: "left" | "right";
-  tooltip?: string;
-  onSort: (key: SortKey) => void;
-}) {
-  const isActive = sortKey === activeKey;
-
-  return (
-    <th
-      scope="col"
-      className={`season-sort-heading season-align-${align}`}
-      aria-sort={isActive ? direction : "none"}
-    >
-      <span className="season-sort-control">
-        <button type="button" onClick={() => onSort(sortKey)}>
-          {label}
-          {isActive && (
-            <span aria-hidden="true">
-              {direction === "descending" ? "↓" : "↑"}
-            </span>
-          )}
-        </button>
-        {tooltip && (
-          <MetricTooltip label={label}>{tooltip}</MetricTooltip>
-        )}
-      </span>
-    </th>
-  );
-}
-
 function WeeklyRankCell({
   week,
   rank,
@@ -186,13 +153,11 @@ function SeasonAward({
   title: string;
   body: string;
   cta: string;
-  href?: string;
+  href: string;
   explanation?: string;
 }) {
   return (
-    <article
-      className={`season-award-card${href ? "" : " season-award-disabled"}`}
-    >
+    <article className="season-award-card">
       <span className="season-award-kicker metric-label">
         {kicker}
         {explanation && (
@@ -201,13 +166,9 @@ function SeasonAward({
       </span>
       <strong>{title}</strong>
       <span>{body}</span>
-      {href ? (
-        <Link className="season-award-cta" to={href}>
-          {cta} →
-        </Link>
-      ) : (
-        <span className="season-award-cta">{cta}</span>
-      )}
+      <Link className="season-award-cta section-route-link activity-cta" to={href}>
+        {cta} →
+      </Link>
     </article>
   );
 }
@@ -255,7 +216,9 @@ function Season() {
   const activeTab: SeasonTab =
     tabParam === "bracket" ||
     tabParam === "matchups" ||
-    tabParam === "reports"
+    tabParam === "reports" ||
+    tabParam === "draft" ||
+    tabParam === "moves"
       ? tabParam
       : "standings";
   const [sort, setSort] = useState<{
@@ -347,6 +310,16 @@ function Season() {
       let comparison = 0;
 
       switch (sort.key) {
+        case "rank":
+          comparison = left.rank - right.rank;
+          break;
+        case "form": {
+          const average = (row: StandingsRow) => {
+            const ranks = row.metrics.weeklyRanks.slice(-5).map(({ rank }) => rank);
+            return ranks.length ? ranks.reduce((sum, rank) => sum + rank, 0) / ranks.length : null;
+          };
+          return compareTableValues(average(left), average(right), sort.direction) || left.rank - right.rank;
+        }
         case "manager":
           comparison = getManagerName(left.team).localeCompare(
             getManagerName(right.team),
@@ -385,10 +358,7 @@ function Season() {
           comparison = left.metrics.luck - right.metrics.luck;
           break;
         case "efficiency":
-          comparison =
-            (left.metrics.lineupEfficiency ?? -1) -
-            (right.metrics.lineupEfficiency ?? -1);
-          break;
+          return compareTableValues(left.metrics.lineupEfficiency, right.metrics.lineupEfficiency, sort.direction) || left.rank - right.rank;
       }
 
       return comparison * multiplier || left.rank - right.rank;
@@ -401,6 +371,25 @@ function Season() {
     showFinal,
     sort,
   ]);
+  const weeklyBase = [...standingsRows].sort((a, b) => a.rank - b.rank).map((row) => {
+    const ranks = row.metrics.weeklyRanks.map(({ rank }) => rank);
+    return { ...row,
+      average: ranks.length ? ranks.reduce((sum, rank) => sum + rank, 0) / ranks.length : null,
+      spread: ranks.length ? Math.max(...ranks) - Math.min(...ranks) : null,
+    };
+  });
+  const weeklyColumns: Record<string, SortColumn<(typeof weeklyBase)[number]>> = {
+    standing: { value: (row) => row.rank },
+    manager: { value: (row) => getManagerName(row.team) },
+    average: { value: (row) => row.average },
+    spread: { value: (row) => row.spread },
+  };
+  const availableRegularWeeks = getAvailableWeeks(season.settings.week_status)
+    .filter((week) => week <= season.settings.regular_season_length);
+  for (const week of availableRegularWeeks) {
+    weeklyColumns[`week${week}`] = { value: (row) => row.metrics.weeklyRanks.find((item) => item.week === week)?.rank };
+  }
+  const weeklySort = useTableSort(weeklyBase, weeklyColumns, { key: "standing", direction: "ascending" }, "weekly");
   const scoringLeader = [...standingsRows].sort(
     (left, right) => right.metrics.pointsFor - left.metrics.pointsFor,
   )[0];
@@ -458,9 +447,8 @@ function Season() {
     setSort((current) => ({
       key,
       direction:
-        current.key === key && current.direction === "descending"
-          ? "ascending"
-          : "descending",
+        current.key === key ? current.direction === "descending" ? "ascending" : "descending"
+          : ["manager", "rank", "form"].includes(key) ? "ascending" : "descending",
     }));
   };
 
@@ -514,27 +502,17 @@ function Season() {
               ` · ${keeperLimit} keeper${keeperLimit === 1 ? "" : "s"}`}
           </p>
         </div>
-        <label className="season-picker">
-          <span>Season</span>
-          <select
-            value={season.year}
-            onChange={(event) =>
+        <SelectField className="season-picker" label="Season" value={String(season.year)}
+            onChange={(value) =>
               navigate(
-                `/seasons/${event.currentTarget.value}${
+                `/seasons/${value}${
                   activeTab === "standings" ? "" : `?tab=${activeTab}`
                 }`,
               )
             }
-          >
-            {[...seasonList]
+          options={[...seasonList]
               .sort((left, right) => right - left)
-              .map((year) => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-          </select>
-        </label>
+              .map((year) => ({ value: String(year), label: String(year) }))} />
       </header>
 
       <nav className="season-tabs" aria-label="Season sections">
@@ -566,20 +544,22 @@ function Season() {
         >
           Reports
         </button>
-        {["Draft", "Moves"].map(
+        {(["draft", "moves"] as const).map(
           (tab) => (
             <button
               key={tab}
               type="button"
-              disabled
-              title={`${tab} coming soon`}
+              aria-current={activeTab === tab ? "page" : undefined}
+              onClick={() => setSeasonTab(tab)}
             >
-              {tab}
+              {tab === "draft" ? "Draft" : "Moves"}
             </button>
           ),
         )}
       </nav>
 
+      {activeTab === "draft" && <SeasonDraftView key={season.year} season={season} />}
+      {activeTab === "moves" && <SeasonMovesView key={season.year} season={season} />}
       {activeTab === "bracket" && (
         <SeasonBracketView season={season} seeds={bracketSeeds} />
       )}
@@ -666,23 +646,15 @@ function Season() {
             Cards
           </button>
         </div>
-        <div className="season-sort-picker">
-          <label>
-            <span>Sort by</span>
-            <select
-              value={sort.key}
-              onChange={(event) => {
-                const option = SORT_OPTIONS.find(({ key }) => key === event.currentTarget.value);
+        {showCards && <div className="season-sort-picker">
+          <SelectField label="Sort by" value={sort.key}
+              onChange={(value) => {
+                const option = SORT_OPTIONS.find(({ key }) => key === value);
                 if (option) {
                   setSort({ key: option.key, direction: option.key === "manager" ? "ascending" : "descending" });
                 }
               }}
-            >
-              {SORT_OPTIONS.map(({ key, label }) => (
-                <option key={key} value={key}>{label}</option>
-              ))}
-            </select>
-          </label>
+              options={SORT_OPTIONS.map(({ key, label }) => ({ value: key, label }))} />
           <button
             type="button"
             aria-label={`Sort ${sort.direction === "descending" ? "ascending" : "descending"}`}
@@ -693,7 +665,9 @@ function Season() {
           >
             {sort.direction === "descending" ? "Descending ↓" : "Ascending ↑"}
           </button>
-        </div>
+        </div>}
+        <button type="button" className="table-reset" disabled={sort.key === "record" && sort.direction === "descending"}
+          onClick={() => setSort({ key: "record", direction: "descending" })}>Reset sort</button>
         <div className="season-rank-legend">
           <span>Weekly scoring rank:</span>
           <span><i className="season-rank-top" />1 to {Math.ceil(season.settings.team_count / 4)}</span>
@@ -716,7 +690,7 @@ function Season() {
           </caption>
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <SortHeader label="#" sortKey="rank" activeKey={sort.key} direction={sort.direction} onSort={handleSort} />
               <SortHeader
                 label="Manager"
                 sortKey="manager"
@@ -778,7 +752,8 @@ function Season() {
                 tooltip={DERIVED_METRIC_EXPLANATIONS.efficiency}
                 onSort={handleSort}
               />
-              <th scope="col">Weekly rank · last 5</th>
+              <SortHeader label="Weekly rank · last 5" sortKey="form" activeKey={sort.key} direction={sort.direction}
+                onSort={handleSort} tooltip="Sort by average scoring rank over each manager's last five finalized regular-season weeks. Lower is better." />
             </tr>
           </thead>
           <tbody>
@@ -827,55 +802,38 @@ function Season() {
             Rank among {season.settings.team_count} by points that week. 1 =
             top scorer.
           </span>
+          <button type="button" className="table-reset" onClick={weeklySort.reset} disabled={weeklySort.isDefault}>Reset sort</button>
         </div>
         <div className="season-weekly-table-shell">
           <table className="season-weekly-table">
-            <caption>
-              Weekly scoring rank for each manager, weeks 1 to{" "}
-              {season.settings.regular_season_length}
-            </caption>
+            <caption>Weekly scoring rank for each manager in available regular-season weeks</caption>
             <thead>
               <tr>
-                <th scope="col">Manager</th>
-                {Array.from(
-                  { length: season.settings.regular_season_length },
-                  (_, index) => (
-                    <th key={index} scope="col">
-                      W{index + 1}
-                    </th>
+                <SortHeader label="Manager" sortKey="manager" activeKey={weeklySort.key}
+                  direction={weeklySort.direction} onSort={weeklySort.onSort} align="left" />
+                {availableRegularWeeks.map(
+                  (week) => (
+                    <SortHeader key={week} label={`W${week}`} sortKey={`week${week}`} activeKey={weeklySort.key}
+                      direction={weeklySort.direction} onSort={weeklySort.onSort} />
                   ),
                 )}
-                <th scope="col">Avg</th>
-                <th scope="col">Spread</th>
+                <SortHeader label="Avg" sortKey="average" activeKey={weeklySort.key} direction={weeklySort.direction} onSort={weeklySort.onSort} />
+                <SortHeader label="Spread" sortKey="spread" activeKey={weeklySort.key} direction={weeklySort.direction} onSort={weeklySort.onSort} />
               </tr>
             </thead>
             <tbody>
-              {[...standingsRows]
-                .sort((left, right) => left.rank - right.rank)
-                .map(({ team, metrics }) => {
-                  const ranks = metrics.weeklyRanks.map(({ rank }) => rank);
-                  const average =
-                    ranks.length > 0
-                      ? ranks.reduce((sum, rank) => sum + rank, 0) /
-                        ranks.length
-                      : 0;
-                  const spread =
-                    ranks.length > 0
-                      ? Math.max(...ranks) - Math.min(...ranks)
-                      : 0;
-
+              {weeklySort.rows.map(({ team, metrics, average, spread }) => {
                   return (
                     <tr key={team.team_id}>
                       <th scope="row">{getManagerName(team)}</th>
-                      {Array.from(
-                        { length: season.settings.regular_season_length },
-                        (_, index) => {
+                      {availableRegularWeeks.map(
+                        (week) => {
                           const weeklyRank = metrics.weeklyRanks.find(
-                            ({ week }) => week === index + 1,
+                            (item) => item.week === week,
                           );
 
                           return (
-                            <td key={index}>
+                            <td key={week}>
                               {weeklyRank ? (
                                 <WeeklyRankCell
                                   week={weeklyRank.week}
@@ -886,15 +844,15 @@ function Season() {
                               ) : (
                                 <span
                                   className="season-rank-empty"
-                                  aria-label={`Week ${index + 1} not played`}
+                                  aria-label={`Week ${week} rank not finalized`}
                                 />
                               )}
                             </td>
                           );
                         },
                       )}
-                      <td>{ranks.length ? average.toFixed(1) : "—"}</td>
-                      <td>{ranks.length ? spread : "—"}</td>
+                      <td>{average?.toFixed(1) ?? "—"}</td>
+                      <td>{spread ?? "—"}</td>
                     </tr>
                   );
                 })}
@@ -902,7 +860,7 @@ function Season() {
           </table>
         </div>
         <p className="season-table-note">
-          Dashed cells have not been played. Spread is the difference
+          Dashed cells do not have a finalized rank. Spread is the difference
           between a manager&apos;s best and worst weekly rank.
         </p>
       </section>
@@ -937,9 +895,10 @@ function Season() {
             <SeasonAward
               kicker="Best pickup"
               title={`${getManagerName(pickupTeam)}: ${awards.bestPickup.playerName}, $${awards.bestPickup.bidAmount}`}
-              body={`${awards.bestPickup.startedPoints.toFixed(2)} points as a starter after being added.`}
-              cta="Moves tab coming soon"
-              explanation="The waiver or free-agent addition with the most points scored in the acquiring team's starting lineup."
+              body={`${awards.bestPickup.startedPoints.toFixed(2)} season starter points for the acquiring team.`}
+              cta="View pickup moves"
+              href={`/seasons/${season.year}?tab=moves&team=${awards.bestPickup.teamId}`}
+              explanation="The waiver or free-agent addition with the most season starter points for the acquiring team. This can include starts before a later reacquisition; it is not strictly post-acquisition production."
             />
           )}
           {awards.draftSteal && draftTeam && (
@@ -947,7 +906,8 @@ function Season() {
               kicker="Steal of the draft"
               title={`${getManagerName(draftTeam)}: ${awards.draftSteal.playerName} at R${awards.draftSteal.round}.${awards.draftSteal.roundPick}`}
               body={`${awards.draftSteal.position}${awards.draftSteal.positionRank} of ${awards.draftSteal.positionCount} with ${awards.draftSteal.totalPoints.toFixed(2)} points; ${awards.draftSteal.startedPoints.toFixed(2)} as a starter accounted for ${(awards.draftSteal.teamPointShare * 100).toFixed(1)}% of team scoring.`}
-              cta="Draft tab coming soon"
+              cta="View draft picks"
+              href={`/seasons/${season.year}?tab=draft&team=${awards.draftSteal.teamId}`}
               explanation="Among drafted QB, RB, WR, and TE players, draft value weighs scoring rank within position (45%), share of the drafting team's scoring compared with other drafted players at that position (25%), draft capital (20%), and how much of the player's production the manager used in the starting lineup (10%). Keepers, kickers, and defenses are excluded because their listed draft cost and streaming value are not meaningfully comparable."
             />
           )}

@@ -37,6 +37,8 @@ export type TeamSeasonMetrics = {
   luckyWins: number[];
   closeGameRecord: MetricRecord;
   lineupEfficiency: number | null;
+  lineupActualPoints: number;
+  lineupOptimalPoints: number;
   pointsLeftOnBench: number;
   selfInflictedLosses: number[];
   longestWinStreak: number;
@@ -159,8 +161,6 @@ export type SeasonMetricSource = {
 };
 
 type MutableTeamMetrics = TeamSeasonMetrics & {
-  lineupActualPoints: number;
-  lineupOptimalPoints: number;
   currentWinStreak: number;
   currentLossStreak: number;
   weeklyPowerInputs: WeeklyPowerInput[];
@@ -274,7 +274,7 @@ const FLEX_POSITIONS: Record<string, string[]> = {
 const OFFENSIVE_POSITIONS = new Set(["QB", "RB", "WR", "TE", "K", "P"]);
 const DRAFT_VALUE_POSITIONS = new Set(["QB", "RB", "WR", "TE"]);
 
-function playerCanFillSlot(position: string, slot: string) {
+export function playerCanFillSlot(position: string, slot: string) {
   if (position === slot) return true;
   if (FLEX_POSITIONS[slot]?.includes(position)) return true;
 
@@ -536,14 +536,16 @@ function getBenchBlunder(source: SeasonMetricSource) {
   return biggest;
 }
 
-function getBestPickup(
+export function getBestPickup(
   source: SeasonMetricSource,
-  starterPoints: Map<string, number>,
+  starterPoints: Map<string, number> = getStarterPointsByPlayer(source),
+  teamId?: number,
 ) {
   let best: BestPickupMetric | null = null;
 
   for (const transaction of source.transactions ?? []) {
     if (transaction.status !== "EXECUTED") continue;
+    if (teamId !== undefined && transaction.team_id !== teamId) continue;
 
     for (const item of transaction.items) {
       if (item.type !== "ADD" || item.from_team_id !== 0) continue;
@@ -660,7 +662,7 @@ function getDraftSteal(
 
   metric.totalPoints = round(metric.totalPoints, 2);
   metric.startedPoints = round(metric.startedPoints, 2);
-  metric.teamPointShare = round(metric.teamPointShare * 100);
+  metric.teamPointShare = round(metric.teamPointShare, 4);
   return metric;
 }
 

@@ -127,3 +127,24 @@ export type BracketGame = {
   winner: "HOME" | "AWAY" | null;
   is_bye: boolean;
 };
+
+export type Trade = {
+  id: string;
+  week: number;
+  date: number;
+  team_ids: number[];
+  items: {
+    player_id: number;
+    player_name: string;
+    from_team_id: number;
+    to_team_id: number;
+  }[];
+  source: string;
+};
+
+export type TradedPlayerPoints = {
+  players: Record<string, {
+    player_name: string;
+    weekly_points: Record<string, number>;
+  }>;
+};

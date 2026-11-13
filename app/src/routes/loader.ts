@@ -118,6 +118,8 @@ const SEASON_HUB_FILES = [
   ...HOME_SEASON_FILES,
   SeasonFile.Draft,
   SeasonFile.Transactions,
+  SeasonFile.Trades,
+  SeasonFile.TradedPlayerPoints,
 ] as const;
 
 type SeasonHubFiles = LoadedSeasonFiles<typeof SEASON_HUB_FILES>;
@@ -297,6 +299,35 @@ export async function seasonHubLoader({ params }: LoaderFunctionArgs) {
       files.settings.regular_season_length,
     ),
   } satisfies SeasonLoaderData;
+}
+
+export async function managersLoader() {
+  return Promise.all(seasonList.map(async (year) => {
+    const files = await loadSeasonFiles(year, SEASON_HUB_FILES);
+    return {
+      year, ...files,
+      reports: reportsList.filter((report) => report.season === year),
+      metrics: calculateSeasonMetrics({ year, ...files }),
+      matchupWeeks: calculateSeasonMatchupWeeks(files.matchups, files.teams, files.settings.regular_season_length),
+    } satisfies SeasonLoaderData;
+  }));
+}
+
+export async function managerLoader(args: LoaderFunctionArgs) {
+  const seasons = await managersLoader();
+  if (!seasons.some(({ teams }) => teams.some(({ owners }) =>
+    owners.some(({ id }) => id === args.params.managerId),
+  ))) {
+    throw new Response("Manager not found", { status: 404 });
+  }
+  return { seasons, managerId: args.params.managerId! };
+}
+
+export async function tradeLoader(args: LoaderFunctionArgs) {
+  const season = await seasonHubLoader(args);
+  const trade = season.trades.find(({ id }) => id === args.params.tradeId);
+  if (!trade) throw new Response("Trade not found", { status: 404 });
+  return { season, trade };
 }
 
 export async function weekLoader({ params }: LoaderFunctionArgs) {

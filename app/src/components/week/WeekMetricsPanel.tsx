@@ -3,6 +3,8 @@ import type { WeekMetrics } from "../../utils/metrics";
 import MetricCard from "../shared/MetricCard";
 import MetricTooltip from "../shared/MetricTooltip";
 import { getManagerName } from "../../utils/homeViewUtils";
+import SortHeader from "../shared/SortHeader";
+import { useTableSort } from "../../hooks/useTableSort";
 
 const getTeam = (teams: Team[], teamId: number) =>
   teams.find((team) => team.team_id === teamId);
@@ -15,6 +17,15 @@ function WeekMetricsPanel({
   teams: Team[];
 }) {
   const provisional = metrics.status === "in_progress";
+  const sorter = useTableSort(metrics.performances, {
+    rank: { value: (row) => row.rank },
+    manager: { value: (row) => getManagerName(getTeam(teams, row.teamId)) },
+    score: { value: (row) => row.score, direction: "descending" },
+    result: { value: (row) => row.result },
+    allPlay: { value: (row) => row.allPlayRecord.wins + row.allPlayRecord.ties / 2, direction: "descending" },
+    efficiency: { value: (row) => row.lineupEfficiency, direction: "descending" },
+    bench: { value: (row) => row.pointsLeftOnBench, direction: "descending" },
+  }, { key: "rank", direction: "ascending" }, "weekMetrics");
 
   return (
     <section className="week-metrics" aria-labelledby="week-metrics-title">
@@ -29,6 +40,7 @@ function WeekMetricsPanel({
               ? "Calculated from final scores"
               : "Awaiting scoring data"}
         </span>
+        <button type="button" className="table-reset" onClick={sorter.reset} disabled={sorter.isDefault}>Reset sort</button>
       </div>
 
       {provisional && (
@@ -56,41 +68,17 @@ function WeekMetricsPanel({
               <caption>Manager performance metrics for this week</caption>
               <thead>
                 <tr>
-                  <th scope="col">Rank</th>
-                  <th scope="col">Manager</th>
-                  <th scope="col">Score</th>
-                  <th scope="col">Result</th>
-                  <th scope="col">
-                    <span className="metric-label">
-                      All-play
-                      <MetricTooltip label="weekly all-play">
-                        The manager&apos;s record if they played every other
-                        team this week.
-                      </MetricTooltip>
-                    </span>
-                  </th>
-                  <th scope="col">
-                    <span className="metric-label">
-                      Lineup efficiency
-                      <MetricTooltip label="weekly lineup efficiency">
-                        Points scored divided by the best valid lineup the
-                        manager could have started this week, using hindsight.
-                      </MetricTooltip>
-                    </span>
-                  </th>
-                  <th scope="col">
-                    <span className="metric-label">
-                      Points left on bench
-                      <MetricTooltip label="weekly points left on bench">
-                        Extra points available from a valid hindsight-optimal
-                        lineup, not the total points scored by the bench.
-                      </MetricTooltip>
-                    </span>
-                  </th>
+                  {[
+                    { key: "rank", label: "Rank" }, { key: "manager", label: "Manager" }, { key: "score", label: "Score" },
+                    { key: "result", label: "Result" }, { key: "allPlay", label: "All-play", tooltip: "The manager's record if they played every other team this week." },
+                    { key: "efficiency", label: "Lineup efficiency", tooltip: "Points scored divided by the best valid lineup the manager could have started this week, using hindsight." },
+                    { key: "bench", label: "Points left on bench", tooltip: "Extra points available from a valid hindsight-optimal lineup, not the total points scored by the bench." },
+                  ].map(({ key, label, tooltip }) => <SortHeader key={key} sortKey={key} label={label} activeKey={sorter.key}
+                    direction={sorter.direction} onSort={sorter.onSort} tooltip={tooltip} align="left" />)}
                 </tr>
               </thead>
               <tbody>
-                {metrics.performances.map((performance) => {
+                {sorter.rows.map((performance) => {
                   const team = getTeam(teams, performance.teamId);
                   const opponent = getTeam(
                     teams,
@@ -142,7 +130,7 @@ function WeekMetricsPanel({
             </table>
           </div>
           <div className="week-metrics-mobile-list">
-            {metrics.performances.map((performance) => {
+            {sorter.rows.map((performance) => {
               const team = getTeam(teams, performance.teamId);
               const opponent = getTeam(
                 teams,

@@ -135,17 +135,105 @@ const writePreview = async ({
   ]);
 };
 
+const managers = new Map();
+for (const year of seasons) {
+  const teams = JSON.parse(await readFile(path.join(dataRoot, String(year), "teams.json"), "utf8"));
+  for (const team of teams) {
+    for (const owner of team.owners) {
+      const manager = managers.get(owner.id) ?? { id: owner.id, name: owner.name, seasons: new Set(), latestYear: year, teamName: team.team_name };
+      manager.name = owner.name;
+      manager.seasons.add(year);
+      if (year >= manager.latestYear) {
+        manager.latestYear = year;
+        manager.teamName = team.team_name;
+      }
+      managers.set(owner.id, manager);
+    }
+  }
+}
+await writePreview({
+  route: "/managers",
+  imageRoute: "/link-previews/managers.png",
+  metadata: {
+    title: "Managers | Ian Book Believers",
+    description: "Explore manager history, seasons, rivals, drafts, moves and single-trade scenarios.",
+    imageAlt: "Ian Book Believers managers directory",
+  },
+  image: {
+    eyebrow: "MANAGER HISTORY", title: "Meet the managers",
+    subtitle: "Season history, rivalries, draft receipts and trade scenarios",
+    leftLabel: "MANAGERS", leftValue: String(managers.size),
+    rightLabel: "SEASONS", rightValue: String(seasons.length),
+    footer: siteOrigin.host,
+  },
+});
+await writePreview({
+  route: "/managers/rivalries",
+  imageRoute: "/link-previews/rivalries.png",
+  metadata: {
+    title: "Rivalries | Ian Book Believers",
+    description: "Explore the league's head-to-head rivalry grid and every recorded meeting.",
+    imageAlt: "Ian Book Believers rivalry grid",
+  },
+  image: {
+    eyebrow: "HEAD-TO-HEAD HISTORY", title: "Who owns the rivalry?",
+    subtitle: "Real records, playoff meetings and every matchup",
+    leftLabel: "MANAGERS", leftValue: String(managers.size),
+    rightLabel: "SEASONS", rightValue: String(seasons.length),
+    footer: siteOrigin.host,
+  },
+});
+for (const manager of managers.values()) {
+  await writePreview({
+    route: `/managers/${manager.id}`,
+    imageRoute: `/link-previews/managers/${manager.id}.png`,
+    metadata: {
+      title: `${manager.name} | Manager profile | Ian Book Believers`,
+      description: `Explore ${manager.name}'s ${manager.seasons.size} seasons, rivals, drafts, moves and trade scenarios. Latest team: ${manager.teamName}.`,
+      imageAlt: `${manager.name} manager profile preview`,
+    },
+    image: {
+      eyebrow: "MANAGER PROFILE", title: manager.name, subtitle: manager.teamName,
+      leftLabel: "SEASONS", leftValue: String(manager.seasons.size),
+      rightLabel: "LATEST SEASON", rightValue: String(manager.latestYear),
+      footer: "Actual league history · One-trade scenarios, not a rewritten league",
+    },
+  });
+}
+
 for (const year of seasons) {
   const seasonRoot = path.join(dataRoot, String(year));
-  const [teams, matchupWeeks, settings, boxScores] = await Promise.all([
+  const [teams, matchupWeeks, settings, boxScores, trades] = await Promise.all([
     readFile(path.join(seasonRoot, "teams.json"), "utf8").then(JSON.parse),
     readFile(path.join(seasonRoot, "matchups.json"), "utf8").then(JSON.parse),
     readFile(path.join(seasonRoot, "settings.json"), "utf8").then(JSON.parse),
     readFile(path.join(seasonRoot, "box_scores.json"), "utf8").then(JSON.parse),
+    readFile(path.join(seasonRoot, "trades.json"), "utf8").then(JSON.parse),
   ]);
   const teamsById = new Map(teams.map((team) => [team.team_id, team]));
   const seasonRoute = `/seasons/${year}`;
   const seasonImageRoute = `/link-previews/seasons/${year}.png`;
+
+  for (const trade of trades) {
+    const names = trade.team_ids.map((id) => getManagerName(teamsById.get(id)));
+    await writePreview({
+      route: `${seasonRoute}/trades/${trade.id}`,
+      imageRoute: `/link-previews/seasons/${year}/trades/${trade.id}.png`,
+      metadata: {
+        title: `${names.join(" / ")} | ${year} Week ${trade.week} trade`,
+        description: `See the ${year} Week ${trade.week} trade between ${names.join(" and ")} and a one-trade keep-original optimal-lineup scenario. Opponent scores stay unchanged; coverage caveats apply.`,
+        imageAlt: `${year} Week ${trade.week} trade between ${names.join(" and ")}`,
+      },
+      image: {
+        eyebrow: `${year} · WEEK ${trade.week} TRADE`,
+        title: names.join(" / "),
+        subtitle: "What if you kept the original players?",
+        leftLabel: "PLAYERS EXCHANGED", leftValue: String(trade.items.length),
+        rightLabel: "SOURCE", rightValue: trade.source === "espn" ? "ESPN" : "Reconstructed",
+        footer: "Single-trade hindsight scenario · Opponents unchanged",
+      },
+    });
+  }
 
   await writePreview({
     route: seasonRoute,
@@ -247,4 +335,4 @@ for (const year of seasons) {
   }
 }
 
-console.log("Generated link previews for seasons, weeks, and matchups.");
+console.log("Generated link previews for managers, trades, seasons, weeks, and matchups.");

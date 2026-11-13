@@ -15,6 +15,12 @@ import type { OptimalLineupPlayer } from "../utils/metrics";
 import { getLineupChanges } from "../utils/lineupChanges";
 import type { MatchupDetailLoaderData } from "./loader";
 import RouteErrorPage from "./RouteErrorPage";
+import { RosterPlayer, RosterSlot } from "../components/shared/RosterTable";
+import { SortButton, type SortDirection } from "../components/shared/SortHeader";
+import { compareTableValues } from "../hooks/useTableSort";
+
+type LineupSortKey = "slot" | "home" | "homePoints" | "awayPoints" | "away";
+type LineupSort = { key: LineupSortKey; direction: SortDirection };
 
 type DisplayPlayer = Lineup & {
   displaySlot: string;
@@ -79,43 +85,6 @@ function getBench(
   );
 }
 
-function LineupPlayer({
-  player,
-  substituted,
-  removed,
-  align,
-  empty = false,
-}: {
-  player: Lineup | undefined;
-  substituted: boolean;
-  removed: boolean;
-  align: "left" | "right";
-  empty?: boolean;
-}) {
-  if (!player) {
-    return empty ? (
-      <span className={`matchup-lineup-player matchup-lineup-player-${align} matchup-lineup-empty`}>
-        <strong>Empty</strong>
-        <small>No player used</small>
-      </span>
-    ) : <span />;
-  }
-
-  return (
-    <span className={`matchup-lineup-player matchup-lineup-player-${align}`}>
-      <strong className={substituted ? "substituted" : undefined}>
-        {player.name}
-      </strong>
-      <small>
-        {player.position} {player.pro_team}
-        {substituted && <em> · Subbed in</em>}
-        {removed && <em> · Subbed out</em>}
-      </small>
-      {substituted && <i aria-label="Added to hindsight-optimal lineup" />}
-    </span>
-  );
-}
-
 function LineupRows({
   home,
   away,
@@ -126,6 +95,7 @@ function LineupRows({
   bench = false,
   slotOrder,
   showEmptySlots = false,
+  sort,
 }: {
   home: (Lineup & { displaySlot?: string })[];
   away: (Lineup & { displaySlot?: string })[];
@@ -136,6 +106,7 @@ function LineupRows({
   bench?: boolean;
   slotOrder?: string[];
   showEmptySlots?: boolean;
+  sort: LineupSort;
 }) {
   const rows = slotOrder
     ? (() => {
@@ -176,23 +147,25 @@ function LineupRows({
         }),
       );
 
-  return rows.map(
+  const ordered = rows.map((row, index) => ({ ...row, index })).sort((a, b) => {
+    switch (sort.key) {
+      case "home": return compareTableValues(a.homePlayer?.name, b.homePlayer?.name, sort.direction);
+      case "away": return compareTableValues(a.awayPlayer?.name, b.awayPlayer?.name, sort.direction);
+      case "homePoints": return compareTableValues(a.homePlayer?.points, b.homePlayer?.points, sort.direction);
+      case "awayPoints": return compareTableValues(a.awayPlayer?.points, b.awayPlayer?.points, sort.direction);
+      default: return compareTableValues(a.index, b.index, sort.direction);
+    }
+  });
+  return ordered.map(
     ({ slot, homePlayer, awayPlayer }, index) => {
       return (
         <div className="matchup-lineup-row" key={`${slot}-${index}`}>
-          <LineupPlayer
+          {homePlayer || showEmptySlots ? <RosterPlayer
             player={homePlayer}
-            substituted={
-              homePlayer !== undefined &&
-              (homeSubstitutionIds?.has(homePlayer.player_id) ?? false)
-            }
-            removed={
-              homePlayer !== undefined &&
-              (homeRemovedIds?.has(homePlayer.player_id) ?? false)
-            }
+            status={homePlayer && (homeSubstitutionIds?.has(homePlayer.player_id) ? "Subbed in"
+              : homeRemovedIds?.has(homePlayer.player_id) ? "Subbed out" : undefined)}
             align="left"
-            empty={showEmptySlots}
-          />
+          /> : <span />}
           <strong
             className={
               homePlayer && homeSubstitutionIds?.has(homePlayer.player_id)
@@ -201,7 +174,7 @@ function LineupRows({
           >
             {homePlayer?.points.toFixed(2) ?? "—"}
           </strong>
-          <span>{bench ? "BE" : slot}</span>
+          <span><RosterSlot slot={bench ? "BE" : slot} /></span>
           <strong
             className={
               awayPlayer && awaySubstitutionIds?.has(awayPlayer.player_id)
@@ -210,19 +183,12 @@ function LineupRows({
           >
             {awayPlayer?.points.toFixed(2) ?? "—"}
           </strong>
-          <LineupPlayer
+          {awayPlayer || showEmptySlots ? <RosterPlayer
             player={awayPlayer}
-            substituted={
-              awayPlayer !== undefined &&
-              (awaySubstitutionIds?.has(awayPlayer.player_id) ?? false)
-            }
-            removed={
-              awayPlayer !== undefined &&
-              (awayRemovedIds?.has(awayPlayer.player_id) ?? false)
-            }
+            status={awayPlayer && (awaySubstitutionIds?.has(awayPlayer.player_id) ? "Subbed in"
+              : awayRemovedIds?.has(awayPlayer.player_id) ? "Subbed out" : undefined)}
             align="right"
-            empty={showEmptySlots}
-          />
+          /> : <span />}
         </div>
       );
     },
@@ -254,6 +220,12 @@ export function MatchupErrorBoundary() {
 function Matchup() {
   const data = useLoaderData() as MatchupDetailLoaderData;
   const [bestPossibleSelected, setBestPossible] = useState(false);
+  const [lineupSort, setLineupSort] = useState<LineupSort>({ key: "slot", direction: "ascending" });
+  const sortLineup = (key: LineupSortKey) => setLineupSort((current) => ({
+    key, direction: current.key === key
+      ? current.direction === "ascending" ? "descending" : "ascending"
+      : key.endsWith("Points") ? "descending" : "ascending",
+  }));
   const {
     season,
     week,
@@ -350,7 +322,6 @@ function Matchup() {
           ) : <span aria-disabled="true">Next game →</span>}
         </nav>
       </div>
-
       <section className="matchup-scoreboard">
         <div>
           <small>{home?.team_name} · {formatRecord(data.records[matchup.home_team_id] ?? EMPTY_RECORD)}</small>
@@ -404,6 +375,8 @@ function Matchup() {
       <section className="matchup-lineups">
         <header>
           <h2>Lineups</h2>
+          <button className="table-reset" type="button" disabled={lineupSort.key === "slot" && lineupSort.direction === "ascending"}
+            onClick={() => setLineupSort({ key: "slot", direction: "ascending" })}>Reset sort</button>
           <div role="group" aria-label="Lineup view">
             <button
               type="button"
@@ -436,7 +409,8 @@ function Matchup() {
               { name: awayName, changes: awayChanges, total: awayOptimalTotal,
                 score: boxScore.away_score, changesResult: selfInflictedAway },
             ].map(({ name, changes, total, score, changesResult }, index) => (
-              <article key={index}>
+              <details key={index}>
+                <summary>{name} · +{Math.max(0, total - score).toFixed(2)} points</summary>
                 <strong>{name}</strong>
                 {changes.added.length || changes.removed.length ? (
                   <>
@@ -453,13 +427,16 @@ function Matchup() {
                 ) : (
                   <p>No substitutions needed.</p>
                 )}
-              </article>
+              </details>
             ))}
           </div>
         )}
+        <p className="matchup-roster-hint">Scroll horizontally to compare both teams.</p>
+        <div className="matchup-roster-scroll" role="region" aria-label="Matchup rosters, scroll horizontally to compare both teams" tabIndex={0}>
+        <div className="matchup-roster-content">
         <div className="matchup-lineup-heading">
           <strong>
-            {homeName}
+            <SortButton label={homeName} active={lineupSort.key === "home"} direction={lineupSort.direction} onClick={() => sortLineup("home")} />
             {bestPossible && (
               <small>
                 Best possible{" "}
@@ -467,11 +444,11 @@ function Matchup() {
               </small>
             )}
           </strong>
-          <span>Pts</span>
-          <span>Slot</span>
-          <span>Pts</span>
+          <span><SortButton label="Pts" active={lineupSort.key === "homePoints"} direction={lineupSort.direction} onClick={() => sortLineup("homePoints")} /></span>
+          <span><SortButton label="Slot" active={lineupSort.key === "slot"} direction={lineupSort.direction} onClick={() => sortLineup("slot")} /></span>
+          <span><SortButton label="Pts" active={lineupSort.key === "awayPoints"} direction={lineupSort.direction} onClick={() => sortLineup("awayPoints")} /></span>
           <strong>
-            {awayName}
+            <SortButton label={awayName} active={lineupSort.key === "away"} direction={lineupSort.direction} onClick={() => sortLineup("away")} />
             {bestPossible && (
               <small>
                 Best possible{" "}
@@ -486,7 +463,8 @@ function Matchup() {
           homeSubstitutionIds={bestPossible ? homeChanges.addedIds : undefined}
           awaySubstitutionIds={bestPossible ? awayChanges.addedIds : undefined}
           slotOrder={slotOrder}
-          showEmptySlots={bestPossible}
+          showEmptySlots
+          sort={lineupSort}
         />
         <h3>Bench</h3>
         <LineupRows
@@ -495,10 +473,13 @@ function Matchup() {
           homeRemovedIds={bestPossible ? homeChanges.removedIds : undefined}
           awayRemovedIds={bestPossible ? awayChanges.removedIds : undefined}
           bench
+          sort={lineupSort}
         />
+        </div>
+        </div>
         <p>
           {bestPossible
-            ? "Orange markers and underlined names identify every player added to the starting lineup. \"Subbed out\" identifies displaced starters. Teal labels mark a result-changing lineup as a whole."
+            ? "\"Subbed in\" marks every player added to the starting lineup; \"Subbed out\" marks displaced starters on the bench. Result-changing summaries refer to the lineup as a whole."
             : bestPossibleAvailable
               ? "Select Best possible to see every hindsight substitution."
               : "Actual lineups are shown until the week is final."}

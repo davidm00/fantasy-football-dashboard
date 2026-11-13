@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   NavLink,
   Outlet,
@@ -20,6 +20,18 @@ function Root() {
   const copyStatus =
     copyResult?.location === locationKey ? copyResult.status : "idle";
   const showCopyLink = location.pathname !== "/";
+  useEffect(() => {
+    if (!copyResult) return;
+    const timer = window.setTimeout(() => setCopyResult(null), 4000);
+    return () => window.clearTimeout(timer);
+  }, [copyResult]);
+  useEffect(() => {
+    if (location.hash) {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: "start" });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  }, [location.pathname, location.hash]);
 
   const copyLink = async () => {
     try {
@@ -53,7 +65,8 @@ function Root() {
             Home
           </NavLink>
           <NavLink to="/seasons">Season</NavLink>
-          {["Managers", "Records", "Explore"].map((item) => (
+          <NavLink to="/managers">Managers</NavLink>
+          {["Records", "Explore"].map((item) => (
             <span
               key={item}
               className="app-nav-future"
@@ -68,6 +81,7 @@ function Root() {
           <button
             className="app-copy-link"
             type="button"
+            aria-live="polite"
             onClick={copyLink}
           >
             {copyStatus === "copied"
