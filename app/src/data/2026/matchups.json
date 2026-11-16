@@ -383,39 +383,39 @@
     "matchups": [
       {
         "home_team_id": 6,
-        "home_score": 0.0,
+        "home_score": 175.25,
         "away_team_id": 7,
-        "away_score": 27.2
+        "away_score": 181.25
       },
       {
         "home_team_id": 11,
-        "home_score": 0.0,
+        "home_score": 101.9,
         "away_team_id": 8,
-        "away_score": 2.0
+        "away_score": 140.15
       },
       {
         "home_team_id": 5,
-        "home_score": 0.0,
+        "home_score": 116.55,
         "away_team_id": 9,
-        "away_score": 24.3
+        "away_score": 146.95
       },
       {
         "home_team_id": 4,
-        "home_score": 0.0,
+        "home_score": 146.2,
         "away_team_id": 10,
-        "away_score": 30.25
+        "away_score": 139.45
       },
       {
         "home_team_id": 12,
-        "home_score": 27.7,
+        "home_score": 167.85,
         "away_team_id": 2,
-        "away_score": 0.0
+        "away_score": 146.0
       },
       {
         "home_team_id": 1,
-        "home_score": 6.2,
+        "home_score": 135.9,
         "away_team_id": 3,
-        "away_score": 8.9
+        "away_score": 78.75
       }
     ]
   },

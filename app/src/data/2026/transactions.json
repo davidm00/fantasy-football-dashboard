@@ -11421,6 +11421,32 @@
     ]
   },
   {
+    "id": "81669c25-2f4e-4241-a741-3008a042e656",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718474837,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361331,
+        "player_name": "Jamien Sherwood",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "152b07c8-14fa-45dc-97c1-921c74471e53",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -11499,6 +11525,32 @@
     ]
   },
   {
+    "id": "047229d8-5431-4047-b02a-93e597399592",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794762020206,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361652,
+        "player_name": "Payton Wilson",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "128396fd-11ce-41b9-ad94-70d3e1a73f6b",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -11520,6 +11572,32 @@
         "player_id": 4685415,
         "player_name": "Travis Hunter",
         "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "9e23a2cb-cdc0-413e-8aa5-770ee93a6e01",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718589591,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431519,
+        "player_name": "Barrett Carter",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
         "to_team_id": 0
       }
     ]
@@ -11572,6 +11650,32 @@
         "player_id": 4241474,
         "player_name": "Brian Robinson Jr.",
         "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "249f92ae-344f-4bb3-af0c-90fdcf1af73c",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794762020206,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685415,
+        "player_name": "Travis Hunter",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
         "to_team_id": 0
       }
     ]
@@ -11702,6 +11806,32 @@
         "player_id": 4682648,
         "player_name": "Malachi Fields",
         "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "dfa5c5de-8653-4133-b85d-37a1a2dd0f93",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 10,
+    "team_name": "Scam Little",
+    "scoring_period": 10,
+    "date": 1794762020205,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3915189,
+        "player_name": "Roquan Smith",
+        "from_team_id": 0,
+        "to_team_id": 10
+      },
+      {
+        "type": "DROP",
+        "player_id": 3116165,
+        "player_name": "Chris Godwin Jr.",
+        "from_team_id": 10,
         "to_team_id": 0
       }
     ]
@@ -11856,6 +11986,32 @@
     ]
   },
   {
+    "id": "1f61838d-c88a-4952-8c9b-e6d0df89b34a",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Scammer get Scammed",
+    "scoring_period": 10,
+    "date": 1794589217705,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 14880,
+        "player_name": "Kirk Cousins",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4837248,
+        "player_name": "Fernando Mendoza",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "969e4f0c-5001-4791-afcb-a1341d22d969",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -11908,6 +12064,32 @@
     ]
   },
   {
+    "id": "7f74f47f-792f-40bc-a1d3-16979784e581",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794762020204,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361331,
+        "player_name": "Jamien Sherwood",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "a8a64dd3-7f7d-41db-9a60-743779d10908",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -11923,6 +12105,25 @@
         "player_name": "CJ Daniels",
         "from_team_id": 0,
         "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "625a2ab5-c005-4982-89a4-7296dbaef808",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 10,
+    "date": 1794762020205,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4869132,
+        "player_name": "Reggie Virgil",
+        "from_team_id": 0,
+        "to_team_id": 7
       }
     ]
   },
@@ -11948,6 +12149,32 @@
         "player_id": 4912274,
         "player_name": "Sione Vaki",
         "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f24044c2-3555-4f22-a4b7-89719c374574",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718645775,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3127287,
+        "player_name": "Budda Baker",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
         "to_team_id": 0
       }
     ]
@@ -11979,6 +12206,32 @@
     ]
   },
   {
+    "id": "a9cd13d0-487b-449d-9cd8-5e6f522d8a00",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718553500,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361652,
+        "player_name": "Payton Wilson",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "8560a9f1-402b-45a2-baf5-ff58cdfe6a2e",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -12005,6 +12258,32 @@
     ]
   },
   {
+    "id": "4c0c2545-e6a0-4a15-a401-dfd0041d09f8",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Scammer get Scammed",
+    "scoring_period": 10,
+    "date": 1794762020205,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4243181,
+        "player_name": "Nate Landman",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569682,
+        "player_name": "Audric Estime",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "d03f4e5b-644a-4030-95fe-a48bf3b52006",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -12026,6 +12305,32 @@
         "player_id": 4682648,
         "player_name": "Malachi Fields",
         "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "6cc526db-221a-43f7-a51e-f1f323958561",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718609096,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685415,
+        "player_name": "Travis Hunter",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
         "to_team_id": 0
       }
     ]
@@ -12083,6 +12388,32 @@
     ]
   },
   {
+    "id": "0ce86c55-3c4d-4977-a5dc-333725360fa9",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794762020206,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431519,
+        "player_name": "Barrett Carter",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "14bbdc19-10ce-4cb9-8d9a-cac42c45623b",
     "type": "WAIVER",
     "status": "CANCELED",
@@ -12104,6 +12435,32 @@
         "player_id": 4635008,
         "player_name": "Keon Coleman",
         "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "fb366d73-0f4b-43ec-8e06-af73542f1eda",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794762020206,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3127287,
+        "player_name": "Budda Baker",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
         "to_team_id": 0
       }
     ]
