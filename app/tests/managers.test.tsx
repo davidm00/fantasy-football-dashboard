@@ -458,6 +458,19 @@ describe("manager and activity views", () => {
   });
 
   describe("shared roster and controls", () => {
+    it("shows a single draft coverage footnote only when the filtered picks lack roster data", () => {
+      const source = loadSeason(2026);
+      const markup = renderRoute(Season, source, "/seasons/2026?tab=draft");
+      expect(markup).not.toContain("without observed weeks");
+      expect(markup.match(/Production totals exclude/g)).toHaveLength(1);
+      const missing = getDraftUsage(source).filter(({ observedWeeks }) => !observedWeeks).length;
+      expect(markup).toContain(`${missing} picks with`);
+      expect(markup).toContain("no recorded roster data");
+      const keepers = renderRoute(Season, source, "/seasons/2026?tab=draft&keepers=1");
+      expect(keepers).not.toContain("Production totals exclude");
+      expect(keepers).not.toContain("without observed weeks");
+    });
+
     it("renders inline Here targets, cancellation and disabled invalid rows without a dialog", () => {
       const pool = [player(1, 10), player(2, 20), { ...player(3, 30), position: "WR" }, player(4, 5, "BE")];
       const slots = ["RB", "RB", "RB/WR/TE"];

@@ -66,6 +66,9 @@ round/slot headings. The stronger teal heat scale shows drafting-team starter
 production, not a draft grade; striped gray means unavailable, not zero.
 The scale remains stable when filtering picks. Shared tables support header
 sorting and reset.
+Draft highlights and receipts show pick counts without repeated data-coverage
+warnings. A single small footnote appears only when the filtered picks include
+players with no recorded roster data; missing production is not treated as zero.
 
 Moves include FAAB ledgers using executed bids and exported budgets only.
 Unknown budgets/balances remain explicitly unavailable; annual budgets are not

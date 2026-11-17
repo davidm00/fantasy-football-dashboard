@@ -102,7 +102,8 @@ export function SeasonDraftView(props: ActivityProps) {
   const latePicks = picks.filter(({ round }) => round >= 10);
   const production = (group: typeof picks) => !group.length ? "No picks" : group.some(({ observedWeeks }) => observedWeeks > 0)
     ? `${group.reduce((sum, pick) => sum + pick.starterPoints, 0).toFixed(1)} pts` : "Unavailable";
-  const coverageNote = (group: typeof picks) => `${group.length} ${group.length === 1 ? "pick" : "picks"} · ${group.filter(({ observedWeeks }) => !observedWeeks).length} without observed weeks`;
+  const pickCount = (group: typeof picks) => `${group.length} ${group.length === 1 ? "pick" : "picks"}`;
+  const missingRosterData = picks.length - observedPicks.length;
   return <section className="activity-view" aria-labelledby="draft-heading">
     <header className="activity-heading"><h2 id="draft-heading">{allTime ? "All-time" : season.year} draft</h2>
       <span>{picks.length} {picks.length === 1 ? "pick" : "picks"} shown</span></header>
@@ -111,9 +112,11 @@ export function SeasonDraftView(props: ActivityProps) {
         value={(allTime ? careerWorkhorse?.name : workhorse?.player_name) ?? "Awaiting starter production"}
         note={allTime && careerWorkhorse ? `${careerWorkhorse.points.toFixed(1)} observed starter pts · ${careerWorkhorse.picks} picks across ${careerWorkhorse.years.size} seasons`
           : workhorse ? `${workhorse.season.year} · pick ${workhorse.round}.${workhorse.round_pick} · ${workhorse.starterPoints.toFixed(1)} starter pts` : "Awaiting observed starter production."} />
-      <InsightCard label="Keeper production" value={production(keeperPicks)} note={coverageNote(keeperPicks)} />
-      <InsightCard label="Rounds 10+ production" value={production(latePicks)} note={coverageNote(latePicks)} />
+      <InsightCard label="Keeper production" value={production(keeperPicks)} note={pickCount(keeperPicks)} />
+      <InsightCard label="Rounds 10+ production" value={production(latePicks)} note={pickCount(latePicks)} />
     </div>
+    {missingRosterData > 0 && <p className="activity-note">Production totals exclude {missingRosterData} {missingRosterData === 1 ? "pick" : "picks"} with
+      no recorded roster data in the picks shown. Missing data is not counted as zero production.</p>}
     <div className="activity-controls">
       {teamId === undefined && <TeamFilter season={season} value={params.get("team") ?? ""} onChange={(value) => update("team", value)} />}
       <label className="activity-checkbox"><input type="checkbox" checked={keepers} onChange={(event) => update("keepers", event.target.checked ? "1" : "")} />Keepers only</label>
@@ -144,7 +147,7 @@ export function SeasonDraftView(props: ActivityProps) {
       {[{ label: "Rounds 1–3", picks: picks.filter(({ round }) => round <= 3) },
         { label: "Rounds 4–9", picks: picks.filter(({ round }) => round >= 4 && round <= 9) },
         { label: "Rounds 10+", picks: latePicks }].map((group) => <div className="production-row" key={group.label}>
-          <span>{group.label}</span><strong>{production(group.picks)}</strong><small>{coverageNote(group.picks)}</small>
+          <span>{group.label}</span><strong>{production(group.picks)}</strong><small>{pickCount(group.picks)}</small>
         </div>)}
       <h3>{allTime ? "Top individual draft seasons" : "Most starter production"}</h3>
       {[...observedPicks].sort((a, b) => b.starterPoints - a.starterPoints).slice(0, 3).map((pick) =>
