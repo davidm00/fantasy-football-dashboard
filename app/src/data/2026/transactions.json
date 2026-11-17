@@ -11421,58 +11421,6 @@
     ]
   },
   {
-    "id": "81669c25-2f4e-4241-a741-3008a042e656",
-    "type": "WAIVER",
-    "status": "PENDING",
-    "team_id": 4,
-    "team_name": "JSN My Pants",
-    "scoring_period": 10,
-    "date": 1794718474837,
-    "bid_amount": 2,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4361331,
-        "player_name": "Jamien Sherwood",
-        "from_team_id": 0,
-        "to_team_id": 4
-      },
-      {
-        "type": "DROP",
-        "player_id": 3917657,
-        "player_name": "Zack Baun",
-        "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "152b07c8-14fa-45dc-97c1-921c74471e53",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 3,
-    "team_name": "Weeenie Monarch",
-    "scoring_period": 10,
-    "date": 1794502807726,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4038441,
-        "player_name": "Justice Hill",
-        "from_team_id": 0,
-        "to_team_id": 3
-      },
-      {
-        "type": "DROP",
-        "player_id": 4874509,
-        "player_name": "DJ Giddens",
-        "from_team_id": 3,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "94f151de-34b2-4c73-a37f-8ae421630dab",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -11603,84 +11551,6 @@
     ]
   },
   {
-    "id": "ebb6c4c3-4482-4253-bf04-8eb2c403ba09",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 8,
-    "team_name": "Team Mickey Mouse",
-    "scoring_period": 10,
-    "date": 1794416411505,
-    "bid_amount": 19,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4431431,
-        "player_name": "Corey Kiner",
-        "from_team_id": 0,
-        "to_team_id": 8
-      },
-      {
-        "type": "DROP",
-        "player_id": 3150744,
-        "player_name": "Chase McLaughlin",
-        "from_team_id": 8,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "ee9c830c-2c21-41a1-9614-944a92bba8f5",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 6,
-    "team_name": "Go Get Some Wins Bro",
-    "scoring_period": 10,
-    "date": 1794416411507,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4819231,
-        "player_name": "Kaleb Johnson",
-        "from_team_id": 0,
-        "to_team_id": 6
-      },
-      {
-        "type": "DROP",
-        "player_id": 4241474,
-        "player_name": "Brian Robinson Jr.",
-        "from_team_id": 6,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "249f92ae-344f-4bb3-af0c-90fdcf1af73c",
-    "type": "WAIVER",
-    "status": "FAILED_PLAYERALREADYDROPPED",
-    "team_id": 4,
-    "team_name": "JSN My Pants",
-    "scoring_period": 10,
-    "date": 1794762020206,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4685415,
-        "player_name": "Travis Hunter",
-        "from_team_id": 0,
-        "to_team_id": 4
-      },
-      {
-        "type": "DROP",
-        "player_id": 3917657,
-        "player_name": "Zack Baun",
-        "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "99d1716e-42af-47a5-a5ab-a88aaa622478",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -11728,32 +11598,6 @@
         "player_id": 4599739,
         "player_name": "Kendre Miller",
         "from_team_id": 3,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "89b00e2d-024a-48ce-a126-27b9c63b325d",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 9,
-    "team_name": "RB Stash",
-    "scoring_period": 10,
-    "date": 1794502807725,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4576297,
-        "player_name": "AJ Barner",
-        "from_team_id": 0,
-        "to_team_id": 9
-      },
-      {
-        "type": "DROP",
-        "player_id": 4887558,
-        "player_name": "Emanuel Wilson",
-        "from_team_id": 9,
         "to_team_id": 0
       }
     ]
@@ -11837,32 +11681,6 @@
     ]
   },
   {
-    "id": "df97be5b-811b-4e6f-9982-e1b2f5fafe65",
-    "type": "WAIVER",
-    "status": "CANCELED",
-    "team_id": 3,
-    "team_name": "Weeenie Monarch",
-    "scoring_period": 10,
-    "date": 1794536223010,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4950400,
-        "player_name": "Arvell Reese",
-        "from_team_id": 0,
-        "to_team_id": 3
-      },
-      {
-        "type": "DROP",
-        "player_id": 3050073,
-        "player_name": "Foyesade Oluokun",
-        "from_team_id": 3,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "feb28c38-2aa1-4cd7-9cd9-0916b2df773a",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -11884,77 +11702,6 @@
         "player_id": 4242512,
         "player_name": "Malik Willis",
         "from_team_id": 11,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "0967e68b-b943-4675-95b3-ee75c12fcf13",
-    "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 7,
-    "team_name": "Chase ma Ballz",
-    "scoring_period": 10,
-    "date": 1794416411506,
-    "bid_amount": 6,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4431431,
-        "player_name": "Corey Kiner",
-        "from_team_id": 0,
-        "to_team_id": 7
-      }
-    ]
-  },
-  {
-    "id": "cfeb48d0-10fe-420c-b228-061154b95670",
-    "type": "WAIVER",
-    "status": "CANCELED",
-    "team_id": 8,
-    "team_name": "Team Mickey Mouse",
-    "scoring_period": 10,
-    "date": 1794328469997,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4431431,
-        "player_name": "Corey Kiner",
-        "from_team_id": 0,
-        "to_team_id": 8
-      },
-      {
-        "type": "DROP",
-        "player_id": 4597500,
-        "player_name": "Adonai Mitchell",
-        "from_team_id": 8,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "f5249d45-b72c-4e83-a05e-39378f2b0ba3",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 1,
-    "team_name": "Kill Me Before",
-    "scoring_period": 10,
-    "date": 1794416411506,
-    "bid_amount": 3,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 2991662,
-        "player_name": "Mack Hollins",
-        "from_team_id": 0,
-        "to_team_id": 1
-      },
-      {
-        "type": "DROP",
-        "player_id": 4360078,
-        "player_name": "Alec Pierce",
-        "from_team_id": 1,
         "to_team_id": 0
       }
     ]
@@ -12090,25 +11837,6 @@
     ]
   },
   {
-    "id": "a8a64dd3-7f7d-41db-9a60-743779d10908",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 1,
-    "team_name": "Kill Me Before",
-    "scoring_period": 10,
-    "date": 1794502807725,
-    "bid_amount": 1,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4605951,
-        "player_name": "CJ Daniels",
-        "from_team_id": 0,
-        "to_team_id": 1
-      }
-    ]
-  },
-  {
     "id": "625a2ab5-c005-4982-89a4-7296dbaef808",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -12149,110 +11877,6 @@
         "player_id": 4912274,
         "player_name": "Sione Vaki",
         "from_team_id": 6,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "f24044c2-3555-4f22-a4b7-89719c374574",
-    "type": "WAIVER",
-    "status": "PENDING",
-    "team_id": 4,
-    "team_name": "JSN My Pants",
-    "scoring_period": 10,
-    "date": 1794718645775,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 3127287,
-        "player_name": "Budda Baker",
-        "from_team_id": 0,
-        "to_team_id": 4
-      },
-      {
-        "type": "DROP",
-        "player_id": 3917657,
-        "player_name": "Zack Baun",
-        "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "8e7f8595-3d5f-4c1a-9c4e-35e661efb0b5",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 5,
-    "team_name": "Scammer get Scammed",
-    "scoring_period": 10,
-    "date": 1794502807726,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4837248,
-        "player_name": "Fernando Mendoza",
-        "from_team_id": 0,
-        "to_team_id": 5
-      },
-      {
-        "type": "DROP",
-        "player_id": 4360423,
-        "player_name": "Michael Penix Jr.",
-        "from_team_id": 5,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "a9cd13d0-487b-449d-9cd8-5e6f522d8a00",
-    "type": "WAIVER",
-    "status": "PENDING",
-    "team_id": 4,
-    "team_name": "JSN My Pants",
-    "scoring_period": 10,
-    "date": 1794718553500,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4361652,
-        "player_name": "Payton Wilson",
-        "from_team_id": 0,
-        "to_team_id": 4
-      },
-      {
-        "type": "DROP",
-        "player_id": 3917657,
-        "player_name": "Zack Baun",
-        "from_team_id": 4,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "8560a9f1-402b-45a2-baf5-ff58cdfe6a2e",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 3,
-    "team_name": "Weeenie Monarch",
-    "scoring_period": 10,
-    "date": 1794502807727,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4596334,
-        "player_name": "Keaton Mitchell",
-        "from_team_id": 0,
-        "to_team_id": 3
-      },
-      {
-        "type": "DROP",
-        "player_id": 4599739,
-        "player_name": "Kendre Miller",
-        "from_team_id": 3,
         "to_team_id": 0
       }
     ]
@@ -12435,6 +12059,382 @@
         "player_id": 4635008,
         "player_name": "Keon Coleman",
         "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "81669c25-2f4e-4241-a741-3008a042e656",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718474837,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361331,
+        "player_name": "Jamien Sherwood",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "152b07c8-14fa-45dc-97c1-921c74471e53",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Monarch",
+    "scoring_period": 10,
+    "date": 1794502807726,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4038441,
+        "player_name": "Justice Hill",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4874509,
+        "player_name": "DJ Giddens",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ebb6c4c3-4482-4253-bf04-8eb2c403ba09",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 10,
+    "date": 1794416411505,
+    "bid_amount": 19,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431431,
+        "player_name": "Corey Kiner",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 3150744,
+        "player_name": "Chase McLaughlin",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ee9c830c-2c21-41a1-9614-944a92bba8f5",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 10,
+    "date": 1794416411507,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4819231,
+        "player_name": "Kaleb Johnson",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4241474,
+        "player_name": "Brian Robinson Jr.",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "249f92ae-344f-4bb3-af0c-90fdcf1af73c",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794762020206,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685415,
+        "player_name": "Travis Hunter",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "89b00e2d-024a-48ce-a126-27b9c63b325d",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 9,
+    "team_name": "RB Stash",
+    "scoring_period": 10,
+    "date": 1794502807725,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4576297,
+        "player_name": "AJ Barner",
+        "from_team_id": 0,
+        "to_team_id": 9
+      },
+      {
+        "type": "DROP",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 9,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "df97be5b-811b-4e6f-9982-e1b2f5fafe65",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 3,
+    "team_name": "Weeenie Monarch",
+    "scoring_period": 10,
+    "date": 1794536223010,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4950400,
+        "player_name": "Arvell Reese",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 3050073,
+        "player_name": "Foyesade Oluokun",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0967e68b-b943-4675-95b3-ee75c12fcf13",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 10,
+    "date": 1794416411506,
+    "bid_amount": 6,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431431,
+        "player_name": "Corey Kiner",
+        "from_team_id": 0,
+        "to_team_id": 7
+      }
+    ]
+  },
+  {
+    "id": "cfeb48d0-10fe-420c-b228-061154b95670",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 10,
+    "date": 1794328469997,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431431,
+        "player_name": "Corey Kiner",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4597500,
+        "player_name": "Adonai Mitchell",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "f5249d45-b72c-4e83-a05e-39378f2b0ba3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Kill Me Before",
+    "scoring_period": 10,
+    "date": 1794416411506,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 0,
+        "to_team_id": 1
+      },
+      {
+        "type": "DROP",
+        "player_id": 4360078,
+        "player_name": "Alec Pierce",
+        "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a8a64dd3-7f7d-41db-9a60-743779d10908",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Kill Me Before",
+    "scoring_period": 10,
+    "date": 1794502807725,
+    "bid_amount": 1,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4605951,
+        "player_name": "CJ Daniels",
+        "from_team_id": 0,
+        "to_team_id": 1
+      }
+    ]
+  },
+  {
+    "id": "f24044c2-3555-4f22-a4b7-89719c374574",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718645775,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3127287,
+        "player_name": "Budda Baker",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8e7f8595-3d5f-4c1a-9c4e-35e661efb0b5",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 5,
+    "team_name": "Scammer get Scammed",
+    "scoring_period": 10,
+    "date": 1794502807726,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4837248,
+        "player_name": "Fernando Mendoza",
+        "from_team_id": 0,
+        "to_team_id": 5
+      },
+      {
+        "type": "DROP",
+        "player_id": 4360423,
+        "player_name": "Michael Penix Jr.",
+        "from_team_id": 5,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "a9cd13d0-487b-449d-9cd8-5e6f522d8a00",
+    "type": "WAIVER",
+    "status": "PENDING",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 10,
+    "date": 1794718553500,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361652,
+        "player_name": "Payton Wilson",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "8560a9f1-402b-45a2-baf5-ff58cdfe6a2e",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Monarch",
+    "scoring_period": 10,
+    "date": 1794502807727,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4596334,
+        "player_name": "Keaton Mitchell",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4599739,
+        "player_name": "Kendre Miller",
+        "from_team_id": 3,
         "to_team_id": 0
       }
     ]

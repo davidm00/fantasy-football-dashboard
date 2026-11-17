@@ -15943,7 +15943,7 @@
   },
   {
     "week": 10,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 6,
     "home_score": 175.25,
@@ -16094,7 +16094,7 @@
       }
     ],
     "away_team_id": 7,
-    "away_score": 181.25,
+    "away_score": 192.65,
     "away_lineup": [
       {
         "player_id": 4362628,
@@ -16118,7 +16118,7 @@
         "position": "WR",
         "pro_team": "BAL",
         "slot_position": "RB/WR/TE",
-        "points": 0
+        "points": 11.4
       },
       {
         "player_id": 4035538,
@@ -16244,7 +16244,7 @@
   },
   {
     "week": 10,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 11,
     "home_score": 101.9,
@@ -16319,7 +16319,7 @@
         "position": "WR",
         "pro_team": "LAC",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4567048,
@@ -16395,7 +16395,7 @@
       }
     ],
     "away_team_id": 8,
-    "away_score": 140.15,
+    "away_score": 159.15,
     "away_lineup": [
       {
         "player_id": 4362238,
@@ -16411,7 +16411,7 @@
         "position": "RB",
         "pro_team": "BAL",
         "slot_position": "RB",
-        "points": 0
+        "points": 19.0
       },
       {
         "player_id": 16800,
@@ -16545,7 +16545,7 @@
   },
   {
     "week": 10,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 5,
     "home_score": 116.55,
@@ -16572,7 +16572,7 @@
         "position": "QB",
         "pro_team": "BAL",
         "slot_position": "IR",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4431459,
@@ -16736,7 +16736,7 @@
         "position": "K",
         "pro_team": "BAL",
         "slot_position": "BE",
-        "points": 0
+        "points": 0.0
       },
       {
         "player_id": 4688813,
@@ -16792,7 +16792,7 @@
         "position": "S",
         "pro_team": "BAL",
         "slot_position": "BE",
-        "points": 0
+        "points": 12.75
       },
       {
         "player_id": 2976212,
@@ -16838,7 +16838,7 @@
   },
   {
     "week": 10,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 4,
     "home_score": 146.2,
@@ -17125,16 +17125,16 @@
         "position": "LB",
         "pro_team": "BAL",
         "slot_position": "BE",
-        "points": 0
+        "points": 13.5
       }
     ]
   },
   {
     "week": 10,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 12,
-    "home_score": 167.85,
+    "home_score": 171.85,
     "home_lineup": [
       {
         "player_id": 3117251,
@@ -17230,7 +17230,7 @@
         "position": "D/ST",
         "pro_team": "BAL",
         "slot_position": "D/ST",
-        "points": 0
+        "points": 4.0
       },
       {
         "player_id": 4036133,
@@ -17386,7 +17386,7 @@
         "position": "WR",
         "pro_team": "BAL",
         "slot_position": "BE",
-        "points": 0
+        "points": 9.1
       },
       {
         "player_id": 4832800,
@@ -17432,7 +17432,7 @@
   },
   {
     "week": 10,
-    "status": "in_progress",
+    "status": "final",
     "is_playoff": false,
     "home_team_id": 1,
     "home_score": 135.9,
@@ -17451,7 +17451,7 @@
         "position": "RB",
         "pro_team": "LAC",
         "slot_position": "BE",
-        "points": 0
+        "points": 17.5
       },
       {
         "player_id": 4432620,
@@ -17583,7 +17583,7 @@
       }
     ],
     "away_team_id": 3,
-    "away_score": 78.75,
+    "away_score": 87.95,
     "away_lineup": [
       {
         "player_id": 4374302,
@@ -17719,7 +17719,7 @@
         "position": "RB",
         "pro_team": "BAL",
         "slot_position": "RB",
-        "points": 0
+        "points": 8.8
       },
       {
         "player_id": 4596334,
@@ -17727,7 +17727,7 @@
         "position": "RB",
         "pro_team": "LAC",
         "slot_position": "RB",
-        "points": 0
+        "points": 0.4
       }
     ]
   }
