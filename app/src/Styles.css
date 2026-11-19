@@ -1924,6 +1924,11 @@ select.btn-primary {
   outline-offset: 2px;
 }
 
+.metric-tooltip-fallback:not([hidden]) {
+  display: block;
+  z-index: 90;
+}
+
 .metric-tooltip-panel {
   position: fixed;
   inset: var(--metric-tooltip-top) auto auto var(--metric-tooltip-left);

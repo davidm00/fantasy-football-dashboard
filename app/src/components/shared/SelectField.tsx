@@ -1,5 +1,6 @@
 import { useId, useRef, useState, type KeyboardEvent } from "react";
 import { usePopoverDismissal } from "../../hooks/usePopoverDismissal";
+import { usePopoverSupport } from "../../hooks/usePopoverSupport";
 
 type SelectOption = { value: string; label: string };
 
@@ -11,6 +12,7 @@ export default function SelectField({ label, value, options, onChange, className
   className?: string;
 }) {
   const id = useId();
+  const supportsPopover = usePopoverSupport();
   const trigger = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLDivElement>(null);
   const typeahead = useRef({ text: "", time: 0 });
@@ -65,6 +67,14 @@ export default function SelectField({ label, value, options, onChange, className
       if (index >= 0) { event.preventDefault(); reveal(index); }
     }
   };
+  if (!supportsPopover) return <div className={`select-field ${className}`}>
+    <label htmlFor={id} className="control-label">{label}</label>
+    <select id={id} className="select-trigger" value={value} disabled={!options.length}
+      aria-invalid={selected < 0 || undefined} onChange={(event) => onChange(event.target.value)}>
+      {selected < 0 && <option value={value} disabled>Unavailable selection</option>}
+      {options.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+    </select>
+  </div>;
   return <div className={`select-field ${className}`} onKeyDown={onKeyDown}>
     <span id={`${id}-label`} className="control-label">{label}</span>
     <button ref={trigger} type="button" className="select-trigger" role="combobox"

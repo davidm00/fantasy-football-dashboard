@@ -25,3 +25,17 @@ navigation. Same-page query filters retain focus; hash destinations retain
 their explicit target. The skip action focuses the heading, rather than making
 the entire content wrapper a permanent tab stop. Existing page landmarks and
 design remain unchanged.
+
+Verification after this commit: all 93 tests, build, explicit typecheck, lint and
+5 preview checks pass. Browser checks confirm first-Tab skip access, heading
+focus after navigation, and preserved search focus while query parameters change.
+
+### `html`: Popover progressive enhancement
+
+Keep the existing native Popover UI in supported browsers. An SSR-safe capability
+hook provides a labeled native select when Popover is unavailable; explanations
+use an explicit hidden/open state with Close, Escape and outside dismissal.
+No polyfill dependency or global browser emulation is shipped. Closing an
+explanation returns focus to its trigger in either path. This follows the
+guide's manual-fallback option rather than introducing newly available invoker
+commands or replacing the working selector in modern browsers.
