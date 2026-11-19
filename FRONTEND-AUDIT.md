@@ -39,3 +39,15 @@ No polyfill dependency or global browser emulation is shipped. Closing an
 explanation returns focus to its trigger in either path. This follows the
 guide's manual-fallback option rather than introducing newly available invoker
 commands or replacing the working selector in modern browsers.
+
+Verification after this commit: all 96 tests, build, explicit typecheck, lint
+and 5 preview checks pass. Both native and simulated unsupported-Popover
+browsers pass Close, immediate Escape, outside dismissal and focus return.
+The native-select fallback changes the same URL filters.
+
+### `sortable-table`: single active sort state
+
+Only the currently sorted header carries `aria-sort`. Inactive headers retain
+their buttons and header semantics without announcing a misleading sort state.
+Keep React's stable keyed rows and existing click handlers; do not imperatively
+move VDOM-managed nodes or adopt invoker commands without a compatible fallback.

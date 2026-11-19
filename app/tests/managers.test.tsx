@@ -118,7 +118,7 @@ describe("mock-inspired receipts and rivalries", () => {
     expect(grid).not.toContain("Jericho");
     expect(grid).toContain("rivalry-grid-shell");
     expect(grid).toContain("manager=m01&amp;opponent=");
-    expect(grid.match(/aria-sort="/g)).toHaveLength(getManagers(seasons).filter(({ active }) => active).length + 1);
+    expect(grid.match(/aria-sort="/g)).toHaveLength(1);
     expect(grid).not.toContain('class="breadcrumbs"');
     expect(grid).toContain("Manager directory views");
     const former = renderRoute(Rivalries, seasons, "/managers/rivalries?managers=all");
@@ -383,11 +383,11 @@ describe("single-trade scenarios", () => {
   it("provides sortable data headers and resets without a sort dropdown in table views", () => {
     const season = loadSeason(2026);
     const markup = renderRoute(Managers, [season], "/managers");
-    expect(markup.match(/aria-sort=/g)).toHaveLength(8);
+    expect(markup.match(/aria-sort=/g)).toHaveLength(1);
     expect(markup).toContain("Reset sort");
     expect(markup).not.toContain("Sort managers");
     const draft = renderRoute(Season, season, "/seasons/2026?tab=draft");
-    expect(draft.match(/aria-sort=/g)).toHaveLength(7);
+    expect(draft.match(/aria-sort=/g)).toHaveLength(1);
     expect(draft).not.toContain("Sort picks");
   });
 
