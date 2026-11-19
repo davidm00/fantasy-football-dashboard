@@ -623,6 +623,24 @@
   min-height: 100svh;
 }
 
+.app-skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  background: #0b1f3a;
+  border-radius: 0.4rem;
+  transform: translateY(calc(-100% - 1rem));
+}
+
+.app-skip-link:focus {
+  transform: none;
+  outline: 3px solid #0f766e;
+  outline-offset: 2px;
+}
+
 .route-page {
   min-height: calc(100svh - 6.75rem);
   padding: clamp(2.5rem, 7vw, 5rem) clamp(1.25rem, 4vw, 2.5rem);

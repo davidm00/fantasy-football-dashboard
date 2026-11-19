@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   NavLink,
   Outlet,
@@ -11,6 +11,8 @@ import DataFreshness from "../components/shared/DataFreshness";
 function Root() {
   const navigation = useNavigation();
   const location = useLocation();
+  const contentRef = useRef<HTMLDivElement>(null);
+  const previousPath = useRef(location.pathname);
   const [copyResult, setCopyResult] = useState<{
     location: string;
     status: "copied" | "error";
@@ -32,6 +34,16 @@ function Root() {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }
   }, [location.pathname, location.hash]);
+  useEffect(() => {
+    if (previousPath.current === location.pathname) return;
+    previousPath.current = location.pathname;
+    const target = (location.hash ? document.getElementById(location.hash.slice(1)) : null)
+      ?? contentRef.current?.querySelector<HTMLElement>("h1");
+    if (target) {
+      target.tabIndex = -1;
+      target.focus({ preventScroll: true });
+    }
+  }, [location.pathname, location.hash]);
 
   const copyLink = async () => {
     try {
@@ -44,6 +56,14 @@ function Root() {
 
   return (
     <div className="route-shell">
+      <a className="app-skip-link" href="#page-content" onClick={(event) => {
+        const target = contentRef.current?.querySelector<HTMLElement>("h1");
+        if (!target) return;
+        event.preventDefault();
+        target.tabIndex = -1;
+        target.focus();
+        target.scrollIntoView({ block: "start" });
+      }}>Skip to main content</a>
       <header className="app-nav">
         <NavLink
           className="app-brand"
@@ -102,7 +122,9 @@ function Root() {
         )}
       </header>
       <DataFreshness />
-      <Outlet />
+      <div id="page-content" ref={contentRef}>
+        <Outlet />
+      </div>
     </div>
   );
 }
