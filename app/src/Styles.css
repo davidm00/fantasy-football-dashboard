@@ -486,11 +486,17 @@
 
 .route-pending span {
   display: block;
-  width: 40%;
+  width: 100%;
   height: 100%;
   background: var(--accent);
   border-radius: 999px;
-  animation: route-pending-slide 900ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .route-pending span {
+    width: 40%;
+    animation: route-pending-slide 900ms ease-in-out 4;
+  }
 }
 
 @keyframes route-pending-slide {
@@ -846,7 +852,12 @@
 .match-ups-card:hover {
   border-color: #c6d0df;
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .match-ups-card:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .match-ups-card-team {
@@ -1357,7 +1368,12 @@ select.btn-primary {
 .home-pairing-card:hover {
   border-color: #b8c4d4;
   box-shadow: 0 12px 28px rgb(15 23 42 / 0.1);
-  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-pairing-card:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .home-status {
@@ -4016,10 +4032,15 @@ select.btn-primary {
 }
 
 .season-rank-cell:hover {
-  transform: translateY(-1px);
   box-shadow:
     0 0 0 2px var(--surface),
     0 0 0 4px rgb(52 87 213 / 0.35);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .season-rank-cell:hover {
+    transform: translateY(-1px);
+  }
 }
 
 .season-rank-cell:focus-visible {

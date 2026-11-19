@@ -51,3 +51,14 @@ Only the currently sorted header carries `aria-sort`. Inactive headers retain
 their buttons and header semantics without announcing a misleading sort state.
 Keep React's stable keyed rows and existing click handlers; do not imperatively
 move VDOM-managed nodes or adopt invoker commands without a compatible fallback.
+
+Verification after this commit: all 97 tests, build, explicit typecheck, lint and
+5 preview checks pass.
+
+### `motion`: opt in to spatial animation
+
+Loading and hover movement run only with `prefers-reduced-motion: no-preference`.
+Reduced-motion users retain a visible static loading indicator and all color,
+shadow and focus feedback. The automatic loading animation stops after 3.6 seconds,
+leaving a static indicator if loading continues instead of an indefinite moving
+banner. No completion event is required for navigation or content visibility.
