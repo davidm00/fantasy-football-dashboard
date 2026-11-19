@@ -157,7 +157,7 @@ async function loadPreviousSeasonData(
 async function loadLatestCompletedSeason(
   currentSeasonData: HomeSeasonData,
 ): Promise<HomeSeasonData | null> {
-  const seasonsDescending = [...seasonList].sort((a, b) => b - a);
+  const seasonsDescending = seasonList.toSorted((a, b) => b - a);
 
   for (const year of seasonsDescending) {
     const data =

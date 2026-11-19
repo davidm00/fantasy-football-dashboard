@@ -695,7 +695,7 @@ function maxTeam(
   values: TeamSeasonMetrics[],
   selector: (metrics: TeamSeasonMetrics) => number,
 ) {
-  return [...values].sort(
+  return values.toSorted(
     (left, right) =>
       selector(right) - selector(left) || left.teamId - right.teamId,
   )[0];
@@ -705,7 +705,7 @@ function minTeam(
   values: TeamSeasonMetrics[],
   selector: (metrics: TeamSeasonMetrics) => number,
 ) {
-  return [...values].sort(
+  return values.toSorted(
     (left, right) =>
       selector(left) - selector(right) || left.teamId - right.teamId,
   )[0];
@@ -762,7 +762,7 @@ export function calculateSeasonMetrics(
         },
       ];
     });
-    const rankedScores = [...weeklyScores].sort(
+    const rankedScores = weeklyScores.toSorted(
       (left, right) => right.score - left.score,
     );
     const highScore = rankedScores[0]?.score;
@@ -1017,7 +1017,7 @@ export function calculateSeasonMetrics(
     }),
   );
   const closestGame =
-    [...completedGames].sort(
+    completedGames.toSorted(
       (left, right) => left.margin - right.margin || left.week - right.week,
     )[0] ?? null;
   const starterPoints = getStarterPointsByPlayer(source);

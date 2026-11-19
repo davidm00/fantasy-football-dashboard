@@ -22,8 +22,8 @@ function getWeekSummary(week: SeasonMatchupWeek, teams: Team[]) {
       entry.score !== null &&
       (week.status === "final" || entry.score > 0),
   );
-  const high = [...scores].sort((left, right) => right.score - left.score)[0];
-  const low = [...scores].sort((left, right) => left.score - right.score)[0];
+  const high = scores.toSorted((left, right) => right.score - left.score)[0];
+  const low = scores.toSorted((left, right) => left.score - right.score)[0];
   const closest = week.matchups.flatMap((matchup) => {
     if (matchup.home_score === null || matchup.away_score === null) return [];
     if (
@@ -180,7 +180,7 @@ function SeasonMatchupsView({
   const visibleWeeks = [...weeks]
     .filter(({ status }) => hasWeekStarted(status))
     .sort((left, right) => right.week - left.week);
-  const sortedWeeks = [...visibleWeeks].sort((left, right) => left.week - right.week);
+  const sortedWeeks = visibleWeeks.toSorted((left, right) => left.week - right.week);
   const latestVisibleWeek = visibleWeeks[0]?.week ?? 1;
   const [selectedTeamId, setSelectedTeamId] = useState(
     highlightedTeamId ?? defaultTeamId,
@@ -238,8 +238,8 @@ function SeasonMatchupsView({
                 setSelectedTeamId(teamId);
                 onHighlight(teamId);
               }}
-              options={[...teams]
-                .sort((left, right) =>
+              options={teams
+                .toSorted((left, right) =>
                   getManagerName(left).localeCompare(getManagerName(right)),
                 )
                 .map((team) => ({ value: String(team.team_id), label: getManagerName(team) }))} />

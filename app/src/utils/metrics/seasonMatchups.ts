@@ -18,8 +18,8 @@ export function calculateSeasonMatchupWeeks(
   );
 
   let recordsThroughWeek = 0;
-  return [...matchups]
-    .sort((left, right) => left.week - right.week)
+  return matchups
+    .toSorted((left, right) => left.week - right.week)
     .map((week) => {
       if (week.status === "final" && week.week <= regularSeasonLength) {
         recordsThroughWeek = week.week;

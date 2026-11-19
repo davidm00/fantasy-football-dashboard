@@ -35,7 +35,7 @@ export const getManagerName = (team: Team | undefined) =>
   "Unknown manager";
 
 export const getLatestReport = (season: HomeSeasonData) =>
-  [...season.reports].sort((left, right) => right.week - left.week)[0];
+  season.reports.toSorted((left, right) => right.week - left.week)[0];
 
 export function getSeasonStandings(
   season: HomeSeasonData,
@@ -88,7 +88,7 @@ export function getFinalSeasonStandings(season: HomeSeasonData) {
 }
 
 export function getChampionshipDetails(season: HomeSeasonData) {
-  const finalRound = [...season.bracket.rounds].sort(
+  const finalRound = season.bracket.rounds.toSorted(
     (left, right) => right.week - left.week,
   )[0];
   const game = finalRound?.games.find(

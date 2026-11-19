@@ -280,8 +280,8 @@ function Season() {
   );
   const bracketSeeds = useMemo(
     () =>
-      [...season.teams]
-        .sort(
+      season.teams
+        .toSorted(
           (left, right) =>
             (regularRanks.get(left.team_id) ?? Number.POSITIVE_INFINITY) -
             (regularRanks.get(right.team_id) ?? Number.POSITIVE_INFINITY),
@@ -371,7 +371,7 @@ function Season() {
     showFinal,
     sort,
   ]);
-  const weeklyBase = [...standingsRows].sort((a, b) => a.rank - b.rank).map((row) => {
+  const weeklyBase = standingsRows.toSorted((a, b) => a.rank - b.rank).map((row) => {
     const ranks = row.metrics.weeklyRanks.map(({ rank }) => rank);
     return { ...row,
       average: ranks.length ? ranks.reduce((sum, rank) => sum + rank, 0) / ranks.length : null,
@@ -390,15 +390,15 @@ function Season() {
     weeklyColumns[`week${week}`] = { value: (row) => row.metrics.weeklyRanks.find((item) => item.week === week)?.rank };
   }
   const weeklySort = useTableSort(weeklyBase, weeklyColumns, { key: "standing", direction: "ascending" }, "weekly");
-  const scoringLeader = [...standingsRows].sort(
+  const scoringLeader = standingsRows.toSorted(
     (left, right) => right.metrics.pointsFor - left.metrics.pointsFor,
   )[0];
-  const unluckiest = [...standingsRows].sort(
+  const unluckiest = standingsRows.toSorted(
     (left, right) => left.metrics.luck - right.metrics.luck,
   )[0];
   const unluckiestPointsRank =
-    [...standingsRows]
-      .sort(
+    standingsRows
+      .toSorted(
         (left, right) =>
           right.metrics.pointsFor - left.metrics.pointsFor,
       )
@@ -510,8 +510,8 @@ function Season() {
                 }`,
               )
             }
-          options={[...seasonList]
-              .sort((left, right) => right - left)
+          options={seasonList
+              .toSorted((left, right) => right - left)
               .map((year) => ({ value: String(year), label: String(year) }))} />
       </header>
 

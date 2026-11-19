@@ -16,7 +16,7 @@ export function getManagers(seasons: SeasonLoaderData[]) {
     name: string;
     entries: { season: SeasonLoaderData; team: Team }[];
   }>();
-  for (const season of [...seasons].sort((a, b) => a.year - b.year)) {
+  for (const season of seasons.toSorted((a, b) => a.year - b.year)) {
     for (const team of season.teams) {
       for (const owner of team.owners) {
         const manager = managers.get(owner.id) ?? {

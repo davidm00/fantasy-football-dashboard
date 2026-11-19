@@ -79,3 +79,17 @@ manager-stat columns, intrinsic selector tracks, and chart label sizing. These
 rules preserve the normal layout when sufficient space is available. All 18
 checks (six screens at 320/390/1280px) pass without document overflow at 200%
 root text size. This is a stylesheet-based proxy, not a real OS preference test.
+
+Verification after this commit: all 100 tests, build, explicit typecheck, lint
+and 5 preview checks pass.
+
+### `js`: native immutable array operations
+
+Replace 31 confirmed dense-array copy/sort, copy/reverse and reverse/find
+patterns with `toSorted`, `toReversed` and `findLast`. The reverse search uses
+only the item, not the reversed index or callback array. The existing ES2023
+target/lib supports these methods; no compatibility library is added.
+Keep Set/Map iterable materialization and sorts on newly produced arrays.
+Defer the three findings in the existing uncommitted Moves file rather than
+mixing that feature into the audit. New frozen-input sorting regressions verify
+source preservation, stable ties and nulls last in both directions.

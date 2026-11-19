@@ -10,7 +10,7 @@ function SeasonReportsView({
   year: number;
   reports: Report[];
 }) {
-  const sortedReports = [...reports].sort(
+  const sortedReports = reports.toSorted(
     (left, right) => right.week - left.week,
   );
 

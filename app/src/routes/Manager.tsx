@@ -30,7 +30,7 @@ export default function ManagerPage() {
   const allTime = params.get("season") === "all";
   const scope = allTime ? "all" : String(season.year);
   const careerHistory = tab === "seasons";
-  const entries = allTime || careerHistory ? [...manager.entries].reverse() : [entry];
+  const entries = allTime || careerHistory ? manager.entries.toReversed() : [entry];
   const luck = allTime ? manager.luck : season.metrics.teams[team.team_id]?.luck;
   const efficiency = allTime ? manager.lineupEfficiency : season.metrics.teams[team.team_id]?.lineupEfficiency;
   const metrics = season.metrics.teams[team.team_id];
@@ -66,8 +66,8 @@ export default function ManagerPage() {
     finish: { value: (row) => row.finish },
     luck: { value: (row) => row.metric?.luck, direction: "descending" },
   }, { key: "year", direction: "descending" }, "history");
-  const chronology = [...historyRows].sort((a, b) => a.season.year - b.season.year);
-  const scoringGames = [...games].reverse();
+  const chronology = historyRows.toSorted((a, b) => a.season.year - b.season.year);
+  const scoringGames = games.toReversed();
   const rankGraphic = <section className="manager-chart-panel"><h2>Points rank vs final finish</h2>
     <TrendChart label={`${manager.name}: points rank and completed-season finish`}
       labels={chronology.map(({ season }) => String(season.year))}
@@ -85,7 +85,7 @@ export default function ManagerPage() {
         {entries.some(({ team }) => team.owners.length > 1) && " · Shared team results with co-manager"}</p>
       {manager.titleYears.length > 0 && <div className="manager-championships" role="group" aria-label="Championship seasons">
         <span>Championship seasons</span>
-        {[...manager.titleYears].reverse().map((year) => <Link key={year} to={`/seasons/${year}?tab=bracket`}
+        {manager.titleYears.toReversed().map((year) => <Link key={year} to={`/seasons/${year}?tab=bracket`}
           aria-label={`${manager.name}, ${year} champion; view championship bracket`}>
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="m3 7 4 4 5-8 5 8 4-4-2 11H5L3 7Z" />
@@ -96,7 +96,7 @@ export default function ManagerPage() {
       </div>}
     </div>
       {!careerHistory && <SelectField className="season-picker" label="Season" value={scope} onChange={(value) => update("season", value)}
-        options={[{ value: "all", label: "All time" }, ...[...manager.entries].reverse().map(({ season }) => ({ value: String(season.year), label: String(season.year) }))]} />}
+        options={[{ value: "all", label: "All time" }, ...manager.entries.toReversed().map(({ season }) => ({ value: String(season.year), label: String(season.year) }))]} />}
     </header>
     <nav className="season-tabs manager-tabs" aria-label="Manager sections">{tabs.map((item) => <Link key={item}
       aria-current={tab === item ? "page" : undefined}

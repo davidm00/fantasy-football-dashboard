@@ -10,7 +10,7 @@ export default function RivalryList({ managerName, rivals, selectedId, href, sho
   href: (opponentId: string) => string;
   showVersus?: boolean;
 }) {
-  const sorter = useTableSort([...rivals].sort((a, b) => a.name.localeCompare(b.name)), {
+  const sorter = useTableSort(rivals.toSorted((a, b) => a.name.localeCompare(b.name)), {
     name: { value: (row) => row.name },
     record: { value: (row) => (row.wins + row.ties / 2) / row.games, direction: "descending" },
     games: { value: (row) => row.games, direction: "descending" },

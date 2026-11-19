@@ -59,7 +59,7 @@ export default function Rivalries() {
   return <main className="season-hub managers-page">
     <header className="season-hub-header"><div><h1>Rivalries</h1><p>Read across a row: that manager’s record against each opponent.</p></div>
       <SelectField label="Season" value={scope} onChange={(value) => update("season", value === "all" ? "" : value)}
-        options={[{ value: "all", label: "All time" }, ...[...seasons].sort((a, b) => b.year - a.year).map(({ year }) => ({ value: String(year), label: String(year) }))]} />
+        options={[{ value: "all", label: "All time" }, ...seasons.toSorted((a, b) => b.year - a.year).map(({ year }) => ({ value: String(year), label: String(year) }))]} />
     </header>
     <ManagerDirectoryTabs />
     <div className="activity-controls">
