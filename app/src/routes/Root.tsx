@@ -8,10 +8,19 @@ import {
 import "../Styles.css";
 import DataFreshness from "../components/shared/DataFreshness";
 
+function scrollToContent(target: HTMLElement, header: HTMLElement | null) {
+  target.scrollIntoView({ block: "start", behavior: "instant" });
+  if (header && getComputedStyle(header).position === "sticky") {
+    const overlap = header.getBoundingClientRect().bottom - target.getBoundingClientRect().top;
+    if (overlap > 0) window.scrollBy({ top: -overlap, behavior: "instant" });
+  }
+}
+
 function Root() {
   const navigation = useNavigation();
   const location = useLocation();
   const contentRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const previousPath = useRef(location.pathname);
   const [copyResult, setCopyResult] = useState<{
     location: string;
@@ -29,7 +38,8 @@ function Root() {
   }, [copyResult]);
   useEffect(() => {
     if (location.hash) {
-      document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: "start" });
+      const target = document.getElementById(location.hash.slice(1));
+      if (target) scrollToContent(target, headerRef.current);
     } else {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }
@@ -61,10 +71,10 @@ function Root() {
         if (!target) return;
         event.preventDefault();
         target.tabIndex = -1;
-        target.focus();
-        target.scrollIntoView({ block: "start" });
+        target.focus({ preventScroll: true });
+        scrollToContent(target, headerRef.current);
       }}>Skip to main content</a>
-      <header className="app-nav">
+      <header className="app-nav" ref={headerRef}>
         <NavLink
           className="app-brand"
           to="/"
