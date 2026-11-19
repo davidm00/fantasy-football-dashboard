@@ -465,6 +465,7 @@
   top: 0;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: clamp(2rem, 5vw, 4rem);
   min-height: 6.75rem;
@@ -560,6 +561,7 @@
 
 .app-nav-links {
   display: flex;
+  flex-wrap: wrap;
   flex: 1 1 auto;
   align-items: center;
   gap: 0.35rem;
@@ -2212,6 +2214,7 @@ select.btn-primary {
 .trade-receipt,
 .trade-path {
   display: grid;
+  min-width: 0;
   gap: 0.6rem;
 }
 
@@ -2331,9 +2334,10 @@ select.btn-primary {
 .manager-story a { color: #0f766e; font-size: 0.8rem; }
 .manager-chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .manager-chart-panel h2 { margin: 0; font-size: 1rem; }
-.trend-chart { margin: 0.75rem 0; }
+.trend-chart { min-width: 0; margin: 0.75rem 0; }
 .trend-chart svg { display: block; width: 100%; max-height: 12rem; }
 .trend-axis { display: flex; justify-content: space-between; gap: 0.5rem; color: #64748b; font-size: 0.65rem; }
+.trend-axis > span { min-width: 0; overflow-wrap: anywhere; }
 .trend-chart figcaption { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.5rem; font-size: 0.72rem; color: #475569; }
 .trend-chart figcaption span { display: flex; align-items: center; gap: 0.35rem; }
 .trend-chart figcaption i { width: 0.6rem; height: 0.6rem; border-radius: 50%; }
@@ -3329,7 +3333,7 @@ select.btn-primary {
   }
 
   .manager-stat-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
   }
 
   .roster-table th,
@@ -4939,6 +4943,7 @@ select.btn-primary {
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
+    flex-wrap: nowrap;
     padding-top: 0.75rem;
     overflow-x: auto;
     border-top: 1px solid var(--border);
@@ -5285,6 +5290,7 @@ select.btn-primary {
 
 .select-field {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-content: end;
   min-width: 7.5rem;
   max-width: 20rem;

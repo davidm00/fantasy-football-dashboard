@@ -62,3 +62,20 @@ Reduced-motion users retain a visible static loading indicator and all color,
 shadow and focus feedback. The automatic loading animation stops after 3.6 seconds,
 leaving a static indicator if loading continues instead of an indefinite moving
 banner. No completion event is required for navigation or content visibility.
+
+Verification after this commit: all 99 tests, build, explicit typecheck, lint and
+5 preview checks pass. Browser-emulated motion preferences show no loading
+animation for reduce and exactly four iterations for no-preference.
+
+### `respect-os-text-scale`: browser-controlled root typography
+
+Remove the fixed 16px root font and opt into OS text scaling. Normal 16px browser
+defaults preserve the design. Browsers without the text-scale meta feature
+ignore it and retain their standard font-size/zoom support; do not combine this
+with manual `env(preferred-text-scale)` scaling or a root font-size override.
+
+Enlarged-text browser checks exposed and fixed desktop navigation wrapping,
+manager-stat columns, intrinsic selector tracks, and chart label sizing. These
+rules preserve the normal layout when sufficient space is available. All 18
+checks (six screens at 320/390/1280px) pass without document overflow at 200%
+root text size. This is a stylesheet-based proxy, not a real OS preference test.
