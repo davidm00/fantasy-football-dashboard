@@ -1,9 +1,12 @@
 # Modern web audit
 
-Branch: `modern-web-audit`. Do not push or merge these audit commits.
+Audit branch: `modern-web-audit`. The audit was initially kept local; the user
+subsequently approved merging it into `main` and pushing on November 19, 2026.
 
-The existing uncommitted Moves sorting changes and local decisions are outside
-the audit and are not included in its commits. No dependencies are added.
+The Moves sorting changes were uncommitted during the audit and are included in
+a separate feature commit for integration. Unrelated local decisions remain
+uncommitted and excluded. No dependencies are added. References below to pending
+Moves changes describe the audit-time state.
 
 ## Baseline
 
