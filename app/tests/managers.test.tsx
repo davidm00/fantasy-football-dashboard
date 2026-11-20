@@ -13,6 +13,7 @@ import TradePage from "../src/routes/Trade";
 import Rivalries from "../src/routes/Rivalries";
 import TrendChart from "../src/components/shared/TrendChart";
 import Season from "../src/routes/Season";
+import { SeasonMovesView } from "../src/components/season/SeasonActivity";
 import type { SeasonLoaderData } from "../src/routes/loader";
 import { loadSeason, renderRoute } from "./fixtures";
 
@@ -118,7 +119,7 @@ describe("mock-inspired receipts and rivalries", () => {
     expect(grid).not.toContain("Jericho");
     expect(grid).toContain("rivalry-grid-shell");
     expect(grid).toContain("manager=m01&amp;opponent=");
-    expect(grid.match(/aria-sort="/g)).toHaveLength(getManagers(seasons).filter(({ active }) => active).length + 1);
+    expect(grid.match(/aria-sort="/g)).toHaveLength(1);
     expect(grid).not.toContain('class="breadcrumbs"');
     expect(grid).toContain("Manager directory views");
     const former = renderRoute(Rivalries, seasons, "/managers/rivalries?managers=all");
@@ -383,11 +384,11 @@ describe("single-trade scenarios", () => {
   it("provides sortable data headers and resets without a sort dropdown in table views", () => {
     const season = loadSeason(2026);
     const markup = renderRoute(Managers, [season], "/managers");
-    expect(markup.match(/aria-sort=/g)).toHaveLength(8);
+    expect(markup.match(/aria-sort=/g)).toHaveLength(1);
     expect(markup).toContain("Reset sort");
     expect(markup).not.toContain("Sort managers");
     const draft = renderRoute(Season, season, "/seasons/2026?tab=draft");
-    expect(draft.match(/aria-sort=/g)).toHaveLength(7);
+    expect(draft.match(/aria-sort=/g)).toHaveLength(1);
     expect(draft).not.toContain("Sort picks");
   });
 
@@ -590,6 +591,37 @@ describe("manager and activity views", () => {
     expect(markup).toContain(`/seasons/2026/trades/${season.trades[0].id}`);
     expect(markup).toContain("Only executed moves and recorded trades");
     expect(markup).not.toContain("Moves coming soon");
+  });
+
+  it("sorts completed additions by bid or date, preserving zero bids and putting drop-only moves last", () => {
+    const source = loadSeason(2026);
+    const base = source.transactions.find(({ items }) => items.some(({ type }) => type === "ADD"))!;
+    const transactions = [
+      { ...base, id: "low", type: "FREEAGENT", status: "EXECUTED", date: 100, bid_amount: 0,
+        items: [{ ...base.items[0], type: "ADD" as const, player_name: "Zero Add" }] },
+      { ...base, id: "high", type: "WAIVER", status: "EXECUTED", date: 200, bid_amount: 50,
+        items: [{ ...base.items[0], type: "ADD" as const, player_name: "High Add" }] },
+      { ...base, id: "tie", type: "WAIVER", status: "EXECUTED", date: 300, bid_amount: 50,
+        items: [{ ...base.items[0], type: "ADD" as const, player_name: "Newer High Add" }] },
+      { ...base, id: "drop", type: "FREEAGENT", status: "EXECUTED", date: 400, bid_amount: 0,
+        items: [{ ...base.items[0], type: "DROP" as const, player_name: "Drop Only" }] },
+      { ...base, id: "failed", type: "WAIVER", status: "FAILED", date: 500, bid_amount: 100,
+        items: [{ ...base.items[0], type: "ADD" as const, player_name: "Failed Add" }] },
+    ];
+    const data = { ...source, trades: [], transactions };
+    const render = (query: string) => renderRoute(() => <SeasonMovesView season={data} />, null,
+      `/seasons/2026?tab=moves${query}`).split('class="activity-feed"')[1].split('class="activity-sidebar"')[0];
+    const names = (markup: string) => [...markup.matchAll(/[+−] (Zero Add|High Add|Newer High Add|Drop Only)/g)].map((match) => match[1]);
+    expect(names(render(""))).toEqual(["Drop Only", "Newer High Add", "High Add", "Zero Add"]);
+    expect(names(render("&moveSort=date&moveOrder=ascending"))).toEqual(["Zero Add", "High Add", "Newer High Add", "Drop Only"]);
+    const highest = render("&moveSort=bid&moveOrder=descending");
+    expect(names(highest)).toEqual(["Newer High Add", "High Add", "Zero Add", "Drop Only"]);
+    expect(highest).toContain('class="move-bid">$0');
+    expect(highest).not.toContain("Failed Add");
+    expect(names(render("&moveSort=bid&moveOrder=ascending"))).toEqual(["Zero Add", "Newer High Add", "High Add", "Drop Only"]);
+    expect(names(render("&type=adds&moveSort=bid&moveOrder=ascending"))).toEqual(["Zero Add", "Newer High Add", "High Add"]);
+    expect(names(render("&type=WAIVER&moveSort=bid"))).toEqual(["Newer High Add", "High Add"]);
+    expect(names(render("&type=FREEAGENT&moveSort=bid"))).toEqual(["Zero Add", "Drop Only"]);
   });
 
   it("labels scenario coverage, unchanged opponents and overlap warnings", () => {

@@ -26,7 +26,7 @@ export default function SortHeader<Key extends string>({
 }) {
   const isActive = sortKey === activeKey;
   return <th scope="col" className={`season-sort-heading season-align-${align}`}
-    aria-sort={isActive ? direction : "none"}>
+    aria-sort={isActive ? direction : undefined}>
     <span className="season-sort-control">
       <SortButton label={label} active={isActive} direction={direction} onClick={() => onSort(sortKey)} />
       {tooltip && <MetricTooltip label={label}>{tooltip}</MetricTooltip>}

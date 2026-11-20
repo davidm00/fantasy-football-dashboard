@@ -71,6 +71,11 @@ warnings. A single small footnote appears only when the filtered picks include
 players with no recorded roster data; missing production is not treated as zero.
 
 Moves include FAAB ledgers using executed bids and exported budgets only.
+Moves default to newest first, with oldest-first and highest/lowest-bid sorting.
+The FA & waiver adds filter combines both acquisition types. Bid sorting includes
+$0 additions, keeps trades/drop-only moves last, and breaks equal bids by newest
+first. Sorting and filters are shareable in the URL; Reset filters restores the
+default chronological view. These controls are shared with manager Moves views.
 Unknown budgets/balances remain explicitly unavailable; annual budgets are not
 pooled across career views. Pickup highlights count that team's season starter
 production, not strictly production after acquisition. Trade receipts count

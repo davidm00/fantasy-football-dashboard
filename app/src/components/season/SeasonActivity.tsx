@@ -41,7 +41,7 @@ function useActivityFilters() {
   };
   const reset = () => {
     const next = new URLSearchParams(params);
-    for (const key of ["team", "week", "type", "keepers", "pickSort", "pickOrder"]) next.delete(key);
+    for (const key of ["team", "week", "type", "keepers", "pickSort", "pickOrder", "moveSort", "moveOrder"]) next.delete(key);
     setParams(next, { flushSync: true });
   };
   return { params, update, reset };
@@ -182,13 +182,21 @@ export function SeasonMovesView(props: ActivityProps & { tradesOnly?: boolean })
     const transactions = source.season.transactions.filter((transaction) =>
       transaction.status === "EXECUTED" &&
       (selectedTeam === undefined || transaction.team_id === selectedTeam) &&
-      (week === undefined || transaction.scoring_period === week) && (!type || type === transaction.type),
+      (week === undefined || transaction.scoring_period === week) && (!type || type === transaction.type ||
+        (type === "adds" && ["WAIVER", "FREEAGENT"].includes(transaction.type) && transaction.items.some(({ type }) => type === "ADD"))),
     );
     return [
       ...trades.map((trade) => ({ kind: "trade" as const, date: trade.date, id: trade.id, trade, season: source.season })),
       ...transactions.map((transaction) => ({ kind: "move" as const, date: transaction.date, id: transaction.id, transaction, season: source.season })),
     ];
   }).sort((a, b) => b.season.year - a.season.year || b.date - a.date);
+  const sorter = useTableSort(entries, {
+    date: { value: (entry) => entry.date, direction: "descending" },
+    bid: { value: (entry) => entry.kind === "move" &&
+      ["WAIVER", "FREEAGENT"].includes(entry.transaction.type) &&
+      entry.transaction.items.some(({ type }) => type === "ADD") ? entry.transaction.bid_amount : null,
+      direction: "descending" },
+  }, { key: "date", direction: "descending" }, "move");
   const executed = sources.flatMap((source) => source.season.transactions.filter((transaction) =>
     transaction.status === "EXECUTED" && (source.selectedTeam === undefined || transaction.team_id === source.selectedTeam),
   ).map((transaction) => ({ ...transaction, year: source.season.year })));
@@ -209,9 +217,20 @@ export function SeasonMovesView(props: ActivityProps & { tradesOnly?: boolean })
       {teamId === undefined && <TeamFilter season={season} value={params.get("team") ?? ""} onChange={(value) => update("team", value)} />}
       {!tradesOnly && <SelectField label="Move type" value={type} onChange={(value) => update("type", value)}
         options={[{ value: "", label: "All completed moves" }, { value: "trade", label: "Trades" },
+          { value: "adds", label: "FA & waiver adds" },
           { value: "WAIVER", label: "Waivers" }, { value: "FREEAGENT", label: "Free agents" }]} />}
       <SelectField label="Week" value={params.get("week") ?? ""} onChange={(value) => update("week", value)}
         options={[{ value: "", label: "All weeks" }, ...weeks.map((number) => ({ value: String(number), label: `Week ${number}` }))]} />
+      {!tradesOnly && <SelectField label="Sort moves" value={`${sorter.key}:${sorter.direction}`}
+        onChange={(value) => {
+          const [key, direction] = value.split(":");
+          sorter.setSort(key, direction === "ascending" ? "ascending" : "descending");
+        }} options={[
+          { value: "date:descending", label: "Date · newest first" },
+          { value: "date:ascending", label: "Date · oldest first" },
+          { value: "bid:descending", label: "Bid · highest first" },
+          { value: "bid:ascending", label: "Bid · lowest first" },
+        ]} />}
       <button type="button" onClick={reset}>Reset filters</button>
     </div>
     {!tradesOnly && <div className="insight-grid" role="region" aria-label="Move highlights" tabIndex={0}>
@@ -223,11 +242,14 @@ export function SeasonMovesView(props: ActivityProps & { tradesOnly?: boolean })
       <InsightCard label="Recorded bid spend" value={`$${spent}`} note={allTime ? `Across ${sources.length} seasons; budgets reset each year.` : `${executed.length} executed moves in this scope.`} />
     </div>}
     <p className="activity-note">Only executed moves and recorded trades are listed. {failed} failed claims are excluded. Highlights cover the season/manager scope, not the week/type filters.</p>
+    {!tradesOnly && sorter.key === "bid" && <p className="activity-note">Bids sort FA and waiver additions, including $0 adds.
+      Trades and moves without an addition appear last. Equal bids are newest first.</p>}
     <ActivityLayout><div className="activity-main">
-    <div className="activity-feed">{entries.map((entry) => <article key={`${entry.season.year}-${entry.kind}-${entry.id}`} className={`activity-item move-receipt ${entry.kind === "trade" ? "move-receipt-trade" : ""}`}>
+    <div className="activity-feed">{sorter.rows.map((entry) => <article key={`${entry.season.year}-${entry.kind}-${entry.id}`} className={`activity-item move-receipt ${entry.kind === "trade" ? "move-receipt-trade" : ""}`}>
       <div className="move-receipt-meta"><small>{new Date(entry.date).toLocaleDateString("en-US", { timeZone: "America/New_York", month: "short", day: "numeric", year: "numeric" })} · Week {entry.kind === "trade" ? entry.trade.week : entry.transaction.scoring_period}</small>
         <span className="move-type-pill">{entry.kind === "trade" ? "Trade" : entry.transaction.type === "WAIVER" ? "Waiver" : "Free agent"}</span>
-        {entry.kind === "move" && entry.transaction.bid_amount > 0 && <strong className="move-bid">${entry.transaction.bid_amount}</strong>}</div>
+        {entry.kind === "move" && entry.transaction.items.some(({ type }) => type === "ADD") &&
+          <strong className="move-bid">${entry.transaction.bid_amount}</strong>}</div>
       {entry.kind === "trade" ? <>
         <h3>Trade · {entry.trade.team_ids.map((id, index) => <span key={id}>{index > 0 && " / "}<TeamManagerLinks season={entry.season} teamId={id} /></span>)}</h3>
         <div className="move-exchange">{entry.trade.team_ids.map((id) => <div key={id}>

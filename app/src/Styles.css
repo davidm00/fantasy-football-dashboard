@@ -465,6 +465,7 @@
   top: 0;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: clamp(2rem, 5vw, 4rem);
   min-height: 6.75rem;
@@ -486,11 +487,17 @@
 
 .route-pending span {
   display: block;
-  width: 40%;
+  width: 100%;
   height: 100%;
   background: var(--accent);
   border-radius: 999px;
-  animation: route-pending-slide 900ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .route-pending span {
+    width: 40%;
+    animation: route-pending-slide 900ms ease-in-out 4;
+  }
 }
 
 @keyframes route-pending-slide {
@@ -554,6 +561,7 @@
 
 .app-nav-links {
   display: flex;
+  flex-wrap: wrap;
   flex: 1 1 auto;
   align-items: center;
   gap: 0.35rem;
@@ -621,6 +629,24 @@
 
 .route-shell {
   min-height: 100svh;
+}
+
+.app-skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  background: #0b1f3a;
+  border-radius: 0.4rem;
+  transform: translateY(calc(-100% - 1rem));
+}
+
+.app-skip-link:focus {
+  transform: none;
+  outline: 3px solid #0f766e;
+  outline-offset: 2px;
 }
 
 .route-page {
@@ -828,7 +854,12 @@
 .match-ups-card:hover {
   border-color: #c6d0df;
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .match-ups-card:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .match-ups-card-team {
@@ -1339,7 +1370,12 @@ select.btn-primary {
 .home-pairing-card:hover {
   border-color: #b8c4d4;
   box-shadow: 0 12px 28px rgb(15 23 42 / 0.1);
-  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-pairing-card:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .home-status {
@@ -1906,6 +1942,11 @@ select.btn-primary {
   outline-offset: 2px;
 }
 
+.metric-tooltip-fallback:not([hidden]) {
+  display: block;
+  z-index: 90;
+}
+
 .metric-tooltip-panel {
   position: fixed;
   inset: var(--metric-tooltip-top) auto auto var(--metric-tooltip-left);
@@ -2173,6 +2214,7 @@ select.btn-primary {
 .trade-receipt,
 .trade-path {
   display: grid;
+  min-width: 0;
   gap: 0.6rem;
 }
 
@@ -2292,9 +2334,10 @@ select.btn-primary {
 .manager-story a { color: #0f766e; font-size: 0.8rem; }
 .manager-chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .manager-chart-panel h2 { margin: 0; font-size: 1rem; }
-.trend-chart { margin: 0.75rem 0; }
+.trend-chart { min-width: 0; margin: 0.75rem 0; }
 .trend-chart svg { display: block; width: 100%; max-height: 12rem; }
 .trend-axis { display: flex; justify-content: space-between; gap: 0.5rem; color: #64748b; font-size: 0.65rem; }
+.trend-axis > span { min-width: 0; overflow-wrap: anywhere; }
 .trend-chart figcaption { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.5rem; font-size: 0.72rem; color: #475569; }
 .trend-chart figcaption span { display: flex; align-items: center; gap: 0.35rem; }
 .trend-chart figcaption i { width: 0.6rem; height: 0.6rem; border-radius: 50%; }
@@ -3290,7 +3333,7 @@ select.btn-primary {
   }
 
   .manager-stat-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
   }
 
   .roster-table th,
@@ -3993,10 +4036,15 @@ select.btn-primary {
 }
 
 .season-rank-cell:hover {
-  transform: translateY(-1px);
   box-shadow:
     0 0 0 2px var(--surface),
     0 0 0 4px rgb(52 87 213 / 0.35);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .season-rank-cell:hover {
+    transform: translateY(-1px);
+  }
 }
 
 .season-rank-cell:focus-visible {
@@ -4895,6 +4943,7 @@ select.btn-primary {
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
+    flex-wrap: nowrap;
     padding-top: 0.75rem;
     overflow-x: auto;
     border-top: 1px solid var(--border);
@@ -5241,6 +5290,7 @@ select.btn-primary {
 
 .select-field {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-content: end;
   min-width: 7.5rem;
   max-width: 20rem;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   NavLink,
   Outlet,
@@ -8,9 +8,20 @@ import {
 import "../Styles.css";
 import DataFreshness from "../components/shared/DataFreshness";
 
+function scrollToContent(target: HTMLElement, header: HTMLElement | null) {
+  target.scrollIntoView({ block: "start", behavior: "instant" });
+  if (header && getComputedStyle(header).position === "sticky") {
+    const overlap = header.getBoundingClientRect().bottom - target.getBoundingClientRect().top;
+    if (overlap > 0) window.scrollBy({ top: -overlap, behavior: "instant" });
+  }
+}
+
 function Root() {
   const navigation = useNavigation();
   const location = useLocation();
+  const contentRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const previousPath = useRef(location.pathname);
   const [copyResult, setCopyResult] = useState<{
     location: string;
     status: "copied" | "error";
@@ -27,9 +38,20 @@ function Root() {
   }, [copyResult]);
   useEffect(() => {
     if (location.hash) {
-      document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: "start" });
+      const target = document.getElementById(location.hash.slice(1));
+      if (target) scrollToContent(target, headerRef.current);
     } else {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  }, [location.pathname, location.hash]);
+  useEffect(() => {
+    if (previousPath.current === location.pathname) return;
+    previousPath.current = location.pathname;
+    const target = (location.hash ? document.getElementById(location.hash.slice(1)) : null)
+      ?? contentRef.current?.querySelector<HTMLElement>("h1");
+    if (target) {
+      target.tabIndex = -1;
+      target.focus({ preventScroll: true });
     }
   }, [location.pathname, location.hash]);
 
@@ -44,7 +66,15 @@ function Root() {
 
   return (
     <div className="route-shell">
-      <header className="app-nav">
+      <a className="app-skip-link" href="#page-content" onClick={(event) => {
+        const target = contentRef.current?.querySelector<HTMLElement>("h1");
+        if (!target) return;
+        event.preventDefault();
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+        scrollToContent(target, headerRef.current);
+      }}>Skip to main content</a>
+      <header className="app-nav" ref={headerRef}>
         <NavLink
           className="app-brand"
           to="/"
@@ -102,7 +132,9 @@ function Root() {
         )}
       </header>
       <DataFreshness />
-      <Outlet />
+      <div id="page-content" ref={contentRef}>
+        <Outlet />
+      </div>
     </div>
   );
 }

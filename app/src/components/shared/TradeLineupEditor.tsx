@@ -113,7 +113,7 @@ export default function TradeLineupEditor({ season, trade }: { season: SeasonLoa
         <SelectField label="Selected manager" value={String(teamId)} onChange={(value) => update("team", value)}
           options={trade.team_ids.map((id) => ({ value: String(id), label: getManagerName(season.teams.find(({ team_id }) => team_id === id)) }))} />
         <SelectField label="Selected week" value={String(selectedWeek ?? "")} onChange={(value) => update("week", value)}
-          options={available.length ? [...available].reverse().map(({ week }) => ({ value: String(week), label: `Week ${week}` }))
+          options={available.length ? available.toReversed().map(({ week }) => ({ value: String(week), label: `Week ${week}` }))
             : [{ value: "", label: "No finalized weeks" }]} />
       </div>
     </div>

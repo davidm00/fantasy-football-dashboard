@@ -42,7 +42,7 @@ export function useTableSort<Row>(
     setParams(next, { flushSync: true, preventScrollReset: true });
   };
   return {
-    rows: [...rows].sort((a, b) => compareTableValues(columns[key].value(a), columns[key].value(b), direction)),
+    rows: rows.toSorted((a, b) => compareTableValues(columns[key].value(a), columns[key].value(b), direction)),
     key, direction, setSort, reset,
     isDefault: key === defaultSort.key && direction === defaultSort.direction,
     onSort: (nextKey: string) => setSort(nextKey, nextKey === key

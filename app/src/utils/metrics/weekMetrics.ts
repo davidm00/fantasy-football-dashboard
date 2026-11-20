@@ -128,7 +128,7 @@ export function calculateWeekMetrics(
       },
     ];
   });
-  const ranked = [...scores].sort(
+  const ranked = scores.toSorted(
     (left, right) => right.score - left.score || left.teamId - right.teamId,
   );
   const boxScores = source.box_scores.filter(
@@ -329,7 +329,7 @@ export function calculateWeekMetrics(
     });
   }
 
-  const scheduleRobbery = [...performances].reverse().find(
+  const scheduleRobbery = performances.findLast(
     ({ result, rank }) =>
       result === "W" && rank > Math.ceil(performances.length / 2),
   );
