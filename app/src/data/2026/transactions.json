@@ -12492,32 +12492,6 @@
     ]
   },
   {
-    "id": "820e1bd5-736e-44c4-a96a-9cb3493903e3",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 6,
-    "team_name": "Go Get Some Wins Bro",
-    "scoring_period": 11,
-    "date": 1795107605498,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4361652,
-        "player_name": "Payton Wilson",
-        "from_team_id": 0,
-        "to_team_id": 6
-      },
-      {
-        "type": "DROP",
-        "player_id": 4819231,
-        "player_name": "Kaleb Johnson",
-        "from_team_id": 6,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "9789c2cf-831a-49f3-9729-8003b6bee7ab",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -12563,32 +12537,6 @@
     ]
   },
   {
-    "id": "d59819e4-9bfd-4710-a1ff-87f47af90677",
-    "type": "WAIVER",
-    "status": "FAILED_INVALIDPLAYERSOURCE",
-    "team_id": 6,
-    "team_name": "Go Get Some Wins Bro",
-    "scoring_period": 11,
-    "date": 1795107605501,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 5081807,
-        "player_name": "Sonny Styles",
-        "from_team_id": 0,
-        "to_team_id": 6
-      },
-      {
-        "type": "DROP",
-        "player_id": 4819231,
-        "player_name": "Kaleb Johnson",
-        "from_team_id": 6,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "61ed58fc-65fa-4542-a4fe-22080f919043",
     "type": "WAIVER",
     "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -12602,6 +12550,349 @@
         "type": "ADD",
         "player_id": 4688380,
         "player_name": "Cam Ward",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4819231,
+        "player_name": "Kaleb Johnson",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "151f7367-14bf-49b4-bf05-285a0e186bba",
+    "type": "WAIVER",
+    "status": "FAILED_PLAYERALREADYDROPPED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 11,
+    "date": 1795021217241,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 17427,
+        "player_name": "Cairo Santos",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 4360698,
+        "player_name": "Joe Milton",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "fe9d967a-a6ef-4fdb-becb-b6d5d4118e34",
+    "type": "WAIVER",
+    "status": "FAILED_ROSTERLIMIT",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 11,
+    "date": 1795021217241,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081807,
+        "player_name": "Sonny Styles",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "4e5aea52-b4b8-4425-aa6b-9547a7904e9d",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 11,
+    "date": 1795021217239,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4883647,
+        "player_name": "Elic Ayomanor",
+        "from_team_id": 0,
+        "to_team_id": 6
+      }
+    ]
+  },
+  {
+    "id": "db014e77-b3df-46fd-b47f-0cca42d75c80",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Monarch",
+    "scoring_period": 11,
+    "date": 1795107605499,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 3045147,
+        "player_name": "James Conner",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "1fbd974a-e105-401b-a16a-de668c470a6b",
+    "type": "WAIVER",
+    "status": "FAILED_TRADE_RESERVED",
+    "team_id": 5,
+    "team_name": "Scammer get Scammed",
+    "scoring_period": 11,
+    "date": 1795021217237,
+    "bid_amount": 7,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3116365,
+        "player_name": "Mark Andrews",
+        "from_team_id": 0,
+        "to_team_id": 5
+      }
+    ]
+  },
+  {
+    "id": "2caed3a9-86a4-4f75-b697-58a50c475c64",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 11,
+    "date": 1795020803312,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3917657,
+        "player_name": "Zack Baun",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430539,
+        "player_name": "Brenton Strange",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "11ddaa91-0d3b-4b98-8b7a-152e9a1a1870",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Monarch",
+    "scoring_period": 11,
+    "date": 1795021217239,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 8439,
+        "player_name": "Aaron Rodgers",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4596334,
+        "player_name": "Keaton Mitchell",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "eaffa7eb-2be1-45ce-a082-c55862a90e8a",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 11,
+    "date": 1795194007072,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 3124890,
+        "player_name": "Kaden Elliss",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4362851,
+        "player_name": "Ernest Jones IV",
+        "from_team_id": 8,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "cd94bd58-03b1-4332-a30e-f75ce3d7cf2f",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 2,
+    "team_name": "Smack That Ahh",
+    "scoring_period": 11,
+    "date": 1795021217240,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4362081,
+        "player_name": "Cameron Dicker",
+        "from_team_id": 0,
+        "to_team_id": 2
+      },
+      {
+        "type": "DROP",
+        "player_id": 4360698,
+        "player_name": "Joe Milton",
+        "from_team_id": 2,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "ab12bc07-5995-4924-b6a9-56e0dda5b5bd",
+    "type": "WAIVER",
+    "status": "CANCELED",
+    "team_id": 7,
+    "team_name": "Chase ma Ballz",
+    "scoring_period": 11,
+    "date": 1795020797454,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4950400,
+        "player_name": "Arvell Reese",
+        "from_team_id": 0,
+        "to_team_id": 7
+      },
+      {
+        "type": "DROP",
+        "player_id": 4430539,
+        "player_name": "Brenton Strange",
+        "from_team_id": 7,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "0563d98f-7373-4d2c-84a2-59f7b1eb2ce4",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 4,
+    "team_name": "JSN My Pants",
+    "scoring_period": 11,
+    "date": 1795021217238,
+    "bid_amount": 3,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4685415,
+        "player_name": "Travis Hunter",
+        "from_team_id": 0,
+        "to_team_id": 4
+      },
+      {
+        "type": "DROP",
+        "player_id": 4361331,
+        "player_name": "Jamien Sherwood",
+        "from_team_id": 4,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "86092dca-ad36-48d8-9a67-e663a93356ee",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 11,
+    "team_name": "Sorry This Had 2 Happen 2 U",
+    "scoring_period": 11,
+    "date": 1795194007072,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4431492,
+        "player_name": "Roman Wilson",
+        "from_team_id": 0,
+        "to_team_id": 11
+      },
+      {
+        "type": "DROP",
+        "player_id": 4569587,
+        "player_name": "Wan'Dale Robinson",
+        "from_team_id": 11,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "820e1bd5-736e-44c4-a96a-9cb3493903e3",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 11,
+    "date": 1795107605498,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4361652,
+        "player_name": "Payton Wilson",
+        "from_team_id": 0,
+        "to_team_id": 6
+      },
+      {
+        "type": "DROP",
+        "player_id": 4819231,
+        "player_name": "Kaleb Johnson",
+        "from_team_id": 6,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "d59819e4-9bfd-4710-a1ff-87f47af90677",
+    "type": "WAIVER",
+    "status": "FAILED_INVALIDPLAYERSOURCE",
+    "team_id": 6,
+    "team_name": "Go Get Some Wins Bro",
+    "scoring_period": 11,
+    "date": 1795107605501,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 5081807,
+        "player_name": "Sonny Styles",
         "from_team_id": 0,
         "to_team_id": 6
       },
@@ -12660,47 +12951,28 @@
     ]
   },
   {
-    "id": "151f7367-14bf-49b4-bf05-285a0e186bba",
+    "id": "42a0562a-7b5f-4301-b331-8ed1856ce23f",
     "type": "WAIVER",
-    "status": "FAILED_PLAYERALREADYDROPPED",
-    "team_id": 2,
-    "team_name": "Smack That Ahh",
+    "status": "EXECUTED",
+    "team_id": 1,
+    "team_name": "Kill Me Before",
     "scoring_period": 11,
-    "date": 1795021217241,
+    "date": 1795280408627,
     "bid_amount": 0,
     "items": [
       {
         "type": "ADD",
-        "player_id": 17427,
-        "player_name": "Cairo Santos",
+        "player_id": 4430656,
+        "player_name": "Myles Price",
         "from_team_id": 0,
-        "to_team_id": 2
+        "to_team_id": 1
       },
       {
         "type": "DROP",
-        "player_id": 4360698,
-        "player_name": "Joe Milton",
-        "from_team_id": 2,
+        "player_id": 2991662,
+        "player_name": "Mack Hollins",
+        "from_team_id": 1,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "fe9d967a-a6ef-4fdb-becb-b6d5d4118e34",
-    "type": "WAIVER",
-    "status": "FAILED_ROSTERLIMIT",
-    "team_id": 6,
-    "team_name": "Go Get Some Wins Bro",
-    "scoring_period": 11,
-    "date": 1795021217241,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 5081807,
-        "player_name": "Sonny Styles",
-        "from_team_id": 0,
-        "to_team_id": 6
       }
     ]
   },
@@ -12750,25 +13022,6 @@
     ]
   },
   {
-    "id": "4e5aea52-b4b8-4425-aa6b-9547a7904e9d",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 6,
-    "team_name": "Go Get Some Wins Bro",
-    "scoring_period": 11,
-    "date": 1795021217239,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4883647,
-        "player_name": "Elic Ayomanor",
-        "from_team_id": 0,
-        "to_team_id": 6
-      }
-    ]
-  },
-  {
     "id": "f72c1813-ed38-415a-ad74-835e76e26edc",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -12795,47 +13048,28 @@
     ]
   },
   {
-    "id": "db014e77-b3df-46fd-b47f-0cca42d75c80",
+    "id": "2f9222a2-e22c-4190-9072-c1193a71982e",
     "type": "WAIVER",
     "status": "EXECUTED",
-    "team_id": 3,
-    "team_name": "Weeenie Monarch",
+    "team_id": 9,
+    "team_name": "RB Stash",
     "scoring_period": 11,
-    "date": 1795107605499,
+    "date": 1795194007071,
     "bid_amount": 0,
     "items": [
       {
         "type": "ADD",
-        "player_id": 4887558,
-        "player_name": "Emanuel Wilson",
+        "player_id": 4837248,
+        "player_name": "Fernando Mendoza",
         "from_team_id": 0,
-        "to_team_id": 3
+        "to_team_id": 9
       },
       {
         "type": "DROP",
-        "player_id": 3045147,
-        "player_name": "James Conner",
-        "from_team_id": 3,
+        "player_id": 4697745,
+        "player_name": "Tyler Loop",
+        "from_team_id": 9,
         "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "1fbd974a-e105-401b-a16a-de668c470a6b",
-    "type": "WAIVER",
-    "status": "FAILED_TRADE_RESERVED",
-    "team_id": 5,
-    "team_name": "Scammer get Scammed",
-    "scoring_period": 11,
-    "date": 1795021217237,
-    "bid_amount": 7,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 3116365,
-        "player_name": "Mark Andrews",
-        "from_team_id": 0,
-        "to_team_id": 5
       }
     ]
   },
@@ -12866,58 +13100,6 @@
     ]
   },
   {
-    "id": "2caed3a9-86a4-4f75-b697-58a50c475c64",
-    "type": "WAIVER",
-    "status": "CANCELED",
-    "team_id": 7,
-    "team_name": "Chase ma Ballz",
-    "scoring_period": 11,
-    "date": 1795020803312,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 3917657,
-        "player_name": "Zack Baun",
-        "from_team_id": 0,
-        "to_team_id": 7
-      },
-      {
-        "type": "DROP",
-        "player_id": 4430539,
-        "player_name": "Brenton Strange",
-        "from_team_id": 7,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "11ddaa91-0d3b-4b98-8b7a-152e9a1a1870",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 3,
-    "team_name": "Weeenie Monarch",
-    "scoring_period": 11,
-    "date": 1795021217239,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 8439,
-        "player_name": "Aaron Rodgers",
-        "from_team_id": 0,
-        "to_team_id": 3
-      },
-      {
-        "type": "DROP",
-        "player_id": 4596334,
-        "player_name": "Keaton Mitchell",
-        "from_team_id": 3,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
     "id": "49d7f70f-6c79-4cf4-a8c7-be9c29a645e8",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -12939,6 +13121,32 @@
         "player_id": 17372,
         "player_name": "Chris Boswell",
         "from_team_id": 1,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
+    "id": "7d9153c6-fb3f-4a90-a82e-7e74d5a0b255",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 8,
+    "team_name": "Team Mickey Mouse",
+    "scoring_period": 11,
+    "date": 1795194007072,
+    "bid_amount": 0,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": -16008,
+        "player_name": "Lions D/ST",
+        "from_team_id": 0,
+        "to_team_id": 8
+      },
+      {
+        "type": "DROP",
+        "player_id": 4431431,
+        "player_name": "Corey Kiner",
+        "from_team_id": 8,
         "to_team_id": 0
       }
     ]
@@ -13093,6 +13301,32 @@
     ]
   },
   {
+    "id": "82fa871a-a911-4bc1-9b6c-555b8fb605de",
+    "type": "WAIVER",
+    "status": "EXECUTED",
+    "team_id": 3,
+    "team_name": "Weeenie Monarch",
+    "scoring_period": 11,
+    "date": 1795366803825,
+    "bid_amount": 2,
+    "items": [
+      {
+        "type": "ADD",
+        "player_id": 4819231,
+        "player_name": "Kaleb Johnson",
+        "from_team_id": 0,
+        "to_team_id": 3
+      },
+      {
+        "type": "DROP",
+        "player_id": 4887558,
+        "player_name": "Emanuel Wilson",
+        "from_team_id": 3,
+        "to_team_id": 0
+      }
+    ]
+  },
+  {
     "id": "ba289a72-19aa-4669-a4e3-892d53878a97",
     "type": "WAIVER",
     "status": "EXECUTED",
@@ -13113,58 +13347,6 @@
         "type": "DROP",
         "player_id": -16034,
         "player_name": "Texans D/ST",
-        "from_team_id": 7,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "cd94bd58-03b1-4332-a30e-f75ce3d7cf2f",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 2,
-    "team_name": "Smack That Ahh",
-    "scoring_period": 11,
-    "date": 1795021217240,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4362081,
-        "player_name": "Cameron Dicker",
-        "from_team_id": 0,
-        "to_team_id": 2
-      },
-      {
-        "type": "DROP",
-        "player_id": 4360698,
-        "player_name": "Joe Milton",
-        "from_team_id": 2,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "ab12bc07-5995-4924-b6a9-56e0dda5b5bd",
-    "type": "WAIVER",
-    "status": "CANCELED",
-    "team_id": 7,
-    "team_name": "Chase ma Ballz",
-    "scoring_period": 11,
-    "date": 1795020797454,
-    "bid_amount": 0,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4950400,
-        "player_name": "Arvell Reese",
-        "from_team_id": 0,
-        "to_team_id": 7
-      },
-      {
-        "type": "DROP",
-        "player_id": 4430539,
-        "player_name": "Brenton Strange",
         "from_team_id": 7,
         "to_team_id": 0
       }
@@ -13218,32 +13400,6 @@
         "player_id": 4430539,
         "player_name": "Brenton Strange",
         "from_team_id": 7,
-        "to_team_id": 0
-      }
-    ]
-  },
-  {
-    "id": "0563d98f-7373-4d2c-84a2-59f7b1eb2ce4",
-    "type": "WAIVER",
-    "status": "EXECUTED",
-    "team_id": 4,
-    "team_name": "JSN My Pants",
-    "scoring_period": 11,
-    "date": 1795021217238,
-    "bid_amount": 3,
-    "items": [
-      {
-        "type": "ADD",
-        "player_id": 4685415,
-        "player_name": "Travis Hunter",
-        "from_team_id": 0,
-        "to_team_id": 4
-      },
-      {
-        "type": "DROP",
-        "player_id": 4361331,
-        "player_name": "Jamien Sherwood",
-        "from_team_id": 4,
         "to_team_id": 0
       }
     ]
