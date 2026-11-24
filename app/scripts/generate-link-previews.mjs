@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import sharp from "sharp";
+import { getTradeReceipts } from "../src/utils/tradeReceipts.mjs";
 
 const appRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataRoot = path.join(appRoot, "src", "data");
@@ -82,6 +83,25 @@ const buildHtml = ({ title, description, route, imagePath, imageAlt }) => {
   return html;
 };
 
+const tradeReceiptSvg = (receipts) => {
+  const maximum = Math.max(1, ...receipts.map(({ points }) => Math.abs(points ?? 0)));
+  const rowHeight = 200 / receipts.length;
+  return receipts.map(({ name, points, covered, weeks }, index) => {
+    const top = 335 + index * rowHeight;
+    const labelSize = Math.min(24, rowHeight * 0.28);
+    const barTop = top + labelSize + 8;
+    const barHeight = Math.min(22, rowHeight * 0.2);
+    const color = ["#2dd4bf", "#f59e0b", "#a78bfa"][index % 3];
+    return `
+      <text x="72" y="${top + labelSize}" fill="#f8fafc" font-family="Arial, sans-serif" font-size="${Math.min(labelSize, 820 / Math.max(1, Array.from(name).length))}" font-weight="700">${escapeText(name)}</text>
+      <text x="1128" y="${top + labelSize}" fill="#ffffff" font-family="Arial, sans-serif" font-size="${labelSize}" font-weight="800" text-anchor="end">${points === null ? "Unavailable" : `${points.toFixed(1)} pts`}</text>
+      ${points === null ? "" : `
+        <rect x="72" y="${barTop}" width="1056" height="${barHeight}" rx="7" fill="#173650"/>
+        <rect x="72" y="${barTop}" width="${Math.abs(points) / maximum * 1056}" height="${barHeight}" rx="7" fill="${color}"/>`}
+      <text x="72" y="${top + rowHeight - 8}" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="${Math.min(19, rowHeight * 0.22)}">${covered}/${weeks} full weeks covered${covered < weeks ? " · incomplete coverage" : ""}</text>`;
+  }).join("");
+};
+
 const previewSvg = ({
   eyebrow,
   title,
@@ -91,6 +111,7 @@ const previewSvg = ({
   rightLabel,
   rightValue,
   footer,
+  receipts,
 }) => `
   <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="630" fill="#071a2f"/>
@@ -102,10 +123,11 @@ const previewSvg = ({
     <text x="72" y="220" fill="#ffffff" font-family="Arial, sans-serif" font-size="${Math.min(58, 1056 / Math.max(1, Array.from(title).length))}" font-weight="800">${escapeText(title)}</text>
     <text x="72" y="270" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="${Math.min(25, 1056 / Math.max(1, Array.from(subtitle).length))}">${escapeText(subtitle)}</text>
     <line x1="72" y1="315" x2="1128" y2="315" stroke="#31506d" stroke-width="2"/>
+    ${receipts ? tradeReceiptSvg(receipts) : `
     <text x="72" y="370" fill="#8fa8bf" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1">${escapeText(leftLabel)}</text>
     <text x="72" y="438" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="800">${escapeText(leftValue)}</text>
     <text x="1128" y="370" fill="#8fa8bf" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="end" letter-spacing="1">${escapeText(rightLabel)}</text>
-    <text x="1128" y="438" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="end">${escapeText(rightValue)}</text>
+    <text x="1128" y="438" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="end">${escapeText(rightValue)}</text>`}
     <text x="72" y="568" fill="#8fa8bf" font-family="Arial, sans-serif" font-size="22">${escapeText(footer)}</text>
     <rect x="1037" y="510" width="91" height="72" rx="16" fill="#f59e0b"/>
     <text x="1082" y="560" fill="#071a2f" font-family="Arial, sans-serif" font-size="35" font-weight="900" text-anchor="middle">IB</text>
@@ -216,21 +238,25 @@ for (const year of seasons) {
 
   for (const trade of trades) {
     const names = trade.team_ids.map((id) => getManagerName(teamsById.get(id)));
+    const receipts = getTradeReceipts({ teams, matchups: matchupWeeks, settings, box_scores: boxScores }, trade)
+      .map((receipt) => ({ ...receipt, name: getManagerName(teamsById.get(receipt.teamId)) }));
     await writePreview({
       route: `${seasonRoute}/trades/${trade.id}`,
       imageRoute: `/link-previews/seasons/${year}/trades/${trade.id}.png`,
       metadata: {
-        title: `${names.join(" / ")} | ${year} Week ${trade.week} trade`,
+        title: `Was this a fleece? ${names.join(" / ")} | ${year} Week ${trade.week} trade`,
         description: `See the ${year} Week ${trade.week} trade between ${names.join(" and ")} and a one-trade keep-original optimal-lineup scenario. Opponent scores stay unchanged; coverage caveats apply.`,
-        imageAlt: `${year} Week ${trade.week} trade between ${names.join(" and ")}`,
+        imageAlt: `Was this a fleece? ${year} Week ${trade.week}. Received players' actual starter points: ${
+          receipts.map(({ name, points, covered, weeks }) =>
+            `${name}: ${points === null ? "Unavailable" : `${points.toFixed(1)} pts`} (${covered}/${weeks} full weeks covered)`).join("; ")
+        }. Finalized regular season only.`,
       },
       image: {
         eyebrow: `${year} · WEEK ${trade.week} TRADE`,
-        title: names.join(" / "),
-        subtitle: "What if you kept the original players?",
-        leftLabel: "PLAYERS EXCHANGED", leftValue: String(trade.items.length),
-        rightLabel: "SOURCE", rightValue: trade.source === "espn" ? "ESPN" : "Reconstructed",
-        footer: "Single-trade hindsight scenario · Opponents unchanged",
+        title: "Was this a fleece?",
+        subtitle: names.join(" / "),
+        receipts,
+        footer: "Received players' starter points · Finalized regular season",
       },
     });
   }

@@ -2,13 +2,14 @@ import type { Lineup, Team, Trade } from "../models/models";
 import type { SeasonLoaderData } from "../routes/loader";
 import { getOptimalLineup, type OptimalLineupPlayer } from "./metrics";
 import { playerCanFillSlot } from "./metrics/seasonMetrics";
+import { isStarter } from "./tradeReceipts.mjs";
+
+export { getTradeReceipts, isStarter } from "./tradeReceipts.mjs";
 
 export const recordText = (record: { wins: number; losses: number; ties: number }) =>
   `${record.wins}-${record.losses}${record.ties ? `-${record.ties}` : ""}`;
 export const resultOf = (score: number, opponent: number) =>
   score > opponent ? "W" : score < opponent ? "L" : "T";
-export const isStarter = (player: Lineup) =>
-  !["BE", "IR", "ER"].includes(player.slot_position);
 
 export function getManagers(seasons: SeasonLoaderData[]) {
   const managers = new Map<string, {
@@ -134,26 +135,6 @@ export function getRivalryMeetings(entries: { season: SeasonLoaderData; team: Te
       season.teams.find(({ team_id }) => team_id === game.opponentId)?.owners.some(({ id }) => id === opponentId))
     .map((game) => ({ ...game, year: season.year })))
     .sort((a, b) => b.year - a.year || b.week - a.week);
-}
-
-export function getTradeReceipts(season: SeasonLoaderData, trade: Trade) {
-  return trade.team_ids.map((teamId) => {
-    const players = trade.items.filter(({ to_team_id }) => to_team_id === teamId);
-    let points = 0;
-    let covered = 0;
-    const games = getManagerGames(season, teamId).filter(({ week, playoff }) => week > trade.week && !playoff);
-    for (const game of games) {
-      const box = season.box_scores.find((box) => box.week === game.week &&
-        (box.home_team_id === teamId || box.away_team_id === teamId));
-      if (box?.status !== "final") continue;
-      const lineup = box ? box.home_team_id === teamId ? box.home_lineup : box.away_lineup : [];
-      if (!lineup.length) continue;
-      covered++;
-      points += lineup.filter((player) => isStarter(player) && players.some(({ player_id }) => player_id === player.player_id))
-        .reduce((sum, player) => sum + player.points, 0);
-    }
-    return { teamId, points: covered ? points : null, covered, weeks: games.length };
-  });
 }
 
 export function getDraftUsage(season: SeasonLoaderData) {

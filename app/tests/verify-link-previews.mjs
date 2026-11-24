@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 import sharp from "sharp";
+import { getTradeReceipts } from "../src/utils/tradeReceipts.mjs";
 
 const appRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const distRoot = path.join(appRoot, "dist");
@@ -80,6 +81,71 @@ test("rivalry exploration has its own canonical social preview", async () => {
   assert.ok(html.includes("Rivalries | Ian Book Believers"));
   assert.ok(html.includes('href="https://ian-book-believers.vercel.app/managers/rivalries"'));
   assert.ok(html.includes("head-to-head rivalry grid"));
+});
+
+test("trade cards use the fleece title and render the actual received-player points chart", async () => {
+  let charts = 0;
+  for (const year of seasons) {
+    const root = path.join(appRoot, `src/data/${year}`);
+    const [teams, matchups, settings, box_scores, trades] = await Promise.all(
+      ["teams", "matchups", "settings", "box_scores", "trades"].map((name) => readJson(path.join(root, `${name}.json`))),
+    );
+    for (const trade of trades) {
+      const receipts = getTradeReceipts({ teams, matchups, settings, box_scores }, trade);
+      const html = await readFile(path.join(distRoot, `seasons/${year}/trades/${trade.id}.html`), "utf8");
+      assert.ok(html.includes('<title>Was this a fleece? '));
+      assert.ok(html.includes('property="og:title" content="Was this a fleece? '));
+      assert.ok(html.includes('name="twitter:title" content="Was this a fleece? '));
+      const alt = html.match(/property="og:image:alt" content="([^"]+)"/)?.[1];
+      assert.ok(alt.startsWith("Was this a fleece?"));
+      for (const { points, covered, weeks } of receipts) {
+        assert.ok(alt.includes(points === null ? "Unavailable" : `${points.toFixed(1)} pts`));
+        assert.ok(alt.includes(`${covered}/${weeks} full weeks covered`));
+      }
+      const maximum = Math.max(1, ...receipts.map(({ points }) => Math.abs(points ?? 0)));
+      const index = receipts.findIndex(({ points }) => points !== null && Math.abs(points) === maximum);
+      if (index < 0) continue;
+      const rowHeight = 200 / receipts.length;
+      const image = new URL(html.match(/property="og:image" content="([^"]+)"/)[1]);
+      const pixel = await sharp(path.join(distRoot, image.pathname.slice(1)))
+        .extract({ left: 600, top: Math.floor(335 + index * rowHeight + Math.min(24, rowHeight * 0.28) + 8 + Math.min(22, rowHeight * 0.2) / 2), width: 1, height: 1 })
+        .removeAlpha().raw().toBuffer();
+      assert.deepEqual([...pixel], [[45, 212, 191], [245, 158, 11], [167, 139, 250]][index % 3]);
+      charts++;
+    }
+  }
+  assert.ok(charts > 0, "No trade points charts were checked");
+});
+
+test("shared trade receipts keep missing, zero, negative and non-starter production distinct", () => {
+  const game = { home_team_id: 1, away_team_id: 2, home_score: 100, away_score: 90 };
+  const player = (id, slot, points) => ({ player_id: id, slot_position: slot, points });
+  const season = {
+    teams: [{ team_id: 1 }, { team_id: 2 }],
+    settings: { regular_season_length: 3 },
+    matchups: [1, 2, 3, 4].map((week) => ({ week, status: "final", matchups: [game] })),
+    box_scores: [
+      { ...game, week: 1, status: "final", home_lineup: [player(10, "RB", 100)], away_lineup: [] },
+      { ...game, week: 2, status: "final", home_lineup: [
+        player(10, "RB", -2), player(11, "BE", 30), player(12, "IR", 40), player(13, "ER", 50),
+      ], away_lineup: [player(20, "BE", 25)] },
+      { ...game, week: 3, status: "in_progress", home_lineup: [player(10, "RB", 100)], away_lineup: [] },
+      { ...game, week: 4, status: "final", home_lineup: [player(10, "RB", 100)], away_lineup: [] },
+    ],
+  };
+  const trade = { week: 1, team_ids: [1, 2], items: [
+    ...[10, 11, 12, 13].map((player_id) => ({ player_id, to_team_id: 1 })),
+    { player_id: 20, to_team_id: 2 },
+  ] };
+  assert.deepEqual(getTradeReceipts(season, trade), [
+    { teamId: 1, points: -2, covered: 1, weeks: 2 },
+    { teamId: 2, points: 0, covered: 1, weeks: 2 },
+  ]);
+  assert.deepEqual(getTradeReceipts({ ...season, box_scores: [] }, trade), [
+    { teamId: 1, points: null, covered: 0, weeks: 2 },
+    { teamId: 2, points: null, covered: 0, weeks: 2 },
+  ]);
+  assert.equal(getTradeReceipts(season, { ...trade, week: 3 })[0].weeks, 0);
 });
 test("representative matchup metadata contains season, week, managers and actual scores", async () => {
   const html = await readFile(path.join(distRoot, "seasons/2025/weeks/8/matchups/8/10.html"), "utf8");

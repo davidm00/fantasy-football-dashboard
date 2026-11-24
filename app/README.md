@@ -135,6 +135,11 @@ Byes and future games without a box score do not get misleading matchup pages.
 Image filenames are content-hashed so updated scores receive a new image URL.
 Manager, Rivalries and trade URLs have dedicated previews. Query-string filters and custom
 lineups use that route's canonical preview, not an image of arbitrary user edits.
+Trade cards show “Was this a fleece?” above the received-player starter-points
+bars, manager names, totals, and coverage from the same receipt calculation as
+the trade page. Only finalized full regular-season weeks after the trade count;
+missing coverage is unavailable, not zero. Rebuilds update the content-hashed
+image URL when those receipts change.
 
 Vercel must use `app/` as its project root. The configuration runs the full
 build, serves `dist/`, and resolves generated `.html` files through clean URLs
