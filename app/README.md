@@ -87,6 +87,9 @@ internally and converted to percentages once for display.
 On mobile, Draft/Moves supporting panels are collapsed above the main content;
 on desktop they sit alongside it. Primary embedded actions have bordered, 44px-minimum
 tap targets, and inline navigation links are visibly underlined.
+Mobile navigation scrolls with the page and uses an opaque, unfiltered
+background; the translucent backdrop blur is reserved for sticky desktop
+navigation to avoid an unnecessary backdrop-compositing layer during mobile scrolling.
 
 `/seasons/<year>/trades/<trade-id>` compares actual results, optimal actual
 rosters and optimal keep-original rosters. Reverse exactly one trade in each
