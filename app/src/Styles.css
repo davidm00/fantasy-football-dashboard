@@ -3447,6 +3447,114 @@ select.btn-primary {
   line-height: 1.55;
 }
 
+.schedule-matchups-section,
+.schedule-comparison {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.75rem;
+}
+
+.schedule-matchups-section > .season-view-toggle {
+  align-self: start;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.schedule-matchups-section > .season-view-toggle button {
+  position: relative;
+  flex: none;
+  min-height: 2.75rem;
+  font-weight: 600;
+}
+
+.schedule-matchups-section > .season-view-toggle button[aria-pressed="true"]::after {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.15rem;
+  left: 0.75rem;
+  border-bottom: 2px solid currentColor;
+  content: "";
+}
+
+.schedule-comparison {
+  margin-top: 0.5rem;
+}
+
+.schedule-comparison h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.schedule-table-shell {
+  max-height: 36rem;
+  overflow: auto;
+}
+
+.schedule-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.schedule-week-table {
+  min-width: 46rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 0.45rem 0.65rem;
+  white-space: nowrap;
+}
+
+.schedule-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f8fafc;
+}
+
+.schedule-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface);
+}
+
+.schedule-week-table thead th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+.schedule-table .schedule-number {
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.schedule-week-heading { justify-content: space-between; }
+.season-sos-value { display: inline-flex; flex-direction: column; gap: 0.15rem; }
+.season-sos-value > strong { font-size: inherit; font-weight: 600; }
+.season-sos-value > small { color: #64748b; font-size: 0.7rem; font-weight: 400; }
+.season-mobile-standing-card dl > .season-sos-metric { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.season-sos-metric .metric-label { max-width: 100%; flex-wrap: wrap; }
+.schedule-selectors .select-field { flex: 1; min-width: min(12rem, 100%); }
+.schedule-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.schedule-records .metric-card > strong { font-size: 1.9rem; }
+.schedule-record-worse { border-top-color: #b45339; background: #fff7f5; }
+.schedule-opponent { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.schedule-changed td, .schedule-table .schedule-changed th { background: #f5f7ff; }
+.schedule-outcome { display: inline-grid; place-items: center; min-width: 1.7rem; min-height: 1.7rem; border-radius: 0.3rem; background: #edf1f7; font-weight: 700; }
+.schedule-outcome-W { color: #0f766e; background: #ddf5ed; }
+.schedule-outcome-L { color: #9f321c; background: #feeae4; }
+.schedule-error { margin: 0; padding: 0.8rem; color: #9f321c; background: #fff4f2; border: 1px solid #f6c9c0; border-radius: 0.5rem; }
+
+@media (max-width: 560px) {
+  .schedule-selectors .select-field { flex-basis: 100%; min-width: 0; }
+  .schedule-selectors > button { margin-left: auto; }
+  .schedule-records { gap: 0.6rem; }
+  .schedule-records .metric-card { padding: 0.75rem; }
+  .schedule-records .metric-card > strong { font-size: 1.65rem; }
+}
+
 .season-matchups-controls {
   position: sticky;
   z-index: 8;

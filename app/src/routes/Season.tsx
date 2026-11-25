@@ -14,6 +14,8 @@ import {
 import PlayoffBracket from "../components/shared/PlayoffBracket";
 import MetricTooltip from "../components/shared/MetricTooltip";
 import SeasonMatchupsView from "../components/season/SeasonMatchupsView";
+import SeasonMatchupsSection from "../components/season/SeasonMatchupsSection";
+import ScheduleStrengthValue from "../components/shared/ScheduleStrengthValue";
 import SeasonReportsView from "../components/season/SeasonReportsView";
 import { SeasonDraftView, SeasonMovesView } from "../components/season/SeasonActivity";
 import seasonList from "../data/seasons.json";
@@ -24,6 +26,7 @@ import type {
 import type { TeamSeasonMetrics } from "../utils/metrics";
 import { getPlayoffRounds } from "../utils/playoffRounds";
 import { getManagerName } from "../utils/homeViewUtils";
+import { getScheduleStrength, type ScheduleStrengthRow } from "../utils/scheduleMetrics";
 import RouteErrorPage from "./RouteErrorPage";
 
 type SortKey =
@@ -34,6 +37,7 @@ type SortKey =
   | "power"
   | "pointsFor"
   | "pointsAgainst"
+  | "sos"
   | "allPlay"
   | "luck"
   | "efficiency";
@@ -45,6 +49,7 @@ type StandingsRow = {
   rank: number;
   team: Team;
   metrics: TeamSeasonMetrics;
+  sos?: ScheduleStrengthRow;
 };
 
 const DERIVED_METRIC_EXPLANATIONS = {
@@ -63,6 +68,7 @@ const SORT_OPTIONS: { key: SortKey; label: string }[] = [
   { key: "power", label: "Power" },
   { key: "pointsFor", label: "Points scored" },
   { key: "pointsAgainst", label: "Points against" },
+  { key: "sos", label: "Strength of schedule" },
   { key: "allPlay", label: "All-play" },
   { key: "luck", label: "Schedule luck" },
   { key: "efficiency", label: "Lineup efficiency" },
@@ -295,6 +301,9 @@ function Season() {
   )
     ? requestedHighlightId
     : null;
+  const scheduleStrength = useMemo(() => getScheduleStrength(season), [season]);
+  const scheduleStrengthByTeam = useMemo(() => new Map(scheduleStrength.rows.map(row => [row.teamId, row])), [scheduleStrength]);
+  const sosExplanation = `Strength of schedule is average points scored by actual scheduled opponents; lower is easier. Rank 1 is easiest, and ties share a rank. This differs from total PA and all-play schedule luck. Uses the same ${scheduleStrength.coveredWeeks.length}/${scheduleStrength.finalizedWeeks} finalized regular-season weeks for every team; missing scores and byes are excluded for everyone. League average: ${scheduleStrength.leagueAverage === null ? "Unavailable" : `${scheduleStrength.leagueAverage.toFixed(2)} points`}.`;
   const standingsRows = useMemo(() => {
     const rows: StandingsRow[] = season.teams.flatMap((team) => {
       const metrics = season.metrics.teams[team.team_id];
@@ -302,7 +311,7 @@ function Season() {
         ? finalRanks.get(team.team_id)
         : regularRanks.get(team.team_id);
 
-      return metrics && rank ? [{ rank, team, metrics }] : [];
+      return metrics && rank ? [{ rank, team, metrics, sos: scheduleStrengthByTeam.get(team.team_id) }] : [];
     });
     const multiplier = sort.direction === "descending" ? -1 : 1;
 
@@ -347,6 +356,8 @@ function Season() {
           comparison =
             left.metrics.pointsAgainst - right.metrics.pointsAgainst;
           break;
+        case "sos":
+          return compareTableValues(left.sos?.averageOpponentPoints, right.sos?.averageOpponentPoints, sort.direction) || left.rank - right.rank;
         case "allPlay":
           comparison =
             left.metrics.allPlayRecord.wins -
@@ -368,6 +379,7 @@ function Season() {
     regularRanks,
     season.metrics.teams,
     season.teams,
+    scheduleStrengthByTeam,
     showFinal,
     sort,
   ]);
@@ -448,7 +460,7 @@ function Season() {
       key,
       direction:
         current.key === key ? current.direction === "descending" ? "ascending" : "descending"
-          : ["manager", "rank", "form"].includes(key) ? "ascending" : "descending",
+          : ["manager", "rank", "form", "sos"].includes(key) ? "ascending" : "descending",
     }));
   };
 
@@ -474,7 +486,9 @@ function Season() {
 
     if (tab !== "standings") next.set("tab", tab);
     else next.delete("tab");
-    if (tab !== "matchups") next.delete("highlight");
+    if (tab !== "matchups") {
+      for (const key of ["highlight", "matchupView", "scoreTeam", "scheduleTeam", "scheduleChanges"]) next.delete(key);
+    }
 
     setSearchParams(next);
   };
@@ -506,7 +520,7 @@ function Season() {
             onChange={(value) =>
               navigate(
                 `/seasons/${value}${
-                  activeTab === "standings" ? "" : `?tab=${activeTab}`
+                  activeTab === "standings" ? "" : `?tab=${activeTab}${activeTab === "matchups" && searchParams.get("matchupView") === "schedule" ? "&matchupView=schedule" : ""}`
                 }`,
               )
             }
@@ -565,8 +579,8 @@ function Season() {
       )}
 
       {activeTab === "matchups" && bracketSeeds[0] && (
+        <SeasonMatchupsSection key={season.year} season={season}>
         <SeasonMatchupsView
-          key={season.year}
           year={season.year}
           teams={season.teams}
           weeks={season.matchupWeeks}
@@ -576,6 +590,7 @@ function Season() {
           highlightedTeamId={highlightedTeamId}
           onHighlight={setHighlightedTeam}
         />
+        </SeasonMatchupsSection>
       )}
 
       {activeTab === "reports" && (
@@ -651,7 +666,7 @@ function Season() {
               onChange={(value) => {
                 const option = SORT_OPTIONS.find(({ key }) => key === value);
                 if (option) {
-                  setSort({ key: option.key, direction: option.key === "manager" ? "ascending" : "descending" });
+                  setSort({ key: option.key, direction: option.key === "manager" || option.key === "sos" ? "ascending" : "descending" });
                 }
               }}
               options={SORT_OPTIONS.map(({ key, label }) => ({ value: key, label }))} />
@@ -729,6 +744,14 @@ function Season() {
                 onSort={handleSort}
               />
               <SortHeader
+                label="SOS"
+                sortKey="sos"
+                activeKey={sort.key}
+                direction={sort.direction}
+                tooltip={sosExplanation}
+                onSort={handleSort}
+              />
+              <SortHeader
                 label="All-play"
                 sortKey="allPlay"
                 activeKey={sort.key}
@@ -757,12 +780,13 @@ function Season() {
             </tr>
           </thead>
           <tbody>
-            {standingsRows.map(({ rank, team, metrics }) => (
+            {standingsRows.map(({ rank, team, metrics, sos }) => (
               <SeasonStandingRow
                 key={team.team_id}
                 rank={rank}
                 team={team}
                 metrics={metrics}
+                sos={sos}
                 year={season.year}
                 teamCount={season.settings.team_count}
                 playoffTeamCount={playoffTeamCount}
@@ -780,6 +804,7 @@ function Season() {
             <SeasonMobileStandingCard
               key={row.team.team_id}
               {...row}
+              sosExplanation={sosExplanation}
               year={season.year}
               teamCount={season.settings.team_count}
               playoffTeamCount={playoffTeamCount}
@@ -793,6 +818,8 @@ function Season() {
         Switch between Table and Cards to change the layout. Rank numbers remain
         standings positions. Each form cell opens that week. Metrics describe
         completed regular-season games, even in the final-placement view.
+        {" "}SOS shows average opponent points and schedule rank: lower is easier.
+        It uses {scheduleStrength.coveredWeeks.length}/{scheduleStrength.finalizedWeeks} finalized regular-season weeks shared by every team.
       </p>
 
       <section className="season-weekly-panel" aria-labelledby="weekly-ranks">
@@ -923,6 +950,7 @@ function SeasonStandingRow({
   rank,
   team,
   metrics,
+  sos,
   year,
   teamCount,
   playoffTeamCount,
@@ -981,6 +1009,7 @@ function SeasonStandingRow({
         </td>
         <td>{metrics.pointsFor.toFixed(2)}</td>
         <td>{metrics.pointsAgainst.toFixed(2)}</td>
+        <td><ScheduleStrengthValue strength={sos} /></td>
         <td>{formatRecord(metrics.allPlayRecord)}</td>
         <td>
           <div className="season-luck">
@@ -1017,7 +1046,7 @@ function SeasonStandingRow({
       </tr>
       {showPlayoffLine && rank === playoffTeamCount && (
         <tr className="season-playoff-cut">
-          <td colSpan={10}>
+          <td colSpan={11}>
             <span>Playoff line</span>
           </td>
         </tr>
@@ -1030,6 +1059,8 @@ function SeasonMobileStandingCard({
   rank,
   team,
   metrics,
+  sos,
+  sosExplanation,
   year,
   teamCount,
   playoffTeamCount,
@@ -1039,6 +1070,7 @@ function SeasonMobileStandingCard({
   teamCount: number;
   playoffTeamCount: number;
   showPlayoffLine: boolean;
+  sosExplanation: string;
 }) {
   return (
     <>
@@ -1090,6 +1122,13 @@ function SeasonMobileStandingCard({
                 ? "—"
                 : `${metrics.lineupEfficiency.toFixed(1)}%`}
             </dd>
+          </div>
+          <div className="season-sos-metric">
+            <dt className="metric-label">
+              SOS (avg opp.)
+              <MetricTooltip label="Strength of schedule">{sosExplanation}</MetricTooltip>
+            </dt>
+            <dd><ScheduleStrengthValue strength={sos} /></dd>
           </div>
         </dl>
         <div className="season-mobile-form">

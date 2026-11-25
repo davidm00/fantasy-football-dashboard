@@ -17,6 +17,27 @@ in-progress metrics are provisional, and outcome awards wait for final scores.
 Standings and matchup records exclude playoff games. Historical bracket rounds
 come from each season's settings and bracket data.
 
+Season Matchups defaults to Actual matchups, with an exclusive Schedule comparison
+view at `?tab=matchups&matchupView=schedule`. Standings Table and Cards include a
+sortable SOS metric: average actual opponent points with a schedule rank,
+from easiest (rank 1) to hardest. No second full-league table sits above the comparison.
+Its league baseline uses the same finalized regular-season weeks for every team;
+weeks with missing scores or byes are excluded for everyone, with visible coverage.
+This metric is distinct from all-play schedule luck and opponent win percentage.
+Equal averages share a rank; the next rank skips the occupied places.
+
+Borrowed schedules hold the selected manager's actual weekly scores fixed.
+Head-to-head meetings with the schedule donor remain unchanged, rather than
+comparing a manager against themself. Own schedules reproduce actual records.
+Both record summaries cover only weeks with valid scores for the subject, donor,
+and resulting opponent. Missing games are explicitly unavailable, not zero scores.
+Playoffs and unfinished weeks are excluded. This is a descriptive counterfactual,
+not a prediction of different matchup strategy or lineup decisions.
+The selected teams (`scoreTeam`, `scheduleTeam`) and changed-results filter
+(`scheduleChanges`) are shareable through
+the existing Copy link action. Changing seasons retains the selected matchup
+view but resets borrowed-schedule team selections and filters for the new season.
+
 Best-possible lineups are hindsight-optimal. "Subbed in" identifies **every**
 player added to the starting lineup, and "Subbed out" identifies displaced
 starters on the bench. Defense can be left empty when that is optimal.
