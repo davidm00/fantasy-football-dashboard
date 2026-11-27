@@ -1,7 +1,7 @@
 [
   {
     "team_id": 4,
-    "team_name": "JSN My Pants",
+    "team_name": "Jolo Fan Club President",
     "final_standing": 0,
     "wins": 10,
     "losses": 1,
@@ -11,7 +11,7 @@
   },
   {
     "team_id": 2,
-    "team_name": "Smack That Ahh",
+    "team_name": "Jolo Fan Club Vice President",
     "final_standing": 0,
     "wins": 9,
     "losses": 2,
@@ -41,7 +41,7 @@
   },
   {
     "team_id": 5,
-    "team_name": "Scammer get Scammed",
+    "team_name": "Jolo Fan Club Co-President",
     "final_standing": 0,
     "wins": 5,
     "losses": 6,
@@ -71,7 +71,7 @@
   },
   {
     "team_id": 12,
-    "team_name": "League full of DLs",
+    "team_name": "Certfied Mid",
     "final_standing": 0,
     "wins": 5,
     "losses": 6,
